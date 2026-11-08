@@ -154,8 +154,10 @@ somewhere else.
    `sg_enable_smart_government` decision or automatically on the first monthly
    pulse if `sg_schema_version` does not exist. Disabling leaves
    `sg_schema_version` behind, so the advisor never silently re-enables.
-2. **Journal entry.** `sg_ensure_journal_entry` adds
-   `je_sg_law_advisor` if neither the active nor the inactive entry exists.
+2. **Journal entry.** `sg_ensure_journal_entry` initializes missing refresh
+   date variables and adds `je_sg_law_advisor` if neither the active nor the
+   inactive entry exists. The monthly dispatcher also initializes those
+   variables for older saves that already have the advisor enabled.
 3. **Evaluation.** `sg_rank_laws` first calls `sg_migrate_schema` (schema 1
    positional state is discarded), sets every top slot to `-1000`, then iterates
    all 148 laws. For each law it checks `sg_law_available_<law>` and the ignored

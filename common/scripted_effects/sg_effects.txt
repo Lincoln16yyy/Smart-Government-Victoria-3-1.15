@@ -36,11 +36,23 @@ sg_migrate_schema = {
 sg_initialize_country = {
 	sg_migrate_schema = yes
 	set_variable = { name = sg_enabled value = yes }
+	sg_initialize_refresh_date = yes
 	sg_ensure_journal_entry = yes
 	sg_rank_laws = yes
 	if = {
 		limit = { has_variable = sg_debug }
 		debug_log = "Smart Government Advisor: initialized for [THIS.GetNameNoFormatting]"
+	}
+}
+
+sg_initialize_refresh_date = {
+	if = {
+		limit = { NOT = { has_variable = sg_last_refresh_year } }
+		set_variable = { name = sg_last_refresh_year value = year }
+	}
+	if = {
+		limit = { NOT = { has_variable = sg_last_refresh_month } }
+		set_variable = { name = sg_last_refresh_month value = month }
 	}
 }
 
@@ -91,6 +103,7 @@ sg_clear_rank = {
 }
 
 sg_ensure_journal_entry = {
+	sg_initialize_refresh_date = yes
 	if = {
 		limit = {
 			NOT = { has_journal_entry = je_sg_law_advisor }

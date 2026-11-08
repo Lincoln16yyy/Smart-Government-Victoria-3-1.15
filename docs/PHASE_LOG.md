@@ -154,3 +154,6 @@ Installation performed:
 - Added a player-facing last-refresh line to the journal widget.
 - Reworded the empty state to explicitly say that no available law can be
   recommended and explain the active, blocked and ignored cases.
+- Follow-up review fixes initialize missing refresh date variables for older
+  enabled saves, keep the refresh assignments in `tools/build_law_data.py`, and
+  normalize localization indentation.

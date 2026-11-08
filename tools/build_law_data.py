@@ -865,6 +865,8 @@ def emit_rank(laws) -> str:
     # Migrate a save created by the old positional-index schema before any
     # stored id is compared.
     out.append("\tsg_migrate_schema = yes")
+    out.append("\tset_variable = { name = sg_last_refresh_year value = year }")
+    out.append("\tset_variable = { name = sg_last_refresh_month value = month }")
     fields = ["id", "benefit", "risk", "focus", "benefit_score", "risk_score", "politics"]
     for slot in (1, 2, 3):
         for field in fields:

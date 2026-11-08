@@ -9,7 +9,7 @@
  sg_disable_smart_government_desc:0 "Removes the journal entry and all advisor variables. Already running enactments are untouched. The advisor will not re-enable itself."
  sg_status_title:0 "Smart Government"
  sg_status_enabled:0 "Advisor active"
-  sg_last_refresh:0 "Last refreshed: month [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_month').GetValue|v0], [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_year').GetValue|v0]"
+ sg_last_refresh:0 "Last refreshed: month [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_month').GetValue|v0], [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_year').GetValue|v0]"
  sg_disable:0 "Disable"
  sg_disable_tt:0 "Disable the advisor and remove its journal entry. No law is changed."
  sg_refresh_tt:0 "Reassess now. The advisor also reassesses every month."

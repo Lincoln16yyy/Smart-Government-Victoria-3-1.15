@@ -9,7 +9,7 @@
  sg_disable_smart_government_desc:0 "Remove o registro de diário e todas as variáveis do conselheiro. Promulgações em andamento não são alteradas. O conselheiro não se reativa sozinho."
  sg_status_title:0 "Governo Inteligente"
  sg_status_enabled:0 "Conselheiro ativo"
-  sg_last_refresh:0 "Última atualização: mês [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_month').GetValue|v0], [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_year').GetValue|v0]"
+ sg_last_refresh:0 "Última atualização: mês [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_month').GetValue|v0], [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_year').GetValue|v0]"
  sg_disable:0 "Desativar"
  sg_disable_tt:0 "Desativa o conselheiro e remove o registro de diário. Nenhuma lei é alterada."
  sg_refresh_tt:0 "Reavaliar agora. O conselheiro também reavalia todo mês."

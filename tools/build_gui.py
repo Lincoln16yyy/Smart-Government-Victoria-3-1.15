@@ -263,6 +263,82 @@ def law_explanations(slot: int, laws: list[dict]) -> str:
     return "".join(branches)
 
 
+def ignored_law_entry(slot: int, laws: list[dict]) -> str:
+    branches = []
+    for law in laws:
+        lid = law["id"]
+        sid = law["sid"]
+        branches.append(
+            f"""
+						widget = {{
+							visible = "[GetScriptedGui('sg_ignored_{slot}_law_{lid}_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+							autoresize = yes
+							flowcontainer = {{
+								direction = horizontal
+								spacing = 6
+								parentanchor = vcenter
+								ignoreinvisible = yes
+
+								textbox = {{
+									autoresize = yes
+									align = left|nobaseline
+									using = fontsize_small
+									text = "sg_law_name_{sid}"
+									tooltip = "sg_law_tip_{sid}"
+									using = tooltip_se
+								}}
+								textbox = {{
+									autoresize = yes
+									align = left|nobaseline
+									using = fontsize_small
+									default_format = "#weak"
+									text = "sg_law_group_{sid}"
+								}}
+							}}
+						}}"""
+        )
+    return "".join(branches)
+
+
+def ignored_slot_row(slot: int, laws: list[dict]) -> str:
+    return f"""
+		widget = {{
+			visible = "[GetScriptedGui('sg_ignored_{slot}_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			size = {{ 500 32 }}
+			background = {{ using = entry_bg_simple }}
+
+			flowcontainer = {{
+				position = {{ 8 0 }}
+				direction = horizontal
+				spacing = 8
+				parentanchor = vcenter
+				ignoreinvisible = yes
+
+				textbox = {{
+					size = {{ 16 20 }}
+					parentanchor = vcenter
+					align = left|nobaseline
+					using = fontsize_small
+					default_format = "#weak"
+					raw_text = "{slot}."
+				}}
+{ignored_law_entry(slot, laws)}
+			}}
+
+			button = {{
+				position = {{ -8 0 }}
+				parentanchor = right|vcenter
+				size = {{ 84 24 }}
+				using = select_button_sound
+				using = tooltip_se
+				text = "sg_restore"
+				tooltip = "sg_restore_tt"
+				enabled = "[GetScriptedGui('sg_restore_ignored_{slot}_sgui').IsValid(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+				onclick = "[GetScriptedGui('sg_restore_ignored_{slot}_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			}}
+		}}"""
+
+
 def build() -> str:
     data = json.loads(DATA.read_text(encoding="utf-8"))
     laws = data["laws"]
@@ -394,6 +470,27 @@ flowcontainer = {{
 		minimumsize = {{ 500 -1 }}
 		maximumsize = {{ 500 -1 }}
 		text = "sg_empty"
+	}}
+
+	# ---- ignored laws ---------------------------------------------------------
+	flowcontainer = {{
+		visible = "{clear_visible}"
+		direction = vertical
+		spacing = 4
+		ignoreinvisible = yes
+		minimumsize = {{ 500 -1 }}
+		maximumsize = {{ 500 -1 }}
+
+		textbox = {{
+			autoresize = yes
+			align = left|nobaseline
+			using = fontsize_small
+			default_format = "#weak"
+			text = "sg_ignored_title"
+		}}
+{ignored_slot_row(1, laws)}
+{ignored_slot_row(2, laws)}
+{ignored_slot_row(3, laws)}
 	}}
 
 	# ---- footer ---------------------------------------------------------------

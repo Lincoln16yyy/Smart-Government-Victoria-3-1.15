@@ -329,6 +329,12 @@ Still to do:
    `is_visible` that assumes a different scope.
 4. **Git/PR.** Commit, push branch, reply to the Sourcery review, merge.
 
+The reproducible manual checklist, including the exact existing test-save name
+and log command, is in `docs/MANUAL_RUNTIME_TEST.md`. The current environment
+can validate startup and logs under Wine but cannot provide reliable clicks in
+the graphical save/UI flow, so interactive action results must be recorded by a
+desktop-driven test session.
+
 ---
 
 ## 10. Fallbacks if a runtime feature fails

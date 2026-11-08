@@ -157,3 +157,17 @@ Installation performed:
 - Follow-up review fixes initialize missing refresh date variables for older
   enabled saves, keep the refresh assignments in `tools/build_law_data.py`, and
   normalize localization indentation.
+
+## Phase 8 — interactive action test preparation
+
+- Rechecked Refresh, Enact, Ignore, Clear ignored, Disable and Re-enable across
+  their scripted GUIs, effects, localization and journal-entry lifecycle.
+- Re-ran the GUI generator, static validator, Python compilation and whitespace
+  checks after the PR #4 merge.
+- Confirmed the separate `haiti_1836_06_30_SG_TEST.v3` save and installed mod
+  are present in the Hydra/Wine user-data directory.
+- Added `docs/MANUAL_RUNTIME_TEST.md` with a reproducible action checklist,
+  expected outcomes, backup/install commands and log checks.
+- Startup/log inspection found no advisor-specific errors; the environment still
+  cannot drive reliable in-game clicks, so interactive behavior remains pending
+  a desktop-driven test.

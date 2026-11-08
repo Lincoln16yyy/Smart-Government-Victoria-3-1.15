@@ -360,6 +360,7 @@ flowcontainer = {{
 	}}
 
 	textbox = {{
+		visible = "[JournalEntry.GetCountry.MakeScope.HasVariable('sg_last_rank_evaluated')]"
 		autoresize = yes
 		multiline = yes
 		align = left|nobaseline

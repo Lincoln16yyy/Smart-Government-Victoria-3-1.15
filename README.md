@@ -169,6 +169,13 @@ O contexto completo para outro desenvolvedor ou IA está em
   ~/.config/hydralauncher/wine-prefixes/529340/drive_c/users/steamuser/Documents/Paradox Interactive/Victoria 3/logs/
   ```
 
+## Teste manual de runtime
+
+O procedimento reproduzível para testar as ações do diário em um save separado
+está em [`docs/MANUAL_RUNTIME_TEST.md`](docs/MANUAL_RUNTIME_TEST.md). Ele cobre
+ativação, atualização, tooltip, promulgação normal, ignorar, limpar ignoradas,
+desativar, reativar e pulso mensal, além da verificação dos logs.
+
 ## Limitações conhecidas
 
 - O executável inicia em Wine, mas este ambiente não permite conduzir de forma

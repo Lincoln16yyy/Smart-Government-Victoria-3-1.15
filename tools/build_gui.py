@@ -44,7 +44,7 @@ def var(slot: int, field: str) -> str:
 
 def exact_id(slot: int, sid: int) -> str:
     """Return a GUI boolean expression that is true for exactly one id.
-    
+
     Use EqualTo_int32 instead of GreaterThan/LessThan because the latter
     fail with FetchData errors when used with Var().GetValue in GUI context.
     """

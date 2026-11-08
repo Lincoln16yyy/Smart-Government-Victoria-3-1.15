@@ -192,3 +192,19 @@ Installation performed:
   authoritative source for exact effects and requirements.
 - Replaced the generic positive-benefit sentence with a neutral description of
   measurable score input, avoiding an unsupported claim about state capacity.
+
+## Phase 11 — GUI visibility stabilization
+
+- Reproduced the reported overlap against the installed build and found
+  `FetchData failed` entries for direct `EqualTo_int32` comparisons against
+  `JournalEntry.GetCountry.MakeScope.Var(...).GetValue`.
+- Replaced direct GUI variable comparisons with generated country-scope
+  visibility SGUIs, one per recommendation slot and law.
+- Rendered law-specific benefit and risk explanations only inside the matching
+  visible branch, removing the failing dynamic theme selector.
+- Regenerated and installed the mod; `validate.py`, the 14-test regression
+  suite, `py_compile` and `git diff --check` pass. The executable starts under
+  Wine without new advisor/GUI/localization matches in the logs.
+- Interactive save loading and clicks remain blocked by the lack of reliable
+  graphical control in this environment; the repeatable checklist remains in
+  `docs/MANUAL_RUNTIME_TEST.md`.

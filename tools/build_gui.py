@@ -20,46 +20,26 @@ RISK_COUNT = 13  # 12 specific themes + neutral
 FOCUS_COUNT = 6
 
 
-def selector(variable: str, prefix: str, count: int) -> str:
-    """Build a SelectLocalization chain using EqualTo_int32.
-
-    Maps numeric values 1..count to localization keys prefix_1 .. prefix_count
-    and uses the zero-indexed key as the fallback for value 0.
-    EqualTo_int32 is the reliable comparison function with Var().GetValue in
-    the Victoria 3 GUI context.
-    """
-    var_expr = f"JournalEntry.GetCountry.MakeScope.Var('{variable}').GetValue"
-    expr = f"'{prefix}_0'"
-    for k in range(count, 0, -1):
-        expr = (
-            f"SelectLocalization(EqualTo_int32({var_expr}, '(int32){k}'), "
-            f"'{prefix}_{k}', {expr})"
-        )
-    return f"[{expr}]"
-
-
 def var(slot: int, field: str) -> str:
     return f"JournalEntry.GetCountry.MakeScope.Var('sg_top_{slot}_{field}')"
 
 
-def exact_id(slot: int, sid: int) -> str:
-    """Return a GUI boolean expression that is true for exactly one id.
-
-    Use EqualTo_int32 instead of GreaterThan/LessThan because the latter
-    fail with FetchData errors when used with Var().GetValue in GUI context.
-    """
-    value = f"{var(slot, 'id')}.GetValue"
-    return f"EqualTo_int32({value}, '(int32){sid}')"
+def law_visible(slot: int, law_id: str) -> str:
+    return (
+        f"[GetScriptedGui('sg_top_{slot}_law_{law_id}_visible_sgui')"
+        ".IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+    )
 
 
 def law_header(slot: int, laws: list[dict]) -> str:
     branches = []
     for law in laws:
         sid = law["sid"]
+        lid = law["id"]
         branches.append(
             f"""
 				widget = {{
-					visible = "[{exact_id(slot, sid)}]"
+					visible = "{law_visible(slot, lid)}"
 					autoresize = yes
 					flowcontainer = {{
 						direction = horizontal
@@ -96,11 +76,10 @@ def law_actions(slot: int, laws: list[dict]) -> str:
     branches = []
     for law in laws:
         lid = law["id"]
-        sid = law["sid"]
         branches.append(
             f"""
 				widget = {{
-					visible = "[{exact_id(slot, sid)}]"
+					visible = "{law_visible(slot, lid)}"
 					autoresize = yes
 					flowcontainer = {{
 						direction = horizontal
@@ -132,9 +111,6 @@ def law_actions(slot: int, laws: list[dict]) -> str:
 
 
 def row(slot: int, laws: list[dict]) -> str:
-    benefit = selector(f"sg_top_{slot}_benefit", "sg_benefit", BENEFIT_COUNT)
-    risk = selector(f"sg_top_{slot}_risk", "sg_risk", RISK_COUNT)
-    focus = selector(f"sg_top_{slot}_focus", "sg_focus", FOCUS_COUNT)
     visible = (
         f"[GetScriptedGui('sg_top_{slot}_visible_sgui')"
         ".IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
@@ -175,13 +151,6 @@ def row(slot: int, laws: list[dict]) -> str:
 				spacing = 10
 				ignoreinvisible = yes
 
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					default_format = "#weak"
-					raw_text = "{focus}"
-				}}
 				textbox = {{
 					autoresize = yes
 					align = left|nobaseline
@@ -242,25 +211,7 @@ def row(slot: int, laws: list[dict]) -> str:
 				maximumsize = {{ 480 -1 }}
 				text = "sg_why_ranked_{slot}"
 			}}
-			textbox = {{
-				autoresize = yes
-				multiline = yes
-				align = left|nobaseline
-				using = fontsize_small
-				minimumsize = {{ 480 -1 }}
-				maximumsize = {{ 480 -1 }}
-				raw_text = "{benefit}"
-			}}
-			textbox = {{
-				autoresize = yes
-				multiline = yes
-				align = left|nobaseline
-				using = fontsize_small
-				default_format = "#warning"
-				minimumsize = {{ 480 -1 }}
-				maximumsize = {{ 480 -1 }}
-				raw_text = "{risk}"
-			}}
+{law_explanations(slot, laws)}
 			flowcontainer = {{
 				direction = horizontal
 				spacing = 8
@@ -270,6 +221,44 @@ def row(slot: int, laws: list[dict]) -> str:
 		}}
 	}}
 """
+
+
+def law_explanations(slot: int, laws: list[dict]) -> str:
+    branches = []
+    for law in laws:
+        lid = law["id"]
+        branches.append(
+            f"""
+				widget = {{
+					visible = "{law_visible(slot, lid)}"
+					autoresize = yes
+					flowcontainer = {{
+						direction = vertical
+						spacing = 1
+						ignoreinvisible = yes
+						textbox = {{
+							autoresize = yes
+							multiline = yes
+							align = left|nobaseline
+							using = fontsize_small
+							minimumsize = {{ 480 -1 }}
+							maximumsize = {{ 480 -1 }}
+							text = "sg_law_benefit_{lid}"
+						}}
+						textbox = {{
+							autoresize = yes
+							multiline = yes
+							align = left|nobaseline
+							using = fontsize_small
+							default_format = "#warning"
+							minimumsize = {{ 480 -1 }}
+							maximumsize = {{ 480 -1 }}
+							text = "sg_law_risk_{lid}"
+						}}
+					}}
+				}}"""
+        )
+    return "".join(branches)
 
 
 def build() -> str:

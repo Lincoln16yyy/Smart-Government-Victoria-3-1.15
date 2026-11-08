@@ -234,8 +234,9 @@ class RuntimeSurfaceTests(unittest.TestCase):
         )
         self.assertNotIn('default_format = "#P"', self.gui)
         self.assertIn('default_format = "#positive_value"', self.gui)
-        self.assertIn("raw_text = \"[SelectLocalization(", self.gui)
         self.assertIn("raw_text = \"[JournalEntry.GetCountry", self.gui)
+        self.assertNotIn("EqualTo_int32(", self.gui)
+        self.assertIn("_law_law_mass_conscription_visible_sgui", self.gui)
 
     def test_every_law_has_bilingual_generated_explanations_and_tooltip_keys(self) -> None:
         for law in LAWS:

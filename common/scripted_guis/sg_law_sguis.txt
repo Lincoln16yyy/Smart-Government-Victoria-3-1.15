@@ -16,6 +16,21 @@ sg_ignore_law_law_mass_conscription_sgui = {
 	effect = { sg_ignore_law_law_mass_conscription = yes }
 }
 
+sg_top_1_law_law_mass_conscription_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 70 }
+}
+
+sg_top_2_law_law_mass_conscription_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 70 }
+}
+
+sg_top_3_law_law_mass_conscription_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 70 }
+}
+
 sg_enact_law_law_national_militia_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -28,6 +43,21 @@ sg_ignore_law_law_national_militia_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_national_militia = yes }
+}
+
+sg_top_1_law_law_national_militia_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 80 }
+}
+
+sg_top_2_law_law_national_militia_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 80 }
+}
+
+sg_top_3_law_law_national_militia_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 80 }
 }
 
 sg_enact_law_law_peasant_levies_sgui = {
@@ -44,6 +74,21 @@ sg_ignore_law_law_peasant_levies_sgui = {
 	effect = { sg_ignore_law_law_peasant_levies = yes }
 }
 
+sg_top_1_law_law_peasant_levies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 99 }
+}
+
+sg_top_2_law_law_peasant_levies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 99 }
+}
+
+sg_top_3_law_law_peasant_levies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 99 }
+}
+
 sg_enact_law_law_professional_army_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -56,6 +101,21 @@ sg_ignore_law_law_professional_army_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_professional_army = yes }
+}
+
+sg_top_1_law_law_professional_army_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 107 }
+}
+
+sg_top_2_law_law_professional_army_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 107 }
+}
+
+sg_top_3_law_law_professional_army_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 107 }
 }
 
 sg_enact_law_law_revolutionary_guard_sgui = {
@@ -72,6 +132,21 @@ sg_ignore_law_law_revolutionary_guard_sgui = {
 	effect = { sg_ignore_law_law_revolutionary_guard = yes }
 }
 
+sg_top_1_law_law_revolutionary_guard_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 118 }
+}
+
+sg_top_2_law_law_revolutionary_guard_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 118 }
+}
+
+sg_top_3_law_law_revolutionary_guard_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 118 }
+}
+
 sg_enact_law_law_warrior_caste_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -84,6 +159,21 @@ sg_ignore_law_law_warrior_caste_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_warrior_caste = yes }
+}
+
+sg_top_1_law_law_warrior_caste_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 142 }
+}
+
+sg_top_2_law_law_warrior_caste_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 142 }
+}
+
+sg_top_3_law_law_warrior_caste_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 142 }
 }
 
 sg_enact_law_law_appointed_bureaucrats_sgui = {
@@ -100,6 +190,21 @@ sg_ignore_law_law_appointed_bureaucrats_sgui = {
 	effect = { sg_ignore_law_law_appointed_bureaucrats = yes }
 }
 
+sg_top_1_law_law_appointed_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 5 }
+}
+
+sg_top_2_law_law_appointed_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 5 }
+}
+
+sg_top_3_law_law_appointed_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 5 }
+}
+
 sg_enact_law_law_communal_administration_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -112,6 +217,21 @@ sg_ignore_law_law_communal_administration_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_communal_administration = yes }
+}
+
+sg_top_1_law_law_communal_administration_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 25 }
+}
+
+sg_top_2_law_law_communal_administration_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 25 }
+}
+
+sg_top_3_law_law_communal_administration_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 25 }
 }
 
 sg_enact_law_law_crownland_diets_sgui = {
@@ -128,6 +248,21 @@ sg_ignore_law_law_crownland_diets_sgui = {
 	effect = { sg_ignore_law_law_crownland_diets = yes }
 }
 
+sg_top_1_law_law_crownland_diets_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 32 }
+}
+
+sg_top_2_law_law_crownland_diets_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 32 }
+}
+
+sg_top_3_law_law_crownland_diets_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 32 }
+}
+
 sg_enact_law_law_elected_bureaucrats_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -140,6 +275,21 @@ sg_ignore_law_law_elected_bureaucrats_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_elected_bureaucrats = yes }
+}
+
+sg_top_1_law_law_elected_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 38 }
+}
+
+sg_top_2_law_law_elected_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 38 }
+}
+
+sg_top_3_law_law_elected_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 38 }
 }
 
 sg_enact_law_law_hereditary_bureaucrats_sgui = {
@@ -156,6 +306,21 @@ sg_ignore_law_law_hereditary_bureaucrats_sgui = {
 	effect = { sg_ignore_law_law_hereditary_bureaucrats = yes }
 }
 
+sg_top_1_law_law_hereditary_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 50 }
+}
+
+sg_top_2_law_law_hereditary_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 50 }
+}
+
+sg_top_3_law_law_hereditary_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 50 }
+}
+
 sg_enact_law_law_military_bureaucrats_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -168,6 +333,21 @@ sg_ignore_law_law_military_bureaucrats_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_military_bureaucrats = yes }
+}
+
+sg_top_1_law_law_military_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 75 }
+}
+
+sg_top_2_law_law_military_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 75 }
+}
+
+sg_top_3_law_law_military_bureaucrats_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 75 }
 }
 
 sg_enact_law_law_affirmative_action_sgui = {
@@ -184,6 +364,21 @@ sg_ignore_law_law_affirmative_action_sgui = {
 	effect = { sg_ignore_law_law_affirmative_action = yes }
 }
 
+sg_top_1_law_law_affirmative_action_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 1 }
+}
+
+sg_top_2_law_law_affirmative_action_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 1 }
+}
+
+sg_top_3_law_law_affirmative_action_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 1 }
+}
+
 sg_enact_law_law_hindu_caste_codified_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -196,6 +391,21 @@ sg_ignore_law_law_hindu_caste_codified_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_hindu_caste_codified = yes }
+}
+
+sg_top_1_law_law_hindu_caste_codified_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 51 }
+}
+
+sg_top_2_law_law_hindu_caste_codified_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 51 }
+}
+
+sg_top_3_law_law_hindu_caste_codified_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 51 }
 }
 
 sg_enact_law_law_hindu_caste_enforced_sgui = {
@@ -212,6 +422,21 @@ sg_ignore_law_law_hindu_caste_enforced_sgui = {
 	effect = { sg_ignore_law_law_hindu_caste_enforced = yes }
 }
 
+sg_top_1_law_law_hindu_caste_enforced_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 52 }
+}
+
+sg_top_2_law_law_hindu_caste_enforced_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 52 }
+}
+
+sg_top_3_law_law_hindu_caste_enforced_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 52 }
+}
+
 sg_enact_law_law_hindu_caste_not_enforced_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -224,6 +449,21 @@ sg_ignore_law_law_hindu_caste_not_enforced_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_hindu_caste_not_enforced = yes }
+}
+
+sg_top_1_law_law_hindu_caste_not_enforced_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 53 }
+}
+
+sg_top_2_law_law_hindu_caste_not_enforced_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 53 }
+}
+
+sg_top_3_law_law_hindu_caste_not_enforced_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 53 }
 }
 
 sg_enact_law_law_child_labor_allowed_sgui = {
@@ -240,6 +480,21 @@ sg_ignore_law_law_child_labor_allowed_sgui = {
 	effect = { sg_ignore_law_law_child_labor_allowed = yes }
 }
 
+sg_top_1_law_law_child_labor_allowed_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 15 }
+}
+
+sg_top_2_law_law_child_labor_allowed_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 15 }
+}
+
+sg_top_3_law_law_child_labor_allowed_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 15 }
+}
+
 sg_enact_law_law_compulsory_primary_school_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -252,6 +507,21 @@ sg_ignore_law_law_compulsory_primary_school_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_compulsory_primary_school = yes }
+}
+
+sg_top_1_law_law_compulsory_primary_school_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 26 }
+}
+
+sg_top_2_law_law_compulsory_primary_school_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 26 }
+}
+
+sg_top_3_law_law_compulsory_primary_school_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 26 }
 }
 
 sg_enact_law_law_restricted_child_labor_sgui = {
@@ -268,6 +538,21 @@ sg_ignore_law_law_restricted_child_labor_sgui = {
 	effect = { sg_ignore_law_law_restricted_child_labor = yes }
 }
 
+sg_top_1_law_law_restricted_child_labor_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 117 }
+}
+
+sg_top_2_law_law_restricted_child_labor_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 117 }
+}
+
+sg_top_3_law_law_restricted_child_labor_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 117 }
+}
+
 sg_enact_law_law_caesaropapism_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -280,6 +565,21 @@ sg_ignore_law_law_caesaropapism_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_caesaropapism = yes }
+}
+
+sg_top_1_law_law_caesaropapism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 8 }
+}
+
+sg_top_2_law_law_caesaropapism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 8 }
+}
+
+sg_top_3_law_law_caesaropapism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 8 }
 }
 
 sg_enact_law_law_freedom_of_conscience_sgui = {
@@ -296,6 +596,21 @@ sg_ignore_law_law_freedom_of_conscience_sgui = {
 	effect = { sg_ignore_law_law_freedom_of_conscience = yes }
 }
 
+sg_top_1_law_law_freedom_of_conscience_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 45 }
+}
+
+sg_top_2_law_law_freedom_of_conscience_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 45 }
+}
+
+sg_top_3_law_law_freedom_of_conscience_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 45 }
+}
+
 sg_enact_law_law_millet_system_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -308,6 +623,21 @@ sg_ignore_law_law_millet_system_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_millet_system = yes }
+}
+
+sg_top_1_law_law_millet_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 76 }
+}
+
+sg_top_2_law_law_millet_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 76 }
+}
+
+sg_top_3_law_law_millet_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 76 }
 }
 
 sg_enact_law_law_people_of_the_book_sgui = {
@@ -324,6 +654,21 @@ sg_ignore_law_law_people_of_the_book_sgui = {
 	effect = { sg_ignore_law_law_people_of_the_book = yes }
 }
 
+sg_top_1_law_law_people_of_the_book_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 101 }
+}
+
+sg_top_2_law_law_people_of_the_book_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 101 }
+}
+
+sg_top_3_law_law_people_of_the_book_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 101 }
+}
+
 sg_enact_law_law_state_atheism_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -336,6 +681,21 @@ sg_ignore_law_law_state_atheism_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_state_atheism = yes }
+}
+
+sg_top_1_law_law_state_atheism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 129 }
+}
+
+sg_top_2_law_law_state_atheism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 129 }
+}
+
+sg_top_3_law_law_state_atheism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 129 }
 }
 
 sg_enact_law_law_state_religion_sgui = {
@@ -352,6 +712,21 @@ sg_ignore_law_law_state_religion_sgui = {
 	effect = { sg_ignore_law_law_state_religion = yes }
 }
 
+sg_top_1_law_law_state_religion_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 130 }
+}
+
+sg_top_2_law_law_state_religion_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 130 }
+}
+
+sg_top_3_law_law_state_religion_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 130 }
+}
+
 sg_enact_law_law_total_separation_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -364,6 +739,21 @@ sg_ignore_law_law_total_separation_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_total_separation = yes }
+}
+
+sg_top_1_law_law_total_separation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 138 }
+}
+
+sg_top_2_law_law_total_separation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 138 }
+}
+
+sg_top_3_law_law_total_separation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 138 }
 }
 
 sg_enact_law_law_cultural_exclusion_sgui = {
@@ -380,6 +770,21 @@ sg_ignore_law_law_cultural_exclusion_sgui = {
 	effect = { sg_ignore_law_law_cultural_exclusion = yes }
 }
 
+sg_top_1_law_law_cultural_exclusion_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 33 }
+}
+
+sg_top_2_law_law_cultural_exclusion_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 33 }
+}
+
+sg_top_3_law_law_cultural_exclusion_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 33 }
+}
+
 sg_enact_law_law_ethnostate_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -392,6 +797,21 @@ sg_ignore_law_law_ethnostate_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_ethnostate = yes }
+}
+
+sg_top_1_law_law_ethnostate_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 39 }
+}
+
+sg_top_2_law_law_ethnostate_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 39 }
+}
+
+sg_top_3_law_law_ethnostate_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 39 }
 }
 
 sg_enact_law_law_multicultural_sgui = {
@@ -408,6 +828,21 @@ sg_ignore_law_law_multicultural_sgui = {
 	effect = { sg_ignore_law_law_multicultural = yes }
 }
 
+sg_top_1_law_law_multicultural_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 78 }
+}
+
+sg_top_2_law_law_multicultural_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 78 }
+}
+
+sg_top_3_law_law_multicultural_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 78 }
+}
+
 sg_enact_law_law_national_supremacy_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -420,6 +855,21 @@ sg_ignore_law_law_national_supremacy_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_national_supremacy = yes }
+}
+
+sg_top_1_law_law_national_supremacy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 81 }
+}
+
+sg_top_2_law_law_national_supremacy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 81 }
+}
+
+sg_top_3_law_law_national_supremacy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 81 }
 }
 
 sg_enact_law_law_official_nationality_sgui = {
@@ -436,6 +886,21 @@ sg_ignore_law_law_official_nationality_sgui = {
 	effect = { sg_ignore_law_law_official_nationality = yes }
 }
 
+sg_top_1_law_law_official_nationality_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 92 }
+}
+
+sg_top_2_law_law_official_nationality_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 92 }
+}
+
+sg_top_3_law_law_official_nationality_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 92 }
+}
+
 sg_enact_law_law_racial_segregation_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -448,6 +913,21 @@ sg_ignore_law_law_racial_segregation_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_racial_segregation = yes }
+}
+
+sg_top_1_law_law_racial_segregation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 114 }
+}
+
+sg_top_2_law_law_racial_segregation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 114 }
+}
+
+sg_top_3_law_law_racial_segregation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 114 }
 }
 
 sg_enact_law_law_subjecthood_sgui = {
@@ -464,6 +944,21 @@ sg_ignore_law_law_subjecthood_sgui = {
 	effect = { sg_ignore_law_law_subjecthood = yes }
 }
 
+sg_top_1_law_law_subjecthood_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 132 }
+}
+
+sg_top_2_law_law_subjecthood_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 132 }
+}
+
+sg_top_3_law_law_subjecthood_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 132 }
+}
+
 sg_enact_law_law_colonial_exploitation_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -476,6 +971,21 @@ sg_ignore_law_law_colonial_exploitation_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_colonial_exploitation = yes }
+}
+
+sg_top_1_law_law_colonial_exploitation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 19 }
+}
+
+sg_top_2_law_law_colonial_exploitation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 19 }
+}
+
+sg_top_3_law_law_colonial_exploitation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 19 }
 }
 
 sg_enact_law_law_colonial_resettlement_sgui = {
@@ -492,6 +1002,21 @@ sg_ignore_law_law_colonial_resettlement_sgui = {
 	effect = { sg_ignore_law_law_colonial_resettlement = yes }
 }
 
+sg_top_1_law_law_colonial_resettlement_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 20 }
+}
+
+sg_top_2_law_law_colonial_resettlement_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 20 }
+}
+
+sg_top_3_law_law_colonial_resettlement_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 20 }
+}
+
 sg_enact_law_law_frontier_colonization_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -504,6 +1029,21 @@ sg_ignore_law_law_frontier_colonization_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_frontier_colonization = yes }
+}
+
+sg_top_1_law_law_frontier_colonization_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 46 }
+}
+
+sg_top_2_law_law_frontier_colonization_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 46 }
+}
+
+sg_top_3_law_law_frontier_colonization_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 46 }
 }
 
 sg_enact_law_law_internal_colonization_sgui = {
@@ -520,6 +1060,21 @@ sg_ignore_law_law_internal_colonization_sgui = {
 	effect = { sg_ignore_law_law_internal_colonization = yes }
 }
 
+sg_top_1_law_law_internal_colonization_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 57 }
+}
+
+sg_top_2_law_law_internal_colonization_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 57 }
+}
+
+sg_top_3_law_law_internal_colonization_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 57 }
+}
+
 sg_enact_law_law_no_colonial_affairs_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -532,6 +1087,21 @@ sg_ignore_law_law_no_colonial_affairs_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_no_colonial_affairs = yes }
+}
+
+sg_top_1_law_law_no_colonial_affairs_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 83 }
+}
+
+sg_top_2_law_law_no_colonial_affairs_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 83 }
+}
+
+sg_top_3_law_law_no_colonial_affairs_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 83 }
 }
 
 sg_enact_law_law_anarchy_sgui = {
@@ -548,6 +1118,21 @@ sg_ignore_law_law_anarchy_sgui = {
 	effect = { sg_ignore_law_law_anarchy = yes }
 }
 
+sg_top_1_law_law_anarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 3 }
+}
+
+sg_top_2_law_law_anarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 3 }
+}
+
+sg_top_3_law_law_anarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 3 }
+}
+
 sg_enact_law_law_autocracy_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -560,6 +1145,21 @@ sg_ignore_law_law_autocracy_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_autocracy = yes }
+}
+
+sg_top_1_law_law_autocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 6 }
+}
+
+sg_top_2_law_law_autocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 6 }
+}
+
+sg_top_3_law_law_autocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 6 }
 }
 
 sg_enact_law_law_bakufu_sgui = {
@@ -576,6 +1176,21 @@ sg_ignore_law_law_bakufu_sgui = {
 	effect = { sg_ignore_law_law_bakufu = yes }
 }
 
+sg_top_1_law_law_bakufu_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 7 }
+}
+
+sg_top_2_law_law_bakufu_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 7 }
+}
+
+sg_top_3_law_law_bakufu_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 7 }
+}
+
 sg_enact_law_law_census_voting_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -588,6 +1203,21 @@ sg_ignore_law_law_census_voting_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_census_voting = yes }
+}
+
+sg_top_1_law_law_census_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 11 }
+}
+
+sg_top_2_law_law_census_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 11 }
+}
+
+sg_top_3_law_law_census_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 11 }
 }
 
 sg_enact_law_law_elder_council_sgui = {
@@ -604,6 +1234,21 @@ sg_ignore_law_law_elder_council_sgui = {
 	effect = { sg_ignore_law_law_elder_council = yes }
 }
 
+sg_top_1_law_law_elder_council_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 37 }
+}
+
+sg_top_2_law_law_elder_council_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 37 }
+}
+
+sg_top_3_law_law_elder_council_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 37 }
+}
+
 sg_enact_law_law_labour_suffrage_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -616,6 +1261,21 @@ sg_ignore_law_law_labour_suffrage_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_labour_suffrage = yes }
+}
+
+sg_top_1_law_law_labour_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 61 }
+}
+
+sg_top_2_law_law_labour_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 61 }
+}
+
+sg_top_3_law_law_labour_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 61 }
 }
 
 sg_enact_law_law_landed_voting_sgui = {
@@ -632,6 +1292,21 @@ sg_ignore_law_law_landed_voting_sgui = {
 	effect = { sg_ignore_law_law_landed_voting = yes }
 }
 
+sg_top_1_law_law_landed_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 64 }
+}
+
+sg_top_2_law_law_landed_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 64 }
+}
+
+sg_top_3_law_law_landed_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 64 }
+}
+
 sg_enact_law_law_neo_absolutism_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -644,6 +1319,21 @@ sg_ignore_law_law_neo_absolutism_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_neo_absolutism = yes }
+}
+
+sg_top_1_law_law_neo_absolutism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 82 }
+}
+
+sg_top_2_law_law_neo_absolutism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 82 }
+}
+
+sg_top_3_law_law_neo_absolutism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 82 }
 }
 
 sg_enact_law_law_oligarchy_sgui = {
@@ -660,6 +1350,21 @@ sg_ignore_law_law_oligarchy_sgui = {
 	effect = { sg_ignore_law_law_oligarchy = yes }
 }
 
+sg_top_1_law_law_oligarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 95 }
+}
+
+sg_top_2_law_law_oligarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 95 }
+}
+
+sg_top_3_law_law_oligarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 95 }
+}
+
 sg_enact_law_law_organic_regulation_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -672,6 +1377,21 @@ sg_ignore_law_law_organic_regulation_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_organic_regulation = yes }
+}
+
+sg_top_1_law_law_organic_regulation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 96 }
+}
+
+sg_top_2_law_law_organic_regulation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 96 }
+}
+
+sg_top_3_law_law_organic_regulation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 96 }
 }
 
 sg_enact_law_law_single_party_state_sgui = {
@@ -688,6 +1408,21 @@ sg_ignore_law_law_single_party_state_sgui = {
 	effect = { sg_ignore_law_law_single_party_state = yes }
 }
 
+sg_top_1_law_law_single_party_state_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 125 }
+}
+
+sg_top_2_law_law_single_party_state_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 125 }
+}
+
+sg_top_3_law_law_single_party_state_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 125 }
+}
+
 sg_enact_law_law_technocracy_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -700,6 +1435,21 @@ sg_ignore_law_law_technocracy_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_technocracy = yes }
+}
+
+sg_top_1_law_law_technocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 133 }
+}
+
+sg_top_2_law_law_technocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 133 }
+}
+
+sg_top_3_law_law_technocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 133 }
 }
 
 sg_enact_law_law_universal_suffrage_sgui = {
@@ -716,6 +1466,21 @@ sg_ignore_law_law_universal_suffrage_sgui = {
 	effect = { sg_ignore_law_law_universal_suffrage = yes }
 }
 
+sg_top_1_law_law_universal_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 140 }
+}
+
+sg_top_2_law_law_universal_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 140 }
+}
+
+sg_top_3_law_law_universal_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 140 }
+}
+
 sg_enact_law_law_wealth_voting_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -728,6 +1493,21 @@ sg_ignore_law_law_wealth_voting_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_wealth_voting = yes }
+}
+
+sg_top_1_law_law_wealth_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 143 }
+}
+
+sg_top_2_law_law_wealth_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 143 }
+}
+
+sg_top_3_law_law_wealth_voting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 143 }
 }
 
 sg_enact_law_law_agrarianism_sgui = {
@@ -744,6 +1524,21 @@ sg_ignore_law_law_agrarianism_sgui = {
 	effect = { sg_ignore_law_law_agrarianism = yes }
 }
 
+sg_top_1_law_law_agrarianism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 2 }
+}
+
+sg_top_2_law_law_agrarianism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 2 }
+}
+
+sg_top_3_law_law_agrarianism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 2 }
+}
+
 sg_enact_law_law_command_economy_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -756,6 +1551,21 @@ sg_ignore_law_law_command_economy_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_command_economy = yes }
+}
+
+sg_top_1_law_law_command_economy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 23 }
+}
+
+sg_top_2_law_law_command_economy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 23 }
+}
+
+sg_top_3_law_law_command_economy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 23 }
 }
 
 sg_enact_law_law_cooperative_ownership_sgui = {
@@ -772,6 +1582,21 @@ sg_ignore_law_law_cooperative_ownership_sgui = {
 	effect = { sg_ignore_law_law_cooperative_ownership = yes }
 }
 
+sg_top_1_law_law_cooperative_ownership_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 28 }
+}
+
+sg_top_2_law_law_cooperative_ownership_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 28 }
+}
+
+sg_top_3_law_law_cooperative_ownership_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 28 }
+}
+
 sg_enact_law_law_extraction_economy_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -784,6 +1609,21 @@ sg_ignore_law_law_extraction_economy_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_extraction_economy = yes }
+}
+
+sg_top_1_law_law_extraction_economy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 41 }
+}
+
+sg_top_2_law_law_extraction_economy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 41 }
+}
+
+sg_top_3_law_law_extraction_economy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 41 }
 }
 
 sg_enact_law_law_industry_banned_sgui = {
@@ -800,6 +1640,21 @@ sg_ignore_law_law_industry_banned_sgui = {
 	effect = { sg_ignore_law_law_industry_banned = yes }
 }
 
+sg_top_1_law_law_industry_banned_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 55 }
+}
+
+sg_top_2_law_law_industry_banned_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 55 }
+}
+
+sg_top_3_law_law_industry_banned_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 55 }
+}
+
 sg_enact_law_law_interventionism_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -812,6 +1667,21 @@ sg_ignore_law_law_interventionism_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_interventionism = yes }
+}
+
+sg_top_1_law_law_interventionism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 58 }
+}
+
+sg_top_2_law_law_interventionism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 58 }
+}
+
+sg_top_3_law_law_interventionism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 58 }
 }
 
 sg_enact_law_law_laissez_faire_sgui = {
@@ -828,6 +1698,21 @@ sg_ignore_law_law_laissez_faire_sgui = {
 	effect = { sg_ignore_law_law_laissez_faire = yes }
 }
 
+sg_top_1_law_law_laissez_faire_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 62 }
+}
+
+sg_top_2_law_law_laissez_faire_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 62 }
+}
+
+sg_top_3_law_law_laissez_faire_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 62 }
+}
+
 sg_enact_law_law_traditionalism_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -840,6 +1725,21 @@ sg_ignore_law_law_traditionalism_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_traditionalism = yes }
+}
+
+sg_top_1_law_law_traditionalism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 139 }
+}
+
+sg_top_2_law_law_traditionalism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 139 }
+}
+
+sg_top_3_law_law_traditionalism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 139 }
 }
 
 sg_enact_law_law_intermediate_edo_system_sgui = {
@@ -856,6 +1756,21 @@ sg_ignore_law_law_intermediate_edo_system_sgui = {
 	effect = { sg_ignore_law_law_intermediate_edo_system = yes }
 }
 
+sg_top_1_law_law_intermediate_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 56 }
+}
+
+sg_top_2_law_law_intermediate_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 56 }
+}
+
+sg_top_3_law_law_intermediate_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 56 }
+}
+
 sg_enact_law_law_lax_edo_system_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -868,6 +1783,21 @@ sg_ignore_law_law_lax_edo_system_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_lax_edo_system = yes }
+}
+
+sg_top_1_law_law_lax_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 66 }
+}
+
+sg_top_2_law_law_lax_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 66 }
+}
+
+sg_top_3_law_law_lax_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 66 }
 }
 
 sg_enact_law_law_strict_edo_system_sgui = {
@@ -884,6 +1814,21 @@ sg_ignore_law_law_strict_edo_system_sgui = {
 	effect = { sg_ignore_law_law_strict_edo_system = yes }
 }
 
+sg_top_1_law_law_strict_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 131 }
+}
+
+sg_top_2_law_law_strict_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 131 }
+}
+
+sg_top_3_law_law_strict_edo_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 131 }
+}
+
 sg_enact_law_law_no_schools_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -896,6 +1841,21 @@ sg_ignore_law_law_no_schools_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_no_schools = yes }
+}
+
+sg_top_1_law_law_no_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 88 }
+}
+
+sg_top_2_law_law_no_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 88 }
+}
+
+sg_top_3_law_law_no_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 88 }
 }
 
 sg_enact_law_law_private_schools_sgui = {
@@ -912,6 +1872,21 @@ sg_ignore_law_law_private_schools_sgui = {
 	effect = { sg_ignore_law_law_private_schools = yes }
 }
 
+sg_top_1_law_law_private_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 106 }
+}
+
+sg_top_2_law_law_private_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 106 }
+}
+
+sg_top_3_law_law_private_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 106 }
+}
+
 sg_enact_law_law_public_schools_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -924,6 +1899,21 @@ sg_ignore_law_law_public_schools_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_public_schools = yes }
+}
+
+sg_top_1_law_law_public_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 113 }
+}
+
+sg_top_2_law_law_public_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 113 }
+}
+
+sg_top_3_law_law_public_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 113 }
 }
 
 sg_enact_law_law_religious_schools_sgui = {
@@ -940,6 +1930,21 @@ sg_ignore_law_law_religious_schools_sgui = {
 	effect = { sg_ignore_law_law_religious_schools = yes }
 }
 
+sg_top_1_law_law_religious_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 116 }
+}
+
+sg_top_2_law_law_religious_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 116 }
+}
+
+sg_top_3_law_law_religious_schools_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 116 }
+}
+
 sg_enact_law_law_terakoya_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -952,6 +1957,21 @@ sg_ignore_law_law_terakoya_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_terakoya = yes }
+}
+
+sg_top_1_law_law_terakoya_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 135 }
+}
+
+sg_top_2_law_law_terakoya_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 135 }
+}
+
+sg_top_3_law_law_terakoya_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 135 }
 }
 
 sg_enact_law_law_censorship_sgui = {
@@ -968,6 +1988,21 @@ sg_ignore_law_law_censorship_sgui = {
 	effect = { sg_ignore_law_law_censorship = yes }
 }
 
+sg_top_1_law_law_censorship_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 10 }
+}
+
+sg_top_2_law_law_censorship_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 10 }
+}
+
+sg_top_3_law_law_censorship_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 10 }
+}
+
 sg_enact_law_law_outlawed_dissent_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -980,6 +2015,21 @@ sg_ignore_law_law_outlawed_dissent_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_outlawed_dissent = yes }
+}
+
+sg_top_1_law_law_outlawed_dissent_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 97 }
+}
+
+sg_top_2_law_law_outlawed_dissent_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 97 }
+}
+
+sg_top_3_law_law_outlawed_dissent_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 97 }
 }
 
 sg_enact_law_law_protected_speech_sgui = {
@@ -996,6 +2046,21 @@ sg_ignore_law_law_protected_speech_sgui = {
 	effect = { sg_ignore_law_law_protected_speech = yes }
 }
 
+sg_top_1_law_law_protected_speech_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 110 }
+}
+
+sg_top_2_law_law_protected_speech_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 110 }
+}
+
+sg_top_3_law_law_protected_speech_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 110 }
+}
+
 sg_enact_law_law_right_of_assembly_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1008,6 +2073,21 @@ sg_ignore_law_law_right_of_assembly_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_right_of_assembly = yes }
+}
+
+sg_top_1_law_law_right_of_assembly_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 119 }
+}
+
+sg_top_2_law_law_right_of_assembly_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 119 }
+}
+
+sg_top_3_law_law_right_of_assembly_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 119 }
 }
 
 sg_enact_law_law_chiefdom_sgui = {
@@ -1024,6 +2104,21 @@ sg_ignore_law_law_chiefdom_sgui = {
 	effect = { sg_ignore_law_law_chiefdom = yes }
 }
 
+sg_top_1_law_law_chiefdom_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 13 }
+}
+
+sg_top_2_law_law_chiefdom_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 13 }
+}
+
+sg_top_3_law_law_chiefdom_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 13 }
+}
+
 sg_enact_law_law_colonial_administration_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1036,6 +2131,21 @@ sg_ignore_law_law_colonial_administration_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_colonial_administration = yes }
+}
+
+sg_top_1_law_law_colonial_administration_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 18 }
+}
+
+sg_top_2_law_law_colonial_administration_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 18 }
+}
+
+sg_top_3_law_law_colonial_administration_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 18 }
 }
 
 sg_enact_law_law_corporate_state_sgui = {
@@ -1052,6 +2162,21 @@ sg_ignore_law_law_corporate_state_sgui = {
 	effect = { sg_ignore_law_law_corporate_state = yes }
 }
 
+sg_top_1_law_law_corporate_state_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 29 }
+}
+
+sg_top_2_law_law_corporate_state_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 29 }
+}
+
+sg_top_3_law_law_corporate_state_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 29 }
+}
+
 sg_enact_law_law_council_republic_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1064,6 +2189,21 @@ sg_ignore_law_law_council_republic_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_council_republic = yes }
+}
+
+sg_top_1_law_law_council_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 31 }
+}
+
+sg_top_2_law_law_council_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 31 }
+}
+
+sg_top_3_law_law_council_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 31 }
 }
 
 sg_enact_law_law_monarchy_sgui = {
@@ -1080,6 +2220,21 @@ sg_ignore_law_law_monarchy_sgui = {
 	effect = { sg_ignore_law_law_monarchy = yes }
 }
 
+sg_top_1_law_law_monarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 77 }
+}
+
+sg_top_2_law_law_monarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 77 }
+}
+
+sg_top_3_law_law_monarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 77 }
+}
+
 sg_enact_law_law_parliamentary_republic_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1092,6 +2247,21 @@ sg_ignore_law_law_parliamentary_republic_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_parliamentary_republic = yes }
+}
+
+sg_top_1_law_law_parliamentary_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 98 }
+}
+
+sg_top_2_law_law_parliamentary_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 98 }
+}
+
+sg_top_3_law_law_parliamentary_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 98 }
 }
 
 sg_enact_law_law_presidential_republic_sgui = {
@@ -1108,6 +2278,21 @@ sg_ignore_law_law_presidential_republic_sgui = {
 	effect = { sg_ignore_law_law_presidential_republic = yes }
 }
 
+sg_top_1_law_law_presidential_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 104 }
+}
+
+sg_top_2_law_law_presidential_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 104 }
+}
+
+sg_top_3_law_law_presidential_republic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 104 }
+}
+
 sg_enact_law_law_social_monarchy_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1120,6 +2305,21 @@ sg_ignore_law_law_social_monarchy_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_social_monarchy = yes }
+}
+
+sg_top_1_law_law_social_monarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 128 }
+}
+
+sg_top_2_law_law_social_monarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 128 }
+}
+
+sg_top_3_law_law_social_monarchy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 128 }
 }
 
 sg_enact_law_law_theocracy_sgui = {
@@ -1136,6 +2336,21 @@ sg_ignore_law_law_theocracy_sgui = {
 	effect = { sg_ignore_law_law_theocracy = yes }
 }
 
+sg_top_1_law_law_theocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 136 }
+}
+
+sg_top_2_law_law_theocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 136 }
+}
+
+sg_top_3_law_law_theocracy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 136 }
+}
+
 sg_enact_law_law_charitable_health_system_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1148,6 +2363,21 @@ sg_ignore_law_law_charitable_health_system_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_charitable_health_system = yes }
+}
+
+sg_top_1_law_law_charitable_health_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 12 }
+}
+
+sg_top_2_law_law_charitable_health_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 12 }
+}
+
+sg_top_3_law_law_charitable_health_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 12 }
 }
 
 sg_enact_law_law_no_health_system_sgui = {
@@ -1164,6 +2394,21 @@ sg_ignore_law_law_no_health_system_sgui = {
 	effect = { sg_ignore_law_law_no_health_system = yes }
 }
 
+sg_top_1_law_law_no_health_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 84 }
+}
+
+sg_top_2_law_law_no_health_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 84 }
+}
+
+sg_top_3_law_law_no_health_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 84 }
+}
+
 sg_enact_law_law_private_health_insurance_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1176,6 +2421,21 @@ sg_ignore_law_law_private_health_insurance_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_private_health_insurance = yes }
+}
+
+sg_top_1_law_law_private_health_insurance_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 105 }
+}
+
+sg_top_2_law_law_private_health_insurance_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 105 }
+}
+
+sg_top_3_law_law_private_health_insurance_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 105 }
 }
 
 sg_enact_law_law_public_health_insurance_sgui = {
@@ -1192,6 +2452,21 @@ sg_ignore_law_law_public_health_insurance_sgui = {
 	effect = { sg_ignore_law_law_public_health_insurance = yes }
 }
 
+sg_top_1_law_law_public_health_insurance_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 112 }
+}
+
+sg_top_2_law_law_public_health_insurance_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 112 }
+}
+
+sg_top_3_law_law_public_health_insurance_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 112 }
+}
+
 sg_enact_law_law_extraordinary_commission_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1204,6 +2479,21 @@ sg_ignore_law_law_extraordinary_commission_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_extraordinary_commission = yes }
+}
+
+sg_top_1_law_law_extraordinary_commission_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 42 }
+}
+
+sg_top_2_law_law_extraordinary_commission_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 42 }
+}
+
+sg_top_3_law_law_extraordinary_commission_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 42 }
 }
 
 sg_enact_law_law_guaranteed_liberties_sgui = {
@@ -1220,6 +2510,21 @@ sg_ignore_law_law_guaranteed_liberties_sgui = {
 	effect = { sg_ignore_law_law_guaranteed_liberties = yes }
 }
 
+sg_top_1_law_law_guaranteed_liberties_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 48 }
+}
+
+sg_top_2_law_law_guaranteed_liberties_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 48 }
+}
+
+sg_top_3_law_law_guaranteed_liberties_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 48 }
+}
+
 sg_enact_law_law_national_guard_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1232,6 +2537,21 @@ sg_ignore_law_law_national_guard_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_national_guard = yes }
+}
+
+sg_top_1_law_law_national_guard_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 79 }
+}
+
+sg_top_2_law_law_national_guard_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 79 }
+}
+
+sg_top_3_law_law_national_guard_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 79 }
 }
 
 sg_enact_law_law_no_home_affairs_sgui = {
@@ -1248,6 +2568,21 @@ sg_ignore_law_law_no_home_affairs_sgui = {
 	effect = { sg_ignore_law_law_no_home_affairs = yes }
 }
 
+sg_top_1_law_law_no_home_affairs_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 85 }
+}
+
+sg_top_2_law_law_no_home_affairs_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 85 }
+}
+
+sg_top_3_law_law_no_home_affairs_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 85 }
+}
+
 sg_enact_law_law_okhrana_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1260,6 +2595,21 @@ sg_ignore_law_law_okhrana_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_okhrana = yes }
+}
+
+sg_top_1_law_law_okhrana_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 93 }
+}
+
+sg_top_2_law_law_okhrana_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 93 }
+}
+
+sg_top_3_law_law_okhrana_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 93 }
 }
 
 sg_enact_law_law_secret_police_sgui = {
@@ -1276,6 +2626,21 @@ sg_ignore_law_law_secret_police_sgui = {
 	effect = { sg_ignore_law_law_secret_police = yes }
 }
 
+sg_top_1_law_law_secret_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 122 }
+}
+
+sg_top_2_law_law_secret_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 122 }
+}
+
+sg_top_3_law_law_secret_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 122 }
+}
+
 sg_enact_law_law_shinsengumi_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1288,6 +2653,21 @@ sg_ignore_law_law_shinsengumi_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_shinsengumi = yes }
+}
+
+sg_top_1_law_law_shinsengumi_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 124 }
+}
+
+sg_top_2_law_law_shinsengumi_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 124 }
+}
+
+sg_top_3_law_law_shinsengumi_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 124 }
 }
 
 sg_enact_law_law_third_section_sgui = {
@@ -1304,6 +2684,21 @@ sg_ignore_law_law_third_section_sgui = {
 	effect = { sg_ignore_law_law_third_section = yes }
 }
 
+sg_top_1_law_law_third_section_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 137 }
+}
+
+sg_top_2_law_law_third_section_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 137 }
+}
+
+sg_top_3_law_law_third_section_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 137 }
+}
+
 sg_enact_law_law_no_workers_rights_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1316,6 +2711,21 @@ sg_ignore_law_law_no_workers_rights_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_no_workers_rights = yes }
+}
+
+sg_top_1_law_law_no_workers_rights_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 91 }
+}
+
+sg_top_2_law_law_no_workers_rights_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 91 }
+}
+
+sg_top_3_law_law_no_workers_rights_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 91 }
 }
 
 sg_enact_law_law_regulatory_bodies_sgui = {
@@ -1332,6 +2742,21 @@ sg_ignore_law_law_regulatory_bodies_sgui = {
 	effect = { sg_ignore_law_law_regulatory_bodies = yes }
 }
 
+sg_top_1_law_law_regulatory_bodies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 115 }
+}
+
+sg_top_2_law_law_regulatory_bodies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 115 }
+}
+
+sg_top_3_law_law_regulatory_bodies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 115 }
+}
+
 sg_enact_law_law_worker_protections_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1344,6 +2769,21 @@ sg_ignore_law_law_worker_protections_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_worker_protections = yes }
+}
+
+sg_top_1_law_law_worker_protections_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 148 }
+}
+
+sg_top_2_law_law_worker_protections_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 148 }
+}
+
+sg_top_3_law_law_worker_protections_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 148 }
 }
 
 sg_enact_law_law_anti_strike_laws_sgui = {
@@ -1360,6 +2800,21 @@ sg_ignore_law_law_anti_strike_laws_sgui = {
 	effect = { sg_ignore_law_law_anti_strike_laws = yes }
 }
 
+sg_top_1_law_law_anti_strike_laws_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 4 }
+}
+
+sg_top_2_law_law_anti_strike_laws_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 4 }
+}
+
+sg_top_3_law_law_anti_strike_laws_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 4 }
+}
+
 sg_enact_law_law_combination_acts_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1372,6 +2827,21 @@ sg_ignore_law_law_combination_acts_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_combination_acts = yes }
+}
+
+sg_top_1_law_law_combination_acts_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 22 }
+}
+
+sg_top_2_law_law_combination_acts_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 22 }
+}
+
+sg_top_3_law_law_combination_acts_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 22 }
 }
 
 sg_enact_law_law_corporatized_unions_sgui = {
@@ -1388,6 +2858,21 @@ sg_ignore_law_law_corporatized_unions_sgui = {
 	effect = { sg_ignore_law_law_corporatized_unions = yes }
 }
 
+sg_top_1_law_law_corporatized_unions_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 30 }
+}
+
+sg_top_2_law_law_corporatized_unions_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 30 }
+}
+
+sg_top_3_law_law_corporatized_unions_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 30 }
+}
+
 sg_enact_law_law_factory_councils_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1400,6 +2885,21 @@ sg_ignore_law_law_factory_councils_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_factory_councils = yes }
+}
+
+sg_top_1_law_law_factory_councils_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 43 }
+}
+
+sg_top_2_law_law_factory_councils_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 43 }
+}
+
+sg_top_3_law_law_factory_councils_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 43 }
 }
 
 sg_enact_law_law_guild_system_sgui = {
@@ -1416,6 +2916,21 @@ sg_ignore_law_law_guild_system_sgui = {
 	effect = { sg_ignore_law_law_guild_system = yes }
 }
 
+sg_top_1_law_law_guild_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 49 }
+}
+
+sg_top_2_law_law_guild_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 49 }
+}
+
+sg_top_3_law_law_guild_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 49 }
+}
+
 sg_enact_law_law_right_to_associate_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1428,6 +2943,21 @@ sg_ignore_law_law_right_to_associate_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_right_to_associate = yes }
+}
+
+sg_top_1_law_law_right_to_associate_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 120 }
+}
+
+sg_top_2_law_law_right_to_associate_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 120 }
+}
+
+sg_top_3_law_law_right_to_associate_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 120 }
 }
 
 sg_enact_law_law_collectivized_agriculture_sgui = {
@@ -1444,6 +2974,21 @@ sg_ignore_law_law_collectivized_agriculture_sgui = {
 	effect = { sg_ignore_law_law_collectivized_agriculture = yes }
 }
 
+sg_top_1_law_law_collectivized_agriculture_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 17 }
+}
+
+sg_top_2_law_law_collectivized_agriculture_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 17 }
+}
+
+sg_top_3_law_law_collectivized_agriculture_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 17 }
+}
+
 sg_enact_law_law_commercialized_agriculture_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1456,6 +3001,21 @@ sg_ignore_law_law_commercialized_agriculture_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_commercialized_agriculture = yes }
+}
+
+sg_top_1_law_law_commercialized_agriculture_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 24 }
+}
+
+sg_top_2_law_law_commercialized_agriculture_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 24 }
+}
+
+sg_top_3_law_law_commercialized_agriculture_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 24 }
 }
 
 sg_enact_law_law_expanded_latifundias_sgui = {
@@ -1472,6 +3032,21 @@ sg_ignore_law_law_expanded_latifundias_sgui = {
 	effect = { sg_ignore_law_law_expanded_latifundias = yes }
 }
 
+sg_top_1_law_law_expanded_latifundias_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 40 }
+}
+
+sg_top_2_law_law_expanded_latifundias_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 40 }
+}
+
+sg_top_3_law_law_expanded_latifundias_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 40 }
+}
+
 sg_enact_law_law_homesteading_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1484,6 +3059,21 @@ sg_ignore_law_law_homesteading_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_homesteading = yes }
+}
+
+sg_top_1_law_law_homesteading_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 54 }
+}
+
+sg_top_2_law_law_homesteading_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 54 }
+}
+
+sg_top_3_law_law_homesteading_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 54 }
 }
 
 sg_enact_law_law_latifundias_sgui = {
@@ -1500,6 +3090,21 @@ sg_ignore_law_law_latifundias_sgui = {
 	effect = { sg_ignore_law_law_latifundias = yes }
 }
 
+sg_top_1_law_law_latifundias_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 65 }
+}
+
+sg_top_2_law_law_latifundias_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 65 }
+}
+
+sg_top_3_law_law_latifundias_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 65 }
+}
+
 sg_enact_law_law_manorialism_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1512,6 +3117,21 @@ sg_ignore_law_law_manorialism_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_manorialism = yes }
+}
+
+sg_top_1_law_law_manorialism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 69 }
+}
+
+sg_top_2_law_law_manorialism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 69 }
+}
+
+sg_top_3_law_law_manorialism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 69 }
 }
 
 sg_enact_law_law_peasant_proprietorship_sgui = {
@@ -1528,6 +3148,21 @@ sg_ignore_law_law_peasant_proprietorship_sgui = {
 	effect = { sg_ignore_law_law_peasant_proprietorship = yes }
 }
 
+sg_top_1_law_law_peasant_proprietorship_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 100 }
+}
+
+sg_top_2_law_law_peasant_proprietorship_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 100 }
+}
+
+sg_top_3_law_law_peasant_proprietorship_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 100 }
+}
+
 sg_enact_law_law_serfdom_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1540,6 +3175,21 @@ sg_ignore_law_law_serfdom_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_serfdom = yes }
+}
+
+sg_top_1_law_law_serfdom_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 123 }
+}
+
+sg_top_2_law_law_serfdom_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 123 }
+}
+
+sg_top_3_law_law_serfdom_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 123 }
 }
 
 sg_enact_law_law_tenant_farmers_sgui = {
@@ -1556,6 +3206,21 @@ sg_ignore_law_law_tenant_farmers_sgui = {
 	effect = { sg_ignore_law_law_tenant_farmers = yes }
 }
 
+sg_top_1_law_law_tenant_farmers_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 134 }
+}
+
+sg_top_2_law_law_tenant_farmers_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 134 }
+}
+
+sg_top_3_law_law_tenant_farmers_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 134 }
+}
+
 sg_enact_law_law_closed_borders_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1568,6 +3233,21 @@ sg_ignore_law_law_closed_borders_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_closed_borders = yes }
+}
+
+sg_top_1_law_law_closed_borders_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 16 }
+}
+
+sg_top_2_law_law_closed_borders_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 16 }
+}
+
+sg_top_3_law_law_closed_borders_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 16 }
 }
 
 sg_enact_law_law_migration_controls_sgui = {
@@ -1584,6 +3264,21 @@ sg_ignore_law_law_migration_controls_sgui = {
 	effect = { sg_ignore_law_law_migration_controls = yes }
 }
 
+sg_top_1_law_law_migration_controls_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 73 }
+}
+
+sg_top_2_law_law_migration_controls_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 73 }
+}
+
+sg_top_3_law_law_migration_controls_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 73 }
+}
+
 sg_enact_law_law_no_migration_controls_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1596,6 +3291,21 @@ sg_ignore_law_law_no_migration_controls_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_no_migration_controls = yes }
+}
+
+sg_top_1_law_law_no_migration_controls_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 86 }
+}
+
+sg_top_2_law_law_no_migration_controls_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 86 }
+}
+
+sg_top_3_law_law_no_migration_controls_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 86 }
 }
 
 sg_enact_law_law_diplomatic_navy_sgui = {
@@ -1612,6 +3322,21 @@ sg_ignore_law_law_diplomatic_navy_sgui = {
 	effect = { sg_ignore_law_law_diplomatic_navy = yes }
 }
 
+sg_top_1_law_law_diplomatic_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 36 }
+}
+
+sg_top_2_law_law_diplomatic_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 36 }
+}
+
+sg_top_3_law_law_diplomatic_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 36 }
+}
+
 sg_enact_law_law_jeune_ecole_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1624,6 +3349,21 @@ sg_ignore_law_law_jeune_ecole_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_jeune_ecole = yes }
+}
+
+sg_top_1_law_law_jeune_ecole_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 60 }
+}
+
+sg_top_2_law_law_jeune_ecole_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 60 }
+}
+
+sg_top_3_law_law_jeune_ecole_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 60 }
 }
 
 sg_enact_law_law_merchant_navy_sgui = {
@@ -1640,6 +3380,21 @@ sg_ignore_law_law_merchant_navy_sgui = {
 	effect = { sg_ignore_law_law_merchant_navy = yes }
 }
 
+sg_top_1_law_law_merchant_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 72 }
+}
+
+sg_top_2_law_law_merchant_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 72 }
+}
+
+sg_top_3_law_law_merchant_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 72 }
+}
+
 sg_enact_law_law_professional_navy_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1652,6 +3407,21 @@ sg_ignore_law_law_professional_navy_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_professional_navy = yes }
+}
+
+sg_top_1_law_law_professional_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 108 }
+}
+
+sg_top_2_law_law_professional_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 108 }
+}
+
+sg_top_3_law_law_professional_navy_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 108 }
 }
 
 sg_enact_law_law_dedicated_police_sgui = {
@@ -1668,6 +3438,21 @@ sg_ignore_law_law_dedicated_police_sgui = {
 	effect = { sg_ignore_law_law_dedicated_police = yes }
 }
 
+sg_top_1_law_law_dedicated_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 35 }
+}
+
+sg_top_2_law_law_dedicated_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 35 }
+}
+
+sg_top_3_law_law_dedicated_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 35 }
+}
+
 sg_enact_law_law_local_police_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1680,6 +3465,21 @@ sg_ignore_law_law_local_police_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_local_police = yes }
+}
+
+sg_top_1_law_law_local_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 68 }
+}
+
+sg_top_2_law_law_local_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 68 }
+}
+
+sg_top_3_law_law_local_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 68 }
 }
 
 sg_enact_law_law_militarized_police_sgui = {
@@ -1696,6 +3496,21 @@ sg_ignore_law_law_militarized_police_sgui = {
 	effect = { sg_ignore_law_law_militarized_police = yes }
 }
 
+sg_top_1_law_law_militarized_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 74 }
+}
+
+sg_top_2_law_law_militarized_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 74 }
+}
+
+sg_top_3_law_law_militarized_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 74 }
+}
+
 sg_enact_law_law_no_police_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1708,6 +3523,21 @@ sg_ignore_law_law_no_police_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_no_police = yes }
+}
+
+sg_top_1_law_law_no_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 87 }
+}
+
+sg_top_2_law_law_no_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 87 }
+}
+
+sg_top_3_law_law_no_police_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 87 }
 }
 
 sg_enact_law_law_no_womens_rights_sgui = {
@@ -1724,6 +3554,21 @@ sg_ignore_law_law_no_womens_rights_sgui = {
 	effect = { sg_ignore_law_law_no_womens_rights = yes }
 }
 
+sg_top_1_law_law_no_womens_rights_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 90 }
+}
+
+sg_top_2_law_law_no_womens_rights_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 90 }
+}
+
+sg_top_3_law_law_no_womens_rights_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 90 }
+}
+
 sg_enact_law_law_women_in_the_fields_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1736,6 +3581,21 @@ sg_ignore_law_law_women_in_the_fields_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_women_in_the_fields = yes }
+}
+
+sg_top_1_law_law_women_in_the_fields_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 144 }
+}
+
+sg_top_2_law_law_women_in_the_fields_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 144 }
+}
+
+sg_top_3_law_law_women_in_the_fields_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 144 }
 }
 
 sg_enact_law_law_women_in_the_workplace_sgui = {
@@ -1752,6 +3612,21 @@ sg_ignore_law_law_women_in_the_workplace_sgui = {
 	effect = { sg_ignore_law_law_women_in_the_workplace = yes }
 }
 
+sg_top_1_law_law_women_in_the_workplace_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 145 }
+}
+
+sg_top_2_law_law_women_in_the_workplace_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 145 }
+}
+
+sg_top_3_law_law_women_in_the_workplace_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 145 }
+}
+
 sg_enact_law_law_women_own_property_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1764,6 +3639,21 @@ sg_ignore_law_law_women_own_property_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_women_own_property = yes }
+}
+
+sg_top_1_law_law_women_own_property_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 146 }
+}
+
+sg_top_2_law_law_women_own_property_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 146 }
+}
+
+sg_top_3_law_law_women_own_property_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 146 }
 }
 
 sg_enact_law_law_womens_suffrage_sgui = {
@@ -1780,6 +3670,21 @@ sg_ignore_law_law_womens_suffrage_sgui = {
 	effect = { sg_ignore_law_law_womens_suffrage = yes }
 }
 
+sg_top_1_law_law_womens_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 147 }
+}
+
+sg_top_2_law_law_womens_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 147 }
+}
+
+sg_top_3_law_law_womens_suffrage_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 147 }
+}
+
 sg_enact_law_law_colonial_slavery_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1792,6 +3697,21 @@ sg_ignore_law_law_colonial_slavery_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_colonial_slavery = yes }
+}
+
+sg_top_1_law_law_colonial_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 21 }
+}
+
+sg_top_2_law_law_colonial_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 21 }
+}
+
+sg_top_3_law_law_colonial_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 21 }
 }
 
 sg_enact_law_law_debt_slavery_sgui = {
@@ -1808,6 +3728,21 @@ sg_ignore_law_law_debt_slavery_sgui = {
 	effect = { sg_ignore_law_law_debt_slavery = yes }
 }
 
+sg_top_1_law_law_debt_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 34 }
+}
+
+sg_top_2_law_law_debt_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 34 }
+}
+
+sg_top_3_law_law_debt_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 34 }
+}
+
 sg_enact_law_law_legacy_slavery_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1820,6 +3755,21 @@ sg_ignore_law_law_legacy_slavery_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_legacy_slavery = yes }
+}
+
+sg_top_1_law_law_legacy_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 67 }
+}
+
+sg_top_2_law_law_legacy_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 67 }
+}
+
+sg_top_3_law_law_legacy_slavery_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 67 }
 }
 
 sg_enact_law_law_slave_trade_sgui = {
@@ -1836,6 +3786,21 @@ sg_ignore_law_law_slave_trade_sgui = {
 	effect = { sg_ignore_law_law_slave_trade = yes }
 }
 
+sg_top_1_law_law_slave_trade_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 126 }
+}
+
+sg_top_2_law_law_slave_trade_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 126 }
+}
+
+sg_top_3_law_law_slave_trade_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 126 }
+}
+
 sg_enact_law_law_slavery_banned_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1848,6 +3813,21 @@ sg_ignore_law_law_slavery_banned_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_slavery_banned = yes }
+}
+
+sg_top_1_law_law_slavery_banned_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 127 }
+}
+
+sg_top_2_law_law_slavery_banned_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 127 }
+}
+
+sg_top_3_law_law_slavery_banned_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 127 }
 }
 
 sg_enact_law_law_consumption_based_taxation_sgui = {
@@ -1864,6 +3844,21 @@ sg_ignore_law_law_consumption_based_taxation_sgui = {
 	effect = { sg_ignore_law_law_consumption_based_taxation = yes }
 }
 
+sg_top_1_law_law_consumption_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 27 }
+}
+
+sg_top_2_law_law_consumption_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 27 }
+}
+
+sg_top_3_law_law_consumption_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 27 }
+}
+
 sg_enact_law_law_graduated_taxation_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1876,6 +3871,21 @@ sg_ignore_law_law_graduated_taxation_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_graduated_taxation = yes }
+}
+
+sg_top_1_law_law_graduated_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 47 }
+}
+
+sg_top_2_law_law_graduated_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 47 }
+}
+
+sg_top_3_law_law_graduated_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 47 }
 }
 
 sg_enact_law_law_land_based_taxation_sgui = {
@@ -1892,6 +3902,21 @@ sg_ignore_law_law_land_based_taxation_sgui = {
 	effect = { sg_ignore_law_law_land_based_taxation = yes }
 }
 
+sg_top_1_law_law_land_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 63 }
+}
+
+sg_top_2_law_law_land_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 63 }
+}
+
+sg_top_3_law_law_land_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 63 }
+}
+
 sg_enact_law_law_per_capita_based_taxation_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1904,6 +3929,21 @@ sg_ignore_law_law_per_capita_based_taxation_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_per_capita_based_taxation = yes }
+}
+
+sg_top_1_law_law_per_capita_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 102 }
+}
+
+sg_top_2_law_law_per_capita_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 102 }
+}
+
+sg_top_3_law_law_per_capita_based_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 102 }
 }
 
 sg_enact_law_law_proportional_taxation_sgui = {
@@ -1920,6 +3960,21 @@ sg_ignore_law_law_proportional_taxation_sgui = {
 	effect = { sg_ignore_law_law_proportional_taxation = yes }
 }
 
+sg_top_1_law_law_proportional_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 109 }
+}
+
+sg_top_2_law_law_proportional_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 109 }
+}
+
+sg_top_3_law_law_proportional_taxation_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 109 }
+}
+
 sg_enact_law_law_canton_system_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1932,6 +3987,21 @@ sg_ignore_law_law_canton_system_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_canton_system = yes }
+}
+
+sg_top_1_law_law_canton_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 9 }
+}
+
+sg_top_2_law_law_canton_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 9 }
+}
+
+sg_top_3_law_law_canton_system_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 9 }
 }
 
 sg_enact_law_law_free_trade_sgui = {
@@ -1948,6 +4018,21 @@ sg_ignore_law_law_free_trade_sgui = {
 	effect = { sg_ignore_law_law_free_trade = yes }
 }
 
+sg_top_1_law_law_free_trade_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 44 }
+}
+
+sg_top_2_law_law_free_trade_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 44 }
+}
+
+sg_top_3_law_law_free_trade_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 44 }
+}
+
 sg_enact_law_law_isolationism_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1960,6 +4045,21 @@ sg_ignore_law_law_isolationism_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_isolationism = yes }
+}
+
+sg_top_1_law_law_isolationism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 59 }
+}
+
+sg_top_2_law_law_isolationism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 59 }
+}
+
+sg_top_3_law_law_isolationism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 59 }
 }
 
 sg_enact_law_law_mercantilism_sgui = {
@@ -1976,6 +4076,21 @@ sg_ignore_law_law_mercantilism_sgui = {
 	effect = { sg_ignore_law_law_mercantilism = yes }
 }
 
+sg_top_1_law_law_mercantilism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 71 }
+}
+
+sg_top_2_law_law_mercantilism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 71 }
+}
+
+sg_top_3_law_law_mercantilism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 71 }
+}
+
 sg_enact_law_law_protectionism_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -1988,6 +4103,21 @@ sg_ignore_law_law_protectionism_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_protectionism = yes }
+}
+
+sg_top_1_law_law_protectionism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 111 }
+}
+
+sg_top_2_law_law_protectionism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 111 }
+}
+
+sg_top_3_law_law_protectionism_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 111 }
 }
 
 sg_enact_law_law_sakoku_sgui = {
@@ -2004,6 +4134,21 @@ sg_ignore_law_law_sakoku_sgui = {
 	effect = { sg_ignore_law_law_sakoku = yes }
 }
 
+sg_top_1_law_law_sakoku_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 121 }
+}
+
+sg_top_2_law_law_sakoku_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 121 }
+}
+
+sg_top_3_law_law_sakoku_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 121 }
+}
+
 sg_enact_law_law_chiefs_distribute_aid_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -2016,6 +4161,21 @@ sg_ignore_law_law_chiefs_distribute_aid_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_chiefs_distribute_aid = yes }
+}
+
+sg_top_1_law_law_chiefs_distribute_aid_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 14 }
+}
+
+sg_top_2_law_law_chiefs_distribute_aid_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 14 }
+}
+
+sg_top_3_law_law_chiefs_distribute_aid_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 14 }
 }
 
 sg_enact_law_law_no_social_security_sgui = {
@@ -2032,6 +4192,21 @@ sg_ignore_law_law_no_social_security_sgui = {
 	effect = { sg_ignore_law_law_no_social_security = yes }
 }
 
+sg_top_1_law_law_no_social_security_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 89 }
+}
+
+sg_top_2_law_law_no_social_security_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 89 }
+}
+
+sg_top_3_law_law_no_social_security_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 89 }
+}
+
 sg_enact_law_law_old_age_pension_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -2044,6 +4219,21 @@ sg_ignore_law_law_old_age_pension_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_old_age_pension = yes }
+}
+
+sg_top_1_law_law_old_age_pension_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 94 }
+}
+
+sg_top_2_law_law_old_age_pension_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 94 }
+}
+
+sg_top_3_law_law_old_age_pension_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 94 }
 }
 
 sg_enact_law_law_poor_laws_sgui = {
@@ -2060,6 +4250,21 @@ sg_ignore_law_law_poor_laws_sgui = {
 	effect = { sg_ignore_law_law_poor_laws = yes }
 }
 
+sg_top_1_law_law_poor_laws_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 103 }
+}
+
+sg_top_2_law_law_poor_laws_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 103 }
+}
+
+sg_top_3_law_law_poor_laws_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 103 }
+}
+
 sg_enact_law_law_wage_subsidies_sgui = {
 	scope = country
 	is_shown = { is_player = yes has_variable = sg_enabled }
@@ -2072,4 +4277,19 @@ sg_ignore_law_law_wage_subsidies_sgui = {
 	is_shown = { is_player = yes has_variable = sg_enabled }
 	is_valid = { is_player = yes has_variable = sg_enabled }
 	effect = { sg_ignore_law_law_wage_subsidies = yes }
+}
+
+sg_top_1_law_law_wage_subsidies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id = 141 }
+}
+
+sg_top_2_law_law_wage_subsidies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id = 141 }
+}
+
+sg_top_3_law_law_wage_subsidies_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id = 141 }
 }

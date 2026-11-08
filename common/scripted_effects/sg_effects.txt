@@ -1,0 +1,151 @@
+# Smart Government Advisor - lifecycle, ignore list and diagnostics effects.
+# Country scope unless noted.
+
+# Schema 2 replaces the old positional law index with a stable numeric id
+# stored in data/law_ids.json. Positional ids from schema 1 mean a different
+# law after any list change, so they are discarded instead of migrated.
+sg_migrate_schema = {
+	if = {
+		limit = { NOT = { has_variable = sg_schema_version } }
+		set_variable = { name = sg_schema_version value = 2 }
+	}
+	else_if = {
+		limit = { var:sg_schema_version < 2 }
+		remove_variable = sg_top_1_law
+		remove_variable = sg_top_1_index
+		remove_variable = sg_top_2_law
+		remove_variable = sg_top_2_index
+		remove_variable = sg_top_3_law
+		remove_variable = sg_top_3_index
+		sg_clear_rank = yes
+		remove_variable = sg_ignored_1
+		remove_variable = sg_ignored_2
+		remove_variable = sg_ignored_3
+		remove_variable = sg_ignored_selected
+		remove_variable = sg_selected_index
+		set_variable = { name = sg_schema_version value = 2 }
+		if = {
+			limit = { has_variable = sg_debug }
+			debug_log = "Smart Government Advisor: migrated save state to schema 2 (stable law ids)"
+		}
+	}
+}
+
+# Enables the advisor, makes sure the journal entry exists and runs a full
+# evaluation. Safe to call on a new campaign and on a running save.
+sg_initialize_country = {
+	sg_migrate_schema = yes
+	set_variable = { name = sg_enabled value = yes }
+	sg_ensure_journal_entry = yes
+	sg_rank_laws = yes
+	if = {
+		limit = { has_variable = sg_debug }
+		debug_log = "Smart Government Advisor: initialized for [THIS.GetNameNoFormatting]"
+	}
+}
+
+# Removes every runtime variable. The schema marker stays so a running save
+# that was deliberately disabled is never auto-enabled again.
+sg_disable_country = {
+	remove_variable = sg_enabled
+	sg_clear_rank = yes
+	remove_variable = sg_ignored_1
+	remove_variable = sg_ignored_2
+	remove_variable = sg_ignored_3
+	remove_variable = sg_ignored_selected
+	remove_variable = sg_selected_id
+	remove_variable = sg_selected_index
+	if = {
+		limit = { has_variable = sg_debug }
+		debug_log = "Smart Government Advisor: disabled for [THIS.GetNameNoFormatting]"
+	}
+}
+
+sg_clear_rank = {
+	remove_variable = sg_top_1_id
+	remove_variable = sg_top_1_score
+	remove_variable = sg_top_1_benefit
+	remove_variable = sg_top_1_risk
+	remove_variable = sg_top_1_focus
+	remove_variable = sg_top_1_benefit_score
+	remove_variable = sg_top_1_risk_score
+	remove_variable = sg_top_1_politics
+	remove_variable = sg_top_2_id
+	remove_variable = sg_top_2_score
+	remove_variable = sg_top_2_benefit
+	remove_variable = sg_top_2_risk
+	remove_variable = sg_top_2_focus
+	remove_variable = sg_top_2_benefit_score
+	remove_variable = sg_top_2_risk_score
+	remove_variable = sg_top_2_politics
+	remove_variable = sg_top_3_id
+	remove_variable = sg_top_3_score
+	remove_variable = sg_top_3_benefit
+	remove_variable = sg_top_3_risk
+	remove_variable = sg_top_3_focus
+	remove_variable = sg_top_3_benefit_score
+	remove_variable = sg_top_3_risk_score
+	remove_variable = sg_top_3_politics
+}
+
+sg_ensure_journal_entry = {
+	if = {
+		limit = {
+			NOT = { has_journal_entry = je_sg_law_advisor }
+			NOT = { has_inactive_journal_entry = je_sg_law_advisor }
+		}
+		add_journal_entry = { type = je_sg_law_advisor }
+	}
+}
+
+# Called from the journal entry's monthly pulse and from the refresh button.
+sg_monthly_update = {
+	if = {
+		limit = { has_variable = sg_enabled }
+		sg_ensure_journal_entry = yes
+		sg_rank_laws = yes
+	}
+}
+
+# ---------------------------------------------------------------------------
+# Ignore list. Up to three laws can be skipped until the player clears them.
+# ---------------------------------------------------------------------------
+
+# Called by the generated per-law ignore effects. The value is the stable law
+# id, never a recommendation slot.
+sg_store_ignored_selected = {
+	if = {
+		limit = { NOT = { has_variable = sg_ignored_1 } }
+		set_variable = { name = sg_ignored_1 value = var:sg_ignored_selected }
+	}
+	else_if = {
+		limit = { NOT = { has_variable = sg_ignored_2 } }
+		set_variable = { name = sg_ignored_2 value = var:sg_ignored_selected }
+	}
+	else_if = {
+		limit = { NOT = { has_variable = sg_ignored_3 } }
+		set_variable = { name = sg_ignored_3 value = var:sg_ignored_selected }
+	}
+	else = {
+		# The list is full; replace the oldest slot so the button always works.
+		set_variable = { name = sg_ignored_3 value = var:sg_ignored_selected }
+	}
+}
+
+sg_clear_ignored = {
+	remove_variable = sg_ignored_1
+	remove_variable = sg_ignored_2
+	remove_variable = sg_ignored_3
+	sg_rank_laws = yes
+}
+
+# ---------------------------------------------------------------------------
+# Diagnostics
+# ---------------------------------------------------------------------------
+
+sg_log_diagnostics = {
+	debug_log = "Smart Government Advisor diagnostics for [THIS.GetNameNoFormatting]"
+	debug_log = "Smart Government Advisor: top scores are visible in the journal entry (score, government support, risk)."
+	debug_log = "Smart Government Advisor: set the country variable sg_debug to get lifecycle messages."
+	sg_rank_laws = yes
+}

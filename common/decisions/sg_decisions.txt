@@ -1,0 +1,35 @@
+# Smart Government Advisor - discoverable enable/disable decisions.
+# The journal entry itself is only visible while enabled, so the enable
+# decision is the entry point for a save the mod was added to.
+
+sg_enable_smart_government = {
+	is_shown = {
+		is_player = yes
+		NOT = { has_variable = sg_enabled }
+	}
+	possible = {
+		is_player = yes
+		NOT = { has_variable = sg_enabled }
+	}
+	when_taken = {
+		hidden_effect = {
+			sg_initialize_country = yes
+		}
+	}
+	ai_chance = { value = 0 }
+}
+
+sg_disable_smart_government = {
+	is_shown = {
+		is_player = yes
+		has_variable = sg_enabled
+	}
+	possible = {
+		is_player = yes
+		has_variable = sg_enabled
+	}
+	when_taken = {
+		sg_disable_country = yes
+	}
+	ai_chance = { value = 0 }
+}

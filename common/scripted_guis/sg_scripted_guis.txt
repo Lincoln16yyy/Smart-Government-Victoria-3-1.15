@@ -1,0 +1,65 @@
+# Smart Government Advisor - buttons used by the journal-entry widget.
+# All of them are country-scope and only valid while sg_enabled exists.
+
+sg_refresh_sgui = {
+	scope = country
+	is_shown = { is_player = yes has_variable = sg_enabled }
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = {
+		sg_rank_laws = yes
+	}
+}
+
+sg_disable_sgui = {
+	scope = country
+	is_shown = { is_player = yes has_variable = sg_enabled }
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = {
+		sg_disable_country = yes
+	}
+}
+
+sg_top_1_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_id var:sg_top_1_id > 0 }
+}
+sg_top_2_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_id var:sg_top_2_id > 0 }
+}
+sg_top_3_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id > 0 }
+}
+
+sg_ignored_1_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_ignored_1 }
+}
+sg_ignored_2_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_ignored_2 }
+}
+sg_ignored_3_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_ignored_3 }
+}
+
+# Enact and Ignore buttons are generated per law in sg_law_sguis.txt. Each
+# button belongs to one law, so a rerank cannot retarget a click to another
+# recommendation. The generated effect re-checks availability and
+# enacting_any_law before starting normal enactment, then reranks.
+
+sg_clear_ignored_sgui = {
+	scope = country
+	is_shown = { sg_has_ignored = yes }
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = { sg_clear_ignored = yes }
+}
+
+sg_diagnostics_sgui = {
+	scope = country
+	is_shown = { is_player = yes has_variable = sg_enabled }
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = { sg_log_diagnostics = yes }
+}

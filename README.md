@@ -16,6 +16,8 @@ registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativa
   automaticamente e não altera legitimidade, grupos de interesse ou oposição.
 - Reavalia todo mês e também por um botão de atualização.
 - Mostra o mês e o ano da última atualização das recomendações.
+- Mostra quantas leis foram verificadas, ficaram disponíveis, foram filtradas
+  por ignoradas, entraram na comparação e foram exibidas no último ranking.
 - Permite promulgar, ignorar até três leis, limpar a lista de ignoradas e
   desativar o conselheiro.
 - Mostra os efeitos e requisitos reais da lei ao passar o mouse sobre o nome.
@@ -163,6 +165,9 @@ O contexto completo para outro desenvolvedor ou IA está em
 - Ative a variável de país `sg_debug` para registrar mensagens de ciclo de vida
   no `error.log`/log de script.
 - O botão **Diagnóstico** no registro de diário grava uma mensagem e reavalia.
+- A linha de diagnóstico do registro mostra os contadores do último ciclo de
+  ranking; isso ajuda a distinguir ausência real de leis de filtragem por
+  requisitos ou pela lista de ignoradas.
 - Logs do jogo (Hydra/Wine):
 
   ```

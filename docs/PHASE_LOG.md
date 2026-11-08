@@ -171,3 +171,14 @@ Installation performed:
 - Startup/log inspection found no advisor-specific errors; the environment still
   cannot drive reliable in-game clicks, so interactive behavior remains pending
   a desktop-driven test.
+
+## Phase 9 — ranking-cycle diagnostics
+
+- Added generated ranking counters for laws checked, available, ignored,
+  eligible and displayed.
+- Reset the counters at the start of every ranking pass and remove them during
+  disable, preventing stale status after lifecycle changes.
+- Added a bilingual status line to the journal widget and expanded the
+  diagnostics action text to point to the visible counters.
+- Regenerated the 148-law output and passed static validation, Python
+  compilation and whitespace checks.

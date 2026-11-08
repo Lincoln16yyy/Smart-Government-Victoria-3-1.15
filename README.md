@@ -151,9 +151,9 @@ uma mensagem pedindo `--game` ou `VICTORIA3_GAME`.
 Validação automatizada (somente biblioteca padrão):
 
 ```bash
-python3 -m unittest discover -s tests -v
 python3 tools/build_law_data.py
 python3 tools/build_gui.py
+python3 -m unittest discover -s tests -v
 python3 tools/validate.py
 python3 -m py_compile tools/*.py tests/*.py
 git diff --check

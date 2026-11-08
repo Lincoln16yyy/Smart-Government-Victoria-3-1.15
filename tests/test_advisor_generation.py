@@ -6,6 +6,7 @@ import json
 import re
 import sys
 import unittest
+from collections import Counter
 from pathlib import Path
 
 
@@ -17,6 +18,9 @@ import build_law_data  # noqa: E402
 
 DATA = json.loads((ROOT / "data" / "law_data.json").read_text(encoding="utf-8"))
 LAW_IDS = json.loads((ROOT / "data" / "law_ids.json").read_text(encoding="utf-8"))
+COMPATIBILITY_IDS = json.loads(
+    (ROOT / "tests" / "fixtures" / "law_ids_compatibility.json").read_text(encoding="utf-8")
+)
 LAWS = DATA["laws"]
 
 
@@ -24,8 +28,16 @@ def read(relative: str) -> str:
     return (ROOT / relative).read_text(encoding="utf-8-sig")
 
 
-def definitions(text: str, pattern: str) -> set[str]:
-    return set(re.findall(pattern, text, re.MULTILINE))
+def definition_names(text: str, pattern: str) -> list[str]:
+    return re.findall(pattern, text, re.MULTILINE)
+
+
+def extract_block(text: str, name: str) -> str:
+    match = re.search(rf"(?m)^{re.escape(name)}\s*=\s*\{{", text)
+    if match is None:
+        raise AssertionError(f"missing block: {name}")
+    close = build_law_data.find_matching_brace(text, text.find("{", match.start()))
+    return text[match.end() : close]
 
 
 class GeneratedDataTests(unittest.TestCase):
@@ -33,10 +45,15 @@ class GeneratedDataTests(unittest.TestCase):
         self.assertEqual(len(LAWS), 148)
         self.assertEqual(len({law["id"] for law in LAWS}), len(LAWS))
         self.assertEqual(len({law["sid"] for law in LAWS}), len(LAWS))
-        self.assertEqual(set(law["id"] for law in LAWS), set(LAW_IDS))
+        self.assertTrue(set(law["id"] for law in LAWS) <= set(LAW_IDS))
         for law in LAWS:
             self.assertEqual(LAW_IDS[law["id"]], law["sid"])
+            self.assertEqual(COMPATIBILITY_IDS[law["id"]], law["sid"])
             self.assertGreater(law["sid"], 0)
+        self.assertEqual(
+            set(COMPATIBILITY_IDS) - set(LAWS[i]["id"] for i in range(len(LAWS))),
+            set(LAW_IDS) - set(law["id"] for law in LAWS),
+        )
 
     def test_modifier_scoring_is_deterministic_and_ignores_unmapped_effects(self) -> None:
         benefit, risk, annotated = build_law_data.score_modifiers(
@@ -71,46 +88,61 @@ class GeneratedScriptTests(unittest.TestCase):
 
     def test_generated_files_have_one_consistent_block_per_law(self) -> None:
         ids = {law["id"] for law in LAWS}
-        self.assertEqual(
-            definitions(self.availability, r"^(sg_law_available_[A-Za-z0-9_]+)\s*="),
-            {f"sg_law_available_{law_id}" for law_id in ids},
+        expected_availability = [f"sg_law_available_{law_id}" for law_id in sorted(ids)]
+        actual_availability = definition_names(
+            self.availability, r"^(sg_law_available_[A-Za-z0-9_]+)\s*="
         )
-        self.assertEqual(
-            definitions(self.values, r"^(sg_law_(?:benefit|risk|politics|score)_[A-Za-z0-9_]+)\s*="),
-            {
-                f"sg_law_{field}_{law_id}"
-                for law_id in ids
-                for field in ("benefit", "risk", "politics", "score")
-            },
+        self.assertEqual(Counter(actual_availability), Counter(expected_availability))
+
+        expected_values = [
+            f"sg_law_{field}_{law_id}"
+            for law_id in sorted(ids)
+            for field in ("benefit", "risk", "politics", "score")
+        ]
+        actual_values = definition_names(
+            self.values, r"^(sg_law_(?:benefit|risk|politics|score)_[A-Za-z0-9_]+)\s*="
         )
-        self.assertEqual(
-            definitions(self.actions, r"^(sg_(?:enact|ignore)_law_[A-Za-z0-9_]+)\s*="),
-            {
-                f"sg_{action}_law_{law_id}"
-                for law_id in ids
-                for action in ("enact", "ignore")
-            },
+        self.assertEqual(Counter(actual_values), Counter(expected_values))
+
+        expected_actions = [
+            f"sg_{action}_law_{law_id}"
+            for law_id in sorted(ids)
+            for action in ("enact", "ignore")
+        ]
+        actual_actions = definition_names(
+            self.actions, r"^(sg_(?:enact|ignore)_law_[A-Za-z0-9_]+)\s*="
         )
-        self.assertEqual(
-            definitions(self.sguis, r"^(sg_(?:enact|ignore)_law_[A-Za-z0-9_]+_sgui)\s*="),
-            {
-                f"sg_{action}_law_{law_id}_sgui"
-                for law_id in ids
-                for action in ("enact", "ignore")
-            },
+        self.assertEqual(Counter(actual_actions), Counter(expected_actions))
+
+        expected_sguis = [
+            f"sg_{action}_law_{law_id}_sgui"
+            for law_id in sorted(ids)
+            for action in ("enact", "ignore")
+        ]
+        actual_sguis = definition_names(
+            self.sguis, r"^(sg_(?:enact|ignore)_law_[A-Za-z0-9_]+_sgui)\s*="
         )
+        self.assertEqual(Counter(actual_sguis), Counter(expected_sguis))
+
+    def test_ranking_contains_one_evaluation_block_for_every_law(self) -> None:
+        ids = {law["id"] for law in LAWS}
+        for law_id in ids:
+            marker = f"\t\t\tsg_law_available_{law_id} = yes"
+            self.assertEqual(self.rank.count(marker), 1, law_id)
 
     def test_score_formula_and_politics_are_wired_into_generated_values(self) -> None:
-        self.assertIn("add = { value = sg_law_benefit_law_no_schools }", self.values)
-        self.assertIn("add = { value = sg_law_politics_law_no_schools }", self.values)
+        block = extract_block(self.values, "sg_law_score_law_no_schools")
+        self.assertIn("add = { value = sg_law_benefit_law_no_schools }", block)
+        self.assertIn("add = { value = sg_law_politics_law_no_schools }", block)
         self.assertIn(
             "subtract = { value = sg_law_risk_law_no_schools multiply = 0.5 }",
-            self.values,
+            block,
         )
-        self.assertIn("law_stance = { law = law_type:law_no_schools", self.values)
+        politics = extract_block(self.values, "sg_law_politics_law_no_schools")
+        self.assertIn("law_stance = { law = law_type:law_no_schools", politics)
         self.assertIn(
             "law_enactment_stance = { law = law_type:law_no_schools",
-            self.values,
+            politics,
         )
 
     def test_ranking_initializes_sentinel_slots_and_tracks_counts(self) -> None:
@@ -123,20 +155,25 @@ class GeneratedScriptTests(unittest.TestCase):
         self.assertIn("set_variable = { name = sg_last_rank_eligible value = 0 }", self.rank)
         self.assertIn("set_variable = { name = sg_last_ranked_count value = 0 }", self.rank)
         self.assertIn("var:sg_top_1_id > 0", self.rank)
+        self.assertEqual(
+            self.rank.count(
+                "change_variable = { name = sg_last_ranked_count add = 1 }"
+            ),
+            3,
+        )
+        for slot in (1, 2, 3):
+            self.assertIn(f"var:sg_top_{slot}_id > 0", self.rank)
 
     def test_actions_recheck_and_rerank(self) -> None:
         law = LAWS[0]["id"]
-        block = re.search(
-            rf"sg_enact_law_{re.escape(law)}\s*=\s*\{{(.*?)\n\}}",
-            self.actions,
-            re.DOTALL,
-        )
-        self.assertIsNotNone(block)
-        assert block is not None
-        self.assertIn(f"sg_law_available_{law} = yes", block.group(1))
-        self.assertIn("NOT = { enacting_any_law = yes }", block.group(1))
-        self.assertIn(f"start_enactment = law_type:{law}", block.group(1))
-        self.assertIn("sg_rank_laws = yes", block.group(1))
+        block = extract_block(self.actions, f"sg_enact_law_{law}")
+        guard_end = block.find("\n\t}\n")
+        rerank = block.find("\n\tsg_rank_laws = yes")
+        self.assertGreaterEqual(guard_end, 0)
+        self.assertGreater(rerank, guard_end)
+        self.assertIn(f"sg_law_available_{law} = yes", block)
+        self.assertIn("NOT = { enacting_any_law = yes }", block)
+        self.assertIn(f"start_enactment = law_type:{law}", block)
 
 
 class RuntimeSurfaceTests(unittest.TestCase):

@@ -37,6 +37,27 @@ sg_rank_diagnostic_visible_sgui = {
 	is_shown = { has_variable = sg_last_rank_evaluated }
 }
 
+# Shown while any law is being enacted. During that period every generated
+# availability trigger is false, so the journal must explain the pause instead
+# of claiming that the recommended laws are already in force.
+sg_enacting_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_enabled enacting_any_law = yes }
+}
+
+sg_top_1_opposition_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_opposition var:sg_top_1_opposition > 0 }
+}
+sg_top_2_opposition_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_opposition var:sg_top_2_opposition > 0 }
+}
+sg_top_3_opposition_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_opposition var:sg_top_3_opposition > 0 }
+}
+
 sg_ignored_1_visible_sgui = {
 	scope = country
 	is_shown = { has_variable = sg_ignored_1 }

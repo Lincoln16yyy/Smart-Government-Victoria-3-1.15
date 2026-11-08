@@ -5,7 +5,7 @@ repository. It records the design, the exact game/save paths on the original
 machine, what is generated, what is hand-written, what has been verified, and
 what still needs a runtime test.
 
-Last updated: 2026-11-08 (phase 15: one law per group and GUI log cleanup; schema 2).
+Last updated: 2026-11-08 (phase 17: enactment pause state, legitimacy risk theme and powerful-opposition warning; schema 2).
 
 ---
 
@@ -172,9 +172,10 @@ somewhere else.
    `sg_law_merit_<law> >= sg_law_upgrade_floor_<group>`, where the floor is the
    merit of the law currently in force in that group plus 5. The ranking is
    global (no one-per-group quota); a law that fails the gate is counted as
-   "no real gain". A passing law's **stable numeric law id**, score, benefit
-   theme, risk theme, focus theme, benefit score, risk score and political
-   score are stored in the top slots.
+   "no real gain". A   passing law's **stable numeric law id**, score, benefit
+   theme, risk theme, focus theme, benefit score, risk score, political
+   score, enactment chance and powerful-opposition flag are stored in the top
+   slots.
 4. **Monthly.** The JE `on_monthly_pulse` calls `sg_monthly_update`, which
    ensures the entry exists and reruns `sg_rank_laws`.
 5. **Enact.** Each row contains one Enact button per law, bound to
@@ -209,6 +210,8 @@ Top slots (`N` = 1, 2, 3):
 - `sg_top_N_risk_score` — numeric risk
 - `sg_top_N_politics` — numeric government support
 - `sg_top_N_enactment_chance` — current estimated enactment chance, 0–100
+- `sg_top_N_opposition` — 1 when a powerful interest group strongly
+  disapproves of the recommended law, 0 otherwise; drives the visible warning
 
 Other variables:
 
@@ -307,9 +310,11 @@ For each law:
   `_medium`, `_high` and `_very_high` per key, so brackets are not ignored.
 - `sg_law_risk_<law>`: `5 + sum(risk contributions)`, clamped 0–60. Risk covers
   radicals, mortality, repression, discrimination, trade bans, migration bans,
-  budget/bureaucracy cost, and similar real penalties. A small situational
-  adjustment is added by risk theme; a law with no measurable risk uses the
-  neutral risk theme.
+  budget/bureaucracy cost, legitimacy loss, and similar real penalties. A small
+  situational adjustment is added by risk theme; a law with no measurable risk
+  uses the neutral risk theme. A powerful interest group that strongly
+  disapproves adds 12 risk through `sg_law_powerful_opposition_<law>`, and the
+  same flag drives the visible warning in the journal.
 - `sg_law_politics_<law>`: iterates interest groups **in government**, adds
   `ig_clout * 60` for strongly approve, `* 30` for approve, subtracts the same
   for disapprove/strongly disapprove, then adds the ruler's
@@ -350,8 +355,13 @@ three components separately so the player can see why a law is ranked.
   - risk sentence
   - one Enact and one Ignore button **per law**, visible only for the law the
     row currently displays
+- explicit enactment-pause line shown while any law is being enacted, so the
+  journal does not claim that the recommended laws are already in force when
+  every availability trigger is temporarily false
 - explicit empty state explaining that no available law can currently be
   recommended and pointing to requirements, active laws and ignored laws
+- per-row warning when a powerful interest group strongly disapproves of the
+  recommended law (+12 risk), using the same flag as the score
 - footer: Clear ignored, Diagnostics, "recommendations only" note
 
 Law names and tooltips are generated per stable numeric id. A row shows the
@@ -387,12 +397,24 @@ available, ignored, no-real-gain, eligible and displayed. These counters are
 reset at the start of every ranking pass and are removed when the advisor is
 disabled, so a stale diagnostic cannot survive a deliberate disable.
 
+During an enactment, every generated availability trigger is false because of
+`NOT = { enacting_any_law = yes }`. The widget therefore shows a dedicated
+pause line (`sg_enacting_visible_sgui`) and hides the generic empty state, so
+an enactment in progress cannot be mistaken for "the recommended laws are
+already in force".
+
 ---
 
 ## 9. What is done / what remains
 
 Done in this phase:
 
+- Added a dedicated journal state while a law is being enacted, replacing the
+  misleading "already in force" empty message during that period.
+- Fixed the never-selected legitimacy risk theme and added the visible
+  powerful-opposition warning, backed by the same flag that adds the +12 risk.
+- Shortened the header paragraph and moved the detailed scoring explanation to
+  its tooltip.
 - Replaced the one-per-group quota with a global top three and an upgrade gate:
   a law only appears when its merit beats the current law of its group by 5
   points, otherwise the journal shows the "already in force" empty state.

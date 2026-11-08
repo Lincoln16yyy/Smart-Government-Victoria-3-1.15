@@ -48,13 +48,14 @@ names and the last-refresh month/year before each action.
 | No law improves on the current laws | Every row stays empty and the widget shows the "recommended laws for this country are already in force; wait for the next review or a change in the country's direction" message. No law is forced into the list. |
 | A law improves on its group's current law | The law appears in the global top three; rows are not reserved one per law group, so the three best laws may come from the same group. |
 | Reproduce the reported screenshot | If National Supremacy, Hindu Caste Enforced or Hindu Caste Codified appears as a candidate, open the law panel and record the displayed success/debate/stall percentages. A law at 0% success must not appear in the advisor; a law at or above the vanilla 1% minimum may appear but its estimated chance must be included in the explanation and ranking. |
-| Start another enactment, then refresh | While any law is already in progress, all law recommendations disappear or are replaced by an empty state; no second law is suggested as currently promulgable. |
+| Start another enactment, then refresh | While any law is already in progress, the recommendation rows disappear and the widget shows the enactment-pause message, not the "already in force" empty state. No second law is suggested as currently promulgable. |
 | Hover a law name | The tooltip shows the game's current effects and blocking requirements for that law. |
+| A powerful interest group strongly disapproves of a recommendation | The row shows the +12 risk warning, and that penalty is included in the displayed risk score. |
 | Ignore one recommendation | That law disappears after reranking and is not immediately recommended again. |
 | Ignore up to three recommendations | Each ignored law stays out of the list. If a fourth is ignored, the newest ignored law in slot 3 is replaced. |
 | Clear ignored | Previously ignored laws become eligible again after reranking. |
 | Enact one recommendation | The normal law enactment process opens/starts for the selected law; the law is not approved instantly. |
-| While a law is being enacted | Enact buttons are disabled, while Refresh, Ignore, Clear ignored and Disable remain usable where applicable. |
+| While a law is being enacted | The pause message is visible; Enact buttons are gone with the rows, while Refresh, Clear ignored and Disable remain usable where applicable. |
 | Disable from the journal | The entry disappears/inactivates, runtime and ranking-diagnostic variables are removed, and any enactment already in progress is untouched. |
 | Re-enable with the decision | A fresh entry and fresh ranking are created. The advisor does not silently re-enable before this step. |
 | Advance one month | The monthly pulse updates the recommendations and refresh date without creating a duplicate journal entry. |

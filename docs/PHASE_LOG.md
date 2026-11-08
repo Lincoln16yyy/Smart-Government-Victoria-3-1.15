@@ -333,3 +333,26 @@ Installation performed:
   known benign "variable never set" warnings remain. The game rejected
   `-loadsave` for both the older test save and the current autosave, so the
   ranking gate still needs one manual in-game confirmation.
+
+## Phase 17 — law-module review before research work
+
+- Reviewed the law ranking, scoring, GUI and texts before adding any research
+  feature.
+- Fixed a misleading empty state: while a law is being enacted, every
+  availability trigger is false, so the journal row list disappeared and said
+  the recommended laws were already in force. Added
+  `sg_enacting_visible_sgui` and a dedicated pause message; the generic empty
+  state is now hidden during an enactment.
+- Fixed a dead risk theme: `choose_risk_theme` never returned theme 8
+  (legitimacy), so the 11 laws with a legitimacy penalty showed the generic
+  "costs, rigidity or political tension" sentence. Legitimacy now selects theme
+  8 and keeps its situational +8 risk when legitimacy is below 40.
+- Made the powerful-opposition penalty explainable: the +12 risk condition is
+  now the named value `sg_law_powerful_opposition_<law>`, stored as
+  `sg_top_N_opposition` and rendered as a per-row warning. The displayed risk
+  explanation and the score now use the same condition.
+- Shortened the header paragraph and moved the detailed scoring explanation to
+  the `sg_header_tt` tooltip.
+- Regenerated 148 laws and 26 groups; 26 regression tests, `validate.py`,
+  `py_compile` and `git diff --check` pass. Reinstalled with
+  `tools/install_mod.py --force`.

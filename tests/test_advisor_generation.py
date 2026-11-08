@@ -77,6 +77,22 @@ class GeneratedDataTests(unittest.TestCase):
             build_law_data.BENEFIT_NEUTRAL_THEME,
         )
 
+    def test_legitimacy_risk_uses_its_specific_theme(self) -> None:
+        self.assertEqual(
+            build_law_data.choose_risk_theme(
+                "lawgroup_power_structure",
+                [
+                    {
+                        "key": "country_legitimacy_ideological_incoherence_mult",
+                        "risk": 10.0,
+                    }
+                ],
+            ),
+            8,
+        )
+        law = next(item for item in LAWS if item["id"] == "law_autocracy")
+        self.assertEqual(law["risk_theme"], 8)
+
 
 class GeneratedScriptTests(unittest.TestCase):
     def setUp(self) -> None:
@@ -198,10 +214,18 @@ class GeneratedScriptTests(unittest.TestCase):
         self.assertIn("radical_fraction = { value >=", self.values)
 
     def test_powerful_interest_group_opposition_penalizes_risk(self) -> None:
-        sample = extract_block(self.values, "sg_law_risk_law_monarchy")
+        sample = extract_block(self.values, "sg_law_powerful_opposition_law_monarchy")
         self.assertIn("is_powerful = yes", sample)
         self.assertIn("strongly_disapprove", sample)
-        self.assertIn("add = 12", sample)
+        risk = extract_block(self.values, "sg_law_risk_law_monarchy")
+        self.assertIn("sg_law_powerful_opposition_law_monarchy > 0", risk)
+        self.assertIn("add = 12", risk)
+        for slot in (1, 2, 3):
+            self.assertIn(
+                f"set_variable = {{ name = sg_top_{slot}_opposition value = "
+                "sg_law_powerful_opposition_",
+                self.rank,
+            )
 
     def test_availability_matches_runtime_promulgation_constraints(self) -> None:
         for law_id in (
@@ -296,6 +320,10 @@ class RuntimeSurfaceTests(unittest.TestCase):
                 f"remove_variable = sg_top_{slot}_enactment_chance",
                 self.effects,
             )
+            self.assertIn(
+                f"remove_variable = sg_top_{slot}_opposition",
+                self.effects,
+            )
         self.assertNotIn("remove_variable = sg_schema_version", body)
 
     def test_empty_state_and_explanations_are_rendered(self) -> None:
@@ -330,6 +358,23 @@ class RuntimeSurfaceTests(unittest.TestCase):
         self.assertIn("size = { 115 34 }", self.gui)
         self.assertIn("size = { 116 30 }", self.gui)
         self.assertIn('text = "sg_focus_1"', self.gui)
+
+    def test_enactment_pause_and_opposition_warning_are_rendered(self) -> None:
+        handwritten_sguis = read("common/scripted_guis/sg_scripted_guis.txt")
+        self.assertIn('text = "sg_enacting"', self.gui)
+        self.assertIn("sg_enacting_visible_sgui", self.gui)
+        self.assertIn("sg_enacting_visible_sgui = {", handwritten_sguis)
+        self.assertIn('text = "sg_opposition_warning"', self.gui)
+        for slot in (1, 2, 3):
+            self.assertIn(f"sg_top_{slot}_opposition_visible_sgui", self.gui)
+            self.assertIn(
+                f"sg_top_{slot}_opposition_visible_sgui = {{", handwritten_sguis
+            )
+        self.assertIn("sg_enacting:0", self.english)
+        self.assertIn("sg_opposition_warning:0", self.english)
+        portuguese = read("localization/braz_por/sg_l_braz_por.yml")
+        self.assertIn("sg_enacting:0", portuguese)
+        self.assertIn("sg_opposition_warning:0", portuguese)
 
     def test_gui_does_not_use_invalid_hasvariable_function(self) -> None:
         self.assertNotIn("HasVariable(", self.gui)

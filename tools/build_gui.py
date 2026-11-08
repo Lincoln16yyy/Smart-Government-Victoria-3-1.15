@@ -129,7 +129,7 @@ def row(slot: int, laws: list[dict]) -> str:
 	widget = {{
 		visible = "{visible}"
 		minimumsize = {{ 500 190 }}
-		maximumsize = {{ 500 230 }}
+		maximumsize = {{ 500 250 }}
 		background = {{ using = dark_area }}
 
 		flowcontainer = {{
@@ -179,8 +179,19 @@ def row(slot: int, laws: list[dict]) -> str:
 				spacing = 2
 				ignoreinvisible = yes
 				minimumsize = {{ 480 36 }}
-				maximumsize = {{ 480 56 }}
+				maximumsize = {{ 480 72 }}
 				background = {{ using = entry_bg_simple }}
+				textbox = {{
+					visible = "[GetScriptedGui('sg_top_{slot}_opposition_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+					autoresize = yes
+					multiline = yes
+					align = left|nobaseline
+					using = fontsize_small
+					default_format = "#warning"
+					minimumsize = {{ 480 -1 }}
+					maximumsize = {{ 480 -1 }}
+					text = "sg_opposition_warning"
+				}}
 {law_explanations(slot, laws)}
 			}}
 			flowcontainer = {{
@@ -340,8 +351,10 @@ def build() -> str:
     laws = data["laws"]
     rows = "".join(row(slot, laws) for slot in (1, 2, 3))
     empty_visible = (
-        "[Not(GetScriptedGui('sg_top_1_visible_sgui')"
-        ".IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End))]"
+        "[Not(Or(GetScriptedGui('sg_top_1_visible_sgui')"
+        ".IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End), "
+        "GetScriptedGui('sg_enacting_visible_sgui')"
+        ".IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)))]"
     )
     # Or() only accepts 2 arguments, so nest: Or(Or(a, b), c)
     ignored_check = "GetScriptedGui('sg_ignored_{n}_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)"
@@ -452,6 +465,20 @@ flowcontainer = {{
 		minimumsize = {{ 500 -1 }}
 		maximumsize = {{ 500 -1 }}
 		text = "sg_header"
+		tooltip = "sg_header_tt"
+		using = tooltip_se
+	}}
+
+	textbox = {{
+		visible = "[GetScriptedGui('sg_enacting_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+		autoresize = yes
+		multiline = yes
+		align = left|nobaseline
+		using = fontsize_medium
+		default_format = "#warning"
+		minimumsize = {{ 500 -1 }}
+		maximumsize = {{ 500 -1 }}
+		text = "sg_enacting"
 	}}
 
 {rows}

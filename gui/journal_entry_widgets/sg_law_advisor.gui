@@ -101,6 +101,20 @@ flowcontainer = {
 		minimumsize = { 500 -1 }
 		maximumsize = { 500 -1 }
 		text = "sg_header"
+		tooltip = "sg_header_tt"
+		using = tooltip_se
+	}
+
+	textbox = {
+		visible = "[GetScriptedGui('sg_enacting_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+		autoresize = yes
+		multiline = yes
+		align = left|nobaseline
+		using = fontsize_medium
+		default_format = "#warning"
+		minimumsize = { 500 -1 }
+		maximumsize = { 500 -1 }
+		text = "sg_enacting"
 	}
 
 
@@ -108,7 +122,7 @@ flowcontainer = {
 	widget = {
 		visible = "[GetScriptedGui('sg_top_1_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 		minimumsize = { 500 190 }
-		maximumsize = { 500 230 }
+		maximumsize = { 500 250 }
 		background = { using = dark_area }
 
 		flowcontainer = {
@@ -5434,8 +5448,19 @@ flowcontainer = {
 				spacing = 2
 				ignoreinvisible = yes
 				minimumsize = { 480 36 }
-				maximumsize = { 480 56 }
+				maximumsize = { 480 72 }
 				background = { using = entry_bg_simple }
+				textbox = {
+					visible = "[GetScriptedGui('sg_top_1_opposition_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+					autoresize = yes
+					multiline = yes
+					align = left|nobaseline
+					using = fontsize_small
+					default_format = "#warning"
+					minimumsize = { 480 -1 }
+					maximumsize = { 480 -1 }
+					text = "sg_opposition_warning"
+				}
 
 				widget = {
 					visible = "[GetScriptedGui('sg_top_1_law_law_mass_conscription_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
@@ -13444,7 +13469,7 @@ flowcontainer = {
 	widget = {
 		visible = "[GetScriptedGui('sg_top_2_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 		minimumsize = { 500 190 }
-		maximumsize = { 500 230 }
+		maximumsize = { 500 250 }
 		background = { using = dark_area }
 
 		flowcontainer = {
@@ -18770,8 +18795,19 @@ flowcontainer = {
 				spacing = 2
 				ignoreinvisible = yes
 				minimumsize = { 480 36 }
-				maximumsize = { 480 56 }
+				maximumsize = { 480 72 }
 				background = { using = entry_bg_simple }
+				textbox = {
+					visible = "[GetScriptedGui('sg_top_2_opposition_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+					autoresize = yes
+					multiline = yes
+					align = left|nobaseline
+					using = fontsize_small
+					default_format = "#warning"
+					minimumsize = { 480 -1 }
+					maximumsize = { 480 -1 }
+					text = "sg_opposition_warning"
+				}
 
 				widget = {
 					visible = "[GetScriptedGui('sg_top_2_law_law_mass_conscription_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
@@ -26780,7 +26816,7 @@ flowcontainer = {
 	widget = {
 		visible = "[GetScriptedGui('sg_top_3_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 		minimumsize = { 500 190 }
-		maximumsize = { 500 230 }
+		maximumsize = { 500 250 }
 		background = { using = dark_area }
 
 		flowcontainer = {
@@ -32106,8 +32142,19 @@ flowcontainer = {
 				spacing = 2
 				ignoreinvisible = yes
 				minimumsize = { 480 36 }
-				maximumsize = { 480 56 }
+				maximumsize = { 480 72 }
 				background = { using = entry_bg_simple }
+				textbox = {
+					visible = "[GetScriptedGui('sg_top_3_opposition_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+					autoresize = yes
+					multiline = yes
+					align = left|nobaseline
+					using = fontsize_small
+					default_format = "#warning"
+					minimumsize = { 480 -1 }
+					maximumsize = { 480 -1 }
+					text = "sg_opposition_warning"
+				}
 
 				widget = {
 					visible = "[GetScriptedGui('sg_top_3_law_law_mass_conscription_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
@@ -40114,7 +40161,7 @@ flowcontainer = {
 
 	# ---- empty state ----------------------------------------------------------
 	textbox = {
-		visible = "[Not(GetScriptedGui('sg_top_1_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End))]"
+		visible = "[Not(Or(GetScriptedGui('sg_top_1_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End), GetScriptedGui('sg_enacting_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)))]"
 		autoresize = yes
 		multiline = yes
 		align = left|nobaseline

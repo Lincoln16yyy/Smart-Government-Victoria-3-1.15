@@ -18,6 +18,10 @@ registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativa
 - Usa o processo **normal** de promulgação (`start_enactment`). Não aprova leis
   automaticamente e não altera legitimidade, grupos de interesse ou oposição.
 - Reavalia todo mês e também por um botão de atualização.
+- Pausa as recomendações enquanto uma lei está em promulgação, com um aviso
+  próprio em vez de dizer que as leis já estão em vigor.
+- Mostra um aviso quando um grupo de interesse poderoso desaprova fortemente a
+  lei recomendada, deixando claro o risco político adicional de +12.
 - Mostra o mês e o ano da última atualização das recomendações.
 - Mostra quantas leis foram verificadas, ficaram disponíveis, foram filtradas
   por ignoradas, foram descartadas por não superarem a lei em vigor, entraram na
@@ -99,7 +103,8 @@ Cada lei recebe:
   (impostos, educação, saúde, burocracia, economia, estabilidade, forças
   armadas etc.), com ajustes situacionais leves.
 - **Risco (0–60):** radicais, mortalidade, repressão, discriminação, restrições
-  comerciais, custo orçamentário e pressão burocrática.
+  comerciais, custo orçamentário, pressão burocrática e perda de legitimidade.
+  Uma lei que aliena um grupo de interesse poderoso recebe +12 de risco.
 - **Apoio do governo (−50..50):** posição dos grupos de interesse **no governo**,
   ponderada por influência (`ig_clout`), mais a posição do governante.
 - **Mérito:** `benefício + apoio − risco × 0,5`.
@@ -208,10 +213,10 @@ O contexto completo para outro desenvolvedor ou IA está em
   no `error.log`/log de script.
 - O botão **Diagnóstico** no registro de diário grava uma mensagem e reavalia.
 - A linha de diagnóstico do registro mostra os contadores do último ciclo de
-  ranking, incluindo quantas leis disponíveis foram descartadas por já haver
-  outra do mesmo grupo; isso ajuda a distinguir ausência real de leis de
-  filtragem por requisitos, pela lista de ignoradas ou pela regra de um por
-  grupo.
+  ranking, incluindo quantas leis disponíveis foram descartadas por não
+  superarem a lei em vigor no grupo; isso ajuda a distinguir ausência real de
+  leis de filtragem por requisitos, pela lista de ignoradas ou pelo corte de
+  melhoria de 5 pontos.
 - Logs do jogo (Hydra/Wine):
 
   ```

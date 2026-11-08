@@ -8,9 +8,24 @@ sg_law_benefit_law_mass_conscription = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_mass_conscription = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_mass_conscription value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_mass_conscription = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_mass_conscription value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_mass_conscription > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -90,9 +105,24 @@ sg_law_benefit_law_national_militia = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_national_militia = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_national_militia value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_national_militia = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_national_militia value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_national_militia > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -172,10 +202,25 @@ sg_law_benefit_law_peasant_levies = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_peasant_levies = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_peasant_levies value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_peasant_levies = {
 	value = 12.5
 	if = { limit = { radical_fraction = { value >= 0.2 } } add = 8 }
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_peasant_levies value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_peasant_levies > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -255,9 +300,24 @@ sg_law_benefit_law_professional_army = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_professional_army = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_professional_army value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_professional_army = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_professional_army value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_professional_army > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -337,9 +397,24 @@ sg_law_benefit_law_revolutionary_guard = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_revolutionary_guard = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_revolutionary_guard value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_revolutionary_guard = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_revolutionary_guard value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_revolutionary_guard > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -419,9 +494,24 @@ sg_law_benefit_law_warrior_caste = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_warrior_caste = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_warrior_caste value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_warrior_caste = {
 	value = 20.5
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_warrior_caste value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_warrior_caste > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -502,9 +592,24 @@ sg_law_benefit_law_appointed_bureaucrats = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_appointed_bureaucrats = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_appointed_bureaucrats value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_appointed_bureaucrats = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_appointed_bureaucrats value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_appointed_bureaucrats > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -584,9 +689,24 @@ sg_law_benefit_law_communal_administration = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_communal_administration = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_communal_administration value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_communal_administration = {
 	value = 0.5
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_communal_administration value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_communal_administration > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -666,9 +786,24 @@ sg_law_benefit_law_crownland_diets = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_crownland_diets = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_crownland_diets value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_crownland_diets = {
 	value = 1.2
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_crownland_diets value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_crownland_diets > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -748,9 +883,24 @@ sg_law_benefit_law_elected_bureaucrats = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_elected_bureaucrats = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_elected_bureaucrats value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_elected_bureaucrats = {
 	value = 4.2
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_elected_bureaucrats value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_elected_bureaucrats > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -830,9 +980,24 @@ sg_law_benefit_law_hereditary_bureaucrats = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_hereditary_bureaucrats = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_hereditary_bureaucrats value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_hereditary_bureaucrats = {
 	value = 1.2
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_hereditary_bureaucrats value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_hereditary_bureaucrats > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -912,9 +1077,24 @@ sg_law_benefit_law_military_bureaucrats = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_military_bureaucrats = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_military_bureaucrats value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_military_bureaucrats = {
 	value = 1.2
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_military_bureaucrats value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_military_bureaucrats > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -994,9 +1174,24 @@ sg_law_benefit_law_affirmative_action = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_affirmative_action = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_affirmative_action value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_affirmative_action = {
 	value = 6.6
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_affirmative_action value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_affirmative_action > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1076,9 +1271,24 @@ sg_law_benefit_law_hindu_caste_codified = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_hindu_caste_codified = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_hindu_caste_codified value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_hindu_caste_codified = {
 	value = 2.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_hindu_caste_codified value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_hindu_caste_codified > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1158,9 +1368,24 @@ sg_law_benefit_law_hindu_caste_enforced = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_hindu_caste_enforced = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_hindu_caste_enforced value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_hindu_caste_enforced = {
 	value = 1.2
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_hindu_caste_enforced value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_hindu_caste_enforced > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1240,9 +1465,24 @@ sg_law_benefit_law_hindu_caste_not_enforced = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_hindu_caste_not_enforced = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_hindu_caste_not_enforced value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_hindu_caste_not_enforced = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_hindu_caste_not_enforced value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_hindu_caste_not_enforced > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1322,9 +1562,24 @@ sg_law_benefit_law_child_labor_allowed = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_child_labor_allowed = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_child_labor_allowed value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_child_labor_allowed = {
 	value = 17.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_child_labor_allowed value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_child_labor_allowed > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1405,9 +1660,24 @@ sg_law_benefit_law_compulsory_primary_school = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_compulsory_primary_school = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_compulsory_primary_school value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_compulsory_primary_school = {
 	value = 13.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_compulsory_primary_school value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_compulsory_primary_school > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1487,9 +1757,24 @@ sg_law_benefit_law_restricted_child_labor = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_restricted_child_labor = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_restricted_child_labor value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_restricted_child_labor = {
 	value = 12.6
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_restricted_child_labor value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_restricted_child_labor > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1569,9 +1854,24 @@ sg_law_benefit_law_caesaropapism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_caesaropapism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_caesaropapism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_caesaropapism = {
 	value = 28.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_caesaropapism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_caesaropapism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1651,9 +1951,24 @@ sg_law_benefit_law_freedom_of_conscience = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_freedom_of_conscience = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_freedom_of_conscience value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_freedom_of_conscience = {
 	value = 26.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_freedom_of_conscience value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_freedom_of_conscience > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1733,9 +2048,24 @@ sg_law_benefit_law_millet_system = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_millet_system = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_millet_system value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_millet_system = {
 	value = 28.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_millet_system value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_millet_system > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1815,9 +2145,24 @@ sg_law_benefit_law_people_of_the_book = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_people_of_the_book = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_people_of_the_book value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_people_of_the_book = {
 	value = 28.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_people_of_the_book value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_people_of_the_book > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1897,9 +2242,24 @@ sg_law_benefit_law_state_atheism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_state_atheism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_state_atheism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_state_atheism = {
 	value = 28.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_state_atheism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_state_atheism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -1979,9 +2339,24 @@ sg_law_benefit_law_state_religion = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_state_religion = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_state_religion value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_state_religion = {
 	value = 28.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_state_religion value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_state_religion > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2061,9 +2436,24 @@ sg_law_benefit_law_total_separation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_total_separation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_total_separation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_total_separation = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_total_separation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_total_separation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2143,9 +2533,24 @@ sg_law_benefit_law_cultural_exclusion = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_cultural_exclusion = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_cultural_exclusion value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_cultural_exclusion = {
 	value = 4.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_cultural_exclusion value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_cultural_exclusion > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2225,9 +2630,24 @@ sg_law_benefit_law_ethnostate = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_ethnostate = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_ethnostate value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_ethnostate = {
 	value = 1.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_ethnostate value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_ethnostate > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2307,9 +2727,24 @@ sg_law_benefit_law_multicultural = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_multicultural = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_multicultural value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_multicultural = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_multicultural value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_multicultural > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2389,9 +2824,24 @@ sg_law_benefit_law_national_supremacy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_national_supremacy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_national_supremacy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_national_supremacy = {
 	value = 2.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_national_supremacy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_national_supremacy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2471,9 +2921,24 @@ sg_law_benefit_law_official_nationality = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_official_nationality = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_official_nationality value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_official_nationality = {
 	value = 3.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_official_nationality value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_official_nationality > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2553,9 +3018,24 @@ sg_law_benefit_law_racial_segregation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_racial_segregation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_racial_segregation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_racial_segregation = {
 	value = 3.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_racial_segregation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_racial_segregation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2635,9 +3115,24 @@ sg_law_benefit_law_subjecthood = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_subjecthood = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_subjecthood value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_subjecthood = {
 	value = 3.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_subjecthood value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_subjecthood > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2718,9 +3213,24 @@ sg_law_benefit_law_colonial_exploitation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_colonial_exploitation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_colonial_exploitation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_colonial_exploitation = {
 	value = 7.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_colonial_exploitation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_colonial_exploitation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2800,9 +3310,24 @@ sg_law_benefit_law_colonial_resettlement = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_colonial_resettlement = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_colonial_resettlement value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_colonial_resettlement = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_colonial_resettlement value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_colonial_resettlement > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2882,9 +3407,24 @@ sg_law_benefit_law_frontier_colonization = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_frontier_colonization = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_frontier_colonization value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_frontier_colonization = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_frontier_colonization value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_frontier_colonization > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -2964,9 +3504,24 @@ sg_law_benefit_law_internal_colonization = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_internal_colonization = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_internal_colonization value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_internal_colonization = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_internal_colonization value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_internal_colonization > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3046,9 +3601,24 @@ sg_law_benefit_law_no_colonial_affairs = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_colonial_affairs = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_colonial_affairs value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_colonial_affairs = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_colonial_affairs value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_colonial_affairs > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3128,9 +3698,24 @@ sg_law_benefit_law_anarchy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_anarchy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_anarchy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_anarchy = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_anarchy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_anarchy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3210,9 +3795,25 @@ sg_law_benefit_law_autocracy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_autocracy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_autocracy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_autocracy = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_autocracy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_autocracy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3292,9 +3893,25 @@ sg_law_benefit_law_bakufu = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_bakufu = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_bakufu value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_bakufu = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_bakufu value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_bakufu > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3374,9 +3991,25 @@ sg_law_benefit_law_census_voting = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_census_voting = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_census_voting value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_census_voting = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_census_voting value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_census_voting > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3456,9 +4089,24 @@ sg_law_benefit_law_elder_council = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_elder_council = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_elder_council value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_elder_council = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_elder_council value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_elder_council > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3538,9 +4186,25 @@ sg_law_benefit_law_labour_suffrage = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_labour_suffrage = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_labour_suffrage value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_labour_suffrage = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_labour_suffrage value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_labour_suffrage > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3620,9 +4284,25 @@ sg_law_benefit_law_landed_voting = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_landed_voting = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_landed_voting value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_landed_voting = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_landed_voting value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_landed_voting > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3702,9 +4382,25 @@ sg_law_benefit_law_neo_absolutism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_neo_absolutism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_neo_absolutism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_neo_absolutism = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_neo_absolutism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_neo_absolutism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3784,9 +4480,24 @@ sg_law_benefit_law_oligarchy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_oligarchy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_oligarchy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_oligarchy = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_oligarchy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_oligarchy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3866,9 +4577,24 @@ sg_law_benefit_law_organic_regulation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_organic_regulation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_organic_regulation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_organic_regulation = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_organic_regulation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_organic_regulation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -3948,9 +4674,24 @@ sg_law_benefit_law_single_party_state = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_single_party_state = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_single_party_state value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_single_party_state = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_single_party_state value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_single_party_state > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4031,9 +4772,24 @@ sg_law_benefit_law_technocracy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_technocracy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_technocracy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_technocracy = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_technocracy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_technocracy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4113,9 +4869,24 @@ sg_law_benefit_law_universal_suffrage = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_universal_suffrage = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_universal_suffrage value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_universal_suffrage = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_universal_suffrage value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_universal_suffrage > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4195,9 +4966,25 @@ sg_law_benefit_law_wealth_voting = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_wealth_voting = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_wealth_voting value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_wealth_voting = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_wealth_voting value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_wealth_voting > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4277,9 +5064,24 @@ sg_law_benefit_law_agrarianism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_agrarianism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_agrarianism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_agrarianism = {
 	value = 15.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_agrarianism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_agrarianism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4359,9 +5161,24 @@ sg_law_benefit_law_command_economy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_command_economy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_command_economy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_command_economy = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_command_economy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_command_economy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4441,9 +5258,24 @@ sg_law_benefit_law_cooperative_ownership = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_cooperative_ownership = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_cooperative_ownership value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_cooperative_ownership = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_cooperative_ownership value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_cooperative_ownership > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4523,9 +5355,24 @@ sg_law_benefit_law_extraction_economy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_extraction_economy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_extraction_economy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_extraction_economy = {
 	value = 15.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_extraction_economy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_extraction_economy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4605,9 +5452,24 @@ sg_law_benefit_law_industry_banned = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_industry_banned = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_industry_banned value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_industry_banned = {
 	value = 15.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_industry_banned value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_industry_banned > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4687,9 +5549,24 @@ sg_law_benefit_law_interventionism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_interventionism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_interventionism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_interventionism = {
 	value = 15.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_interventionism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_interventionism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4769,9 +5646,24 @@ sg_law_benefit_law_laissez_faire = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_laissez_faire = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_laissez_faire value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_laissez_faire = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_laissez_faire value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_laissez_faire > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4851,9 +5743,24 @@ sg_law_benefit_law_traditionalism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_traditionalism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_traditionalism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_traditionalism = {
 	value = 11.2
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_traditionalism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_traditionalism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -4933,9 +5840,24 @@ sg_law_benefit_law_intermediate_edo_system = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_intermediate_edo_system = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_intermediate_edo_system value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_intermediate_edo_system = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_intermediate_edo_system value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_intermediate_edo_system > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5015,9 +5937,24 @@ sg_law_benefit_law_lax_edo_system = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_lax_edo_system = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_lax_edo_system value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_lax_edo_system = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_lax_edo_system value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_lax_edo_system > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5097,9 +6034,24 @@ sg_law_benefit_law_strict_edo_system = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_strict_edo_system = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_strict_edo_system value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_strict_edo_system = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_strict_edo_system value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_strict_edo_system > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5178,9 +6130,24 @@ sg_law_benefit_law_no_schools = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_schools = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_schools value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_schools = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_schools value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_schools > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5260,9 +6227,24 @@ sg_law_benefit_law_private_schools = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_private_schools = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_private_schools value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_private_schools = {
 	value = 1.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_private_schools value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_private_schools > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5342,9 +6324,24 @@ sg_law_benefit_law_public_schools = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_public_schools = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_public_schools value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_public_schools = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_public_schools value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_public_schools > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5424,9 +6421,24 @@ sg_law_benefit_law_religious_schools = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_religious_schools = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_religious_schools value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_religious_schools = {
 	value = 3.4
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_religious_schools value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_religious_schools > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5506,9 +6518,24 @@ sg_law_benefit_law_terakoya = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_terakoya = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_terakoya value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_terakoya = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_terakoya value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_terakoya > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5588,9 +6615,24 @@ sg_law_benefit_law_censorship = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_censorship = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_censorship value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_censorship = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_censorship value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_censorship > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5670,9 +6712,24 @@ sg_law_benefit_law_outlawed_dissent = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_outlawed_dissent = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_outlawed_dissent value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_outlawed_dissent = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_outlawed_dissent value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_outlawed_dissent > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5752,9 +6809,24 @@ sg_law_benefit_law_protected_speech = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_protected_speech = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_protected_speech value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_protected_speech = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_protected_speech value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_protected_speech > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5834,9 +6906,24 @@ sg_law_benefit_law_right_of_assembly = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_right_of_assembly = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_right_of_assembly value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_right_of_assembly = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_right_of_assembly value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_right_of_assembly > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5916,9 +7003,24 @@ sg_law_benefit_law_chiefdom = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_chiefdom = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_chiefdom value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_chiefdom = {
 	value = 1.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_chiefdom value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_chiefdom > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -5998,9 +7100,25 @@ sg_law_benefit_law_colonial_administration = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_colonial_administration = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_colonial_administration value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_colonial_administration = {
 	value = 6.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_colonial_administration value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_colonial_administration > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6080,9 +7198,24 @@ sg_law_benefit_law_corporate_state = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_corporate_state = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_corporate_state value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_corporate_state = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_corporate_state value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_corporate_state > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6162,9 +7295,24 @@ sg_law_benefit_law_council_republic = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_council_republic = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_council_republic value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_council_republic = {
 	value = 1.9
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_council_republic value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_council_republic > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6244,9 +7392,25 @@ sg_law_benefit_law_monarchy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_monarchy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_monarchy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_monarchy = {
 	value = 1.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_monarchy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_monarchy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6326,9 +7490,24 @@ sg_law_benefit_law_parliamentary_republic = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_parliamentary_republic = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_parliamentary_republic value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_parliamentary_republic = {
 	value = 2.9
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_parliamentary_republic value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_parliamentary_republic > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6408,9 +7587,25 @@ sg_law_benefit_law_presidential_republic = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_presidential_republic = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_presidential_republic value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_presidential_republic = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_presidential_republic value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_presidential_republic > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6490,9 +7685,24 @@ sg_law_benefit_law_social_monarchy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_social_monarchy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_social_monarchy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_social_monarchy = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_social_monarchy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_social_monarchy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6572,9 +7782,25 @@ sg_law_benefit_law_theocracy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_theocracy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_theocracy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_theocracy = {
 	value = 1.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_theocracy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { legitimacy < 40 } add = 8 }
+	if = { limit = { sg_law_powerful_opposition_law_theocracy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6654,9 +7880,24 @@ sg_law_benefit_law_charitable_health_system = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_charitable_health_system = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_charitable_health_system value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_charitable_health_system = {
 	value = 1.6
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_charitable_health_system value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_charitable_health_system > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6735,9 +7976,24 @@ sg_law_benefit_law_no_health_system = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_health_system = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_health_system value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_health_system = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_health_system value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_health_system > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6817,9 +8073,24 @@ sg_law_benefit_law_private_health_insurance = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_private_health_insurance = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_private_health_insurance value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_private_health_insurance = {
 	value = 1.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_private_health_insurance value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_private_health_insurance > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6899,9 +8170,24 @@ sg_law_benefit_law_public_health_insurance = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_public_health_insurance = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_public_health_insurance value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_public_health_insurance = {
 	value = 2.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_public_health_insurance value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_public_health_insurance > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -6980,9 +8266,24 @@ sg_law_benefit_law_extraordinary_commission = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_extraordinary_commission = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_extraordinary_commission value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_extraordinary_commission = {
 	value = 2.2
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_extraordinary_commission value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_extraordinary_commission > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7061,9 +8362,24 @@ sg_law_benefit_law_guaranteed_liberties = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_guaranteed_liberties = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_guaranteed_liberties value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_guaranteed_liberties = {
 	value = 3.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_guaranteed_liberties value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_guaranteed_liberties > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7143,9 +8459,24 @@ sg_law_benefit_law_national_guard = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_national_guard = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_national_guard value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_national_guard = {
 	value = 4.1
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_national_guard value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_national_guard > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7224,9 +8555,24 @@ sg_law_benefit_law_no_home_affairs = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_home_affairs = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_home_affairs value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_home_affairs = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_home_affairs value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_home_affairs > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7305,10 +8651,25 @@ sg_law_benefit_law_okhrana = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_okhrana = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_okhrana value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_okhrana = {
 	value = 3.5
 	if = { limit = { radical_fraction = { value >= 0.2 } } add = 8 }
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_okhrana value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_okhrana > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7387,9 +8748,24 @@ sg_law_benefit_law_secret_police = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_secret_police = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_secret_police value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_secret_police = {
 	value = 2.2
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_secret_police value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_secret_police > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7468,9 +8844,24 @@ sg_law_benefit_law_shinsengumi = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_shinsengumi = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_shinsengumi value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_shinsengumi = {
 	value = 1.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_shinsengumi value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_shinsengumi > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7550,9 +8941,24 @@ sg_law_benefit_law_third_section = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_third_section = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_third_section value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_third_section = {
 	value = 0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_third_section value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_third_section > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7631,9 +9037,24 @@ sg_law_benefit_law_no_workers_rights = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_workers_rights = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_workers_rights value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_workers_rights = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_workers_rights value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_workers_rights > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7712,9 +9133,24 @@ sg_law_benefit_law_regulatory_bodies = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_regulatory_bodies = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_regulatory_bodies value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_regulatory_bodies = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_regulatory_bodies value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_regulatory_bodies > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7794,9 +9230,24 @@ sg_law_benefit_law_worker_protections = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_worker_protections = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_worker_protections value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_worker_protections = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_worker_protections value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_worker_protections > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7875,10 +9326,25 @@ sg_law_benefit_law_anti_strike_laws = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_anti_strike_laws = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_anti_strike_laws value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_anti_strike_laws = {
 	value = 9.0
 	if = { limit = { radical_fraction = { value >= 0.2 } } add = 8 }
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_anti_strike_laws value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_anti_strike_laws > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -7957,10 +9423,25 @@ sg_law_benefit_law_combination_acts = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_combination_acts = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_combination_acts value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_combination_acts = {
 	value = 15.0
 	if = { limit = { radical_fraction = { value >= 0.2 } } add = 8 }
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_combination_acts value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_combination_acts > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8039,10 +9520,25 @@ sg_law_benefit_law_corporatized_unions = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_corporatized_unions = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_corporatized_unions value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_corporatized_unions = {
 	value = 8.0
 	if = { limit = { radical_fraction = { value >= 0.2 } } add = 8 }
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_corporatized_unions value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_corporatized_unions > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8121,9 +9617,24 @@ sg_law_benefit_law_factory_councils = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_factory_councils = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_factory_councils value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_factory_councils = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_factory_councils value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_factory_councils > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8204,9 +9715,24 @@ sg_law_benefit_law_guild_system = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_guild_system = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_guild_system value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_guild_system = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_guild_system value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_guild_system > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8285,9 +9811,24 @@ sg_law_benefit_law_right_to_associate = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_right_to_associate = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_right_to_associate value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_right_to_associate = {
 	value = 1.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_right_to_associate value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_right_to_associate > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8366,9 +9907,24 @@ sg_law_benefit_law_collectivized_agriculture = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_collectivized_agriculture = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_collectivized_agriculture value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_collectivized_agriculture = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_collectivized_agriculture value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_collectivized_agriculture > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8447,9 +10003,24 @@ sg_law_benefit_law_commercialized_agriculture = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_commercialized_agriculture = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_commercialized_agriculture value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_commercialized_agriculture = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_commercialized_agriculture value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_commercialized_agriculture > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8529,9 +10100,24 @@ sg_law_benefit_law_expanded_latifundias = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_expanded_latifundias = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_expanded_latifundias value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_expanded_latifundias = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_expanded_latifundias value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_expanded_latifundias > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8611,9 +10197,24 @@ sg_law_benefit_law_homesteading = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_homesteading = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_homesteading value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_homesteading = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_homesteading value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_homesteading > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8692,9 +10293,24 @@ sg_law_benefit_law_latifundias = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_latifundias = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_latifundias value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_latifundias = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_latifundias value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_latifundias > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8774,9 +10390,24 @@ sg_law_benefit_law_manorialism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_manorialism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_manorialism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_manorialism = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_manorialism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_manorialism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8856,9 +10487,24 @@ sg_law_benefit_law_peasant_proprietorship = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_peasant_proprietorship = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_peasant_proprietorship value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_peasant_proprietorship = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_peasant_proprietorship value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_peasant_proprietorship > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -8938,9 +10584,24 @@ sg_law_benefit_law_serfdom = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_serfdom = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_serfdom value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_serfdom = {
 	value = 21.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_serfdom value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_serfdom > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9020,9 +10681,24 @@ sg_law_benefit_law_tenant_farmers = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_tenant_farmers = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_tenant_farmers value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_tenant_farmers = {
 	value = 13.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_tenant_farmers value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_tenant_farmers > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9101,9 +10777,24 @@ sg_law_benefit_law_closed_borders = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_closed_borders = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_closed_borders value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_closed_borders = {
 	value = 31.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_closed_borders value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_closed_borders > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9182,9 +10873,24 @@ sg_law_benefit_law_migration_controls = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_migration_controls = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_migration_controls value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_migration_controls = {
 	value = 25.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_migration_controls value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_migration_controls > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9263,9 +10969,24 @@ sg_law_benefit_law_no_migration_controls = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_migration_controls = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_migration_controls value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_migration_controls = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_migration_controls value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_migration_controls > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9345,9 +11066,24 @@ sg_law_benefit_law_diplomatic_navy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_diplomatic_navy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_diplomatic_navy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_diplomatic_navy = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_diplomatic_navy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_diplomatic_navy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9427,9 +11163,24 @@ sg_law_benefit_law_jeune_ecole = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_jeune_ecole = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_jeune_ecole value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_jeune_ecole = {
 	value = 4.5
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_jeune_ecole value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_jeune_ecole > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9509,9 +11260,24 @@ sg_law_benefit_law_merchant_navy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_merchant_navy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_merchant_navy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_merchant_navy = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_merchant_navy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_merchant_navy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9591,9 +11357,24 @@ sg_law_benefit_law_professional_navy = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_professional_navy = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_professional_navy value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_professional_navy = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_professional_navy value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_professional_navy > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9674,10 +11455,25 @@ sg_law_benefit_law_dedicated_police = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_dedicated_police = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_dedicated_police value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_dedicated_police = {
 	value = 11.0
 	if = { limit = { radical_fraction = { value >= 0.2 } } add = 8 }
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_dedicated_police value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_dedicated_police > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9756,9 +11552,24 @@ sg_law_benefit_law_local_police = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_local_police = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_local_police value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_local_police = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_local_police value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_local_police > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9839,10 +11650,25 @@ sg_law_benefit_law_militarized_police = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_militarized_police = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_militarized_police value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_militarized_police = {
 	value = 11.0
 	if = { limit = { radical_fraction = { value >= 0.2 } } add = 8 }
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_militarized_police value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_militarized_police > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -9921,9 +11747,24 @@ sg_law_benefit_law_no_police = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_police = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_police value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_police = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_police value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_police > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10003,9 +11844,24 @@ sg_law_benefit_law_no_womens_rights = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_womens_rights = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_womens_rights value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_womens_rights = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_womens_rights value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_womens_rights > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10085,9 +11941,24 @@ sg_law_benefit_law_women_in_the_fields = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_women_in_the_fields = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_women_in_the_fields value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_women_in_the_fields = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_women_in_the_fields value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_women_in_the_fields > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10167,9 +12038,24 @@ sg_law_benefit_law_women_in_the_workplace = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_women_in_the_workplace = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_women_in_the_workplace value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_women_in_the_workplace = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_women_in_the_workplace value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_women_in_the_workplace > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10249,9 +12135,24 @@ sg_law_benefit_law_women_own_property = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_women_own_property = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_women_own_property value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_women_own_property = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_women_own_property value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_women_own_property > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10331,9 +12232,24 @@ sg_law_benefit_law_womens_suffrage = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_womens_suffrage = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_womens_suffrage value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_womens_suffrage = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_womens_suffrage value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_womens_suffrage > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10412,9 +12328,24 @@ sg_law_benefit_law_colonial_slavery = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_colonial_slavery = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_colonial_slavery value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_colonial_slavery = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_colonial_slavery value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_colonial_slavery > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10493,9 +12424,24 @@ sg_law_benefit_law_debt_slavery = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_debt_slavery = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_debt_slavery value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_debt_slavery = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_debt_slavery value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_debt_slavery > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10574,9 +12520,24 @@ sg_law_benefit_law_legacy_slavery = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_legacy_slavery = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_legacy_slavery value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_legacy_slavery = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_legacy_slavery value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_legacy_slavery > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10655,9 +12616,24 @@ sg_law_benefit_law_slave_trade = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_slave_trade = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_slave_trade value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_slave_trade = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_slave_trade value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_slave_trade > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10736,9 +12712,24 @@ sg_law_benefit_law_slavery_banned = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_slavery_banned = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_slavery_banned value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_slavery_banned = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_slavery_banned value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_slavery_banned > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10818,9 +12809,24 @@ sg_law_benefit_law_consumption_based_taxation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_consumption_based_taxation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_consumption_based_taxation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_consumption_based_taxation = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_consumption_based_taxation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_consumption_based_taxation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10901,9 +12907,24 @@ sg_law_benefit_law_graduated_taxation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_graduated_taxation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_graduated_taxation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_graduated_taxation = {
 	value = 8.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_graduated_taxation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_graduated_taxation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -10983,9 +13004,24 @@ sg_law_benefit_law_land_based_taxation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_land_based_taxation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_land_based_taxation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_land_based_taxation = {
 	value = 8.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_land_based_taxation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_land_based_taxation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11065,9 +13101,24 @@ sg_law_benefit_law_per_capita_based_taxation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_per_capita_based_taxation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_per_capita_based_taxation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_per_capita_based_taxation = {
 	value = 8.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_per_capita_based_taxation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_per_capita_based_taxation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11148,9 +13199,24 @@ sg_law_benefit_law_proportional_taxation = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_proportional_taxation = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_proportional_taxation value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_proportional_taxation = {
 	value = 8.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_proportional_taxation value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_proportional_taxation > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11231,9 +13297,24 @@ sg_law_benefit_law_canton_system = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_canton_system = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_canton_system value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_canton_system = {
 	value = 13.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_canton_system value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_canton_system > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11314,9 +13395,24 @@ sg_law_benefit_law_free_trade = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_free_trade = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_free_trade value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_free_trade = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_free_trade value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_free_trade > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11397,9 +13493,24 @@ sg_law_benefit_law_isolationism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_isolationism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_isolationism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_isolationism = {
 	value = 22.5
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_isolationism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_isolationism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11480,9 +13591,24 @@ sg_law_benefit_law_mercantilism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_mercantilism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_mercantilism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_mercantilism = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_mercantilism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_mercantilism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11563,9 +13689,24 @@ sg_law_benefit_law_protectionism = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_protectionism = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_protectionism value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_protectionism = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_protectionism value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_protectionism > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11646,9 +13787,24 @@ sg_law_benefit_law_sakoku = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_sakoku = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_sakoku value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_sakoku = {
 	value = 8.8
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_sakoku value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_sakoku > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11728,9 +13884,24 @@ sg_law_benefit_law_chiefs_distribute_aid = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_chiefs_distribute_aid = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_chiefs_distribute_aid value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_chiefs_distribute_aid = {
 	value = 21.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_chiefs_distribute_aid value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_chiefs_distribute_aid > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11809,9 +13980,24 @@ sg_law_benefit_law_no_social_security = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_no_social_security = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_no_social_security value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_no_social_security = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_no_social_security value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_no_social_security > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11891,9 +14077,24 @@ sg_law_benefit_law_old_age_pension = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_old_age_pension = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_old_age_pension value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_old_age_pension = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_old_age_pension value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_old_age_pension > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -11972,9 +14173,24 @@ sg_law_benefit_law_poor_laws = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_poor_laws = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_poor_laws value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_poor_laws = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_poor_laws value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_poor_laws > 0 } add = 12 }
 	min = 0
 	max = 60
 }
@@ -12054,9 +14270,24 @@ sg_law_benefit_law_wage_subsidies = {
 	max = 100
 }
 
+sg_law_powerful_opposition_law_wage_subsidies = {
+	value = 0
+	if = {
+		limit = {
+			any_interest_group = {
+				is_powerful = yes
+				law_stance = { law = law_type:law_wage_subsidies value <= strongly_disapprove }
+			}
+		}
+		add = 1
+	}
+	min = 0
+	max = 1
+}
+
 sg_law_risk_law_wage_subsidies = {
 	value = 5.0
-	if = { limit = { any_interest_group = { is_powerful = yes law_stance = { law = law_type:law_wage_subsidies value <= strongly_disapprove } } } add = 12 }
+	if = { limit = { sg_law_powerful_opposition_law_wage_subsidies > 0 } add = 12 }
 	min = 0
 	max = 60
 }

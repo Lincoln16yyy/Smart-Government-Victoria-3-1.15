@@ -3030,7 +3030,7 @@
    "benefit": 66.0,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3090,7 +3090,7 @@
    "benefit": 66.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3163,7 +3163,7 @@
    "benefit": 78.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3310,7 +3310,7 @@
    "benefit": 77.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3414,7 +3414,7 @@
    "benefit": 72.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3501,7 +3501,7 @@
    "benefit": 68.5,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3896,7 +3896,7 @@
    "benefit": 77.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -5685,7 +5685,7 @@
    "benefit": 46.0,
    "risk": 6.0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -5841,7 +5841,7 @@
    "benefit": 56.0,
    "risk": 1.0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -5927,7 +5927,7 @@
    "benefit": 48.0,
    "risk": 5.0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6029,7 +6029,7 @@
    "benefit": 56.0,
    "risk": 1.0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 8,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [

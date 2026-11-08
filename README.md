@@ -12,20 +12,19 @@ registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativa
 
 - Recomenda até três leis, com pontuação, benefício, risco, apoio do governo e
   explicação.
-- Recomenda no máximo uma lei por grupo de leis. Variantes do mesmo grupo são
-  alternativas mutuamente exclusivas, então o conselheiro escolhe a melhor de
-  cada grupo antes de montar o top três.
+- Classifica as leis globalmente e mostra as três melhores, sem reservar uma
+  vaga por grupo. Uma lei só entra se superar em pelo menos 5 pontos de mérito a
+  lei que já está em vigor no grupo dela.
 - Usa o processo **normal** de promulgação (`start_enactment`). Não aprova leis
   automaticamente e não altera legitimidade, grupos de interesse ou oposição.
 - Reavalia todo mês e também por um botão de atualização.
 - Mostra o mês e o ano da última atualização das recomendações.
 - Mostra quantas leis foram verificadas, ficaram disponíveis, foram filtradas
-  por ignoradas, foram descartadas pela regra de um por grupo, entraram na
+  por ignoradas, foram descartadas por não superarem a lei em vigor, entraram na
   comparação e foram exibidas no último ranking.
 - Permite promulgar, ignorar até três leis, restaurar uma ignorada por vez,
-  limpar a lista de ignoradas e desativar o conselheiro. Se a lei líder de um
-  grupo for ignorada, a próxima melhor alternativa do grupo pode entrar no
-  lugar.
+  limpar a lista de ignoradas e desativar o conselheiro. Uma lei ignorada sai da
+  disputa; as demais continuam concorrendo normalmente.
 - Mostra os efeitos e requisitos reais da lei ao passar o mouse sobre o nome.
 - Interface em português do Brasil, com inglês como fallback.
 - Não edita nenhum arquivo original do jogo.

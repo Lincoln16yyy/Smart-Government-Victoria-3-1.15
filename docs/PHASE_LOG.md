@@ -117,14 +117,14 @@ Installation performed:
   with `EqualTo_int32` in `tools/build_gui.py` to prevent `FetchData` errors in
   the Clausewitz GUI engine which previously caused all 148 laws to render
   simultaneously.
-- Fixed theme selector mapping: properly indexed numeric values with
-  `EqualTo_int32` defaulting cleanly to index 1.
-- Fixed journal entry disable lifecycle: added `invalid_outcome` to
-  `je_sg_law_advisor` so that deactivation immediately closes and invalidates
-  the journal entry rather than lingering with an empty state until month tick.
+- Fixed theme selector mapping: `EqualTo_int32` now covers the generated
+  1..N values and falls back to the explicit zero-indexed localization key,
+  so the initial value `0` no longer displays theme 1.
+- Fixed journal entry disable lifecycle: `je_sg_law_advisor` uses
+  `disable_evaluation` alongside its invalid outcome, removing the inactive
+  entry after disable so the enable decision can create a fresh active entry.
 - Fixed missing localization keys: added `je_sg_law_advisor`,
   `je_sg_law_advisor_reason` and `sg_disabled_desc` in English and Brazilian
   Portuguese.
 - Re-validated with `tools/validate.py` (0 errors) and reinstalled via
   `tools/install_mod.py --force`.
-

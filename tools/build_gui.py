@@ -23,13 +23,14 @@ FOCUS_COUNT = 6
 def selector(variable: str, prefix: str, count: int) -> str:
     """Build a SelectLocalization chain using EqualTo_int32.
 
-    Maps numeric values 1..count to localization keys prefix_1 .. prefix_count.
-    EqualTo_int32 is the reliable comparison function with Var().GetValue
-    in the Victoria 3 GUI context.
+    Maps numeric values 1..count to localization keys prefix_1 .. prefix_count
+    and uses the zero-indexed key as the fallback for value 0.
+    EqualTo_int32 is the reliable comparison function with Var().GetValue in
+    the Victoria 3 GUI context.
     """
     var_expr = f"JournalEntry.GetCountry.MakeScope.Var('{variable}').GetValue"
-    expr = f"'{prefix}_1'"
-    for k in range(count, 1, -1):
+    expr = f"'{prefix}_0'"
+    for k in range(count, 0, -1):
         expr = (
             f"SelectLocalization(EqualTo_int32({var_expr}, '(int32){k}'), "
             f"'{prefix}_{k}', {expr})"

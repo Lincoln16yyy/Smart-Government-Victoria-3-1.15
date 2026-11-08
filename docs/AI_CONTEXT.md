@@ -5,7 +5,7 @@ repository. It records the design, the exact game/save paths on the original
 machine, what is generated, what is hand-written, what has been verified, and
 what still needs a runtime test.
 
-Last updated: 2026-11-07 (phase 4: Sourcery review fixes; schema 2).
+Last updated: 2026-11-07 (phase 6: startup runtime check and metadata fix; schema 2).
 
 ---
 
@@ -314,7 +314,9 @@ Still to do:
    stable ids.
 2. **Runtime test.** Copy a save, back up `content_load.json`, install the mod,
    enable it, load the copy, open the journal, click Enact, ignore, refresh,
-   disable and re-enable. Check `error.log` for script/GUI errors.
+   disable and re-enable. Check `error.log` for script/GUI errors. The
+   executable startup was verified under Wine, but this environment could not
+   drive the graphical save/UI interaction.
 3. **Fix runtime issues.** Most likely areas: the
    `GreaterThan_int32`/`LessThan_int32` id branches, the
    `law_stance`/`law_enactment_stance` values, or a vanilla trigger copied from
@@ -358,6 +360,8 @@ Still to do:
   be removed from a save.
 - Do not add a second journal entry per law category: one entry is deliberately
   used to avoid inactive-entry re-enable problems.
+- `.metadata/metadata.json` is included so the game does not log a missing
+  metadata file when loading a local installation.
 
 ---
 

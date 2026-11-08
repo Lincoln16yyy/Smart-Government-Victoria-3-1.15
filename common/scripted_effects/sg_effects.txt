@@ -1,4 +1,4 @@
-# Smart Government Advisor - lifecycle, ignore list and diagnostics effects.
+﻿# Smart Government Advisor - lifecycle, ignore list and diagnostics effects.
 # Country scope unless noted.
 
 # Schema 2 replaces the old positional law index with a stable numeric id

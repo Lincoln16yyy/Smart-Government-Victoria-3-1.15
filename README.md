@@ -4,10 +4,9 @@ Conselheiro de leis para Victoria 3 1.15. Ele lê os efeitos **reais** das leis 
 jogo, pontua as opções disponíveis e mostra as três melhores recomendações em um
 registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativar.
 
-> **Status:** em desenvolvimento (fase 2). O código-fonte e os dados gerados já
-> estão no repositório, mas o teste em tempo de jogo ainda não foi executado.
-> Não trate o mod como pronto para uso público antes da validação e do teste em
-> um save separado.
+> **Status:** em desenvolvimento. A validação estática e o carregamento inicial
+> do executável foram verificados; o teste interativo das ações do diário em um
+> save ainda depende de uma sessão gráfica do jogo.
 
 ## O que ele faz
 
@@ -21,6 +20,7 @@ registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativa
 - Mostra os efeitos e requisitos reais da lei ao passar o mouse sobre o nome.
 - Interface em português do Brasil, com inglês como fallback.
 - Não edita nenhum arquivo original do jogo.
+- Inclui metadata local para evitar erro de leitura ao carregar o mod instalado.
 
 ## Requisitos
 
@@ -167,7 +167,9 @@ O contexto completo para outro desenvolvedor ou IA está em
 
 ## Limitações conhecidas
 
-- O teste em tempo de jogo ainda não foi executado.
+- O executável inicia em Wine, mas este ambiente não permite conduzir de forma
+  confiável a interface gráfica para carregar o save de teste e clicar nas
+  ações do diário.
 - Algumas funções de GUI e de posição política ainda precisam de confirmação em
   runtime; os fallbacks estão documentados em `docs/AI_CONTEXT.md`.
 - O texto de benefício/risco é temático (derivado dos modificadores), enquanto os

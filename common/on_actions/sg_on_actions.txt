@@ -32,6 +32,7 @@ sg_monthly_country_dispatcher = {
 		}
 		else_if = {
 			limit = { has_variable = sg_enabled }
+			sg_initialize_refresh_date = yes
 			sg_ensure_journal_entry = yes
 		}
 	}

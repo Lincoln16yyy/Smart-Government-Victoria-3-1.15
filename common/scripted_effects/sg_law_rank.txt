@@ -34,6 +34,8 @@ sg_shift_top_for_2 = {
 
 sg_rank_laws = {
 	sg_migrate_schema = yes
+	set_variable = { name = sg_last_refresh_year value = year }
+	set_variable = { name = sg_last_refresh_month value = month }
 	remove_variable = sg_top_1_id
 	remove_variable = sg_top_1_benefit
 	remove_variable = sg_top_1_risk

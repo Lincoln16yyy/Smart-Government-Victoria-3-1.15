@@ -36,6 +36,7 @@ sg_migrate_schema = {
 sg_initialize_country = {
 	sg_migrate_schema = yes
 	set_variable = { name = sg_enabled value = yes }
+	sg_initialize_refresh_date = yes
 	sg_ensure_journal_entry = yes
 	sg_rank_laws = yes
 	if = {
@@ -44,10 +45,23 @@ sg_initialize_country = {
 	}
 }
 
+sg_initialize_refresh_date = {
+	if = {
+		limit = { NOT = { has_variable = sg_last_refresh_year } }
+		set_variable = { name = sg_last_refresh_year value = year }
+	}
+	if = {
+		limit = { NOT = { has_variable = sg_last_refresh_month } }
+		set_variable = { name = sg_last_refresh_month value = month }
+	}
+}
+
 # Removes every runtime variable. The schema marker stays so a running save
 # that was deliberately disabled is never auto-enabled again.
 sg_disable_country = {
 	remove_variable = sg_enabled
+	remove_variable = sg_last_refresh_year
+	remove_variable = sg_last_refresh_month
 	sg_clear_rank = yes
 	remove_variable = sg_ignored_1
 	remove_variable = sg_ignored_2
@@ -89,6 +103,7 @@ sg_clear_rank = {
 }
 
 sg_ensure_journal_entry = {
+	sg_initialize_refresh_date = yes
 	if = {
 		limit = {
 			NOT = { has_journal_entry = je_sg_law_advisor }

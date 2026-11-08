@@ -15,6 +15,7 @@ registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativa
 - Usa o processo **normal** de promulgação (`start_enactment`). Não aprova leis
   automaticamente e não altera legitimidade, grupos de interesse ou oposição.
 - Reavalia todo mês e também por um botão de atualização.
+- Mostra o mês e o ano da última atualização das recomendações.
 - Permite promulgar, ignorar até três leis, limpar a lista de ignoradas e
   desativar o conselheiro.
 - Mostra os efeitos e requisitos reais da lei ao passar o mouse sobre o nome.
@@ -78,6 +79,9 @@ dentro) e o arquivo `Smart Government Advisor.mod` ao lado dela.
   O botão fica desabilitado enquanto outra lei estiver sendo promulgada.
 - Clique em **Ignorar** para tirar uma lei da lista até você limpar as ignoradas.
 - Use o botão de atualização para reavaliar imediatamente.
+- O registro mostra quando as recomendações foram atualizadas pela última vez.
+- Se nenhuma lei puder ser recomendada, o estado vazio explica que as leis podem
+  já estar ativas, bloqueadas pelos requisitos atuais ou ignoradas.
 
 ## Como a pontuação funciona
 

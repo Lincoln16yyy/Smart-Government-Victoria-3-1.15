@@ -9,15 +9,19 @@ copy of a campaign.
 2. Back up the active load order before changing it:
 
    ```bash
-   cp \
-     "$HOME/.config/hydralauncher/wine-prefixes/529340/drive_c/users/steamuser/Documents/Paradox Interactive/Victoria 3/content_load.json" \
-     "$HOME/.config/hydralauncher/wine-prefixes/529340/drive_c/users/steamuser/Documents/Paradox Interactive/Victoria 3/content_load.json.sg-backup"
+   USER_DIR="$HOME/.config/hydralauncher/wine-prefixes/529340/drive_c/users/steamuser/Documents/Paradox Interactive/Victoria 3"
+   BACKUP="$USER_DIR/content_load.json.sg-backup"
+   test ! -e "$BACKUP" || {
+     echo "Backup already exists; restore or rename it before continuing." >&2
+     exit 1
+   }
+   cp -- "$USER_DIR/content_load.json" "$BACKUP"
    ```
 
 3. Install the current working tree:
 
    ```bash
-   python3 tools/install_mod.py --force
+   python3 tools/install_mod.py --user-dir "$USER_DIR" --force
    ```
 
 4. Enable **Smart Government Advisor** in the launcher. Do not remove or
@@ -37,7 +41,7 @@ names and the last-refresh month/year before each action.
 | Refresh | The rows and refresh date are recalculated immediately; no law starts by itself. |
 | Hover a law name | The tooltip shows the game's current effects and blocking requirements for that law. |
 | Ignore one recommendation | That law disappears after reranking and is not immediately recommended again. |
-| Ignore up to three recommendations | Each ignored law stays out of the list. If a fourth is ignored, the oldest-slot replacement behavior is used. |
+| Ignore up to three recommendations | Each ignored law stays out of the list. If a fourth is ignored, the newest ignored law in slot 3 is replaced. |
 | Clear ignored | Previously ignored laws become eligible again after reranking. |
 | Enact one recommendation | The normal law enactment process opens/starts for the selected law; the law is not approved instantly. |
 | While a law is being enacted | Enact buttons are disabled, while Refresh, Ignore, Clear ignored and Disable remain usable where applicable. |
@@ -48,6 +52,20 @@ names and the last-refresh month/year before each action.
 After each click, wait for the journal widget to redraw before judging the row
 or button state. Save the test copy after a meaningful checkpoint if the game
 session must be resumed.
+
+## Cleanup
+
+After closing Victoria 3 and finishing the log checks, restore the original
+load order so later campaigns are unaffected:
+
+```bash
+cp -- "$BACKUP" "$USER_DIR/content_load.json"
+rm -- "$BACKUP"
+```
+
+If the test is interrupted, run the cleanup commands before launching another
+campaign. The mod folder itself may remain installed; only the load order is
+restored.
 
 ## Log checks
 

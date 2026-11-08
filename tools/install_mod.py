@@ -99,22 +99,48 @@ def main() -> int:
     if args.dry_run:
         return 0
 
+    staging = mod_root / f".{MOD_NAME}.staging"
+    previous = mod_root / f".{MOD_NAME}.previous"
+    descriptor_staging = mod_root / f".{MOD_NAME}.mod.staging"
+    if staging.exists() or previous.exists() or descriptor_staging.exists():
+        raise SystemExit(
+            f"Temporary install path already exists under {mod_root}; "
+            "remove it after confirming no install is running."
+        )
+
     if target.exists():
         if not args.force:
             raise SystemExit(
                 f"{target} already exists. Re-run with --force to replace it."
             )
-        shutil.rmtree(target)
-    shutil.copytree(ROOT, target, ignore=IGNORE)
 
-    descriptor.write_text(
+    descriptor_text = (
         "version=\"1.0.0\"\n"
         "tags={\n\t\"Utilities\"\n\t\"Politics\"\n}\n"
         f"name=\"{MOD_NAME}\"\n"
         "supported_version=\"1.15.*\"\n"
-        f"path=\"mod/{MOD_NAME}\"\n",
-        encoding="utf-8",
+        f"path=\"mod/{MOD_NAME}\"\n"
     )
+    try:
+        shutil.copytree(ROOT, staging, ignore=IGNORE)
+        descriptor_staging.write_text(descriptor_text, encoding="utf-8")
+        if target.exists():
+            target.rename(previous)
+        staging.rename(target)
+        descriptor_staging.replace(descriptor)
+    except Exception:
+        if target.exists() and not previous.exists():
+            shutil.rmtree(target)
+        if previous.exists() and not target.exists():
+            previous.rename(target)
+        raise
+    finally:
+        if staging.exists():
+            shutil.rmtree(staging)
+        if descriptor_staging.exists():
+            descriptor_staging.unlink()
+    if previous.exists():
+        shutil.rmtree(previous)
     print("Installed. Activate the mod in the launcher.")
     return 0
 

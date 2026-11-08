@@ -809,13 +809,17 @@ def emit_values(laws) -> str:
 
 
 def ignored_trigger(law) -> str:
+    return f"NOT = {{ {ignored_list_trigger(law)} }}"
+
+
+def ignored_list_trigger(law) -> str:
     parts = []
     for slot in (1, 2, 3):
         parts.append(
             f"AND = {{ has_variable = sg_ignored_{slot} "
             f"var:sg_ignored_{slot} = {law['sid']} }}"
         )
-    return "NOT = { OR = { " + " ".join(parts) + " } }"
+    return "OR = { " + " ".join(parts) + " }"
 
 
 def shift_effects() -> str:
@@ -867,6 +871,11 @@ def emit_rank(laws) -> str:
     out.append("\tsg_migrate_schema = yes")
     out.append("\tset_variable = { name = sg_last_refresh_year value = year }")
     out.append("\tset_variable = { name = sg_last_refresh_month value = month }")
+    out.append(f"\tset_variable = {{ name = sg_last_rank_evaluated value = {len(laws)} }}")
+    out.append("\tset_variable = { name = sg_last_rank_available value = 0 }")
+    out.append("\tset_variable = { name = sg_last_rank_ignored value = 0 }")
+    out.append("\tset_variable = { name = sg_last_rank_eligible value = 0 }")
+    out.append("\tset_variable = { name = sg_last_ranked_count value = 0 }")
     fields = ["id", "benefit", "risk", "focus", "benefit_score", "risk_score", "politics"]
     for slot in (1, 2, 3):
         for field in fields:
@@ -888,8 +897,14 @@ def emit_rank(laws) -> str:
         out.append(f"\tif = {{")
         out.append(f"\t\tlimit = {{")
         out.append(f"\t\t\tsg_law_available_{lid} = yes")
-        out.append(f"\t\t\t{ignored_trigger(law)}")
         out.append(f"\t\t}}")
+        out.append("\t\tchange_variable = { name = sg_last_rank_available add = 1 }")
+        out.append("\t\tif = {")
+        out.append(f"\t\t\tlimit = {{ {ignored_list_trigger(law)} }}")
+        out.append("\t\t\tchange_variable = { name = sg_last_rank_ignored add = 1 }")
+        out.append("\t\t}")
+        out.append("\t\telse = {")
+        out.append("\t\t\tchange_variable = { name = sg_last_rank_eligible add = 1 }")
         out.append(f"\t\tif = {{")
         out.append(f"\t\t\tlimit = {{ {score} > var:sg_top_1_score }}")
         out.append("\t\t\tsg_shift_top_for_1 = yes")
@@ -904,7 +919,11 @@ def emit_rank(laws) -> str:
         out.append(f"\t\t\tlimit = {{ {score} > var:sg_top_3_score }}")
         out.append(store_block(law, 3))
         out.append("\t\t}")
+        out.append("\t\t}")
         out.append("\t}")
+    out.append("\tif = { limit = { var:sg_top_1_id > 0 } change_variable = { name = sg_last_ranked_count add = 1 } }")
+    out.append("\tif = { limit = { var:sg_top_2_id > 0 } change_variable = { name = sg_last_ranked_count add = 1 } }")
+    out.append("\tif = { limit = { var:sg_top_3_id > 0 } change_variable = { name = sg_last_ranked_count add = 1 } }")
     out.append("}")
     out.append("")
     return "\n".join(out)

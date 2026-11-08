@@ -200,6 +200,11 @@ Other variables:
 - `sg_ignored_selected` — short-lived helper for the ignore effect
 - `sg_last_refresh_year` / `sg_last_refresh_month` — game date recorded by
   every monthly or manual ranking refresh
+- `sg_last_rank_evaluated` — total laws traversed by the generated ranking cycle
+- `sg_last_rank_available` — laws passing availability before ignore filtering
+- `sg_last_rank_ignored` — available laws excluded by the ignored list
+- `sg_last_rank_eligible` — available laws that reached score comparison
+- `sg_last_ranked_count` — number of populated recommendation slots after ranking
 - `sg_debug` — optional; enables lifecycle `debug_log` messages
 
 ---
@@ -293,6 +298,11 @@ Theme sentences are selected from numeric variables with nested
 `SelectLocalization(LessThan_int32(...), ...)`. Index 0 is a neutral fallback
 for the short moment before a row variable is written. The per-law localization
 keys `sg_law_benefit_<law>` and `sg_law_risk_<law>` still exist for modders.
+
+The status area also shows the latest ranking-cycle counters: laws checked,
+available, ignored, eligible and displayed. These counters are reset at the
+start of every ranking pass and are removed when the advisor is disabled, so a
+stale diagnostic cannot survive a deliberate disable.
 
 ---
 

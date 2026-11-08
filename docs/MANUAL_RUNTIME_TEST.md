@@ -39,13 +39,14 @@ names and the last-refresh month/year before each action.
 | --- | --- |
 | Enable, if the entry is not already present | The enable decision creates the journal entry, populates up to three rows, and sets a refresh date. |
 | Refresh | The rows and refresh date are recalculated immediately; no law starts by itself. |
+| Ranking status line | The widget reports the checked, available, eligible, ignored and shown counts for the latest cycle; the checked count should match the generated law count for this game data. |
 | Hover a law name | The tooltip shows the game's current effects and blocking requirements for that law. |
 | Ignore one recommendation | That law disappears after reranking and is not immediately recommended again. |
 | Ignore up to three recommendations | Each ignored law stays out of the list. If a fourth is ignored, the newest ignored law in slot 3 is replaced. |
 | Clear ignored | Previously ignored laws become eligible again after reranking. |
 | Enact one recommendation | The normal law enactment process opens/starts for the selected law; the law is not approved instantly. |
 | While a law is being enacted | Enact buttons are disabled, while Refresh, Ignore, Clear ignored and Disable remain usable where applicable. |
-| Disable from the journal | The entry disappears/inactivates, runtime variables are removed, and any enactment already in progress is untouched. |
+| Disable from the journal | The entry disappears/inactivates, runtime and ranking-diagnostic variables are removed, and any enactment already in progress is untouched. |
 | Re-enable with the decision | A fresh entry and fresh ranking are created. The advisor does not silently re-enable before this step. |
 | Advance one month | The monthly pulse updates the recommendations and refresh date without creating a duplicate journal entry. |
 

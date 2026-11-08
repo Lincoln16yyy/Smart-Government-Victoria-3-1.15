@@ -367,6 +367,17 @@ flowcontainer = {{
 		default_format = "#weak"
 		minimumsize = {{ 500 -1 }}
 		maximumsize = {{ 500 -1 }}
+		text = "sg_rank_diagnostic"
+	}}
+
+	textbox = {{
+		autoresize = yes
+		multiline = yes
+		align = left|nobaseline
+		using = fontsize_small
+		default_format = "#weak"
+		minimumsize = {{ 500 -1 }}
+		maximumsize = {{ 500 -1 }}
 		text = "sg_header"
 	}}
 

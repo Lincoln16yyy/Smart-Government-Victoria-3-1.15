@@ -180,7 +180,7 @@ def row(slot: int, laws: list[dict]) -> str:
 					align = left|nobaseline
 					using = fontsize_small
 					default_format = "#weak"
-					text = "{focus}"
+					raw_text = "{focus}"
 				}}
 				textbox = {{
 					autoresize = yes
@@ -249,7 +249,7 @@ def row(slot: int, laws: list[dict]) -> str:
 				using = fontsize_small
 				minimumsize = {{ 480 -1 }}
 				maximumsize = {{ 480 -1 }}
-				text = "{benefit}"
+				raw_text = "{benefit}"
 			}}
 			textbox = {{
 				autoresize = yes
@@ -259,7 +259,7 @@ def row(slot: int, laws: list[dict]) -> str:
 				default_format = "#warning"
 				minimumsize = {{ 480 -1 }}
 				maximumsize = {{ 480 -1 }}
-				text = "{risk}"
+				raw_text = "{risk}"
 			}}
 			flowcontainer = {{
 				direction = horizontal
@@ -326,7 +326,7 @@ flowcontainer = {{
 				autoresize = yes
 				align = left|nobaseline
 				using = fontsize_medium
-				default_format = "#P"
+				default_format = "#positive_value"
 				text = "sg_status_enabled"
 			}}
 		}}

@@ -190,6 +190,16 @@ class RuntimeSurfaceTests(unittest.TestCase):
         self.assertIn("benefit + government support", self.english)
         self.assertIn("metade de", read("localization/braz_por/sg_l_braz_por.yml"))
 
+    def test_dynamic_gui_expressions_use_raw_text_and_known_formats(self) -> None:
+        self.assertNotRegex(
+            self.gui,
+            r'(?m)^\s*text = "\[(?:SelectLocalization|JournalEntry\.)',
+        )
+        self.assertNotIn('default_format = "#P"', self.gui)
+        self.assertIn('default_format = "#positive_value"', self.gui)
+        self.assertIn("raw_text = \"[SelectLocalization(", self.gui)
+        self.assertIn("raw_text = \"[JournalEntry.GetCountry", self.gui)
+
     def test_every_law_has_bilingual_generated_explanations_and_tooltip_keys(self) -> None:
         for law in LAWS:
             sid = law["sid"]

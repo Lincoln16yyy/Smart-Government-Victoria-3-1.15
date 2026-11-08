@@ -88,8 +88,9 @@ dentro) e o arquivo `Smart Government Advisor.mod` ao lado dela.
 - Clique em **Ignorar** para tirar uma lei da lista até você limpar as ignoradas.
 - Use o botão de atualização para reavaliar imediatamente.
 - O registro mostra quando as recomendações foram atualizadas pela última vez.
-- Se nenhuma lei puder ser recomendada, o estado vazio explica que as leis podem
-  já estar ativas, bloqueadas pelos requisitos atuais ou ignoradas.
+- Se nenhuma lei realmente melhorar a lei em vigor no seu grupo, o estado vazio
+  avisa que as leis recomendadas para o país já estão em vigor e pede para
+  aguardar a próxima análise ou uma mudança de rumo do país.
 
 ## Como a pontuação funciona
 
@@ -102,13 +103,15 @@ Cada lei recebe:
   comerciais, custo orçamentário e pressão burocrática.
 - **Apoio do governo (−50..50):** posição dos grupos de interesse **no governo**,
   ponderada por influência (`ig_clout`), mais a posição do governante.
-- **Pontuação final:** `benefício + apoio − risco × 0,5 + chance estimada × 0,5`.
+- **Mérito:** `benefício + apoio − risco × 0,5`.
+- **Pontuação final:** `mérito + chance estimada × 0,5`.
 
-As três recomendações sempre vêm de grupos de leis diferentes. O conselheiro
-elege primeiro a lei de maior pontuação de cada grupo (empates são resolvidos
-pelo id estável) e só então compara essas líderes para formar o top três. Uma
-lei ignorada deixa de concorrer como líder do grupo, permitindo que a próxima
-melhor alternativa apareça.
+As três melhores leis disponíveis são comparadas globalmente, sem reservar uma
+vaga por grupo. Uma lei só entra na lista se o mérito dela superar em pelo menos
+5 pontos o mérito da lei atualmente em vigor no seu grupo. Se nenhuma lei
+superar, a lista fica vazia e o diário mostra o aviso em vez de forçar uma
+recomendação. Leis ignoradas, bloqueadas por requisitos ou ocultas durante outra
+promulgação não concorrem.
 
 Na linha de cada recomendação, o conselheiro mostra essa decomposição com os
 valores calculados para a lei e a chance estimada de promulgação. A chance é
@@ -176,17 +179,16 @@ git diff --check
 ```
 
 Os testes verificam os dados reais gerados, os 148 IDs estáveis, o ranking e
-seus sentinelas, a fórmula de pontuação, a eleição de uma lei por grupo, datas
-de atualização, limpeza ao desativar, estado vazio, explicações, ausência de
-propriedades de GUI rejeitadas pela engine, codificação UTF-8 com BOM,
-referências a defines com namespace e consistência entre scripts, GUI e
+seus sentinelas, a fórmula de pontuação, o corte de melhoria sobre a lei em
+vigor, datas de atualização, limpeza ao desativar, estado vazio, explicações,
+ausência de propriedades de GUI rejeitadas pela engine, codificação UTF-8 com
+BOM, referências a defines com namespace e consistência entre scripts, GUI e
 localização. Eles não substituem o teste interativo no jogo: o motor Clausewitz
 e os cliques do diário continuam cobertos pelo procedimento manual abaixo.
 
 Arquivos gerados (não edite à mão):
 
 - `common/scripted_triggers/sg_law_availability.txt`
-- `common/scripted_triggers/sg_law_groups.txt`
 - `common/script_values/sg_law_scores.txt`
 - `common/scripted_effects/sg_law_rank.txt`
 - `common/scripted_effects/sg_law_actions.txt`

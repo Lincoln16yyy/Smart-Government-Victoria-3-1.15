@@ -304,3 +304,32 @@ Installation performed:
   schema-1 migration variables and the optional `sg_debug` switch.
 - 25 regression tests, `validate.py`, `py_compile` and `git diff --check` pass.
   The mod was reinstalled before the final launch.
+
+## Phase 16 — global top three and an upgrade gate
+
+- User feedback: the three rows should be the three best laws overall, not one
+  reserved per law group, and the advisor must not force a law into the list
+  when nothing really improves on the current law.
+- Removed `sg_law_candidate_<law>` / `sg_law_group_leader_<law>` and
+  `common/scripted_triggers/sg_law_groups.txt`. The ranking is now a global top
+  three; laws from the same group can appear together when they are the best
+  available alternatives.
+- Added `sg_law_merit_<law>` (`benefit + politics - risk * 0.5`) and
+  `sg_law_current_merit_<group>` / `sg_law_upgrade_floor_<group>` (current merit
+  + 5). A law enters a slot only when its merit reaches the floor of its group.
+- The current-law lookup uses `has_law = law_type:<law>` instead of
+  `has_law_or_variant`, because a parent law and its variant can both match the
+  variant check and add two merits.
+- Renamed the diagnostic counter to `sg_last_rank_upgrade_filtered` ("no real
+  gain") and dropped the old-name removal so the engine no longer reports it as
+  an unset variable.
+- Reworded the empty state in English and Portuguese: the recommended laws for
+  this country are already in force; wait for the next analysis or a change in
+  the country's direction. The header now explains the global ranking and the
+  5-point merit margin.
+- Regenerated; 24 regression tests, `validate.py`, `py_compile` and
+  `git diff --check` pass. Reinstalled with `tools/install_mod.py --force`.
+- Runtime load: zero errors from the mod in the new `error*.log`; only the nine
+  known benign "variable never set" warnings remain. The game rejected
+  `-loadsave` for both the older test save and the current autosave, so the
+  ranking gate still needs one manual in-game confirmation.

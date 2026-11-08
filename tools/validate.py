@@ -218,12 +218,32 @@ def main() -> int:
         for key in (f"sg_law_name_{sid}", f"sg_law_group_{sid}", f"sg_law_tip_{sid}"):
             if key not in loc_keys:
                 errors.append(f"missing generated localization key: {key}")
-        for key in (
-            f"sg_law_candidate_{law['id']}",
-            f"sg_law_group_leader_{law['id']}",
-        ):
+        if f"sg_law_merit_{law['id']}" not in definitions:
+            errors.append(f"missing generated merit value: sg_law_merit_{law['id']}")
+
+    groups = {law["group"] for law in data["laws"]}
+    for group in sorted(groups):
+        for key in (f"sg_law_current_merit_{group}", f"sg_law_upgrade_floor_{group}"):
             if key not in definitions:
-                errors.append(f"missing generated group trigger: {key}")
+                errors.append(f"missing generated group value: {key}")
+
+    rank_path = ROOT / "common" / "scripted_effects" / "sg_law_rank.txt"
+    rank_text = texts.get(str(rank_path), "")
+    if "sg_law_group_leader_" in rank_text or "sg_law_candidate_" in rank_text:
+        errors.append(
+            "sg_law_rank.txt still uses the removed group-leader gate; "
+            "the ranking must be global with the upgrade gate"
+        )
+    if rank_text.count("sg_law_upgrade_floor_") != len(data["laws"]):
+        errors.append(
+            "sg_law_rank.txt does not gate every law on sg_law_upgrade_floor_<group>"
+        )
+    stale_groups = ROOT / "common" / "scripted_triggers" / "sg_law_groups.txt"
+    if stale_groups.exists():
+        errors.append(
+            "stale common/scripted_triggers/sg_law_groups.txt: the group-leader "
+            "triggers were replaced by the current-law merit values"
+        )
 
     old_state = []
     for path, text in texts.items():

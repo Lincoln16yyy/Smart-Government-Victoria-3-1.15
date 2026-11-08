@@ -129,7 +129,6 @@ Generated files (do not edit by hand; rerun the tools):
 
 ```
 common/scripted_triggers/sg_law_availability.txt
-common/scripted_triggers/sg_law_groups.txt
 common/script_values/sg_law_scores.txt
 common/scripted_effects/sg_law_rank.txt
 common/scripted_effects/sg_law_actions.txt
@@ -169,11 +168,13 @@ somewhere else.
 3. **Evaluation.** `sg_rank_laws` first calls `sg_migrate_schema` (schema 1
    positional state is discarded), sets every top slot to `-1000`, then iterates
    all 148 laws. For each law it checks `sg_law_available_<law>` and the ignored
-   list. An available, non-ignored law must also pass
-   `sg_law_group_leader_<law>` (no candidate of the same group scores higher) so
-   the three recommendations always come from different law groups. The leader's
-   **stable numeric law id**, score, benefit theme, risk theme, focus theme,
-   benefit score, risk score and political score are stored in the top slots.
+   list. An available, non-ignored law must also pass the upgrade gate:
+   `sg_law_merit_<law> >= sg_law_upgrade_floor_<group>`, where the floor is the
+   merit of the law currently in force in that group plus 5. The ranking is
+   global (no one-per-group quota); a law that fails the gate is counted as
+   "no real gain". A passing law's **stable numeric law id**, score, benefit
+   theme, risk theme, focus theme, benefit score, risk score and political
+   score are stored in the top slots.
 4. **Monthly.** The JE `on_monthly_pulse` calls `sg_monthly_update`, which
    ensures the entry exists and reruns `sg_rank_laws`.
 5. **Enact.** Each row contains one Enact button per law, bound to
@@ -220,9 +221,11 @@ Other variables:
 - `sg_last_rank_evaluated` — total laws traversed by the generated ranking cycle
 - `sg_last_rank_available` — laws passing availability before ignore filtering
 - `sg_last_rank_ignored` — available laws excluded by the ignored list
-- `sg_last_rank_group_filtered` — available, non-ignored laws suppressed because
-  another law of the same group scored higher (or won the stable-id tie-break)
-- `sg_last_rank_eligible` — group leaders that reached score comparison
+- `sg_last_rank_upgrade_filtered` — available, non-ignored laws suppressed
+  because their merit did not beat the current law of their group by 5 points
+  (the old `sg_last_rank_group_filtered` name is removed on disable)
+- `sg_last_rank_eligible` — available, non-ignored laws that passed the upgrade
+  gate and reached score comparison
 - `sg_last_ranked_count` — number of populated recommendation slots after ranking
 - `sg_debug` — optional; enables lifecycle `debug_log` messages
 
@@ -251,20 +254,22 @@ For every law, `tools/build_law_data.py` writes
 `scope:law` inside copied vanilla triggers is rewritten to the concrete
 `law_type:<law>`.
 
-### Group diversity
+### Current-law comparison
 
-`common/scripted_triggers/sg_law_groups.txt` is generated with two triggers per
-law:
+The ranking is global and has no one-per-group quota. Instead,
+`sg_law_scores.txt` generates, for every law group,
+`sg_law_current_merit_<group>` and `sg_law_upgrade_floor_<group>`:
 
-- `sg_law_candidate_<law>` — the law is available and not on the ignored list.
-- `sg_law_group_leader_<law>` — no other candidate in the same law group has a
-  higher `sg_law_score_<law>`. An exact score tie goes to the lower stable id,
-  so exactly one law can lead a group. A group with a single law uses
-  `always = yes`.
+- `sg_law_current_merit_<group>` adds the merit of the law that is active in the
+  group. It uses `has_law = law_type:<law>` (not `has_law_or_variant`, which can
+  match both a parent law and its variant and add two merits).
+- `sg_law_upgrade_floor_<group>` is that current merit plus `MIN_IMPROVEMENT`
+  (5 points).
 
-The ranking only inserts a law after this gate. Ignoring a law removes it from
-`sg_law_candidate_*`, which lets the next-best law of that group compete. This
-is intentional: the player ignores a specific law, not the whole group.
+An available, non-ignored law enters the top three only when its
+`sg_law_merit_<law>` reaches the floor of its group. If no law reaches it, the
+list stays empty and the journal shows the "already in force" message. Ignoring
+a law removes only that law from competition, not the whole group.
 
 Semantics used (confirmed from vanilla examples):
 
@@ -309,15 +314,19 @@ For each law:
   `ig_clout * 60` for strongly approve, `* 30` for approve, subtracts the same
   for disapprove/strongly disapprove, then adds the ruler's
   `law_enactment_stance` (±8/±15). Clamped −50..50.
+- `sg_law_merit_<law>`: `benefit + politics - risk * 0.5`, clamped −100..150.
+  This is the country-fit measure used by the upgrade gate.
 - `sg_law_score_<law>`: only if available:
-  `benefit + politics - risk * 0.5 + enactment_chance * 0.5`, clamped −100..200.
-  `enactment_chance` is the current vanilla estimate expressed as 0–100; it
-  penalizes difficult but possible laws without treating the estimate as a
-  guarantee.
+  `merit + enactment_chance * 0.5`, clamped −100..200. `enactment_chance` is the
+  current vanilla estimate expressed as 0–100; it penalizes difficult but
+  possible laws without treating the estimate as a guarantee.
+- `sg_law_current_merit_<group>` / `sg_law_upgrade_floor_<group>`: the active
+  law's merit and that merit + 5, used to reject sidegrades.
 
-The final top three is built from the per-group leaders, never from two laws of
-the same group, because laws in one group are mutually exclusive alternatives.
-This is a presentation/filtering rule; it does not change any generated score.
+The final top three is a global ranking of every law that passes the upgrade
+gate. It does not reserve a slot per group, so the three rows can come from the
+same group when those are genuinely the best alternatives. This is a
+presentation/filtering rule; it does not change any generated score.
 
 The final score is intentionally simple and explainable. The GUI shows the
 three components separately so the player can see why a law is ranked.
@@ -374,7 +383,7 @@ Law headers, action rows, explanation panels and ignored-law entries are plain
 layout because the engine already ignored it.
 
 The status area also shows the latest ranking-cycle counters: laws checked,
-available, ignored, group-filtered, eligible and displayed. These counters are
+available, ignored, no-real-gain, eligible and displayed. These counters are
 reset at the start of every ranking pass and are removed when the advisor is
 disabled, so a stale diagnostic cannot survive a deliberate disable.
 
@@ -384,8 +393,9 @@ disabled, so a stale diagnostic cannot survive a deliberate disable.
 
 Done in this phase:
 
-- Added per-group candidate/leader triggers and a ranking gate, so the top three
-  always come from three different law groups.
+- Replaced the one-per-group quota with a global top three and an upgrade gate:
+  a law only appears when its merit beats the current law of its group by 5
+  points, otherwise the journal shows the "already in force" empty state.
 - Fixed the 1.15 `autoresize`-on-widget GUI errors reported by the live log.
   Added static validation and a regression test for the property.
 - Fixed the GUI diagnostic visibility (`HasVariable` is not a data function) by
@@ -414,16 +424,19 @@ Still to do:
 1. **Static validation.** Run `python3 tools/validate.py` after every generator
    run. It checks brace balance, law/technology references, scripted-name
    resolution, GUI SGUI references, localization keys, duplicate blocks,
-   stable ids, group-leader triggers and the rejected `autoresize` property.
-   The standard-library regression suite is `python3 -m unittest discover -s
-   tests -v`; it checks the 148-law inventory, stable ids, ranking sentinels,
-   score formula wiring, the one-law-per-group rule, lifecycle cleanup,
+   stable ids, the current-law merit gate and the rejected `autoresize`
+   property. The standard-library regression suite is `python3 -m unittest
+   discover -s tests -v`; it checks the 148-law inventory, stable ids, ranking
+   sentinels, score/merit formula wiring, the upgrade gate, lifecycle cleanup,
    explanations and generated-file consistency.
 2. **Runtime test.** Copy a save, back up `content_load.json`, install the mod,
    enable it, load the copy, open the journal, click Enact, ignore, refresh,
    disable and re-enable. Check `error.log` for script/GUI errors. The
-   executable startup was verified under Wine, but this environment could not
-   drive the graphical save/UI interaction.
+   executable startup was verified under Wine (zero mod errors in the new
+   `error*.log`), but this environment could not drive the graphical save/UI
+   interaction. `-loadsave` was rejected for both the older test save and the
+   current autosave ("Could not load save game"), so the ranking gate itself
+   still needs one manual in-game confirmation.
 3. **Fix runtime issues.** Most likely areas: the generated country-scope
    visibility SGUIs, the `law_stance`/`law_enactment_stance` values, or a vanilla
    trigger copied from `is_visible` that assumes a different scope.
@@ -457,12 +470,11 @@ desktop-driven test session.
   invent a replacement condition.
 - **Storing law types in variables fails.** Not used anymore: the widget binds
   rows to stable numeric ids and resolves names through `GetLawType` inside
-  localization. Do not reintroduce law-type variables.
-- **Comparing two script values in a trigger fails.** Replace
-  `sg_law_group_leader_<law>` with a two-pass ranking: store each group's best
-  id/score/fields in temporary `sg_group_*` variables during a first sweep, then
-  insert those group winners into the top three. Do not fall back to allowing
-two laws of the same group.
+  localization. Do not reintroduce law-type variables.- **Comparing two script values in a trigger fails.** Replace the inline
+  `sg_law_merit_<law> >= sg_law_upgrade_floor_<group>` gate with a precomputed
+  boolean variable per law during the ranking pass, or store each group's
+  current merit in a temporary `sg_group_*` variable before the law loop. Do not
+  remove the gate and fill empty slots with sidegrades.
 
 ---
 

@@ -41,7 +41,7 @@ sg_rank_laws = {
 	set_variable = { name = sg_last_rank_evaluated value = 148 }
 	set_variable = { name = sg_last_rank_available value = 0 }
 	set_variable = { name = sg_last_rank_ignored value = 0 }
-	set_variable = { name = sg_last_rank_group_filtered value = 0 }
+	set_variable = { name = sg_last_rank_upgrade_filtered value = 0 }
 	set_variable = { name = sg_last_rank_eligible value = 0 }
 	set_variable = { name = sg_last_ranked_count value = 0 }
 	remove_variable = sg_top_1_id
@@ -107,7 +107,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_mass_conscription = yes }
+				limit = { sg_law_merit_law_mass_conscription >= sg_law_upgrade_floor_lawgroup_army_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_mass_conscription > var:sg_top_1_score }
@@ -149,7 +149,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -164,7 +164,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_national_militia = yes }
+				limit = { sg_law_merit_law_national_militia >= sg_law_upgrade_floor_lawgroup_army_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_national_militia > var:sg_top_1_score }
@@ -206,7 +206,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -221,7 +221,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_peasant_levies = yes }
+				limit = { sg_law_merit_law_peasant_levies >= sg_law_upgrade_floor_lawgroup_army_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_peasant_levies > var:sg_top_1_score }
@@ -263,7 +263,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -278,7 +278,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_professional_army = yes }
+				limit = { sg_law_merit_law_professional_army >= sg_law_upgrade_floor_lawgroup_army_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_professional_army > var:sg_top_1_score }
@@ -320,7 +320,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -335,7 +335,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_revolutionary_guard = yes }
+				limit = { sg_law_merit_law_revolutionary_guard >= sg_law_upgrade_floor_lawgroup_army_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_revolutionary_guard > var:sg_top_1_score }
@@ -377,7 +377,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -392,7 +392,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_warrior_caste = yes }
+				limit = { sg_law_merit_law_warrior_caste >= sg_law_upgrade_floor_lawgroup_army_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_warrior_caste > var:sg_top_1_score }
@@ -434,7 +434,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -449,7 +449,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_appointed_bureaucrats = yes }
+				limit = { sg_law_merit_law_appointed_bureaucrats >= sg_law_upgrade_floor_lawgroup_bureaucracy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_appointed_bureaucrats > var:sg_top_1_score }
@@ -491,7 +491,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -506,7 +506,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_communal_administration = yes }
+				limit = { sg_law_merit_law_communal_administration >= sg_law_upgrade_floor_lawgroup_bureaucracy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_communal_administration > var:sg_top_1_score }
@@ -548,7 +548,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -563,7 +563,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_crownland_diets = yes }
+				limit = { sg_law_merit_law_crownland_diets >= sg_law_upgrade_floor_lawgroup_bureaucracy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_crownland_diets > var:sg_top_1_score }
@@ -605,7 +605,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -620,7 +620,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_elected_bureaucrats = yes }
+				limit = { sg_law_merit_law_elected_bureaucrats >= sg_law_upgrade_floor_lawgroup_bureaucracy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_elected_bureaucrats > var:sg_top_1_score }
@@ -662,7 +662,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -677,7 +677,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_hereditary_bureaucrats = yes }
+				limit = { sg_law_merit_law_hereditary_bureaucrats >= sg_law_upgrade_floor_lawgroup_bureaucracy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_hereditary_bureaucrats > var:sg_top_1_score }
@@ -719,7 +719,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -734,7 +734,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_military_bureaucrats = yes }
+				limit = { sg_law_merit_law_military_bureaucrats >= sg_law_upgrade_floor_lawgroup_bureaucracy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_military_bureaucrats > var:sg_top_1_score }
@@ -776,7 +776,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -791,7 +791,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_affirmative_action = yes }
+				limit = { sg_law_merit_law_affirmative_action >= sg_law_upgrade_floor_lawgroup_caste_hegemony }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_affirmative_action > var:sg_top_1_score }
@@ -833,7 +833,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -848,7 +848,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_hindu_caste_codified = yes }
+				limit = { sg_law_merit_law_hindu_caste_codified >= sg_law_upgrade_floor_lawgroup_caste_hegemony }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_hindu_caste_codified > var:sg_top_1_score }
@@ -890,7 +890,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -905,7 +905,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_hindu_caste_enforced = yes }
+				limit = { sg_law_merit_law_hindu_caste_enforced >= sg_law_upgrade_floor_lawgroup_caste_hegemony }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_hindu_caste_enforced > var:sg_top_1_score }
@@ -947,7 +947,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -962,7 +962,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_hindu_caste_not_enforced = yes }
+				limit = { sg_law_merit_law_hindu_caste_not_enforced >= sg_law_upgrade_floor_lawgroup_caste_hegemony }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_hindu_caste_not_enforced > var:sg_top_1_score }
@@ -1004,7 +1004,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1019,7 +1019,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_child_labor_allowed = yes }
+				limit = { sg_law_merit_law_child_labor_allowed >= sg_law_upgrade_floor_lawgroup_childrens_rights }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_child_labor_allowed > var:sg_top_1_score }
@@ -1061,7 +1061,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1076,7 +1076,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_compulsory_primary_school = yes }
+				limit = { sg_law_merit_law_compulsory_primary_school >= sg_law_upgrade_floor_lawgroup_childrens_rights }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_compulsory_primary_school > var:sg_top_1_score }
@@ -1118,7 +1118,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1133,7 +1133,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_restricted_child_labor = yes }
+				limit = { sg_law_merit_law_restricted_child_labor >= sg_law_upgrade_floor_lawgroup_childrens_rights }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_restricted_child_labor > var:sg_top_1_score }
@@ -1175,7 +1175,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1190,7 +1190,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_caesaropapism = yes }
+				limit = { sg_law_merit_law_caesaropapism >= sg_law_upgrade_floor_lawgroup_church_and_state }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_caesaropapism > var:sg_top_1_score }
@@ -1232,7 +1232,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1247,7 +1247,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_freedom_of_conscience = yes }
+				limit = { sg_law_merit_law_freedom_of_conscience >= sg_law_upgrade_floor_lawgroup_church_and_state }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_freedom_of_conscience > var:sg_top_1_score }
@@ -1289,7 +1289,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1304,7 +1304,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_millet_system = yes }
+				limit = { sg_law_merit_law_millet_system >= sg_law_upgrade_floor_lawgroup_church_and_state }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_millet_system > var:sg_top_1_score }
@@ -1346,7 +1346,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1361,7 +1361,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_people_of_the_book = yes }
+				limit = { sg_law_merit_law_people_of_the_book >= sg_law_upgrade_floor_lawgroup_church_and_state }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_people_of_the_book > var:sg_top_1_score }
@@ -1403,7 +1403,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1418,7 +1418,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_state_atheism = yes }
+				limit = { sg_law_merit_law_state_atheism >= sg_law_upgrade_floor_lawgroup_church_and_state }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_state_atheism > var:sg_top_1_score }
@@ -1460,7 +1460,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1475,7 +1475,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_state_religion = yes }
+				limit = { sg_law_merit_law_state_religion >= sg_law_upgrade_floor_lawgroup_church_and_state }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_state_religion > var:sg_top_1_score }
@@ -1517,7 +1517,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1532,7 +1532,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_total_separation = yes }
+				limit = { sg_law_merit_law_total_separation >= sg_law_upgrade_floor_lawgroup_church_and_state }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_total_separation > var:sg_top_1_score }
@@ -1574,7 +1574,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1589,7 +1589,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_cultural_exclusion = yes }
+				limit = { sg_law_merit_law_cultural_exclusion >= sg_law_upgrade_floor_lawgroup_citizenship }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_cultural_exclusion > var:sg_top_1_score }
@@ -1631,7 +1631,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1646,7 +1646,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_ethnostate = yes }
+				limit = { sg_law_merit_law_ethnostate >= sg_law_upgrade_floor_lawgroup_citizenship }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_ethnostate > var:sg_top_1_score }
@@ -1688,7 +1688,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1703,7 +1703,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_multicultural = yes }
+				limit = { sg_law_merit_law_multicultural >= sg_law_upgrade_floor_lawgroup_citizenship }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_multicultural > var:sg_top_1_score }
@@ -1745,7 +1745,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1760,7 +1760,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_national_supremacy = yes }
+				limit = { sg_law_merit_law_national_supremacy >= sg_law_upgrade_floor_lawgroup_citizenship }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_national_supremacy > var:sg_top_1_score }
@@ -1802,7 +1802,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1817,7 +1817,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_official_nationality = yes }
+				limit = { sg_law_merit_law_official_nationality >= sg_law_upgrade_floor_lawgroup_citizenship }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_official_nationality > var:sg_top_1_score }
@@ -1859,7 +1859,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1874,7 +1874,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_racial_segregation = yes }
+				limit = { sg_law_merit_law_racial_segregation >= sg_law_upgrade_floor_lawgroup_citizenship }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_racial_segregation > var:sg_top_1_score }
@@ -1916,7 +1916,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1931,7 +1931,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_subjecthood = yes }
+				limit = { sg_law_merit_law_subjecthood >= sg_law_upgrade_floor_lawgroup_citizenship }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_subjecthood > var:sg_top_1_score }
@@ -1973,7 +1973,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -1988,7 +1988,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_colonial_exploitation = yes }
+				limit = { sg_law_merit_law_colonial_exploitation >= sg_law_upgrade_floor_lawgroup_colonization }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_colonial_exploitation > var:sg_top_1_score }
@@ -2030,7 +2030,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2045,7 +2045,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_colonial_resettlement = yes }
+				limit = { sg_law_merit_law_colonial_resettlement >= sg_law_upgrade_floor_lawgroup_colonization }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_colonial_resettlement > var:sg_top_1_score }
@@ -2087,7 +2087,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2102,7 +2102,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_frontier_colonization = yes }
+				limit = { sg_law_merit_law_frontier_colonization >= sg_law_upgrade_floor_lawgroup_colonization }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_frontier_colonization > var:sg_top_1_score }
@@ -2144,7 +2144,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2159,7 +2159,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_internal_colonization = yes }
+				limit = { sg_law_merit_law_internal_colonization >= sg_law_upgrade_floor_lawgroup_colonization }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_internal_colonization > var:sg_top_1_score }
@@ -2201,7 +2201,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2216,7 +2216,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_colonial_affairs = yes }
+				limit = { sg_law_merit_law_no_colonial_affairs >= sg_law_upgrade_floor_lawgroup_colonization }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_colonial_affairs > var:sg_top_1_score }
@@ -2258,7 +2258,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2273,7 +2273,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_anarchy = yes }
+				limit = { sg_law_merit_law_anarchy >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_anarchy > var:sg_top_1_score }
@@ -2315,7 +2315,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2330,7 +2330,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_autocracy = yes }
+				limit = { sg_law_merit_law_autocracy >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_autocracy > var:sg_top_1_score }
@@ -2372,7 +2372,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2387,7 +2387,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_bakufu = yes }
+				limit = { sg_law_merit_law_bakufu >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_bakufu > var:sg_top_1_score }
@@ -2429,7 +2429,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2444,7 +2444,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_census_voting = yes }
+				limit = { sg_law_merit_law_census_voting >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_census_voting > var:sg_top_1_score }
@@ -2486,7 +2486,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2501,7 +2501,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_elder_council = yes }
+				limit = { sg_law_merit_law_elder_council >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_elder_council > var:sg_top_1_score }
@@ -2543,7 +2543,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2558,7 +2558,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_labour_suffrage = yes }
+				limit = { sg_law_merit_law_labour_suffrage >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_labour_suffrage > var:sg_top_1_score }
@@ -2600,7 +2600,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2615,7 +2615,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_landed_voting = yes }
+				limit = { sg_law_merit_law_landed_voting >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_landed_voting > var:sg_top_1_score }
@@ -2657,7 +2657,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2672,7 +2672,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_neo_absolutism = yes }
+				limit = { sg_law_merit_law_neo_absolutism >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_neo_absolutism > var:sg_top_1_score }
@@ -2714,7 +2714,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2729,7 +2729,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_oligarchy = yes }
+				limit = { sg_law_merit_law_oligarchy >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_oligarchy > var:sg_top_1_score }
@@ -2771,7 +2771,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2786,7 +2786,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_organic_regulation = yes }
+				limit = { sg_law_merit_law_organic_regulation >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_organic_regulation > var:sg_top_1_score }
@@ -2828,7 +2828,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2843,7 +2843,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_single_party_state = yes }
+				limit = { sg_law_merit_law_single_party_state >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_single_party_state > var:sg_top_1_score }
@@ -2885,7 +2885,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2900,7 +2900,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_technocracy = yes }
+				limit = { sg_law_merit_law_technocracy >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_technocracy > var:sg_top_1_score }
@@ -2942,7 +2942,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -2957,7 +2957,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_universal_suffrage = yes }
+				limit = { sg_law_merit_law_universal_suffrage >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_universal_suffrage > var:sg_top_1_score }
@@ -2999,7 +2999,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3014,7 +3014,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_wealth_voting = yes }
+				limit = { sg_law_merit_law_wealth_voting >= sg_law_upgrade_floor_lawgroup_distribution_of_power }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_wealth_voting > var:sg_top_1_score }
@@ -3056,7 +3056,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3071,7 +3071,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_agrarianism = yes }
+				limit = { sg_law_merit_law_agrarianism >= sg_law_upgrade_floor_lawgroup_economic_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_agrarianism > var:sg_top_1_score }
@@ -3113,7 +3113,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3128,7 +3128,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_command_economy = yes }
+				limit = { sg_law_merit_law_command_economy >= sg_law_upgrade_floor_lawgroup_economic_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_command_economy > var:sg_top_1_score }
@@ -3170,7 +3170,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3185,7 +3185,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_cooperative_ownership = yes }
+				limit = { sg_law_merit_law_cooperative_ownership >= sg_law_upgrade_floor_lawgroup_economic_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_cooperative_ownership > var:sg_top_1_score }
@@ -3227,7 +3227,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3242,7 +3242,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_extraction_economy = yes }
+				limit = { sg_law_merit_law_extraction_economy >= sg_law_upgrade_floor_lawgroup_economic_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_extraction_economy > var:sg_top_1_score }
@@ -3284,7 +3284,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3299,7 +3299,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_industry_banned = yes }
+				limit = { sg_law_merit_law_industry_banned >= sg_law_upgrade_floor_lawgroup_economic_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_industry_banned > var:sg_top_1_score }
@@ -3341,7 +3341,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3356,7 +3356,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_interventionism = yes }
+				limit = { sg_law_merit_law_interventionism >= sg_law_upgrade_floor_lawgroup_economic_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_interventionism > var:sg_top_1_score }
@@ -3398,7 +3398,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3413,7 +3413,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_laissez_faire = yes }
+				limit = { sg_law_merit_law_laissez_faire >= sg_law_upgrade_floor_lawgroup_economic_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_laissez_faire > var:sg_top_1_score }
@@ -3455,7 +3455,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3470,7 +3470,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_traditionalism = yes }
+				limit = { sg_law_merit_law_traditionalism >= sg_law_upgrade_floor_lawgroup_economic_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_traditionalism > var:sg_top_1_score }
@@ -3512,7 +3512,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3527,7 +3527,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_intermediate_edo_system = yes }
+				limit = { sg_law_merit_law_intermediate_edo_system >= sg_law_upgrade_floor_lawgroup_edo_social_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_intermediate_edo_system > var:sg_top_1_score }
@@ -3569,7 +3569,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3584,7 +3584,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_lax_edo_system = yes }
+				limit = { sg_law_merit_law_lax_edo_system >= sg_law_upgrade_floor_lawgroup_edo_social_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_lax_edo_system > var:sg_top_1_score }
@@ -3626,7 +3626,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3641,7 +3641,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_strict_edo_system = yes }
+				limit = { sg_law_merit_law_strict_edo_system >= sg_law_upgrade_floor_lawgroup_edo_social_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_strict_edo_system > var:sg_top_1_score }
@@ -3683,7 +3683,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3698,7 +3698,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_schools = yes }
+				limit = { sg_law_merit_law_no_schools >= sg_law_upgrade_floor_lawgroup_education_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_schools > var:sg_top_1_score }
@@ -3740,7 +3740,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3755,7 +3755,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_private_schools = yes }
+				limit = { sg_law_merit_law_private_schools >= sg_law_upgrade_floor_lawgroup_education_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_private_schools > var:sg_top_1_score }
@@ -3797,7 +3797,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3812,7 +3812,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_public_schools = yes }
+				limit = { sg_law_merit_law_public_schools >= sg_law_upgrade_floor_lawgroup_education_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_public_schools > var:sg_top_1_score }
@@ -3854,7 +3854,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3869,7 +3869,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_religious_schools = yes }
+				limit = { sg_law_merit_law_religious_schools >= sg_law_upgrade_floor_lawgroup_education_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_religious_schools > var:sg_top_1_score }
@@ -3911,7 +3911,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3926,7 +3926,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_terakoya = yes }
+				limit = { sg_law_merit_law_terakoya >= sg_law_upgrade_floor_lawgroup_education_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_terakoya > var:sg_top_1_score }
@@ -3968,7 +3968,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -3983,7 +3983,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_censorship = yes }
+				limit = { sg_law_merit_law_censorship >= sg_law_upgrade_floor_lawgroup_free_speech }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_censorship > var:sg_top_1_score }
@@ -4025,7 +4025,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4040,7 +4040,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_outlawed_dissent = yes }
+				limit = { sg_law_merit_law_outlawed_dissent >= sg_law_upgrade_floor_lawgroup_free_speech }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_outlawed_dissent > var:sg_top_1_score }
@@ -4082,7 +4082,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4097,7 +4097,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_protected_speech = yes }
+				limit = { sg_law_merit_law_protected_speech >= sg_law_upgrade_floor_lawgroup_free_speech }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_protected_speech > var:sg_top_1_score }
@@ -4139,7 +4139,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4154,7 +4154,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_right_of_assembly = yes }
+				limit = { sg_law_merit_law_right_of_assembly >= sg_law_upgrade_floor_lawgroup_free_speech }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_right_of_assembly > var:sg_top_1_score }
@@ -4196,7 +4196,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4211,7 +4211,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_chiefdom = yes }
+				limit = { sg_law_merit_law_chiefdom >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_chiefdom > var:sg_top_1_score }
@@ -4253,7 +4253,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4268,7 +4268,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_colonial_administration = yes }
+				limit = { sg_law_merit_law_colonial_administration >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_colonial_administration > var:sg_top_1_score }
@@ -4310,7 +4310,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4325,7 +4325,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_corporate_state = yes }
+				limit = { sg_law_merit_law_corporate_state >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_corporate_state > var:sg_top_1_score }
@@ -4367,7 +4367,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4382,7 +4382,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_council_republic = yes }
+				limit = { sg_law_merit_law_council_republic >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_council_republic > var:sg_top_1_score }
@@ -4424,7 +4424,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4439,7 +4439,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_monarchy = yes }
+				limit = { sg_law_merit_law_monarchy >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_monarchy > var:sg_top_1_score }
@@ -4481,7 +4481,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4496,7 +4496,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_parliamentary_republic = yes }
+				limit = { sg_law_merit_law_parliamentary_republic >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_parliamentary_republic > var:sg_top_1_score }
@@ -4538,7 +4538,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4553,7 +4553,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_presidential_republic = yes }
+				limit = { sg_law_merit_law_presidential_republic >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_presidential_republic > var:sg_top_1_score }
@@ -4595,7 +4595,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4610,7 +4610,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_social_monarchy = yes }
+				limit = { sg_law_merit_law_social_monarchy >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_social_monarchy > var:sg_top_1_score }
@@ -4652,7 +4652,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4667,7 +4667,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_theocracy = yes }
+				limit = { sg_law_merit_law_theocracy >= sg_law_upgrade_floor_lawgroup_governance_principles }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_theocracy > var:sg_top_1_score }
@@ -4709,7 +4709,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4724,7 +4724,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_charitable_health_system = yes }
+				limit = { sg_law_merit_law_charitable_health_system >= sg_law_upgrade_floor_lawgroup_health_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_charitable_health_system > var:sg_top_1_score }
@@ -4766,7 +4766,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4781,7 +4781,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_health_system = yes }
+				limit = { sg_law_merit_law_no_health_system >= sg_law_upgrade_floor_lawgroup_health_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_health_system > var:sg_top_1_score }
@@ -4823,7 +4823,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4838,7 +4838,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_private_health_insurance = yes }
+				limit = { sg_law_merit_law_private_health_insurance >= sg_law_upgrade_floor_lawgroup_health_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_private_health_insurance > var:sg_top_1_score }
@@ -4880,7 +4880,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4895,7 +4895,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_public_health_insurance = yes }
+				limit = { sg_law_merit_law_public_health_insurance >= sg_law_upgrade_floor_lawgroup_health_system }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_public_health_insurance > var:sg_top_1_score }
@@ -4937,7 +4937,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -4952,7 +4952,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_extraordinary_commission = yes }
+				limit = { sg_law_merit_law_extraordinary_commission >= sg_law_upgrade_floor_lawgroup_internal_security }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_extraordinary_commission > var:sg_top_1_score }
@@ -4994,7 +4994,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5009,7 +5009,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_guaranteed_liberties = yes }
+				limit = { sg_law_merit_law_guaranteed_liberties >= sg_law_upgrade_floor_lawgroup_internal_security }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_guaranteed_liberties > var:sg_top_1_score }
@@ -5051,7 +5051,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5066,7 +5066,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_national_guard = yes }
+				limit = { sg_law_merit_law_national_guard >= sg_law_upgrade_floor_lawgroup_internal_security }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_national_guard > var:sg_top_1_score }
@@ -5108,7 +5108,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5123,7 +5123,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_home_affairs = yes }
+				limit = { sg_law_merit_law_no_home_affairs >= sg_law_upgrade_floor_lawgroup_internal_security }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_home_affairs > var:sg_top_1_score }
@@ -5165,7 +5165,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5180,7 +5180,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_okhrana = yes }
+				limit = { sg_law_merit_law_okhrana >= sg_law_upgrade_floor_lawgroup_internal_security }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_okhrana > var:sg_top_1_score }
@@ -5222,7 +5222,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5237,7 +5237,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_secret_police = yes }
+				limit = { sg_law_merit_law_secret_police >= sg_law_upgrade_floor_lawgroup_internal_security }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_secret_police > var:sg_top_1_score }
@@ -5279,7 +5279,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5294,7 +5294,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_shinsengumi = yes }
+				limit = { sg_law_merit_law_shinsengumi >= sg_law_upgrade_floor_lawgroup_internal_security }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_shinsengumi > var:sg_top_1_score }
@@ -5336,7 +5336,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5351,7 +5351,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_third_section = yes }
+				limit = { sg_law_merit_law_third_section >= sg_law_upgrade_floor_lawgroup_internal_security }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_third_section > var:sg_top_1_score }
@@ -5393,7 +5393,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5408,7 +5408,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_workers_rights = yes }
+				limit = { sg_law_merit_law_no_workers_rights >= sg_law_upgrade_floor_lawgroup_labor_rights }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_workers_rights > var:sg_top_1_score }
@@ -5450,7 +5450,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5465,7 +5465,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_regulatory_bodies = yes }
+				limit = { sg_law_merit_law_regulatory_bodies >= sg_law_upgrade_floor_lawgroup_labor_rights }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_regulatory_bodies > var:sg_top_1_score }
@@ -5507,7 +5507,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5522,7 +5522,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_worker_protections = yes }
+				limit = { sg_law_merit_law_worker_protections >= sg_law_upgrade_floor_lawgroup_labor_rights }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_worker_protections > var:sg_top_1_score }
@@ -5564,7 +5564,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5579,7 +5579,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_anti_strike_laws = yes }
+				limit = { sg_law_merit_law_anti_strike_laws >= sg_law_upgrade_floor_lawgroup_labour_associations }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_anti_strike_laws > var:sg_top_1_score }
@@ -5621,7 +5621,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5636,7 +5636,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_combination_acts = yes }
+				limit = { sg_law_merit_law_combination_acts >= sg_law_upgrade_floor_lawgroup_labour_associations }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_combination_acts > var:sg_top_1_score }
@@ -5678,7 +5678,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5693,7 +5693,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_corporatized_unions = yes }
+				limit = { sg_law_merit_law_corporatized_unions >= sg_law_upgrade_floor_lawgroup_labour_associations }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_corporatized_unions > var:sg_top_1_score }
@@ -5735,7 +5735,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5750,7 +5750,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_factory_councils = yes }
+				limit = { sg_law_merit_law_factory_councils >= sg_law_upgrade_floor_lawgroup_labour_associations }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_factory_councils > var:sg_top_1_score }
@@ -5792,7 +5792,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5807,7 +5807,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_guild_system = yes }
+				limit = { sg_law_merit_law_guild_system >= sg_law_upgrade_floor_lawgroup_labour_associations }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_guild_system > var:sg_top_1_score }
@@ -5849,7 +5849,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5864,7 +5864,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_right_to_associate = yes }
+				limit = { sg_law_merit_law_right_to_associate >= sg_law_upgrade_floor_lawgroup_labour_associations }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_right_to_associate > var:sg_top_1_score }
@@ -5906,7 +5906,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5921,7 +5921,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_collectivized_agriculture = yes }
+				limit = { sg_law_merit_law_collectivized_agriculture >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_collectivized_agriculture > var:sg_top_1_score }
@@ -5963,7 +5963,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -5978,7 +5978,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_commercialized_agriculture = yes }
+				limit = { sg_law_merit_law_commercialized_agriculture >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_commercialized_agriculture > var:sg_top_1_score }
@@ -6020,7 +6020,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6035,7 +6035,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_expanded_latifundias = yes }
+				limit = { sg_law_merit_law_expanded_latifundias >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_expanded_latifundias > var:sg_top_1_score }
@@ -6077,7 +6077,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6092,7 +6092,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_homesteading = yes }
+				limit = { sg_law_merit_law_homesteading >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_homesteading > var:sg_top_1_score }
@@ -6134,7 +6134,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6149,7 +6149,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_latifundias = yes }
+				limit = { sg_law_merit_law_latifundias >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_latifundias > var:sg_top_1_score }
@@ -6191,7 +6191,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6206,7 +6206,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_manorialism = yes }
+				limit = { sg_law_merit_law_manorialism >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_manorialism > var:sg_top_1_score }
@@ -6248,7 +6248,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6263,7 +6263,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_peasant_proprietorship = yes }
+				limit = { sg_law_merit_law_peasant_proprietorship >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_peasant_proprietorship > var:sg_top_1_score }
@@ -6305,7 +6305,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6320,7 +6320,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_serfdom = yes }
+				limit = { sg_law_merit_law_serfdom >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_serfdom > var:sg_top_1_score }
@@ -6362,7 +6362,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6377,7 +6377,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_tenant_farmers = yes }
+				limit = { sg_law_merit_law_tenant_farmers >= sg_law_upgrade_floor_lawgroup_land_reform }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_tenant_farmers > var:sg_top_1_score }
@@ -6419,7 +6419,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6434,7 +6434,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_closed_borders = yes }
+				limit = { sg_law_merit_law_closed_borders >= sg_law_upgrade_floor_lawgroup_migration }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_closed_borders > var:sg_top_1_score }
@@ -6476,7 +6476,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6491,7 +6491,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_migration_controls = yes }
+				limit = { sg_law_merit_law_migration_controls >= sg_law_upgrade_floor_lawgroup_migration }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_migration_controls > var:sg_top_1_score }
@@ -6533,7 +6533,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6548,7 +6548,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_migration_controls = yes }
+				limit = { sg_law_merit_law_no_migration_controls >= sg_law_upgrade_floor_lawgroup_migration }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_migration_controls > var:sg_top_1_score }
@@ -6590,7 +6590,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6605,7 +6605,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_diplomatic_navy = yes }
+				limit = { sg_law_merit_law_diplomatic_navy >= sg_law_upgrade_floor_lawgroup_navy_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_diplomatic_navy > var:sg_top_1_score }
@@ -6647,7 +6647,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6662,7 +6662,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_jeune_ecole = yes }
+				limit = { sg_law_merit_law_jeune_ecole >= sg_law_upgrade_floor_lawgroup_navy_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_jeune_ecole > var:sg_top_1_score }
@@ -6704,7 +6704,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6719,7 +6719,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_merchant_navy = yes }
+				limit = { sg_law_merit_law_merchant_navy >= sg_law_upgrade_floor_lawgroup_navy_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_merchant_navy > var:sg_top_1_score }
@@ -6761,7 +6761,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6776,7 +6776,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_professional_navy = yes }
+				limit = { sg_law_merit_law_professional_navy >= sg_law_upgrade_floor_lawgroup_navy_model }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_professional_navy > var:sg_top_1_score }
@@ -6818,7 +6818,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6833,7 +6833,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_dedicated_police = yes }
+				limit = { sg_law_merit_law_dedicated_police >= sg_law_upgrade_floor_lawgroup_policing }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_dedicated_police > var:sg_top_1_score }
@@ -6875,7 +6875,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6890,7 +6890,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_local_police = yes }
+				limit = { sg_law_merit_law_local_police >= sg_law_upgrade_floor_lawgroup_policing }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_local_police > var:sg_top_1_score }
@@ -6932,7 +6932,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -6947,7 +6947,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_militarized_police = yes }
+				limit = { sg_law_merit_law_militarized_police >= sg_law_upgrade_floor_lawgroup_policing }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_militarized_police > var:sg_top_1_score }
@@ -6989,7 +6989,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7004,7 +7004,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_police = yes }
+				limit = { sg_law_merit_law_no_police >= sg_law_upgrade_floor_lawgroup_policing }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_police > var:sg_top_1_score }
@@ -7046,7 +7046,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7061,7 +7061,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_womens_rights = yes }
+				limit = { sg_law_merit_law_no_womens_rights >= sg_law_upgrade_floor_lawgroup_rights_of_women }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_womens_rights > var:sg_top_1_score }
@@ -7103,7 +7103,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7118,7 +7118,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_women_in_the_fields = yes }
+				limit = { sg_law_merit_law_women_in_the_fields >= sg_law_upgrade_floor_lawgroup_rights_of_women }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_women_in_the_fields > var:sg_top_1_score }
@@ -7160,7 +7160,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7175,7 +7175,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_women_in_the_workplace = yes }
+				limit = { sg_law_merit_law_women_in_the_workplace >= sg_law_upgrade_floor_lawgroup_rights_of_women }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_women_in_the_workplace > var:sg_top_1_score }
@@ -7217,7 +7217,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7232,7 +7232,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_women_own_property = yes }
+				limit = { sg_law_merit_law_women_own_property >= sg_law_upgrade_floor_lawgroup_rights_of_women }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_women_own_property > var:sg_top_1_score }
@@ -7274,7 +7274,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7289,7 +7289,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_womens_suffrage = yes }
+				limit = { sg_law_merit_law_womens_suffrage >= sg_law_upgrade_floor_lawgroup_rights_of_women }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_womens_suffrage > var:sg_top_1_score }
@@ -7331,7 +7331,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7346,7 +7346,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_colonial_slavery = yes }
+				limit = { sg_law_merit_law_colonial_slavery >= sg_law_upgrade_floor_lawgroup_slavery }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_colonial_slavery > var:sg_top_1_score }
@@ -7388,7 +7388,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7403,7 +7403,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_debt_slavery = yes }
+				limit = { sg_law_merit_law_debt_slavery >= sg_law_upgrade_floor_lawgroup_slavery }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_debt_slavery > var:sg_top_1_score }
@@ -7445,7 +7445,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7460,7 +7460,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_legacy_slavery = yes }
+				limit = { sg_law_merit_law_legacy_slavery >= sg_law_upgrade_floor_lawgroup_slavery }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_legacy_slavery > var:sg_top_1_score }
@@ -7502,7 +7502,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7517,7 +7517,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_slave_trade = yes }
+				limit = { sg_law_merit_law_slave_trade >= sg_law_upgrade_floor_lawgroup_slavery }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_slave_trade > var:sg_top_1_score }
@@ -7559,7 +7559,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7574,7 +7574,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_slavery_banned = yes }
+				limit = { sg_law_merit_law_slavery_banned >= sg_law_upgrade_floor_lawgroup_slavery }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_slavery_banned > var:sg_top_1_score }
@@ -7616,7 +7616,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7631,7 +7631,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_consumption_based_taxation = yes }
+				limit = { sg_law_merit_law_consumption_based_taxation >= sg_law_upgrade_floor_lawgroup_taxation }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_consumption_based_taxation > var:sg_top_1_score }
@@ -7673,7 +7673,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7688,7 +7688,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_graduated_taxation = yes }
+				limit = { sg_law_merit_law_graduated_taxation >= sg_law_upgrade_floor_lawgroup_taxation }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_graduated_taxation > var:sg_top_1_score }
@@ -7730,7 +7730,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7745,7 +7745,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_land_based_taxation = yes }
+				limit = { sg_law_merit_law_land_based_taxation >= sg_law_upgrade_floor_lawgroup_taxation }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_land_based_taxation > var:sg_top_1_score }
@@ -7787,7 +7787,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7802,7 +7802,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_per_capita_based_taxation = yes }
+				limit = { sg_law_merit_law_per_capita_based_taxation >= sg_law_upgrade_floor_lawgroup_taxation }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_per_capita_based_taxation > var:sg_top_1_score }
@@ -7844,7 +7844,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7859,7 +7859,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_proportional_taxation = yes }
+				limit = { sg_law_merit_law_proportional_taxation >= sg_law_upgrade_floor_lawgroup_taxation }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_proportional_taxation > var:sg_top_1_score }
@@ -7901,7 +7901,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7916,7 +7916,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_canton_system = yes }
+				limit = { sg_law_merit_law_canton_system >= sg_law_upgrade_floor_lawgroup_trade_policy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_canton_system > var:sg_top_1_score }
@@ -7958,7 +7958,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -7973,7 +7973,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_free_trade = yes }
+				limit = { sg_law_merit_law_free_trade >= sg_law_upgrade_floor_lawgroup_trade_policy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_free_trade > var:sg_top_1_score }
@@ -8015,7 +8015,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8030,7 +8030,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_isolationism = yes }
+				limit = { sg_law_merit_law_isolationism >= sg_law_upgrade_floor_lawgroup_trade_policy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_isolationism > var:sg_top_1_score }
@@ -8072,7 +8072,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8087,7 +8087,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_mercantilism = yes }
+				limit = { sg_law_merit_law_mercantilism >= sg_law_upgrade_floor_lawgroup_trade_policy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_mercantilism > var:sg_top_1_score }
@@ -8129,7 +8129,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8144,7 +8144,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_protectionism = yes }
+				limit = { sg_law_merit_law_protectionism >= sg_law_upgrade_floor_lawgroup_trade_policy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_protectionism > var:sg_top_1_score }
@@ -8186,7 +8186,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8201,7 +8201,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_sakoku = yes }
+				limit = { sg_law_merit_law_sakoku >= sg_law_upgrade_floor_lawgroup_trade_policy }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_sakoku > var:sg_top_1_score }
@@ -8243,7 +8243,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8258,7 +8258,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_chiefs_distribute_aid = yes }
+				limit = { sg_law_merit_law_chiefs_distribute_aid >= sg_law_upgrade_floor_lawgroup_welfare }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_chiefs_distribute_aid > var:sg_top_1_score }
@@ -8300,7 +8300,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8315,7 +8315,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_no_social_security = yes }
+				limit = { sg_law_merit_law_no_social_security >= sg_law_upgrade_floor_lawgroup_welfare }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_no_social_security > var:sg_top_1_score }
@@ -8357,7 +8357,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8372,7 +8372,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_old_age_pension = yes }
+				limit = { sg_law_merit_law_old_age_pension >= sg_law_upgrade_floor_lawgroup_welfare }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_old_age_pension > var:sg_top_1_score }
@@ -8414,7 +8414,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8429,7 +8429,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_poor_laws = yes }
+				limit = { sg_law_merit_law_poor_laws >= sg_law_upgrade_floor_lawgroup_welfare }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_poor_laws > var:sg_top_1_score }
@@ -8471,7 +8471,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}
@@ -8486,7 +8486,7 @@ sg_rank_laws = {
 		}
 		else = {
 			if = {
-				limit = { sg_law_group_leader_law_wage_subsidies = yes }
+				limit = { sg_law_merit_law_wage_subsidies >= sg_law_upgrade_floor_lawgroup_welfare }
 				change_variable = { name = sg_last_rank_eligible add = 1 }
 				if = {
 					limit = { sg_law_score_law_wage_subsidies > var:sg_top_1_score }
@@ -8528,7 +8528,7 @@ sg_rank_laws = {
 				}
 			}
 			else = {
-				change_variable = { name = sg_last_rank_group_filtered add = 1 }
+				change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }
 			}
 		}
 	}

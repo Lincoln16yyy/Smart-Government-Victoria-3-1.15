@@ -44,7 +44,9 @@ names and the last-refresh month/year before each action.
 | --- | --- |
 | Enable, if the entry is not already present | The enable decision creates the journal entry, populates up to three rows, and sets a refresh date. |
 | Refresh | The rows and refresh date are recalculated immediately; no law starts by itself. |
-| Ranking status line | The widget reports the checked, available, eligible, ignored and shown counts for the latest cycle; the checked count should match the generated law count for this game data. |
+| Ranking status line | The widget reports the checked, available, ignored, no-real-gain, eligible and shown counts for the latest cycle; the checked count should match the generated law count for this game data. |
+| No law improves on the current laws | Every row stays empty and the widget shows the "recommended laws for this country are already in force; wait for the next review or a change in the country's direction" message. No law is forced into the list. |
+| A law improves on its group's current law | The law appears in the global top three; rows are not reserved one per law group, so the three best laws may come from the same group. |
 | Reproduce the reported screenshot | If National Supremacy, Hindu Caste Enforced or Hindu Caste Codified appears as a candidate, open the law panel and record the displayed success/debate/stall percentages. A law at 0% success must not appear in the advisor; a law at or above the vanilla 1% minimum may appear but its estimated chance must be included in the explanation and ranking. |
 | Start another enactment, then refresh | While any law is already in progress, all law recommendations disappear or are replaced by an empty state; no second law is suggested as currently promulgable. |
 | Hover a law name | The tooltip shows the game's current effects and blocking requirements for that law. |

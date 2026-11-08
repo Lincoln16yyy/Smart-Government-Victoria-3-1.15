@@ -81,7 +81,6 @@ class GeneratedDataTests(unittest.TestCase):
 class GeneratedScriptTests(unittest.TestCase):
     def setUp(self) -> None:
         self.availability = read("common/scripted_triggers/sg_law_availability.txt")
-        self.groups = read("common/scripted_triggers/sg_law_groups.txt")
         self.values = read("common/script_values/sg_law_scores.txt")
         self.rank = read("common/scripted_effects/sg_law_rank.txt")
         self.actions = read("common/scripted_effects/sg_law_actions.txt")
@@ -135,13 +134,15 @@ class GeneratedScriptTests(unittest.TestCase):
             self.assertEqual(self.rank.count(marker), 1, law_id)
 
     def test_score_formula_and_politics_are_wired_into_generated_values(self) -> None:
-        block = extract_block(self.values, "sg_law_score_law_no_schools")
-        self.assertIn("add = { value = sg_law_benefit_law_no_schools }", block)
-        self.assertIn("add = { value = sg_law_politics_law_no_schools }", block)
+        merit = extract_block(self.values, "sg_law_merit_law_no_schools")
+        self.assertIn("add = { value = sg_law_benefit_law_no_schools }", merit)
+        self.assertIn("add = { value = sg_law_politics_law_no_schools }", merit)
         self.assertIn(
             "subtract = { value = sg_law_risk_law_no_schools multiply = 0.5 }",
-            block,
+            merit,
         )
+        block = extract_block(self.values, "sg_law_score_law_no_schools")
+        self.assertIn("add = { value = sg_law_merit_law_no_schools }", block)
         politics = extract_block(self.values, "sg_law_politics_law_no_schools")
         self.assertIn("law_stance = { law = law_type:law_no_schools", politics)
         self.assertIn(
@@ -153,76 +154,38 @@ class GeneratedScriptTests(unittest.TestCase):
             block,
         )
 
-    def test_group_leader_triggers_compare_only_same_group_peers(self) -> None:
+    def test_every_group_compares_against_its_current_law(self) -> None:
         by_group: dict[str, set[str]] = {}
         for law in LAWS:
             by_group.setdefault(law["group"], set()).add(law["id"])
         self.assertEqual(len(by_group), 26)
-        for law in LAWS:
-            candidate = extract_block(
-                self.groups, f"sg_law_candidate_{law['id']}"
-            )
-            self.assertIn(f"sg_law_available_{law['id']} = yes", candidate)
-            self.assertIn("sg_ignored_1", candidate)
-
-            block = extract_block(
-                self.groups, f"sg_law_group_leader_{law['id']}"
-            )
-            peers = by_group[law["group"]] - {law["id"]}
-            referenced = set(
-                re.findall(r"sg_law_candidate_([A-Za-z0-9_]+) = yes", block)
-            )
-            self.assertEqual(referenced, peers, law["id"])
-            for peer in peers:
-                operator = ">=" if LAW_IDS[peer] < LAW_IDS[law["id"]] else ">"
-                self.assertIn(
-                    f"sg_law_score_{peer} {operator} sg_law_score_{law['id']}",
-                    block,
-                )
-
-    def test_group_leader_rule_selects_exactly_one_law_per_group(self) -> None:
-        rules: dict[str, list[tuple[str, str]]] = {}
-        for law in LAWS:
-            block = extract_block(
-                self.groups, f"sg_law_group_leader_{law['id']}"
-            )
-            rules[law["id"]] = re.findall(
-                r"sg_law_score_([A-Za-z0-9_]+) (>=|>) sg_law_score_", block
+        for group, laws_in_group in by_group.items():
+            block = extract_block(self.values, f"sg_law_current_merit_{group}")
+            for law_id in laws_in_group:
+                self.assertIn(f"has_law = law_type:{law_id}", block)
+                self.assertIn(f"add = {{ value = sg_law_merit_{law_id} }}", block)
+            floor = extract_block(self.values, f"sg_law_upgrade_floor_{group}")
+            self.assertIn(f"value = sg_law_current_merit_{group}", floor)
+            self.assertIn(
+                f"add = {build_law_data.MIN_IMPROVEMENT}", floor
             )
 
-        def leads(law_id: str, scores: dict[str, float]) -> bool:
-            return all(
-                not (
-                    scores[peer] > scores[law_id]
-                    or (scores[peer] == scores[law_id] and operator == ">=")
-                )
-                for peer, operator in rules[law_id]
-            )
-
-        scores = {
-            law["id"]: law["benefit"] - 0.5 * law["risk"] for law in LAWS
-        }
-        for group in {law["group"] for law in LAWS}:
-            leaders = [
-                law["id"]
-                for law in LAWS
-                if law["group"] == group and leads(law["id"], scores)
-            ]
-            self.assertEqual(len(leaders), 1, f"{group}: {leaders}")
-
-    def test_ranking_promotes_only_group_leaders_and_counts_the_rest(self) -> None:
+    def test_ranking_gates_each_law_on_real_improvement(self) -> None:
+        self.assertNotIn("sg_law_group_leader", self.rank)
+        self.assertNotIn("sg_law_candidate", self.rank)
         for law in LAWS:
             self.assertIn(
-                f"limit = {{ sg_law_group_leader_{law['id']} = yes }}",
+                f"sg_law_merit_{law['id']} >= "
+                f"sg_law_upgrade_floor_{law['group']}",
                 self.rank,
             )
         self.assertIn(
-            "set_variable = { name = sg_last_rank_group_filtered value = 0 }",
+            "set_variable = { name = sg_last_rank_upgrade_filtered value = 0 }",
             self.rank,
         )
         self.assertEqual(
             self.rank.count(
-                "change_variable = { name = sg_last_rank_group_filtered add = 1 }"
+                "change_variable = { name = sg_last_rank_upgrade_filtered add = 1 }"
             ),
             len(LAWS),
         )
@@ -319,7 +282,7 @@ class RuntimeSurfaceTests(unittest.TestCase):
             "sg_last_rank_evaluated",
             "sg_last_rank_available",
             "sg_last_rank_ignored",
-            "sg_last_rank_group_filtered",
+            "sg_last_rank_upgrade_filtered",
             "sg_last_rank_eligible",
             "sg_last_ranked_count",
             "sg_ignored_1",
@@ -345,12 +308,13 @@ class RuntimeSurfaceTests(unittest.TestCase):
             self.assertIn(f"sg_top_{slot}_risk_score", self.english)
             self.assertIn(f"sg_top_{slot}_enactment_chance", self.english)
         self.assertIn("benefit + government support", self.english)
-        self.assertIn("mutually exclusive alternatives", self.english)
-        self.assertIn("sg_last_rank_group_filtered", self.english)
+        self.assertIn("ranked globally", self.english)
+        self.assertIn("already in force", self.english)
+        self.assertIn("sg_last_rank_upgrade_filtered", self.english)
         portuguese = read("localization/braz_por/sg_l_braz_por.yml")
         self.assertIn("metade de", portuguese)
-        self.assertIn("mutuamente exclusivas", portuguese)
-        self.assertIn("sg_last_rank_group_filtered", portuguese)
+        self.assertIn("já estão em vigor", portuguese)
+        self.assertIn("sg_last_rank_upgrade_filtered", portuguese)
 
     def test_dynamic_gui_expressions_use_raw_text_and_known_formats(self) -> None:
         self.assertNotRegex(

@@ -63,13 +63,20 @@ sg_law_enactment_chance_law_mass_conscription = {
 	max = 100
 }
 
+sg_law_merit_law_mass_conscription = {
+	value = 0
+	add = { value = sg_law_benefit_law_mass_conscription }
+	add = { value = sg_law_politics_law_mass_conscription }
+	subtract = { value = sg_law_risk_law_mass_conscription multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_mass_conscription = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_mass_conscription = yes }
-		add = { value = sg_law_benefit_law_mass_conscription }
-		add = { value = sg_law_politics_law_mass_conscription }
-		subtract = { value = sg_law_risk_law_mass_conscription multiply = 0.5 }
+		add = { value = sg_law_merit_law_mass_conscription }
 		add = { value = sg_law_enactment_chance_law_mass_conscription multiply = 0.5 }
 	}
 	min = -100
@@ -138,13 +145,20 @@ sg_law_enactment_chance_law_national_militia = {
 	max = 100
 }
 
+sg_law_merit_law_national_militia = {
+	value = 0
+	add = { value = sg_law_benefit_law_national_militia }
+	add = { value = sg_law_politics_law_national_militia }
+	subtract = { value = sg_law_risk_law_national_militia multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_national_militia = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_national_militia = yes }
-		add = { value = sg_law_benefit_law_national_militia }
-		add = { value = sg_law_politics_law_national_militia }
-		subtract = { value = sg_law_risk_law_national_militia multiply = 0.5 }
+		add = { value = sg_law_merit_law_national_militia }
 		add = { value = sg_law_enactment_chance_law_national_militia multiply = 0.5 }
 	}
 	min = -100
@@ -214,13 +228,20 @@ sg_law_enactment_chance_law_peasant_levies = {
 	max = 100
 }
 
+sg_law_merit_law_peasant_levies = {
+	value = 0
+	add = { value = sg_law_benefit_law_peasant_levies }
+	add = { value = sg_law_politics_law_peasant_levies }
+	subtract = { value = sg_law_risk_law_peasant_levies multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_peasant_levies = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_peasant_levies = yes }
-		add = { value = sg_law_benefit_law_peasant_levies }
-		add = { value = sg_law_politics_law_peasant_levies }
-		subtract = { value = sg_law_risk_law_peasant_levies multiply = 0.5 }
+		add = { value = sg_law_merit_law_peasant_levies }
 		add = { value = sg_law_enactment_chance_law_peasant_levies multiply = 0.5 }
 	}
 	min = -100
@@ -289,13 +310,20 @@ sg_law_enactment_chance_law_professional_army = {
 	max = 100
 }
 
+sg_law_merit_law_professional_army = {
+	value = 0
+	add = { value = sg_law_benefit_law_professional_army }
+	add = { value = sg_law_politics_law_professional_army }
+	subtract = { value = sg_law_risk_law_professional_army multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_professional_army = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_professional_army = yes }
-		add = { value = sg_law_benefit_law_professional_army }
-		add = { value = sg_law_politics_law_professional_army }
-		subtract = { value = sg_law_risk_law_professional_army multiply = 0.5 }
+		add = { value = sg_law_merit_law_professional_army }
 		add = { value = sg_law_enactment_chance_law_professional_army multiply = 0.5 }
 	}
 	min = -100
@@ -364,13 +392,20 @@ sg_law_enactment_chance_law_revolutionary_guard = {
 	max = 100
 }
 
+sg_law_merit_law_revolutionary_guard = {
+	value = 0
+	add = { value = sg_law_benefit_law_revolutionary_guard }
+	add = { value = sg_law_politics_law_revolutionary_guard }
+	subtract = { value = sg_law_risk_law_revolutionary_guard multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_revolutionary_guard = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_revolutionary_guard = yes }
-		add = { value = sg_law_benefit_law_revolutionary_guard }
-		add = { value = sg_law_politics_law_revolutionary_guard }
-		subtract = { value = sg_law_risk_law_revolutionary_guard multiply = 0.5 }
+		add = { value = sg_law_merit_law_revolutionary_guard }
 		add = { value = sg_law_enactment_chance_law_revolutionary_guard multiply = 0.5 }
 	}
 	min = -100
@@ -439,13 +474,20 @@ sg_law_enactment_chance_law_warrior_caste = {
 	max = 100
 }
 
+sg_law_merit_law_warrior_caste = {
+	value = 0
+	add = { value = sg_law_benefit_law_warrior_caste }
+	add = { value = sg_law_politics_law_warrior_caste }
+	subtract = { value = sg_law_risk_law_warrior_caste multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_warrior_caste = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_warrior_caste = yes }
-		add = { value = sg_law_benefit_law_warrior_caste }
-		add = { value = sg_law_politics_law_warrior_caste }
-		subtract = { value = sg_law_risk_law_warrior_caste multiply = 0.5 }
+		add = { value = sg_law_merit_law_warrior_caste }
 		add = { value = sg_law_enactment_chance_law_warrior_caste multiply = 0.5 }
 	}
 	min = -100
@@ -515,13 +557,20 @@ sg_law_enactment_chance_law_appointed_bureaucrats = {
 	max = 100
 }
 
+sg_law_merit_law_appointed_bureaucrats = {
+	value = 0
+	add = { value = sg_law_benefit_law_appointed_bureaucrats }
+	add = { value = sg_law_politics_law_appointed_bureaucrats }
+	subtract = { value = sg_law_risk_law_appointed_bureaucrats multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_appointed_bureaucrats = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_appointed_bureaucrats = yes }
-		add = { value = sg_law_benefit_law_appointed_bureaucrats }
-		add = { value = sg_law_politics_law_appointed_bureaucrats }
-		subtract = { value = sg_law_risk_law_appointed_bureaucrats multiply = 0.5 }
+		add = { value = sg_law_merit_law_appointed_bureaucrats }
 		add = { value = sg_law_enactment_chance_law_appointed_bureaucrats multiply = 0.5 }
 	}
 	min = -100
@@ -590,13 +639,20 @@ sg_law_enactment_chance_law_communal_administration = {
 	max = 100
 }
 
+sg_law_merit_law_communal_administration = {
+	value = 0
+	add = { value = sg_law_benefit_law_communal_administration }
+	add = { value = sg_law_politics_law_communal_administration }
+	subtract = { value = sg_law_risk_law_communal_administration multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_communal_administration = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_communal_administration = yes }
-		add = { value = sg_law_benefit_law_communal_administration }
-		add = { value = sg_law_politics_law_communal_administration }
-		subtract = { value = sg_law_risk_law_communal_administration multiply = 0.5 }
+		add = { value = sg_law_merit_law_communal_administration }
 		add = { value = sg_law_enactment_chance_law_communal_administration multiply = 0.5 }
 	}
 	min = -100
@@ -665,13 +721,20 @@ sg_law_enactment_chance_law_crownland_diets = {
 	max = 100
 }
 
+sg_law_merit_law_crownland_diets = {
+	value = 0
+	add = { value = sg_law_benefit_law_crownland_diets }
+	add = { value = sg_law_politics_law_crownland_diets }
+	subtract = { value = sg_law_risk_law_crownland_diets multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_crownland_diets = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_crownland_diets = yes }
-		add = { value = sg_law_benefit_law_crownland_diets }
-		add = { value = sg_law_politics_law_crownland_diets }
-		subtract = { value = sg_law_risk_law_crownland_diets multiply = 0.5 }
+		add = { value = sg_law_merit_law_crownland_diets }
 		add = { value = sg_law_enactment_chance_law_crownland_diets multiply = 0.5 }
 	}
 	min = -100
@@ -740,13 +803,20 @@ sg_law_enactment_chance_law_elected_bureaucrats = {
 	max = 100
 }
 
+sg_law_merit_law_elected_bureaucrats = {
+	value = 0
+	add = { value = sg_law_benefit_law_elected_bureaucrats }
+	add = { value = sg_law_politics_law_elected_bureaucrats }
+	subtract = { value = sg_law_risk_law_elected_bureaucrats multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_elected_bureaucrats = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_elected_bureaucrats = yes }
-		add = { value = sg_law_benefit_law_elected_bureaucrats }
-		add = { value = sg_law_politics_law_elected_bureaucrats }
-		subtract = { value = sg_law_risk_law_elected_bureaucrats multiply = 0.5 }
+		add = { value = sg_law_merit_law_elected_bureaucrats }
 		add = { value = sg_law_enactment_chance_law_elected_bureaucrats multiply = 0.5 }
 	}
 	min = -100
@@ -815,13 +885,20 @@ sg_law_enactment_chance_law_hereditary_bureaucrats = {
 	max = 100
 }
 
+sg_law_merit_law_hereditary_bureaucrats = {
+	value = 0
+	add = { value = sg_law_benefit_law_hereditary_bureaucrats }
+	add = { value = sg_law_politics_law_hereditary_bureaucrats }
+	subtract = { value = sg_law_risk_law_hereditary_bureaucrats multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_hereditary_bureaucrats = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_hereditary_bureaucrats = yes }
-		add = { value = sg_law_benefit_law_hereditary_bureaucrats }
-		add = { value = sg_law_politics_law_hereditary_bureaucrats }
-		subtract = { value = sg_law_risk_law_hereditary_bureaucrats multiply = 0.5 }
+		add = { value = sg_law_merit_law_hereditary_bureaucrats }
 		add = { value = sg_law_enactment_chance_law_hereditary_bureaucrats multiply = 0.5 }
 	}
 	min = -100
@@ -890,13 +967,20 @@ sg_law_enactment_chance_law_military_bureaucrats = {
 	max = 100
 }
 
+sg_law_merit_law_military_bureaucrats = {
+	value = 0
+	add = { value = sg_law_benefit_law_military_bureaucrats }
+	add = { value = sg_law_politics_law_military_bureaucrats }
+	subtract = { value = sg_law_risk_law_military_bureaucrats multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_military_bureaucrats = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_military_bureaucrats = yes }
-		add = { value = sg_law_benefit_law_military_bureaucrats }
-		add = { value = sg_law_politics_law_military_bureaucrats }
-		subtract = { value = sg_law_risk_law_military_bureaucrats multiply = 0.5 }
+		add = { value = sg_law_merit_law_military_bureaucrats }
 		add = { value = sg_law_enactment_chance_law_military_bureaucrats multiply = 0.5 }
 	}
 	min = -100
@@ -965,13 +1049,20 @@ sg_law_enactment_chance_law_affirmative_action = {
 	max = 100
 }
 
+sg_law_merit_law_affirmative_action = {
+	value = 0
+	add = { value = sg_law_benefit_law_affirmative_action }
+	add = { value = sg_law_politics_law_affirmative_action }
+	subtract = { value = sg_law_risk_law_affirmative_action multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_affirmative_action = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_affirmative_action = yes }
-		add = { value = sg_law_benefit_law_affirmative_action }
-		add = { value = sg_law_politics_law_affirmative_action }
-		subtract = { value = sg_law_risk_law_affirmative_action multiply = 0.5 }
+		add = { value = sg_law_merit_law_affirmative_action }
 		add = { value = sg_law_enactment_chance_law_affirmative_action multiply = 0.5 }
 	}
 	min = -100
@@ -1040,13 +1131,20 @@ sg_law_enactment_chance_law_hindu_caste_codified = {
 	max = 100
 }
 
+sg_law_merit_law_hindu_caste_codified = {
+	value = 0
+	add = { value = sg_law_benefit_law_hindu_caste_codified }
+	add = { value = sg_law_politics_law_hindu_caste_codified }
+	subtract = { value = sg_law_risk_law_hindu_caste_codified multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_hindu_caste_codified = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_hindu_caste_codified = yes }
-		add = { value = sg_law_benefit_law_hindu_caste_codified }
-		add = { value = sg_law_politics_law_hindu_caste_codified }
-		subtract = { value = sg_law_risk_law_hindu_caste_codified multiply = 0.5 }
+		add = { value = sg_law_merit_law_hindu_caste_codified }
 		add = { value = sg_law_enactment_chance_law_hindu_caste_codified multiply = 0.5 }
 	}
 	min = -100
@@ -1115,13 +1213,20 @@ sg_law_enactment_chance_law_hindu_caste_enforced = {
 	max = 100
 }
 
+sg_law_merit_law_hindu_caste_enforced = {
+	value = 0
+	add = { value = sg_law_benefit_law_hindu_caste_enforced }
+	add = { value = sg_law_politics_law_hindu_caste_enforced }
+	subtract = { value = sg_law_risk_law_hindu_caste_enforced multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_hindu_caste_enforced = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_hindu_caste_enforced = yes }
-		add = { value = sg_law_benefit_law_hindu_caste_enforced }
-		add = { value = sg_law_politics_law_hindu_caste_enforced }
-		subtract = { value = sg_law_risk_law_hindu_caste_enforced multiply = 0.5 }
+		add = { value = sg_law_merit_law_hindu_caste_enforced }
 		add = { value = sg_law_enactment_chance_law_hindu_caste_enforced multiply = 0.5 }
 	}
 	min = -100
@@ -1190,13 +1295,20 @@ sg_law_enactment_chance_law_hindu_caste_not_enforced = {
 	max = 100
 }
 
+sg_law_merit_law_hindu_caste_not_enforced = {
+	value = 0
+	add = { value = sg_law_benefit_law_hindu_caste_not_enforced }
+	add = { value = sg_law_politics_law_hindu_caste_not_enforced }
+	subtract = { value = sg_law_risk_law_hindu_caste_not_enforced multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_hindu_caste_not_enforced = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_hindu_caste_not_enforced = yes }
-		add = { value = sg_law_benefit_law_hindu_caste_not_enforced }
-		add = { value = sg_law_politics_law_hindu_caste_not_enforced }
-		subtract = { value = sg_law_risk_law_hindu_caste_not_enforced multiply = 0.5 }
+		add = { value = sg_law_merit_law_hindu_caste_not_enforced }
 		add = { value = sg_law_enactment_chance_law_hindu_caste_not_enforced multiply = 0.5 }
 	}
 	min = -100
@@ -1265,13 +1377,20 @@ sg_law_enactment_chance_law_child_labor_allowed = {
 	max = 100
 }
 
+sg_law_merit_law_child_labor_allowed = {
+	value = 0
+	add = { value = sg_law_benefit_law_child_labor_allowed }
+	add = { value = sg_law_politics_law_child_labor_allowed }
+	subtract = { value = sg_law_risk_law_child_labor_allowed multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_child_labor_allowed = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_child_labor_allowed = yes }
-		add = { value = sg_law_benefit_law_child_labor_allowed }
-		add = { value = sg_law_politics_law_child_labor_allowed }
-		subtract = { value = sg_law_risk_law_child_labor_allowed multiply = 0.5 }
+		add = { value = sg_law_merit_law_child_labor_allowed }
 		add = { value = sg_law_enactment_chance_law_child_labor_allowed multiply = 0.5 }
 	}
 	min = -100
@@ -1341,13 +1460,20 @@ sg_law_enactment_chance_law_compulsory_primary_school = {
 	max = 100
 }
 
+sg_law_merit_law_compulsory_primary_school = {
+	value = 0
+	add = { value = sg_law_benefit_law_compulsory_primary_school }
+	add = { value = sg_law_politics_law_compulsory_primary_school }
+	subtract = { value = sg_law_risk_law_compulsory_primary_school multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_compulsory_primary_school = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_compulsory_primary_school = yes }
-		add = { value = sg_law_benefit_law_compulsory_primary_school }
-		add = { value = sg_law_politics_law_compulsory_primary_school }
-		subtract = { value = sg_law_risk_law_compulsory_primary_school multiply = 0.5 }
+		add = { value = sg_law_merit_law_compulsory_primary_school }
 		add = { value = sg_law_enactment_chance_law_compulsory_primary_school multiply = 0.5 }
 	}
 	min = -100
@@ -1416,13 +1542,20 @@ sg_law_enactment_chance_law_restricted_child_labor = {
 	max = 100
 }
 
+sg_law_merit_law_restricted_child_labor = {
+	value = 0
+	add = { value = sg_law_benefit_law_restricted_child_labor }
+	add = { value = sg_law_politics_law_restricted_child_labor }
+	subtract = { value = sg_law_risk_law_restricted_child_labor multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_restricted_child_labor = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_restricted_child_labor = yes }
-		add = { value = sg_law_benefit_law_restricted_child_labor }
-		add = { value = sg_law_politics_law_restricted_child_labor }
-		subtract = { value = sg_law_risk_law_restricted_child_labor multiply = 0.5 }
+		add = { value = sg_law_merit_law_restricted_child_labor }
 		add = { value = sg_law_enactment_chance_law_restricted_child_labor multiply = 0.5 }
 	}
 	min = -100
@@ -1491,13 +1624,20 @@ sg_law_enactment_chance_law_caesaropapism = {
 	max = 100
 }
 
+sg_law_merit_law_caesaropapism = {
+	value = 0
+	add = { value = sg_law_benefit_law_caesaropapism }
+	add = { value = sg_law_politics_law_caesaropapism }
+	subtract = { value = sg_law_risk_law_caesaropapism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_caesaropapism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_caesaropapism = yes }
-		add = { value = sg_law_benefit_law_caesaropapism }
-		add = { value = sg_law_politics_law_caesaropapism }
-		subtract = { value = sg_law_risk_law_caesaropapism multiply = 0.5 }
+		add = { value = sg_law_merit_law_caesaropapism }
 		add = { value = sg_law_enactment_chance_law_caesaropapism multiply = 0.5 }
 	}
 	min = -100
@@ -1566,13 +1706,20 @@ sg_law_enactment_chance_law_freedom_of_conscience = {
 	max = 100
 }
 
+sg_law_merit_law_freedom_of_conscience = {
+	value = 0
+	add = { value = sg_law_benefit_law_freedom_of_conscience }
+	add = { value = sg_law_politics_law_freedom_of_conscience }
+	subtract = { value = sg_law_risk_law_freedom_of_conscience multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_freedom_of_conscience = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_freedom_of_conscience = yes }
-		add = { value = sg_law_benefit_law_freedom_of_conscience }
-		add = { value = sg_law_politics_law_freedom_of_conscience }
-		subtract = { value = sg_law_risk_law_freedom_of_conscience multiply = 0.5 }
+		add = { value = sg_law_merit_law_freedom_of_conscience }
 		add = { value = sg_law_enactment_chance_law_freedom_of_conscience multiply = 0.5 }
 	}
 	min = -100
@@ -1641,13 +1788,20 @@ sg_law_enactment_chance_law_millet_system = {
 	max = 100
 }
 
+sg_law_merit_law_millet_system = {
+	value = 0
+	add = { value = sg_law_benefit_law_millet_system }
+	add = { value = sg_law_politics_law_millet_system }
+	subtract = { value = sg_law_risk_law_millet_system multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_millet_system = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_millet_system = yes }
-		add = { value = sg_law_benefit_law_millet_system }
-		add = { value = sg_law_politics_law_millet_system }
-		subtract = { value = sg_law_risk_law_millet_system multiply = 0.5 }
+		add = { value = sg_law_merit_law_millet_system }
 		add = { value = sg_law_enactment_chance_law_millet_system multiply = 0.5 }
 	}
 	min = -100
@@ -1716,13 +1870,20 @@ sg_law_enactment_chance_law_people_of_the_book = {
 	max = 100
 }
 
+sg_law_merit_law_people_of_the_book = {
+	value = 0
+	add = { value = sg_law_benefit_law_people_of_the_book }
+	add = { value = sg_law_politics_law_people_of_the_book }
+	subtract = { value = sg_law_risk_law_people_of_the_book multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_people_of_the_book = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_people_of_the_book = yes }
-		add = { value = sg_law_benefit_law_people_of_the_book }
-		add = { value = sg_law_politics_law_people_of_the_book }
-		subtract = { value = sg_law_risk_law_people_of_the_book multiply = 0.5 }
+		add = { value = sg_law_merit_law_people_of_the_book }
 		add = { value = sg_law_enactment_chance_law_people_of_the_book multiply = 0.5 }
 	}
 	min = -100
@@ -1791,13 +1952,20 @@ sg_law_enactment_chance_law_state_atheism = {
 	max = 100
 }
 
+sg_law_merit_law_state_atheism = {
+	value = 0
+	add = { value = sg_law_benefit_law_state_atheism }
+	add = { value = sg_law_politics_law_state_atheism }
+	subtract = { value = sg_law_risk_law_state_atheism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_state_atheism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_state_atheism = yes }
-		add = { value = sg_law_benefit_law_state_atheism }
-		add = { value = sg_law_politics_law_state_atheism }
-		subtract = { value = sg_law_risk_law_state_atheism multiply = 0.5 }
+		add = { value = sg_law_merit_law_state_atheism }
 		add = { value = sg_law_enactment_chance_law_state_atheism multiply = 0.5 }
 	}
 	min = -100
@@ -1866,13 +2034,20 @@ sg_law_enactment_chance_law_state_religion = {
 	max = 100
 }
 
+sg_law_merit_law_state_religion = {
+	value = 0
+	add = { value = sg_law_benefit_law_state_religion }
+	add = { value = sg_law_politics_law_state_religion }
+	subtract = { value = sg_law_risk_law_state_religion multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_state_religion = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_state_religion = yes }
-		add = { value = sg_law_benefit_law_state_religion }
-		add = { value = sg_law_politics_law_state_religion }
-		subtract = { value = sg_law_risk_law_state_religion multiply = 0.5 }
+		add = { value = sg_law_merit_law_state_religion }
 		add = { value = sg_law_enactment_chance_law_state_religion multiply = 0.5 }
 	}
 	min = -100
@@ -1941,13 +2116,20 @@ sg_law_enactment_chance_law_total_separation = {
 	max = 100
 }
 
+sg_law_merit_law_total_separation = {
+	value = 0
+	add = { value = sg_law_benefit_law_total_separation }
+	add = { value = sg_law_politics_law_total_separation }
+	subtract = { value = sg_law_risk_law_total_separation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_total_separation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_total_separation = yes }
-		add = { value = sg_law_benefit_law_total_separation }
-		add = { value = sg_law_politics_law_total_separation }
-		subtract = { value = sg_law_risk_law_total_separation multiply = 0.5 }
+		add = { value = sg_law_merit_law_total_separation }
 		add = { value = sg_law_enactment_chance_law_total_separation multiply = 0.5 }
 	}
 	min = -100
@@ -2016,13 +2198,20 @@ sg_law_enactment_chance_law_cultural_exclusion = {
 	max = 100
 }
 
+sg_law_merit_law_cultural_exclusion = {
+	value = 0
+	add = { value = sg_law_benefit_law_cultural_exclusion }
+	add = { value = sg_law_politics_law_cultural_exclusion }
+	subtract = { value = sg_law_risk_law_cultural_exclusion multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_cultural_exclusion = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_cultural_exclusion = yes }
-		add = { value = sg_law_benefit_law_cultural_exclusion }
-		add = { value = sg_law_politics_law_cultural_exclusion }
-		subtract = { value = sg_law_risk_law_cultural_exclusion multiply = 0.5 }
+		add = { value = sg_law_merit_law_cultural_exclusion }
 		add = { value = sg_law_enactment_chance_law_cultural_exclusion multiply = 0.5 }
 	}
 	min = -100
@@ -2091,13 +2280,20 @@ sg_law_enactment_chance_law_ethnostate = {
 	max = 100
 }
 
+sg_law_merit_law_ethnostate = {
+	value = 0
+	add = { value = sg_law_benefit_law_ethnostate }
+	add = { value = sg_law_politics_law_ethnostate }
+	subtract = { value = sg_law_risk_law_ethnostate multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_ethnostate = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_ethnostate = yes }
-		add = { value = sg_law_benefit_law_ethnostate }
-		add = { value = sg_law_politics_law_ethnostate }
-		subtract = { value = sg_law_risk_law_ethnostate multiply = 0.5 }
+		add = { value = sg_law_merit_law_ethnostate }
 		add = { value = sg_law_enactment_chance_law_ethnostate multiply = 0.5 }
 	}
 	min = -100
@@ -2166,13 +2362,20 @@ sg_law_enactment_chance_law_multicultural = {
 	max = 100
 }
 
+sg_law_merit_law_multicultural = {
+	value = 0
+	add = { value = sg_law_benefit_law_multicultural }
+	add = { value = sg_law_politics_law_multicultural }
+	subtract = { value = sg_law_risk_law_multicultural multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_multicultural = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_multicultural = yes }
-		add = { value = sg_law_benefit_law_multicultural }
-		add = { value = sg_law_politics_law_multicultural }
-		subtract = { value = sg_law_risk_law_multicultural multiply = 0.5 }
+		add = { value = sg_law_merit_law_multicultural }
 		add = { value = sg_law_enactment_chance_law_multicultural multiply = 0.5 }
 	}
 	min = -100
@@ -2241,13 +2444,20 @@ sg_law_enactment_chance_law_national_supremacy = {
 	max = 100
 }
 
+sg_law_merit_law_national_supremacy = {
+	value = 0
+	add = { value = sg_law_benefit_law_national_supremacy }
+	add = { value = sg_law_politics_law_national_supremacy }
+	subtract = { value = sg_law_risk_law_national_supremacy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_national_supremacy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_national_supremacy = yes }
-		add = { value = sg_law_benefit_law_national_supremacy }
-		add = { value = sg_law_politics_law_national_supremacy }
-		subtract = { value = sg_law_risk_law_national_supremacy multiply = 0.5 }
+		add = { value = sg_law_merit_law_national_supremacy }
 		add = { value = sg_law_enactment_chance_law_national_supremacy multiply = 0.5 }
 	}
 	min = -100
@@ -2316,13 +2526,20 @@ sg_law_enactment_chance_law_official_nationality = {
 	max = 100
 }
 
+sg_law_merit_law_official_nationality = {
+	value = 0
+	add = { value = sg_law_benefit_law_official_nationality }
+	add = { value = sg_law_politics_law_official_nationality }
+	subtract = { value = sg_law_risk_law_official_nationality multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_official_nationality = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_official_nationality = yes }
-		add = { value = sg_law_benefit_law_official_nationality }
-		add = { value = sg_law_politics_law_official_nationality }
-		subtract = { value = sg_law_risk_law_official_nationality multiply = 0.5 }
+		add = { value = sg_law_merit_law_official_nationality }
 		add = { value = sg_law_enactment_chance_law_official_nationality multiply = 0.5 }
 	}
 	min = -100
@@ -2391,13 +2608,20 @@ sg_law_enactment_chance_law_racial_segregation = {
 	max = 100
 }
 
+sg_law_merit_law_racial_segregation = {
+	value = 0
+	add = { value = sg_law_benefit_law_racial_segregation }
+	add = { value = sg_law_politics_law_racial_segregation }
+	subtract = { value = sg_law_risk_law_racial_segregation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_racial_segregation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_racial_segregation = yes }
-		add = { value = sg_law_benefit_law_racial_segregation }
-		add = { value = sg_law_politics_law_racial_segregation }
-		subtract = { value = sg_law_risk_law_racial_segregation multiply = 0.5 }
+		add = { value = sg_law_merit_law_racial_segregation }
 		add = { value = sg_law_enactment_chance_law_racial_segregation multiply = 0.5 }
 	}
 	min = -100
@@ -2466,13 +2690,20 @@ sg_law_enactment_chance_law_subjecthood = {
 	max = 100
 }
 
+sg_law_merit_law_subjecthood = {
+	value = 0
+	add = { value = sg_law_benefit_law_subjecthood }
+	add = { value = sg_law_politics_law_subjecthood }
+	subtract = { value = sg_law_risk_law_subjecthood multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_subjecthood = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_subjecthood = yes }
-		add = { value = sg_law_benefit_law_subjecthood }
-		add = { value = sg_law_politics_law_subjecthood }
-		subtract = { value = sg_law_risk_law_subjecthood multiply = 0.5 }
+		add = { value = sg_law_merit_law_subjecthood }
 		add = { value = sg_law_enactment_chance_law_subjecthood multiply = 0.5 }
 	}
 	min = -100
@@ -2542,13 +2773,20 @@ sg_law_enactment_chance_law_colonial_exploitation = {
 	max = 100
 }
 
+sg_law_merit_law_colonial_exploitation = {
+	value = 0
+	add = { value = sg_law_benefit_law_colonial_exploitation }
+	add = { value = sg_law_politics_law_colonial_exploitation }
+	subtract = { value = sg_law_risk_law_colonial_exploitation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_colonial_exploitation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_colonial_exploitation = yes }
-		add = { value = sg_law_benefit_law_colonial_exploitation }
-		add = { value = sg_law_politics_law_colonial_exploitation }
-		subtract = { value = sg_law_risk_law_colonial_exploitation multiply = 0.5 }
+		add = { value = sg_law_merit_law_colonial_exploitation }
 		add = { value = sg_law_enactment_chance_law_colonial_exploitation multiply = 0.5 }
 	}
 	min = -100
@@ -2617,13 +2855,20 @@ sg_law_enactment_chance_law_colonial_resettlement = {
 	max = 100
 }
 
+sg_law_merit_law_colonial_resettlement = {
+	value = 0
+	add = { value = sg_law_benefit_law_colonial_resettlement }
+	add = { value = sg_law_politics_law_colonial_resettlement }
+	subtract = { value = sg_law_risk_law_colonial_resettlement multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_colonial_resettlement = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_colonial_resettlement = yes }
-		add = { value = sg_law_benefit_law_colonial_resettlement }
-		add = { value = sg_law_politics_law_colonial_resettlement }
-		subtract = { value = sg_law_risk_law_colonial_resettlement multiply = 0.5 }
+		add = { value = sg_law_merit_law_colonial_resettlement }
 		add = { value = sg_law_enactment_chance_law_colonial_resettlement multiply = 0.5 }
 	}
 	min = -100
@@ -2692,13 +2937,20 @@ sg_law_enactment_chance_law_frontier_colonization = {
 	max = 100
 }
 
+sg_law_merit_law_frontier_colonization = {
+	value = 0
+	add = { value = sg_law_benefit_law_frontier_colonization }
+	add = { value = sg_law_politics_law_frontier_colonization }
+	subtract = { value = sg_law_risk_law_frontier_colonization multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_frontier_colonization = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_frontier_colonization = yes }
-		add = { value = sg_law_benefit_law_frontier_colonization }
-		add = { value = sg_law_politics_law_frontier_colonization }
-		subtract = { value = sg_law_risk_law_frontier_colonization multiply = 0.5 }
+		add = { value = sg_law_merit_law_frontier_colonization }
 		add = { value = sg_law_enactment_chance_law_frontier_colonization multiply = 0.5 }
 	}
 	min = -100
@@ -2767,13 +3019,20 @@ sg_law_enactment_chance_law_internal_colonization = {
 	max = 100
 }
 
+sg_law_merit_law_internal_colonization = {
+	value = 0
+	add = { value = sg_law_benefit_law_internal_colonization }
+	add = { value = sg_law_politics_law_internal_colonization }
+	subtract = { value = sg_law_risk_law_internal_colonization multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_internal_colonization = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_internal_colonization = yes }
-		add = { value = sg_law_benefit_law_internal_colonization }
-		add = { value = sg_law_politics_law_internal_colonization }
-		subtract = { value = sg_law_risk_law_internal_colonization multiply = 0.5 }
+		add = { value = sg_law_merit_law_internal_colonization }
 		add = { value = sg_law_enactment_chance_law_internal_colonization multiply = 0.5 }
 	}
 	min = -100
@@ -2842,13 +3101,20 @@ sg_law_enactment_chance_law_no_colonial_affairs = {
 	max = 100
 }
 
+sg_law_merit_law_no_colonial_affairs = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_colonial_affairs }
+	add = { value = sg_law_politics_law_no_colonial_affairs }
+	subtract = { value = sg_law_risk_law_no_colonial_affairs multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_colonial_affairs = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_colonial_affairs = yes }
-		add = { value = sg_law_benefit_law_no_colonial_affairs }
-		add = { value = sg_law_politics_law_no_colonial_affairs }
-		subtract = { value = sg_law_risk_law_no_colonial_affairs multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_colonial_affairs }
 		add = { value = sg_law_enactment_chance_law_no_colonial_affairs multiply = 0.5 }
 	}
 	min = -100
@@ -2917,13 +3183,20 @@ sg_law_enactment_chance_law_anarchy = {
 	max = 100
 }
 
+sg_law_merit_law_anarchy = {
+	value = 0
+	add = { value = sg_law_benefit_law_anarchy }
+	add = { value = sg_law_politics_law_anarchy }
+	subtract = { value = sg_law_risk_law_anarchy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_anarchy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_anarchy = yes }
-		add = { value = sg_law_benefit_law_anarchy }
-		add = { value = sg_law_politics_law_anarchy }
-		subtract = { value = sg_law_risk_law_anarchy multiply = 0.5 }
+		add = { value = sg_law_merit_law_anarchy }
 		add = { value = sg_law_enactment_chance_law_anarchy multiply = 0.5 }
 	}
 	min = -100
@@ -2992,13 +3265,20 @@ sg_law_enactment_chance_law_autocracy = {
 	max = 100
 }
 
+sg_law_merit_law_autocracy = {
+	value = 0
+	add = { value = sg_law_benefit_law_autocracy }
+	add = { value = sg_law_politics_law_autocracy }
+	subtract = { value = sg_law_risk_law_autocracy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_autocracy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_autocracy = yes }
-		add = { value = sg_law_benefit_law_autocracy }
-		add = { value = sg_law_politics_law_autocracy }
-		subtract = { value = sg_law_risk_law_autocracy multiply = 0.5 }
+		add = { value = sg_law_merit_law_autocracy }
 		add = { value = sg_law_enactment_chance_law_autocracy multiply = 0.5 }
 	}
 	min = -100
@@ -3067,13 +3347,20 @@ sg_law_enactment_chance_law_bakufu = {
 	max = 100
 }
 
+sg_law_merit_law_bakufu = {
+	value = 0
+	add = { value = sg_law_benefit_law_bakufu }
+	add = { value = sg_law_politics_law_bakufu }
+	subtract = { value = sg_law_risk_law_bakufu multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_bakufu = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_bakufu = yes }
-		add = { value = sg_law_benefit_law_bakufu }
-		add = { value = sg_law_politics_law_bakufu }
-		subtract = { value = sg_law_risk_law_bakufu multiply = 0.5 }
+		add = { value = sg_law_merit_law_bakufu }
 		add = { value = sg_law_enactment_chance_law_bakufu multiply = 0.5 }
 	}
 	min = -100
@@ -3142,13 +3429,20 @@ sg_law_enactment_chance_law_census_voting = {
 	max = 100
 }
 
+sg_law_merit_law_census_voting = {
+	value = 0
+	add = { value = sg_law_benefit_law_census_voting }
+	add = { value = sg_law_politics_law_census_voting }
+	subtract = { value = sg_law_risk_law_census_voting multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_census_voting = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_census_voting = yes }
-		add = { value = sg_law_benefit_law_census_voting }
-		add = { value = sg_law_politics_law_census_voting }
-		subtract = { value = sg_law_risk_law_census_voting multiply = 0.5 }
+		add = { value = sg_law_merit_law_census_voting }
 		add = { value = sg_law_enactment_chance_law_census_voting multiply = 0.5 }
 	}
 	min = -100
@@ -3217,13 +3511,20 @@ sg_law_enactment_chance_law_elder_council = {
 	max = 100
 }
 
+sg_law_merit_law_elder_council = {
+	value = 0
+	add = { value = sg_law_benefit_law_elder_council }
+	add = { value = sg_law_politics_law_elder_council }
+	subtract = { value = sg_law_risk_law_elder_council multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_elder_council = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_elder_council = yes }
-		add = { value = sg_law_benefit_law_elder_council }
-		add = { value = sg_law_politics_law_elder_council }
-		subtract = { value = sg_law_risk_law_elder_council multiply = 0.5 }
+		add = { value = sg_law_merit_law_elder_council }
 		add = { value = sg_law_enactment_chance_law_elder_council multiply = 0.5 }
 	}
 	min = -100
@@ -3292,13 +3593,20 @@ sg_law_enactment_chance_law_labour_suffrage = {
 	max = 100
 }
 
+sg_law_merit_law_labour_suffrage = {
+	value = 0
+	add = { value = sg_law_benefit_law_labour_suffrage }
+	add = { value = sg_law_politics_law_labour_suffrage }
+	subtract = { value = sg_law_risk_law_labour_suffrage multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_labour_suffrage = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_labour_suffrage = yes }
-		add = { value = sg_law_benefit_law_labour_suffrage }
-		add = { value = sg_law_politics_law_labour_suffrage }
-		subtract = { value = sg_law_risk_law_labour_suffrage multiply = 0.5 }
+		add = { value = sg_law_merit_law_labour_suffrage }
 		add = { value = sg_law_enactment_chance_law_labour_suffrage multiply = 0.5 }
 	}
 	min = -100
@@ -3367,13 +3675,20 @@ sg_law_enactment_chance_law_landed_voting = {
 	max = 100
 }
 
+sg_law_merit_law_landed_voting = {
+	value = 0
+	add = { value = sg_law_benefit_law_landed_voting }
+	add = { value = sg_law_politics_law_landed_voting }
+	subtract = { value = sg_law_risk_law_landed_voting multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_landed_voting = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_landed_voting = yes }
-		add = { value = sg_law_benefit_law_landed_voting }
-		add = { value = sg_law_politics_law_landed_voting }
-		subtract = { value = sg_law_risk_law_landed_voting multiply = 0.5 }
+		add = { value = sg_law_merit_law_landed_voting }
 		add = { value = sg_law_enactment_chance_law_landed_voting multiply = 0.5 }
 	}
 	min = -100
@@ -3442,13 +3757,20 @@ sg_law_enactment_chance_law_neo_absolutism = {
 	max = 100
 }
 
+sg_law_merit_law_neo_absolutism = {
+	value = 0
+	add = { value = sg_law_benefit_law_neo_absolutism }
+	add = { value = sg_law_politics_law_neo_absolutism }
+	subtract = { value = sg_law_risk_law_neo_absolutism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_neo_absolutism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_neo_absolutism = yes }
-		add = { value = sg_law_benefit_law_neo_absolutism }
-		add = { value = sg_law_politics_law_neo_absolutism }
-		subtract = { value = sg_law_risk_law_neo_absolutism multiply = 0.5 }
+		add = { value = sg_law_merit_law_neo_absolutism }
 		add = { value = sg_law_enactment_chance_law_neo_absolutism multiply = 0.5 }
 	}
 	min = -100
@@ -3517,13 +3839,20 @@ sg_law_enactment_chance_law_oligarchy = {
 	max = 100
 }
 
+sg_law_merit_law_oligarchy = {
+	value = 0
+	add = { value = sg_law_benefit_law_oligarchy }
+	add = { value = sg_law_politics_law_oligarchy }
+	subtract = { value = sg_law_risk_law_oligarchy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_oligarchy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_oligarchy = yes }
-		add = { value = sg_law_benefit_law_oligarchy }
-		add = { value = sg_law_politics_law_oligarchy }
-		subtract = { value = sg_law_risk_law_oligarchy multiply = 0.5 }
+		add = { value = sg_law_merit_law_oligarchy }
 		add = { value = sg_law_enactment_chance_law_oligarchy multiply = 0.5 }
 	}
 	min = -100
@@ -3592,13 +3921,20 @@ sg_law_enactment_chance_law_organic_regulation = {
 	max = 100
 }
 
+sg_law_merit_law_organic_regulation = {
+	value = 0
+	add = { value = sg_law_benefit_law_organic_regulation }
+	add = { value = sg_law_politics_law_organic_regulation }
+	subtract = { value = sg_law_risk_law_organic_regulation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_organic_regulation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_organic_regulation = yes }
-		add = { value = sg_law_benefit_law_organic_regulation }
-		add = { value = sg_law_politics_law_organic_regulation }
-		subtract = { value = sg_law_risk_law_organic_regulation multiply = 0.5 }
+		add = { value = sg_law_merit_law_organic_regulation }
 		add = { value = sg_law_enactment_chance_law_organic_regulation multiply = 0.5 }
 	}
 	min = -100
@@ -3667,13 +4003,20 @@ sg_law_enactment_chance_law_single_party_state = {
 	max = 100
 }
 
+sg_law_merit_law_single_party_state = {
+	value = 0
+	add = { value = sg_law_benefit_law_single_party_state }
+	add = { value = sg_law_politics_law_single_party_state }
+	subtract = { value = sg_law_risk_law_single_party_state multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_single_party_state = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_single_party_state = yes }
-		add = { value = sg_law_benefit_law_single_party_state }
-		add = { value = sg_law_politics_law_single_party_state }
-		subtract = { value = sg_law_risk_law_single_party_state multiply = 0.5 }
+		add = { value = sg_law_merit_law_single_party_state }
 		add = { value = sg_law_enactment_chance_law_single_party_state multiply = 0.5 }
 	}
 	min = -100
@@ -3743,13 +4086,20 @@ sg_law_enactment_chance_law_technocracy = {
 	max = 100
 }
 
+sg_law_merit_law_technocracy = {
+	value = 0
+	add = { value = sg_law_benefit_law_technocracy }
+	add = { value = sg_law_politics_law_technocracy }
+	subtract = { value = sg_law_risk_law_technocracy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_technocracy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_technocracy = yes }
-		add = { value = sg_law_benefit_law_technocracy }
-		add = { value = sg_law_politics_law_technocracy }
-		subtract = { value = sg_law_risk_law_technocracy multiply = 0.5 }
+		add = { value = sg_law_merit_law_technocracy }
 		add = { value = sg_law_enactment_chance_law_technocracy multiply = 0.5 }
 	}
 	min = -100
@@ -3818,13 +4168,20 @@ sg_law_enactment_chance_law_universal_suffrage = {
 	max = 100
 }
 
+sg_law_merit_law_universal_suffrage = {
+	value = 0
+	add = { value = sg_law_benefit_law_universal_suffrage }
+	add = { value = sg_law_politics_law_universal_suffrage }
+	subtract = { value = sg_law_risk_law_universal_suffrage multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_universal_suffrage = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_universal_suffrage = yes }
-		add = { value = sg_law_benefit_law_universal_suffrage }
-		add = { value = sg_law_politics_law_universal_suffrage }
-		subtract = { value = sg_law_risk_law_universal_suffrage multiply = 0.5 }
+		add = { value = sg_law_merit_law_universal_suffrage }
 		add = { value = sg_law_enactment_chance_law_universal_suffrage multiply = 0.5 }
 	}
 	min = -100
@@ -3893,13 +4250,20 @@ sg_law_enactment_chance_law_wealth_voting = {
 	max = 100
 }
 
+sg_law_merit_law_wealth_voting = {
+	value = 0
+	add = { value = sg_law_benefit_law_wealth_voting }
+	add = { value = sg_law_politics_law_wealth_voting }
+	subtract = { value = sg_law_risk_law_wealth_voting multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_wealth_voting = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_wealth_voting = yes }
-		add = { value = sg_law_benefit_law_wealth_voting }
-		add = { value = sg_law_politics_law_wealth_voting }
-		subtract = { value = sg_law_risk_law_wealth_voting multiply = 0.5 }
+		add = { value = sg_law_merit_law_wealth_voting }
 		add = { value = sg_law_enactment_chance_law_wealth_voting multiply = 0.5 }
 	}
 	min = -100
@@ -3968,13 +4332,20 @@ sg_law_enactment_chance_law_agrarianism = {
 	max = 100
 }
 
+sg_law_merit_law_agrarianism = {
+	value = 0
+	add = { value = sg_law_benefit_law_agrarianism }
+	add = { value = sg_law_politics_law_agrarianism }
+	subtract = { value = sg_law_risk_law_agrarianism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_agrarianism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_agrarianism = yes }
-		add = { value = sg_law_benefit_law_agrarianism }
-		add = { value = sg_law_politics_law_agrarianism }
-		subtract = { value = sg_law_risk_law_agrarianism multiply = 0.5 }
+		add = { value = sg_law_merit_law_agrarianism }
 		add = { value = sg_law_enactment_chance_law_agrarianism multiply = 0.5 }
 	}
 	min = -100
@@ -4043,13 +4414,20 @@ sg_law_enactment_chance_law_command_economy = {
 	max = 100
 }
 
+sg_law_merit_law_command_economy = {
+	value = 0
+	add = { value = sg_law_benefit_law_command_economy }
+	add = { value = sg_law_politics_law_command_economy }
+	subtract = { value = sg_law_risk_law_command_economy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_command_economy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_command_economy = yes }
-		add = { value = sg_law_benefit_law_command_economy }
-		add = { value = sg_law_politics_law_command_economy }
-		subtract = { value = sg_law_risk_law_command_economy multiply = 0.5 }
+		add = { value = sg_law_merit_law_command_economy }
 		add = { value = sg_law_enactment_chance_law_command_economy multiply = 0.5 }
 	}
 	min = -100
@@ -4118,13 +4496,20 @@ sg_law_enactment_chance_law_cooperative_ownership = {
 	max = 100
 }
 
+sg_law_merit_law_cooperative_ownership = {
+	value = 0
+	add = { value = sg_law_benefit_law_cooperative_ownership }
+	add = { value = sg_law_politics_law_cooperative_ownership }
+	subtract = { value = sg_law_risk_law_cooperative_ownership multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_cooperative_ownership = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_cooperative_ownership = yes }
-		add = { value = sg_law_benefit_law_cooperative_ownership }
-		add = { value = sg_law_politics_law_cooperative_ownership }
-		subtract = { value = sg_law_risk_law_cooperative_ownership multiply = 0.5 }
+		add = { value = sg_law_merit_law_cooperative_ownership }
 		add = { value = sg_law_enactment_chance_law_cooperative_ownership multiply = 0.5 }
 	}
 	min = -100
@@ -4193,13 +4578,20 @@ sg_law_enactment_chance_law_extraction_economy = {
 	max = 100
 }
 
+sg_law_merit_law_extraction_economy = {
+	value = 0
+	add = { value = sg_law_benefit_law_extraction_economy }
+	add = { value = sg_law_politics_law_extraction_economy }
+	subtract = { value = sg_law_risk_law_extraction_economy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_extraction_economy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_extraction_economy = yes }
-		add = { value = sg_law_benefit_law_extraction_economy }
-		add = { value = sg_law_politics_law_extraction_economy }
-		subtract = { value = sg_law_risk_law_extraction_economy multiply = 0.5 }
+		add = { value = sg_law_merit_law_extraction_economy }
 		add = { value = sg_law_enactment_chance_law_extraction_economy multiply = 0.5 }
 	}
 	min = -100
@@ -4268,13 +4660,20 @@ sg_law_enactment_chance_law_industry_banned = {
 	max = 100
 }
 
+sg_law_merit_law_industry_banned = {
+	value = 0
+	add = { value = sg_law_benefit_law_industry_banned }
+	add = { value = sg_law_politics_law_industry_banned }
+	subtract = { value = sg_law_risk_law_industry_banned multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_industry_banned = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_industry_banned = yes }
-		add = { value = sg_law_benefit_law_industry_banned }
-		add = { value = sg_law_politics_law_industry_banned }
-		subtract = { value = sg_law_risk_law_industry_banned multiply = 0.5 }
+		add = { value = sg_law_merit_law_industry_banned }
 		add = { value = sg_law_enactment_chance_law_industry_banned multiply = 0.5 }
 	}
 	min = -100
@@ -4343,13 +4742,20 @@ sg_law_enactment_chance_law_interventionism = {
 	max = 100
 }
 
+sg_law_merit_law_interventionism = {
+	value = 0
+	add = { value = sg_law_benefit_law_interventionism }
+	add = { value = sg_law_politics_law_interventionism }
+	subtract = { value = sg_law_risk_law_interventionism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_interventionism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_interventionism = yes }
-		add = { value = sg_law_benefit_law_interventionism }
-		add = { value = sg_law_politics_law_interventionism }
-		subtract = { value = sg_law_risk_law_interventionism multiply = 0.5 }
+		add = { value = sg_law_merit_law_interventionism }
 		add = { value = sg_law_enactment_chance_law_interventionism multiply = 0.5 }
 	}
 	min = -100
@@ -4418,13 +4824,20 @@ sg_law_enactment_chance_law_laissez_faire = {
 	max = 100
 }
 
+sg_law_merit_law_laissez_faire = {
+	value = 0
+	add = { value = sg_law_benefit_law_laissez_faire }
+	add = { value = sg_law_politics_law_laissez_faire }
+	subtract = { value = sg_law_risk_law_laissez_faire multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_laissez_faire = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_laissez_faire = yes }
-		add = { value = sg_law_benefit_law_laissez_faire }
-		add = { value = sg_law_politics_law_laissez_faire }
-		subtract = { value = sg_law_risk_law_laissez_faire multiply = 0.5 }
+		add = { value = sg_law_merit_law_laissez_faire }
 		add = { value = sg_law_enactment_chance_law_laissez_faire multiply = 0.5 }
 	}
 	min = -100
@@ -4493,13 +4906,20 @@ sg_law_enactment_chance_law_traditionalism = {
 	max = 100
 }
 
+sg_law_merit_law_traditionalism = {
+	value = 0
+	add = { value = sg_law_benefit_law_traditionalism }
+	add = { value = sg_law_politics_law_traditionalism }
+	subtract = { value = sg_law_risk_law_traditionalism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_traditionalism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_traditionalism = yes }
-		add = { value = sg_law_benefit_law_traditionalism }
-		add = { value = sg_law_politics_law_traditionalism }
-		subtract = { value = sg_law_risk_law_traditionalism multiply = 0.5 }
+		add = { value = sg_law_merit_law_traditionalism }
 		add = { value = sg_law_enactment_chance_law_traditionalism multiply = 0.5 }
 	}
 	min = -100
@@ -4568,13 +4988,20 @@ sg_law_enactment_chance_law_intermediate_edo_system = {
 	max = 100
 }
 
+sg_law_merit_law_intermediate_edo_system = {
+	value = 0
+	add = { value = sg_law_benefit_law_intermediate_edo_system }
+	add = { value = sg_law_politics_law_intermediate_edo_system }
+	subtract = { value = sg_law_risk_law_intermediate_edo_system multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_intermediate_edo_system = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_intermediate_edo_system = yes }
-		add = { value = sg_law_benefit_law_intermediate_edo_system }
-		add = { value = sg_law_politics_law_intermediate_edo_system }
-		subtract = { value = sg_law_risk_law_intermediate_edo_system multiply = 0.5 }
+		add = { value = sg_law_merit_law_intermediate_edo_system }
 		add = { value = sg_law_enactment_chance_law_intermediate_edo_system multiply = 0.5 }
 	}
 	min = -100
@@ -4643,13 +5070,20 @@ sg_law_enactment_chance_law_lax_edo_system = {
 	max = 100
 }
 
+sg_law_merit_law_lax_edo_system = {
+	value = 0
+	add = { value = sg_law_benefit_law_lax_edo_system }
+	add = { value = sg_law_politics_law_lax_edo_system }
+	subtract = { value = sg_law_risk_law_lax_edo_system multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_lax_edo_system = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_lax_edo_system = yes }
-		add = { value = sg_law_benefit_law_lax_edo_system }
-		add = { value = sg_law_politics_law_lax_edo_system }
-		subtract = { value = sg_law_risk_law_lax_edo_system multiply = 0.5 }
+		add = { value = sg_law_merit_law_lax_edo_system }
 		add = { value = sg_law_enactment_chance_law_lax_edo_system multiply = 0.5 }
 	}
 	min = -100
@@ -4718,13 +5152,20 @@ sg_law_enactment_chance_law_strict_edo_system = {
 	max = 100
 }
 
+sg_law_merit_law_strict_edo_system = {
+	value = 0
+	add = { value = sg_law_benefit_law_strict_edo_system }
+	add = { value = sg_law_politics_law_strict_edo_system }
+	subtract = { value = sg_law_risk_law_strict_edo_system multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_strict_edo_system = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_strict_edo_system = yes }
-		add = { value = sg_law_benefit_law_strict_edo_system }
-		add = { value = sg_law_politics_law_strict_edo_system }
-		subtract = { value = sg_law_risk_law_strict_edo_system multiply = 0.5 }
+		add = { value = sg_law_merit_law_strict_edo_system }
 		add = { value = sg_law_enactment_chance_law_strict_edo_system multiply = 0.5 }
 	}
 	min = -100
@@ -4792,13 +5233,20 @@ sg_law_enactment_chance_law_no_schools = {
 	max = 100
 }
 
+sg_law_merit_law_no_schools = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_schools }
+	add = { value = sg_law_politics_law_no_schools }
+	subtract = { value = sg_law_risk_law_no_schools multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_schools = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_schools = yes }
-		add = { value = sg_law_benefit_law_no_schools }
-		add = { value = sg_law_politics_law_no_schools }
-		subtract = { value = sg_law_risk_law_no_schools multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_schools }
 		add = { value = sg_law_enactment_chance_law_no_schools multiply = 0.5 }
 	}
 	min = -100
@@ -4867,13 +5315,20 @@ sg_law_enactment_chance_law_private_schools = {
 	max = 100
 }
 
+sg_law_merit_law_private_schools = {
+	value = 0
+	add = { value = sg_law_benefit_law_private_schools }
+	add = { value = sg_law_politics_law_private_schools }
+	subtract = { value = sg_law_risk_law_private_schools multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_private_schools = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_private_schools = yes }
-		add = { value = sg_law_benefit_law_private_schools }
-		add = { value = sg_law_politics_law_private_schools }
-		subtract = { value = sg_law_risk_law_private_schools multiply = 0.5 }
+		add = { value = sg_law_merit_law_private_schools }
 		add = { value = sg_law_enactment_chance_law_private_schools multiply = 0.5 }
 	}
 	min = -100
@@ -4942,13 +5397,20 @@ sg_law_enactment_chance_law_public_schools = {
 	max = 100
 }
 
+sg_law_merit_law_public_schools = {
+	value = 0
+	add = { value = sg_law_benefit_law_public_schools }
+	add = { value = sg_law_politics_law_public_schools }
+	subtract = { value = sg_law_risk_law_public_schools multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_public_schools = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_public_schools = yes }
-		add = { value = sg_law_benefit_law_public_schools }
-		add = { value = sg_law_politics_law_public_schools }
-		subtract = { value = sg_law_risk_law_public_schools multiply = 0.5 }
+		add = { value = sg_law_merit_law_public_schools }
 		add = { value = sg_law_enactment_chance_law_public_schools multiply = 0.5 }
 	}
 	min = -100
@@ -5017,13 +5479,20 @@ sg_law_enactment_chance_law_religious_schools = {
 	max = 100
 }
 
+sg_law_merit_law_religious_schools = {
+	value = 0
+	add = { value = sg_law_benefit_law_religious_schools }
+	add = { value = sg_law_politics_law_religious_schools }
+	subtract = { value = sg_law_risk_law_religious_schools multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_religious_schools = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_religious_schools = yes }
-		add = { value = sg_law_benefit_law_religious_schools }
-		add = { value = sg_law_politics_law_religious_schools }
-		subtract = { value = sg_law_risk_law_religious_schools multiply = 0.5 }
+		add = { value = sg_law_merit_law_religious_schools }
 		add = { value = sg_law_enactment_chance_law_religious_schools multiply = 0.5 }
 	}
 	min = -100
@@ -5092,13 +5561,20 @@ sg_law_enactment_chance_law_terakoya = {
 	max = 100
 }
 
+sg_law_merit_law_terakoya = {
+	value = 0
+	add = { value = sg_law_benefit_law_terakoya }
+	add = { value = sg_law_politics_law_terakoya }
+	subtract = { value = sg_law_risk_law_terakoya multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_terakoya = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_terakoya = yes }
-		add = { value = sg_law_benefit_law_terakoya }
-		add = { value = sg_law_politics_law_terakoya }
-		subtract = { value = sg_law_risk_law_terakoya multiply = 0.5 }
+		add = { value = sg_law_merit_law_terakoya }
 		add = { value = sg_law_enactment_chance_law_terakoya multiply = 0.5 }
 	}
 	min = -100
@@ -5167,13 +5643,20 @@ sg_law_enactment_chance_law_censorship = {
 	max = 100
 }
 
+sg_law_merit_law_censorship = {
+	value = 0
+	add = { value = sg_law_benefit_law_censorship }
+	add = { value = sg_law_politics_law_censorship }
+	subtract = { value = sg_law_risk_law_censorship multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_censorship = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_censorship = yes }
-		add = { value = sg_law_benefit_law_censorship }
-		add = { value = sg_law_politics_law_censorship }
-		subtract = { value = sg_law_risk_law_censorship multiply = 0.5 }
+		add = { value = sg_law_merit_law_censorship }
 		add = { value = sg_law_enactment_chance_law_censorship multiply = 0.5 }
 	}
 	min = -100
@@ -5242,13 +5725,20 @@ sg_law_enactment_chance_law_outlawed_dissent = {
 	max = 100
 }
 
+sg_law_merit_law_outlawed_dissent = {
+	value = 0
+	add = { value = sg_law_benefit_law_outlawed_dissent }
+	add = { value = sg_law_politics_law_outlawed_dissent }
+	subtract = { value = sg_law_risk_law_outlawed_dissent multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_outlawed_dissent = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_outlawed_dissent = yes }
-		add = { value = sg_law_benefit_law_outlawed_dissent }
-		add = { value = sg_law_politics_law_outlawed_dissent }
-		subtract = { value = sg_law_risk_law_outlawed_dissent multiply = 0.5 }
+		add = { value = sg_law_merit_law_outlawed_dissent }
 		add = { value = sg_law_enactment_chance_law_outlawed_dissent multiply = 0.5 }
 	}
 	min = -100
@@ -5317,13 +5807,20 @@ sg_law_enactment_chance_law_protected_speech = {
 	max = 100
 }
 
+sg_law_merit_law_protected_speech = {
+	value = 0
+	add = { value = sg_law_benefit_law_protected_speech }
+	add = { value = sg_law_politics_law_protected_speech }
+	subtract = { value = sg_law_risk_law_protected_speech multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_protected_speech = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_protected_speech = yes }
-		add = { value = sg_law_benefit_law_protected_speech }
-		add = { value = sg_law_politics_law_protected_speech }
-		subtract = { value = sg_law_risk_law_protected_speech multiply = 0.5 }
+		add = { value = sg_law_merit_law_protected_speech }
 		add = { value = sg_law_enactment_chance_law_protected_speech multiply = 0.5 }
 	}
 	min = -100
@@ -5392,13 +5889,20 @@ sg_law_enactment_chance_law_right_of_assembly = {
 	max = 100
 }
 
+sg_law_merit_law_right_of_assembly = {
+	value = 0
+	add = { value = sg_law_benefit_law_right_of_assembly }
+	add = { value = sg_law_politics_law_right_of_assembly }
+	subtract = { value = sg_law_risk_law_right_of_assembly multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_right_of_assembly = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_right_of_assembly = yes }
-		add = { value = sg_law_benefit_law_right_of_assembly }
-		add = { value = sg_law_politics_law_right_of_assembly }
-		subtract = { value = sg_law_risk_law_right_of_assembly multiply = 0.5 }
+		add = { value = sg_law_merit_law_right_of_assembly }
 		add = { value = sg_law_enactment_chance_law_right_of_assembly multiply = 0.5 }
 	}
 	min = -100
@@ -5467,13 +5971,20 @@ sg_law_enactment_chance_law_chiefdom = {
 	max = 100
 }
 
+sg_law_merit_law_chiefdom = {
+	value = 0
+	add = { value = sg_law_benefit_law_chiefdom }
+	add = { value = sg_law_politics_law_chiefdom }
+	subtract = { value = sg_law_risk_law_chiefdom multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_chiefdom = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_chiefdom = yes }
-		add = { value = sg_law_benefit_law_chiefdom }
-		add = { value = sg_law_politics_law_chiefdom }
-		subtract = { value = sg_law_risk_law_chiefdom multiply = 0.5 }
+		add = { value = sg_law_merit_law_chiefdom }
 		add = { value = sg_law_enactment_chance_law_chiefdom multiply = 0.5 }
 	}
 	min = -100
@@ -5542,13 +6053,20 @@ sg_law_enactment_chance_law_colonial_administration = {
 	max = 100
 }
 
+sg_law_merit_law_colonial_administration = {
+	value = 0
+	add = { value = sg_law_benefit_law_colonial_administration }
+	add = { value = sg_law_politics_law_colonial_administration }
+	subtract = { value = sg_law_risk_law_colonial_administration multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_colonial_administration = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_colonial_administration = yes }
-		add = { value = sg_law_benefit_law_colonial_administration }
-		add = { value = sg_law_politics_law_colonial_administration }
-		subtract = { value = sg_law_risk_law_colonial_administration multiply = 0.5 }
+		add = { value = sg_law_merit_law_colonial_administration }
 		add = { value = sg_law_enactment_chance_law_colonial_administration multiply = 0.5 }
 	}
 	min = -100
@@ -5617,13 +6135,20 @@ sg_law_enactment_chance_law_corporate_state = {
 	max = 100
 }
 
+sg_law_merit_law_corporate_state = {
+	value = 0
+	add = { value = sg_law_benefit_law_corporate_state }
+	add = { value = sg_law_politics_law_corporate_state }
+	subtract = { value = sg_law_risk_law_corporate_state multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_corporate_state = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_corporate_state = yes }
-		add = { value = sg_law_benefit_law_corporate_state }
-		add = { value = sg_law_politics_law_corporate_state }
-		subtract = { value = sg_law_risk_law_corporate_state multiply = 0.5 }
+		add = { value = sg_law_merit_law_corporate_state }
 		add = { value = sg_law_enactment_chance_law_corporate_state multiply = 0.5 }
 	}
 	min = -100
@@ -5692,13 +6217,20 @@ sg_law_enactment_chance_law_council_republic = {
 	max = 100
 }
 
+sg_law_merit_law_council_republic = {
+	value = 0
+	add = { value = sg_law_benefit_law_council_republic }
+	add = { value = sg_law_politics_law_council_republic }
+	subtract = { value = sg_law_risk_law_council_republic multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_council_republic = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_council_republic = yes }
-		add = { value = sg_law_benefit_law_council_republic }
-		add = { value = sg_law_politics_law_council_republic }
-		subtract = { value = sg_law_risk_law_council_republic multiply = 0.5 }
+		add = { value = sg_law_merit_law_council_republic }
 		add = { value = sg_law_enactment_chance_law_council_republic multiply = 0.5 }
 	}
 	min = -100
@@ -5767,13 +6299,20 @@ sg_law_enactment_chance_law_monarchy = {
 	max = 100
 }
 
+sg_law_merit_law_monarchy = {
+	value = 0
+	add = { value = sg_law_benefit_law_monarchy }
+	add = { value = sg_law_politics_law_monarchy }
+	subtract = { value = sg_law_risk_law_monarchy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_monarchy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_monarchy = yes }
-		add = { value = sg_law_benefit_law_monarchy }
-		add = { value = sg_law_politics_law_monarchy }
-		subtract = { value = sg_law_risk_law_monarchy multiply = 0.5 }
+		add = { value = sg_law_merit_law_monarchy }
 		add = { value = sg_law_enactment_chance_law_monarchy multiply = 0.5 }
 	}
 	min = -100
@@ -5842,13 +6381,20 @@ sg_law_enactment_chance_law_parliamentary_republic = {
 	max = 100
 }
 
+sg_law_merit_law_parliamentary_republic = {
+	value = 0
+	add = { value = sg_law_benefit_law_parliamentary_republic }
+	add = { value = sg_law_politics_law_parliamentary_republic }
+	subtract = { value = sg_law_risk_law_parliamentary_republic multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_parliamentary_republic = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_parliamentary_republic = yes }
-		add = { value = sg_law_benefit_law_parliamentary_republic }
-		add = { value = sg_law_politics_law_parliamentary_republic }
-		subtract = { value = sg_law_risk_law_parliamentary_republic multiply = 0.5 }
+		add = { value = sg_law_merit_law_parliamentary_republic }
 		add = { value = sg_law_enactment_chance_law_parliamentary_republic multiply = 0.5 }
 	}
 	min = -100
@@ -5917,13 +6463,20 @@ sg_law_enactment_chance_law_presidential_republic = {
 	max = 100
 }
 
+sg_law_merit_law_presidential_republic = {
+	value = 0
+	add = { value = sg_law_benefit_law_presidential_republic }
+	add = { value = sg_law_politics_law_presidential_republic }
+	subtract = { value = sg_law_risk_law_presidential_republic multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_presidential_republic = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_presidential_republic = yes }
-		add = { value = sg_law_benefit_law_presidential_republic }
-		add = { value = sg_law_politics_law_presidential_republic }
-		subtract = { value = sg_law_risk_law_presidential_republic multiply = 0.5 }
+		add = { value = sg_law_merit_law_presidential_republic }
 		add = { value = sg_law_enactment_chance_law_presidential_republic multiply = 0.5 }
 	}
 	min = -100
@@ -5992,13 +6545,20 @@ sg_law_enactment_chance_law_social_monarchy = {
 	max = 100
 }
 
+sg_law_merit_law_social_monarchy = {
+	value = 0
+	add = { value = sg_law_benefit_law_social_monarchy }
+	add = { value = sg_law_politics_law_social_monarchy }
+	subtract = { value = sg_law_risk_law_social_monarchy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_social_monarchy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_social_monarchy = yes }
-		add = { value = sg_law_benefit_law_social_monarchy }
-		add = { value = sg_law_politics_law_social_monarchy }
-		subtract = { value = sg_law_risk_law_social_monarchy multiply = 0.5 }
+		add = { value = sg_law_merit_law_social_monarchy }
 		add = { value = sg_law_enactment_chance_law_social_monarchy multiply = 0.5 }
 	}
 	min = -100
@@ -6067,13 +6627,20 @@ sg_law_enactment_chance_law_theocracy = {
 	max = 100
 }
 
+sg_law_merit_law_theocracy = {
+	value = 0
+	add = { value = sg_law_benefit_law_theocracy }
+	add = { value = sg_law_politics_law_theocracy }
+	subtract = { value = sg_law_risk_law_theocracy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_theocracy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_theocracy = yes }
-		add = { value = sg_law_benefit_law_theocracy }
-		add = { value = sg_law_politics_law_theocracy }
-		subtract = { value = sg_law_risk_law_theocracy multiply = 0.5 }
+		add = { value = sg_law_merit_law_theocracy }
 		add = { value = sg_law_enactment_chance_law_theocracy multiply = 0.5 }
 	}
 	min = -100
@@ -6142,13 +6709,20 @@ sg_law_enactment_chance_law_charitable_health_system = {
 	max = 100
 }
 
+sg_law_merit_law_charitable_health_system = {
+	value = 0
+	add = { value = sg_law_benefit_law_charitable_health_system }
+	add = { value = sg_law_politics_law_charitable_health_system }
+	subtract = { value = sg_law_risk_law_charitable_health_system multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_charitable_health_system = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_charitable_health_system = yes }
-		add = { value = sg_law_benefit_law_charitable_health_system }
-		add = { value = sg_law_politics_law_charitable_health_system }
-		subtract = { value = sg_law_risk_law_charitable_health_system multiply = 0.5 }
+		add = { value = sg_law_merit_law_charitable_health_system }
 		add = { value = sg_law_enactment_chance_law_charitable_health_system multiply = 0.5 }
 	}
 	min = -100
@@ -6216,13 +6790,20 @@ sg_law_enactment_chance_law_no_health_system = {
 	max = 100
 }
 
+sg_law_merit_law_no_health_system = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_health_system }
+	add = { value = sg_law_politics_law_no_health_system }
+	subtract = { value = sg_law_risk_law_no_health_system multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_health_system = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_health_system = yes }
-		add = { value = sg_law_benefit_law_no_health_system }
-		add = { value = sg_law_politics_law_no_health_system }
-		subtract = { value = sg_law_risk_law_no_health_system multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_health_system }
 		add = { value = sg_law_enactment_chance_law_no_health_system multiply = 0.5 }
 	}
 	min = -100
@@ -6291,13 +6872,20 @@ sg_law_enactment_chance_law_private_health_insurance = {
 	max = 100
 }
 
+sg_law_merit_law_private_health_insurance = {
+	value = 0
+	add = { value = sg_law_benefit_law_private_health_insurance }
+	add = { value = sg_law_politics_law_private_health_insurance }
+	subtract = { value = sg_law_risk_law_private_health_insurance multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_private_health_insurance = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_private_health_insurance = yes }
-		add = { value = sg_law_benefit_law_private_health_insurance }
-		add = { value = sg_law_politics_law_private_health_insurance }
-		subtract = { value = sg_law_risk_law_private_health_insurance multiply = 0.5 }
+		add = { value = sg_law_merit_law_private_health_insurance }
 		add = { value = sg_law_enactment_chance_law_private_health_insurance multiply = 0.5 }
 	}
 	min = -100
@@ -6366,13 +6954,20 @@ sg_law_enactment_chance_law_public_health_insurance = {
 	max = 100
 }
 
+sg_law_merit_law_public_health_insurance = {
+	value = 0
+	add = { value = sg_law_benefit_law_public_health_insurance }
+	add = { value = sg_law_politics_law_public_health_insurance }
+	subtract = { value = sg_law_risk_law_public_health_insurance multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_public_health_insurance = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_public_health_insurance = yes }
-		add = { value = sg_law_benefit_law_public_health_insurance }
-		add = { value = sg_law_politics_law_public_health_insurance }
-		subtract = { value = sg_law_risk_law_public_health_insurance multiply = 0.5 }
+		add = { value = sg_law_merit_law_public_health_insurance }
 		add = { value = sg_law_enactment_chance_law_public_health_insurance multiply = 0.5 }
 	}
 	min = -100
@@ -6440,13 +7035,20 @@ sg_law_enactment_chance_law_extraordinary_commission = {
 	max = 100
 }
 
+sg_law_merit_law_extraordinary_commission = {
+	value = 0
+	add = { value = sg_law_benefit_law_extraordinary_commission }
+	add = { value = sg_law_politics_law_extraordinary_commission }
+	subtract = { value = sg_law_risk_law_extraordinary_commission multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_extraordinary_commission = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_extraordinary_commission = yes }
-		add = { value = sg_law_benefit_law_extraordinary_commission }
-		add = { value = sg_law_politics_law_extraordinary_commission }
-		subtract = { value = sg_law_risk_law_extraordinary_commission multiply = 0.5 }
+		add = { value = sg_law_merit_law_extraordinary_commission }
 		add = { value = sg_law_enactment_chance_law_extraordinary_commission multiply = 0.5 }
 	}
 	min = -100
@@ -6514,13 +7116,20 @@ sg_law_enactment_chance_law_guaranteed_liberties = {
 	max = 100
 }
 
+sg_law_merit_law_guaranteed_liberties = {
+	value = 0
+	add = { value = sg_law_benefit_law_guaranteed_liberties }
+	add = { value = sg_law_politics_law_guaranteed_liberties }
+	subtract = { value = sg_law_risk_law_guaranteed_liberties multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_guaranteed_liberties = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_guaranteed_liberties = yes }
-		add = { value = sg_law_benefit_law_guaranteed_liberties }
-		add = { value = sg_law_politics_law_guaranteed_liberties }
-		subtract = { value = sg_law_risk_law_guaranteed_liberties multiply = 0.5 }
+		add = { value = sg_law_merit_law_guaranteed_liberties }
 		add = { value = sg_law_enactment_chance_law_guaranteed_liberties multiply = 0.5 }
 	}
 	min = -100
@@ -6589,13 +7198,20 @@ sg_law_enactment_chance_law_national_guard = {
 	max = 100
 }
 
+sg_law_merit_law_national_guard = {
+	value = 0
+	add = { value = sg_law_benefit_law_national_guard }
+	add = { value = sg_law_politics_law_national_guard }
+	subtract = { value = sg_law_risk_law_national_guard multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_national_guard = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_national_guard = yes }
-		add = { value = sg_law_benefit_law_national_guard }
-		add = { value = sg_law_politics_law_national_guard }
-		subtract = { value = sg_law_risk_law_national_guard multiply = 0.5 }
+		add = { value = sg_law_merit_law_national_guard }
 		add = { value = sg_law_enactment_chance_law_national_guard multiply = 0.5 }
 	}
 	min = -100
@@ -6663,13 +7279,20 @@ sg_law_enactment_chance_law_no_home_affairs = {
 	max = 100
 }
 
+sg_law_merit_law_no_home_affairs = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_home_affairs }
+	add = { value = sg_law_politics_law_no_home_affairs }
+	subtract = { value = sg_law_risk_law_no_home_affairs multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_home_affairs = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_home_affairs = yes }
-		add = { value = sg_law_benefit_law_no_home_affairs }
-		add = { value = sg_law_politics_law_no_home_affairs }
-		subtract = { value = sg_law_risk_law_no_home_affairs multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_home_affairs }
 		add = { value = sg_law_enactment_chance_law_no_home_affairs multiply = 0.5 }
 	}
 	min = -100
@@ -6738,13 +7361,20 @@ sg_law_enactment_chance_law_okhrana = {
 	max = 100
 }
 
+sg_law_merit_law_okhrana = {
+	value = 0
+	add = { value = sg_law_benefit_law_okhrana }
+	add = { value = sg_law_politics_law_okhrana }
+	subtract = { value = sg_law_risk_law_okhrana multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_okhrana = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_okhrana = yes }
-		add = { value = sg_law_benefit_law_okhrana }
-		add = { value = sg_law_politics_law_okhrana }
-		subtract = { value = sg_law_risk_law_okhrana multiply = 0.5 }
+		add = { value = sg_law_merit_law_okhrana }
 		add = { value = sg_law_enactment_chance_law_okhrana multiply = 0.5 }
 	}
 	min = -100
@@ -6812,13 +7442,20 @@ sg_law_enactment_chance_law_secret_police = {
 	max = 100
 }
 
+sg_law_merit_law_secret_police = {
+	value = 0
+	add = { value = sg_law_benefit_law_secret_police }
+	add = { value = sg_law_politics_law_secret_police }
+	subtract = { value = sg_law_risk_law_secret_police multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_secret_police = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_secret_police = yes }
-		add = { value = sg_law_benefit_law_secret_police }
-		add = { value = sg_law_politics_law_secret_police }
-		subtract = { value = sg_law_risk_law_secret_police multiply = 0.5 }
+		add = { value = sg_law_merit_law_secret_police }
 		add = { value = sg_law_enactment_chance_law_secret_police multiply = 0.5 }
 	}
 	min = -100
@@ -6886,13 +7523,20 @@ sg_law_enactment_chance_law_shinsengumi = {
 	max = 100
 }
 
+sg_law_merit_law_shinsengumi = {
+	value = 0
+	add = { value = sg_law_benefit_law_shinsengumi }
+	add = { value = sg_law_politics_law_shinsengumi }
+	subtract = { value = sg_law_risk_law_shinsengumi multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_shinsengumi = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_shinsengumi = yes }
-		add = { value = sg_law_benefit_law_shinsengumi }
-		add = { value = sg_law_politics_law_shinsengumi }
-		subtract = { value = sg_law_risk_law_shinsengumi multiply = 0.5 }
+		add = { value = sg_law_merit_law_shinsengumi }
 		add = { value = sg_law_enactment_chance_law_shinsengumi multiply = 0.5 }
 	}
 	min = -100
@@ -6961,13 +7605,20 @@ sg_law_enactment_chance_law_third_section = {
 	max = 100
 }
 
+sg_law_merit_law_third_section = {
+	value = 0
+	add = { value = sg_law_benefit_law_third_section }
+	add = { value = sg_law_politics_law_third_section }
+	subtract = { value = sg_law_risk_law_third_section multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_third_section = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_third_section = yes }
-		add = { value = sg_law_benefit_law_third_section }
-		add = { value = sg_law_politics_law_third_section }
-		subtract = { value = sg_law_risk_law_third_section multiply = 0.5 }
+		add = { value = sg_law_merit_law_third_section }
 		add = { value = sg_law_enactment_chance_law_third_section multiply = 0.5 }
 	}
 	min = -100
@@ -7035,13 +7686,20 @@ sg_law_enactment_chance_law_no_workers_rights = {
 	max = 100
 }
 
+sg_law_merit_law_no_workers_rights = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_workers_rights }
+	add = { value = sg_law_politics_law_no_workers_rights }
+	subtract = { value = sg_law_risk_law_no_workers_rights multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_workers_rights = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_workers_rights = yes }
-		add = { value = sg_law_benefit_law_no_workers_rights }
-		add = { value = sg_law_politics_law_no_workers_rights }
-		subtract = { value = sg_law_risk_law_no_workers_rights multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_workers_rights }
 		add = { value = sg_law_enactment_chance_law_no_workers_rights multiply = 0.5 }
 	}
 	min = -100
@@ -7109,13 +7767,20 @@ sg_law_enactment_chance_law_regulatory_bodies = {
 	max = 100
 }
 
+sg_law_merit_law_regulatory_bodies = {
+	value = 0
+	add = { value = sg_law_benefit_law_regulatory_bodies }
+	add = { value = sg_law_politics_law_regulatory_bodies }
+	subtract = { value = sg_law_risk_law_regulatory_bodies multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_regulatory_bodies = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_regulatory_bodies = yes }
-		add = { value = sg_law_benefit_law_regulatory_bodies }
-		add = { value = sg_law_politics_law_regulatory_bodies }
-		subtract = { value = sg_law_risk_law_regulatory_bodies multiply = 0.5 }
+		add = { value = sg_law_merit_law_regulatory_bodies }
 		add = { value = sg_law_enactment_chance_law_regulatory_bodies multiply = 0.5 }
 	}
 	min = -100
@@ -7184,13 +7849,20 @@ sg_law_enactment_chance_law_worker_protections = {
 	max = 100
 }
 
+sg_law_merit_law_worker_protections = {
+	value = 0
+	add = { value = sg_law_benefit_law_worker_protections }
+	add = { value = sg_law_politics_law_worker_protections }
+	subtract = { value = sg_law_risk_law_worker_protections multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_worker_protections = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_worker_protections = yes }
-		add = { value = sg_law_benefit_law_worker_protections }
-		add = { value = sg_law_politics_law_worker_protections }
-		subtract = { value = sg_law_risk_law_worker_protections multiply = 0.5 }
+		add = { value = sg_law_merit_law_worker_protections }
 		add = { value = sg_law_enactment_chance_law_worker_protections multiply = 0.5 }
 	}
 	min = -100
@@ -7259,13 +7931,20 @@ sg_law_enactment_chance_law_anti_strike_laws = {
 	max = 100
 }
 
+sg_law_merit_law_anti_strike_laws = {
+	value = 0
+	add = { value = sg_law_benefit_law_anti_strike_laws }
+	add = { value = sg_law_politics_law_anti_strike_laws }
+	subtract = { value = sg_law_risk_law_anti_strike_laws multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_anti_strike_laws = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_anti_strike_laws = yes }
-		add = { value = sg_law_benefit_law_anti_strike_laws }
-		add = { value = sg_law_politics_law_anti_strike_laws }
-		subtract = { value = sg_law_risk_law_anti_strike_laws multiply = 0.5 }
+		add = { value = sg_law_merit_law_anti_strike_laws }
 		add = { value = sg_law_enactment_chance_law_anti_strike_laws multiply = 0.5 }
 	}
 	min = -100
@@ -7334,13 +8013,20 @@ sg_law_enactment_chance_law_combination_acts = {
 	max = 100
 }
 
+sg_law_merit_law_combination_acts = {
+	value = 0
+	add = { value = sg_law_benefit_law_combination_acts }
+	add = { value = sg_law_politics_law_combination_acts }
+	subtract = { value = sg_law_risk_law_combination_acts multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_combination_acts = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_combination_acts = yes }
-		add = { value = sg_law_benefit_law_combination_acts }
-		add = { value = sg_law_politics_law_combination_acts }
-		subtract = { value = sg_law_risk_law_combination_acts multiply = 0.5 }
+		add = { value = sg_law_merit_law_combination_acts }
 		add = { value = sg_law_enactment_chance_law_combination_acts multiply = 0.5 }
 	}
 	min = -100
@@ -7409,13 +8095,20 @@ sg_law_enactment_chance_law_corporatized_unions = {
 	max = 100
 }
 
+sg_law_merit_law_corporatized_unions = {
+	value = 0
+	add = { value = sg_law_benefit_law_corporatized_unions }
+	add = { value = sg_law_politics_law_corporatized_unions }
+	subtract = { value = sg_law_risk_law_corporatized_unions multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_corporatized_unions = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_corporatized_unions = yes }
-		add = { value = sg_law_benefit_law_corporatized_unions }
-		add = { value = sg_law_politics_law_corporatized_unions }
-		subtract = { value = sg_law_risk_law_corporatized_unions multiply = 0.5 }
+		add = { value = sg_law_merit_law_corporatized_unions }
 		add = { value = sg_law_enactment_chance_law_corporatized_unions multiply = 0.5 }
 	}
 	min = -100
@@ -7483,13 +8176,20 @@ sg_law_enactment_chance_law_factory_councils = {
 	max = 100
 }
 
+sg_law_merit_law_factory_councils = {
+	value = 0
+	add = { value = sg_law_benefit_law_factory_councils }
+	add = { value = sg_law_politics_law_factory_councils }
+	subtract = { value = sg_law_risk_law_factory_councils multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_factory_councils = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_factory_councils = yes }
-		add = { value = sg_law_benefit_law_factory_councils }
-		add = { value = sg_law_politics_law_factory_councils }
-		subtract = { value = sg_law_risk_law_factory_councils multiply = 0.5 }
+		add = { value = sg_law_merit_law_factory_councils }
 		add = { value = sg_law_enactment_chance_law_factory_councils multiply = 0.5 }
 	}
 	min = -100
@@ -7559,13 +8259,20 @@ sg_law_enactment_chance_law_guild_system = {
 	max = 100
 }
 
+sg_law_merit_law_guild_system = {
+	value = 0
+	add = { value = sg_law_benefit_law_guild_system }
+	add = { value = sg_law_politics_law_guild_system }
+	subtract = { value = sg_law_risk_law_guild_system multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_guild_system = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_guild_system = yes }
-		add = { value = sg_law_benefit_law_guild_system }
-		add = { value = sg_law_politics_law_guild_system }
-		subtract = { value = sg_law_risk_law_guild_system multiply = 0.5 }
+		add = { value = sg_law_merit_law_guild_system }
 		add = { value = sg_law_enactment_chance_law_guild_system multiply = 0.5 }
 	}
 	min = -100
@@ -7633,13 +8340,20 @@ sg_law_enactment_chance_law_right_to_associate = {
 	max = 100
 }
 
+sg_law_merit_law_right_to_associate = {
+	value = 0
+	add = { value = sg_law_benefit_law_right_to_associate }
+	add = { value = sg_law_politics_law_right_to_associate }
+	subtract = { value = sg_law_risk_law_right_to_associate multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_right_to_associate = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_right_to_associate = yes }
-		add = { value = sg_law_benefit_law_right_to_associate }
-		add = { value = sg_law_politics_law_right_to_associate }
-		subtract = { value = sg_law_risk_law_right_to_associate multiply = 0.5 }
+		add = { value = sg_law_merit_law_right_to_associate }
 		add = { value = sg_law_enactment_chance_law_right_to_associate multiply = 0.5 }
 	}
 	min = -100
@@ -7707,13 +8421,20 @@ sg_law_enactment_chance_law_collectivized_agriculture = {
 	max = 100
 }
 
+sg_law_merit_law_collectivized_agriculture = {
+	value = 0
+	add = { value = sg_law_benefit_law_collectivized_agriculture }
+	add = { value = sg_law_politics_law_collectivized_agriculture }
+	subtract = { value = sg_law_risk_law_collectivized_agriculture multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_collectivized_agriculture = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_collectivized_agriculture = yes }
-		add = { value = sg_law_benefit_law_collectivized_agriculture }
-		add = { value = sg_law_politics_law_collectivized_agriculture }
-		subtract = { value = sg_law_risk_law_collectivized_agriculture multiply = 0.5 }
+		add = { value = sg_law_merit_law_collectivized_agriculture }
 		add = { value = sg_law_enactment_chance_law_collectivized_agriculture multiply = 0.5 }
 	}
 	min = -100
@@ -7781,13 +8502,20 @@ sg_law_enactment_chance_law_commercialized_agriculture = {
 	max = 100
 }
 
+sg_law_merit_law_commercialized_agriculture = {
+	value = 0
+	add = { value = sg_law_benefit_law_commercialized_agriculture }
+	add = { value = sg_law_politics_law_commercialized_agriculture }
+	subtract = { value = sg_law_risk_law_commercialized_agriculture multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_commercialized_agriculture = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_commercialized_agriculture = yes }
-		add = { value = sg_law_benefit_law_commercialized_agriculture }
-		add = { value = sg_law_politics_law_commercialized_agriculture }
-		subtract = { value = sg_law_risk_law_commercialized_agriculture multiply = 0.5 }
+		add = { value = sg_law_merit_law_commercialized_agriculture }
 		add = { value = sg_law_enactment_chance_law_commercialized_agriculture multiply = 0.5 }
 	}
 	min = -100
@@ -7856,13 +8584,20 @@ sg_law_enactment_chance_law_expanded_latifundias = {
 	max = 100
 }
 
+sg_law_merit_law_expanded_latifundias = {
+	value = 0
+	add = { value = sg_law_benefit_law_expanded_latifundias }
+	add = { value = sg_law_politics_law_expanded_latifundias }
+	subtract = { value = sg_law_risk_law_expanded_latifundias multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_expanded_latifundias = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_expanded_latifundias = yes }
-		add = { value = sg_law_benefit_law_expanded_latifundias }
-		add = { value = sg_law_politics_law_expanded_latifundias }
-		subtract = { value = sg_law_risk_law_expanded_latifundias multiply = 0.5 }
+		add = { value = sg_law_merit_law_expanded_latifundias }
 		add = { value = sg_law_enactment_chance_law_expanded_latifundias multiply = 0.5 }
 	}
 	min = -100
@@ -7931,13 +8666,20 @@ sg_law_enactment_chance_law_homesteading = {
 	max = 100
 }
 
+sg_law_merit_law_homesteading = {
+	value = 0
+	add = { value = sg_law_benefit_law_homesteading }
+	add = { value = sg_law_politics_law_homesteading }
+	subtract = { value = sg_law_risk_law_homesteading multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_homesteading = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_homesteading = yes }
-		add = { value = sg_law_benefit_law_homesteading }
-		add = { value = sg_law_politics_law_homesteading }
-		subtract = { value = sg_law_risk_law_homesteading multiply = 0.5 }
+		add = { value = sg_law_merit_law_homesteading }
 		add = { value = sg_law_enactment_chance_law_homesteading multiply = 0.5 }
 	}
 	min = -100
@@ -8005,13 +8747,20 @@ sg_law_enactment_chance_law_latifundias = {
 	max = 100
 }
 
+sg_law_merit_law_latifundias = {
+	value = 0
+	add = { value = sg_law_benefit_law_latifundias }
+	add = { value = sg_law_politics_law_latifundias }
+	subtract = { value = sg_law_risk_law_latifundias multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_latifundias = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_latifundias = yes }
-		add = { value = sg_law_benefit_law_latifundias }
-		add = { value = sg_law_politics_law_latifundias }
-		subtract = { value = sg_law_risk_law_latifundias multiply = 0.5 }
+		add = { value = sg_law_merit_law_latifundias }
 		add = { value = sg_law_enactment_chance_law_latifundias multiply = 0.5 }
 	}
 	min = -100
@@ -8080,13 +8829,20 @@ sg_law_enactment_chance_law_manorialism = {
 	max = 100
 }
 
+sg_law_merit_law_manorialism = {
+	value = 0
+	add = { value = sg_law_benefit_law_manorialism }
+	add = { value = sg_law_politics_law_manorialism }
+	subtract = { value = sg_law_risk_law_manorialism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_manorialism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_manorialism = yes }
-		add = { value = sg_law_benefit_law_manorialism }
-		add = { value = sg_law_politics_law_manorialism }
-		subtract = { value = sg_law_risk_law_manorialism multiply = 0.5 }
+		add = { value = sg_law_merit_law_manorialism }
 		add = { value = sg_law_enactment_chance_law_manorialism multiply = 0.5 }
 	}
 	min = -100
@@ -8155,13 +8911,20 @@ sg_law_enactment_chance_law_peasant_proprietorship = {
 	max = 100
 }
 
+sg_law_merit_law_peasant_proprietorship = {
+	value = 0
+	add = { value = sg_law_benefit_law_peasant_proprietorship }
+	add = { value = sg_law_politics_law_peasant_proprietorship }
+	subtract = { value = sg_law_risk_law_peasant_proprietorship multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_peasant_proprietorship = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_peasant_proprietorship = yes }
-		add = { value = sg_law_benefit_law_peasant_proprietorship }
-		add = { value = sg_law_politics_law_peasant_proprietorship }
-		subtract = { value = sg_law_risk_law_peasant_proprietorship multiply = 0.5 }
+		add = { value = sg_law_merit_law_peasant_proprietorship }
 		add = { value = sg_law_enactment_chance_law_peasant_proprietorship multiply = 0.5 }
 	}
 	min = -100
@@ -8230,13 +8993,20 @@ sg_law_enactment_chance_law_serfdom = {
 	max = 100
 }
 
+sg_law_merit_law_serfdom = {
+	value = 0
+	add = { value = sg_law_benefit_law_serfdom }
+	add = { value = sg_law_politics_law_serfdom }
+	subtract = { value = sg_law_risk_law_serfdom multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_serfdom = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_serfdom = yes }
-		add = { value = sg_law_benefit_law_serfdom }
-		add = { value = sg_law_politics_law_serfdom }
-		subtract = { value = sg_law_risk_law_serfdom multiply = 0.5 }
+		add = { value = sg_law_merit_law_serfdom }
 		add = { value = sg_law_enactment_chance_law_serfdom multiply = 0.5 }
 	}
 	min = -100
@@ -8305,13 +9075,20 @@ sg_law_enactment_chance_law_tenant_farmers = {
 	max = 100
 }
 
+sg_law_merit_law_tenant_farmers = {
+	value = 0
+	add = { value = sg_law_benefit_law_tenant_farmers }
+	add = { value = sg_law_politics_law_tenant_farmers }
+	subtract = { value = sg_law_risk_law_tenant_farmers multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_tenant_farmers = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_tenant_farmers = yes }
-		add = { value = sg_law_benefit_law_tenant_farmers }
-		add = { value = sg_law_politics_law_tenant_farmers }
-		subtract = { value = sg_law_risk_law_tenant_farmers multiply = 0.5 }
+		add = { value = sg_law_merit_law_tenant_farmers }
 		add = { value = sg_law_enactment_chance_law_tenant_farmers multiply = 0.5 }
 	}
 	min = -100
@@ -8379,13 +9156,20 @@ sg_law_enactment_chance_law_closed_borders = {
 	max = 100
 }
 
+sg_law_merit_law_closed_borders = {
+	value = 0
+	add = { value = sg_law_benefit_law_closed_borders }
+	add = { value = sg_law_politics_law_closed_borders }
+	subtract = { value = sg_law_risk_law_closed_borders multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_closed_borders = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_closed_borders = yes }
-		add = { value = sg_law_benefit_law_closed_borders }
-		add = { value = sg_law_politics_law_closed_borders }
-		subtract = { value = sg_law_risk_law_closed_borders multiply = 0.5 }
+		add = { value = sg_law_merit_law_closed_borders }
 		add = { value = sg_law_enactment_chance_law_closed_borders multiply = 0.5 }
 	}
 	min = -100
@@ -8453,13 +9237,20 @@ sg_law_enactment_chance_law_migration_controls = {
 	max = 100
 }
 
+sg_law_merit_law_migration_controls = {
+	value = 0
+	add = { value = sg_law_benefit_law_migration_controls }
+	add = { value = sg_law_politics_law_migration_controls }
+	subtract = { value = sg_law_risk_law_migration_controls multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_migration_controls = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_migration_controls = yes }
-		add = { value = sg_law_benefit_law_migration_controls }
-		add = { value = sg_law_politics_law_migration_controls }
-		subtract = { value = sg_law_risk_law_migration_controls multiply = 0.5 }
+		add = { value = sg_law_merit_law_migration_controls }
 		add = { value = sg_law_enactment_chance_law_migration_controls multiply = 0.5 }
 	}
 	min = -100
@@ -8527,13 +9318,20 @@ sg_law_enactment_chance_law_no_migration_controls = {
 	max = 100
 }
 
+sg_law_merit_law_no_migration_controls = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_migration_controls }
+	add = { value = sg_law_politics_law_no_migration_controls }
+	subtract = { value = sg_law_risk_law_no_migration_controls multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_migration_controls = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_migration_controls = yes }
-		add = { value = sg_law_benefit_law_no_migration_controls }
-		add = { value = sg_law_politics_law_no_migration_controls }
-		subtract = { value = sg_law_risk_law_no_migration_controls multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_migration_controls }
 		add = { value = sg_law_enactment_chance_law_no_migration_controls multiply = 0.5 }
 	}
 	min = -100
@@ -8602,13 +9400,20 @@ sg_law_enactment_chance_law_diplomatic_navy = {
 	max = 100
 }
 
+sg_law_merit_law_diplomatic_navy = {
+	value = 0
+	add = { value = sg_law_benefit_law_diplomatic_navy }
+	add = { value = sg_law_politics_law_diplomatic_navy }
+	subtract = { value = sg_law_risk_law_diplomatic_navy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_diplomatic_navy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_diplomatic_navy = yes }
-		add = { value = sg_law_benefit_law_diplomatic_navy }
-		add = { value = sg_law_politics_law_diplomatic_navy }
-		subtract = { value = sg_law_risk_law_diplomatic_navy multiply = 0.5 }
+		add = { value = sg_law_merit_law_diplomatic_navy }
 		add = { value = sg_law_enactment_chance_law_diplomatic_navy multiply = 0.5 }
 	}
 	min = -100
@@ -8677,13 +9482,20 @@ sg_law_enactment_chance_law_jeune_ecole = {
 	max = 100
 }
 
+sg_law_merit_law_jeune_ecole = {
+	value = 0
+	add = { value = sg_law_benefit_law_jeune_ecole }
+	add = { value = sg_law_politics_law_jeune_ecole }
+	subtract = { value = sg_law_risk_law_jeune_ecole multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_jeune_ecole = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_jeune_ecole = yes }
-		add = { value = sg_law_benefit_law_jeune_ecole }
-		add = { value = sg_law_politics_law_jeune_ecole }
-		subtract = { value = sg_law_risk_law_jeune_ecole multiply = 0.5 }
+		add = { value = sg_law_merit_law_jeune_ecole }
 		add = { value = sg_law_enactment_chance_law_jeune_ecole multiply = 0.5 }
 	}
 	min = -100
@@ -8752,13 +9564,20 @@ sg_law_enactment_chance_law_merchant_navy = {
 	max = 100
 }
 
+sg_law_merit_law_merchant_navy = {
+	value = 0
+	add = { value = sg_law_benefit_law_merchant_navy }
+	add = { value = sg_law_politics_law_merchant_navy }
+	subtract = { value = sg_law_risk_law_merchant_navy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_merchant_navy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_merchant_navy = yes }
-		add = { value = sg_law_benefit_law_merchant_navy }
-		add = { value = sg_law_politics_law_merchant_navy }
-		subtract = { value = sg_law_risk_law_merchant_navy multiply = 0.5 }
+		add = { value = sg_law_merit_law_merchant_navy }
 		add = { value = sg_law_enactment_chance_law_merchant_navy multiply = 0.5 }
 	}
 	min = -100
@@ -8827,13 +9646,20 @@ sg_law_enactment_chance_law_professional_navy = {
 	max = 100
 }
 
+sg_law_merit_law_professional_navy = {
+	value = 0
+	add = { value = sg_law_benefit_law_professional_navy }
+	add = { value = sg_law_politics_law_professional_navy }
+	subtract = { value = sg_law_risk_law_professional_navy multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_professional_navy = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_professional_navy = yes }
-		add = { value = sg_law_benefit_law_professional_navy }
-		add = { value = sg_law_politics_law_professional_navy }
-		subtract = { value = sg_law_risk_law_professional_navy multiply = 0.5 }
+		add = { value = sg_law_merit_law_professional_navy }
 		add = { value = sg_law_enactment_chance_law_professional_navy multiply = 0.5 }
 	}
 	min = -100
@@ -8904,13 +9730,20 @@ sg_law_enactment_chance_law_dedicated_police = {
 	max = 100
 }
 
+sg_law_merit_law_dedicated_police = {
+	value = 0
+	add = { value = sg_law_benefit_law_dedicated_police }
+	add = { value = sg_law_politics_law_dedicated_police }
+	subtract = { value = sg_law_risk_law_dedicated_police multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_dedicated_police = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_dedicated_police = yes }
-		add = { value = sg_law_benefit_law_dedicated_police }
-		add = { value = sg_law_politics_law_dedicated_police }
-		subtract = { value = sg_law_risk_law_dedicated_police multiply = 0.5 }
+		add = { value = sg_law_merit_law_dedicated_police }
 		add = { value = sg_law_enactment_chance_law_dedicated_police multiply = 0.5 }
 	}
 	min = -100
@@ -8978,13 +9811,20 @@ sg_law_enactment_chance_law_local_police = {
 	max = 100
 }
 
+sg_law_merit_law_local_police = {
+	value = 0
+	add = { value = sg_law_benefit_law_local_police }
+	add = { value = sg_law_politics_law_local_police }
+	subtract = { value = sg_law_risk_law_local_police multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_local_police = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_local_police = yes }
-		add = { value = sg_law_benefit_law_local_police }
-		add = { value = sg_law_politics_law_local_police }
-		subtract = { value = sg_law_risk_law_local_police multiply = 0.5 }
+		add = { value = sg_law_merit_law_local_police }
 		add = { value = sg_law_enactment_chance_law_local_police multiply = 0.5 }
 	}
 	min = -100
@@ -9055,13 +9895,20 @@ sg_law_enactment_chance_law_militarized_police = {
 	max = 100
 }
 
+sg_law_merit_law_militarized_police = {
+	value = 0
+	add = { value = sg_law_benefit_law_militarized_police }
+	add = { value = sg_law_politics_law_militarized_police }
+	subtract = { value = sg_law_risk_law_militarized_police multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_militarized_police = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_militarized_police = yes }
-		add = { value = sg_law_benefit_law_militarized_police }
-		add = { value = sg_law_politics_law_militarized_police }
-		subtract = { value = sg_law_risk_law_militarized_police multiply = 0.5 }
+		add = { value = sg_law_merit_law_militarized_police }
 		add = { value = sg_law_enactment_chance_law_militarized_police multiply = 0.5 }
 	}
 	min = -100
@@ -9129,13 +9976,20 @@ sg_law_enactment_chance_law_no_police = {
 	max = 100
 }
 
+sg_law_merit_law_no_police = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_police }
+	add = { value = sg_law_politics_law_no_police }
+	subtract = { value = sg_law_risk_law_no_police multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_police = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_police = yes }
-		add = { value = sg_law_benefit_law_no_police }
-		add = { value = sg_law_politics_law_no_police }
-		subtract = { value = sg_law_risk_law_no_police multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_police }
 		add = { value = sg_law_enactment_chance_law_no_police multiply = 0.5 }
 	}
 	min = -100
@@ -9204,13 +10058,20 @@ sg_law_enactment_chance_law_no_womens_rights = {
 	max = 100
 }
 
+sg_law_merit_law_no_womens_rights = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_womens_rights }
+	add = { value = sg_law_politics_law_no_womens_rights }
+	subtract = { value = sg_law_risk_law_no_womens_rights multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_womens_rights = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_womens_rights = yes }
-		add = { value = sg_law_benefit_law_no_womens_rights }
-		add = { value = sg_law_politics_law_no_womens_rights }
-		subtract = { value = sg_law_risk_law_no_womens_rights multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_womens_rights }
 		add = { value = sg_law_enactment_chance_law_no_womens_rights multiply = 0.5 }
 	}
 	min = -100
@@ -9279,13 +10140,20 @@ sg_law_enactment_chance_law_women_in_the_fields = {
 	max = 100
 }
 
+sg_law_merit_law_women_in_the_fields = {
+	value = 0
+	add = { value = sg_law_benefit_law_women_in_the_fields }
+	add = { value = sg_law_politics_law_women_in_the_fields }
+	subtract = { value = sg_law_risk_law_women_in_the_fields multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_women_in_the_fields = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_women_in_the_fields = yes }
-		add = { value = sg_law_benefit_law_women_in_the_fields }
-		add = { value = sg_law_politics_law_women_in_the_fields }
-		subtract = { value = sg_law_risk_law_women_in_the_fields multiply = 0.5 }
+		add = { value = sg_law_merit_law_women_in_the_fields }
 		add = { value = sg_law_enactment_chance_law_women_in_the_fields multiply = 0.5 }
 	}
 	min = -100
@@ -9354,13 +10222,20 @@ sg_law_enactment_chance_law_women_in_the_workplace = {
 	max = 100
 }
 
+sg_law_merit_law_women_in_the_workplace = {
+	value = 0
+	add = { value = sg_law_benefit_law_women_in_the_workplace }
+	add = { value = sg_law_politics_law_women_in_the_workplace }
+	subtract = { value = sg_law_risk_law_women_in_the_workplace multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_women_in_the_workplace = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_women_in_the_workplace = yes }
-		add = { value = sg_law_benefit_law_women_in_the_workplace }
-		add = { value = sg_law_politics_law_women_in_the_workplace }
-		subtract = { value = sg_law_risk_law_women_in_the_workplace multiply = 0.5 }
+		add = { value = sg_law_merit_law_women_in_the_workplace }
 		add = { value = sg_law_enactment_chance_law_women_in_the_workplace multiply = 0.5 }
 	}
 	min = -100
@@ -9429,13 +10304,20 @@ sg_law_enactment_chance_law_women_own_property = {
 	max = 100
 }
 
+sg_law_merit_law_women_own_property = {
+	value = 0
+	add = { value = sg_law_benefit_law_women_own_property }
+	add = { value = sg_law_politics_law_women_own_property }
+	subtract = { value = sg_law_risk_law_women_own_property multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_women_own_property = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_women_own_property = yes }
-		add = { value = sg_law_benefit_law_women_own_property }
-		add = { value = sg_law_politics_law_women_own_property }
-		subtract = { value = sg_law_risk_law_women_own_property multiply = 0.5 }
+		add = { value = sg_law_merit_law_women_own_property }
 		add = { value = sg_law_enactment_chance_law_women_own_property multiply = 0.5 }
 	}
 	min = -100
@@ -9504,13 +10386,20 @@ sg_law_enactment_chance_law_womens_suffrage = {
 	max = 100
 }
 
+sg_law_merit_law_womens_suffrage = {
+	value = 0
+	add = { value = sg_law_benefit_law_womens_suffrage }
+	add = { value = sg_law_politics_law_womens_suffrage }
+	subtract = { value = sg_law_risk_law_womens_suffrage multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_womens_suffrage = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_womens_suffrage = yes }
-		add = { value = sg_law_benefit_law_womens_suffrage }
-		add = { value = sg_law_politics_law_womens_suffrage }
-		subtract = { value = sg_law_risk_law_womens_suffrage multiply = 0.5 }
+		add = { value = sg_law_merit_law_womens_suffrage }
 		add = { value = sg_law_enactment_chance_law_womens_suffrage multiply = 0.5 }
 	}
 	min = -100
@@ -9578,13 +10467,20 @@ sg_law_enactment_chance_law_colonial_slavery = {
 	max = 100
 }
 
+sg_law_merit_law_colonial_slavery = {
+	value = 0
+	add = { value = sg_law_benefit_law_colonial_slavery }
+	add = { value = sg_law_politics_law_colonial_slavery }
+	subtract = { value = sg_law_risk_law_colonial_slavery multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_colonial_slavery = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_colonial_slavery = yes }
-		add = { value = sg_law_benefit_law_colonial_slavery }
-		add = { value = sg_law_politics_law_colonial_slavery }
-		subtract = { value = sg_law_risk_law_colonial_slavery multiply = 0.5 }
+		add = { value = sg_law_merit_law_colonial_slavery }
 		add = { value = sg_law_enactment_chance_law_colonial_slavery multiply = 0.5 }
 	}
 	min = -100
@@ -9652,13 +10548,20 @@ sg_law_enactment_chance_law_debt_slavery = {
 	max = 100
 }
 
+sg_law_merit_law_debt_slavery = {
+	value = 0
+	add = { value = sg_law_benefit_law_debt_slavery }
+	add = { value = sg_law_politics_law_debt_slavery }
+	subtract = { value = sg_law_risk_law_debt_slavery multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_debt_slavery = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_debt_slavery = yes }
-		add = { value = sg_law_benefit_law_debt_slavery }
-		add = { value = sg_law_politics_law_debt_slavery }
-		subtract = { value = sg_law_risk_law_debt_slavery multiply = 0.5 }
+		add = { value = sg_law_merit_law_debt_slavery }
 		add = { value = sg_law_enactment_chance_law_debt_slavery multiply = 0.5 }
 	}
 	min = -100
@@ -9726,13 +10629,20 @@ sg_law_enactment_chance_law_legacy_slavery = {
 	max = 100
 }
 
+sg_law_merit_law_legacy_slavery = {
+	value = 0
+	add = { value = sg_law_benefit_law_legacy_slavery }
+	add = { value = sg_law_politics_law_legacy_slavery }
+	subtract = { value = sg_law_risk_law_legacy_slavery multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_legacy_slavery = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_legacy_slavery = yes }
-		add = { value = sg_law_benefit_law_legacy_slavery }
-		add = { value = sg_law_politics_law_legacy_slavery }
-		subtract = { value = sg_law_risk_law_legacy_slavery multiply = 0.5 }
+		add = { value = sg_law_merit_law_legacy_slavery }
 		add = { value = sg_law_enactment_chance_law_legacy_slavery multiply = 0.5 }
 	}
 	min = -100
@@ -9800,13 +10710,20 @@ sg_law_enactment_chance_law_slave_trade = {
 	max = 100
 }
 
+sg_law_merit_law_slave_trade = {
+	value = 0
+	add = { value = sg_law_benefit_law_slave_trade }
+	add = { value = sg_law_politics_law_slave_trade }
+	subtract = { value = sg_law_risk_law_slave_trade multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_slave_trade = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_slave_trade = yes }
-		add = { value = sg_law_benefit_law_slave_trade }
-		add = { value = sg_law_politics_law_slave_trade }
-		subtract = { value = sg_law_risk_law_slave_trade multiply = 0.5 }
+		add = { value = sg_law_merit_law_slave_trade }
 		add = { value = sg_law_enactment_chance_law_slave_trade multiply = 0.5 }
 	}
 	min = -100
@@ -9874,13 +10791,20 @@ sg_law_enactment_chance_law_slavery_banned = {
 	max = 100
 }
 
+sg_law_merit_law_slavery_banned = {
+	value = 0
+	add = { value = sg_law_benefit_law_slavery_banned }
+	add = { value = sg_law_politics_law_slavery_banned }
+	subtract = { value = sg_law_risk_law_slavery_banned multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_slavery_banned = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_slavery_banned = yes }
-		add = { value = sg_law_benefit_law_slavery_banned }
-		add = { value = sg_law_politics_law_slavery_banned }
-		subtract = { value = sg_law_risk_law_slavery_banned multiply = 0.5 }
+		add = { value = sg_law_merit_law_slavery_banned }
 		add = { value = sg_law_enactment_chance_law_slavery_banned multiply = 0.5 }
 	}
 	min = -100
@@ -9949,13 +10873,20 @@ sg_law_enactment_chance_law_consumption_based_taxation = {
 	max = 100
 }
 
+sg_law_merit_law_consumption_based_taxation = {
+	value = 0
+	add = { value = sg_law_benefit_law_consumption_based_taxation }
+	add = { value = sg_law_politics_law_consumption_based_taxation }
+	subtract = { value = sg_law_risk_law_consumption_based_taxation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_consumption_based_taxation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_consumption_based_taxation = yes }
-		add = { value = sg_law_benefit_law_consumption_based_taxation }
-		add = { value = sg_law_politics_law_consumption_based_taxation }
-		subtract = { value = sg_law_risk_law_consumption_based_taxation multiply = 0.5 }
+		add = { value = sg_law_merit_law_consumption_based_taxation }
 		add = { value = sg_law_enactment_chance_law_consumption_based_taxation multiply = 0.5 }
 	}
 	min = -100
@@ -10025,13 +10956,20 @@ sg_law_enactment_chance_law_graduated_taxation = {
 	max = 100
 }
 
+sg_law_merit_law_graduated_taxation = {
+	value = 0
+	add = { value = sg_law_benefit_law_graduated_taxation }
+	add = { value = sg_law_politics_law_graduated_taxation }
+	subtract = { value = sg_law_risk_law_graduated_taxation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_graduated_taxation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_graduated_taxation = yes }
-		add = { value = sg_law_benefit_law_graduated_taxation }
-		add = { value = sg_law_politics_law_graduated_taxation }
-		subtract = { value = sg_law_risk_law_graduated_taxation multiply = 0.5 }
+		add = { value = sg_law_merit_law_graduated_taxation }
 		add = { value = sg_law_enactment_chance_law_graduated_taxation multiply = 0.5 }
 	}
 	min = -100
@@ -10100,13 +11038,20 @@ sg_law_enactment_chance_law_land_based_taxation = {
 	max = 100
 }
 
+sg_law_merit_law_land_based_taxation = {
+	value = 0
+	add = { value = sg_law_benefit_law_land_based_taxation }
+	add = { value = sg_law_politics_law_land_based_taxation }
+	subtract = { value = sg_law_risk_law_land_based_taxation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_land_based_taxation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_land_based_taxation = yes }
-		add = { value = sg_law_benefit_law_land_based_taxation }
-		add = { value = sg_law_politics_law_land_based_taxation }
-		subtract = { value = sg_law_risk_law_land_based_taxation multiply = 0.5 }
+		add = { value = sg_law_merit_law_land_based_taxation }
 		add = { value = sg_law_enactment_chance_law_land_based_taxation multiply = 0.5 }
 	}
 	min = -100
@@ -10175,13 +11120,20 @@ sg_law_enactment_chance_law_per_capita_based_taxation = {
 	max = 100
 }
 
+sg_law_merit_law_per_capita_based_taxation = {
+	value = 0
+	add = { value = sg_law_benefit_law_per_capita_based_taxation }
+	add = { value = sg_law_politics_law_per_capita_based_taxation }
+	subtract = { value = sg_law_risk_law_per_capita_based_taxation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_per_capita_based_taxation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_per_capita_based_taxation = yes }
-		add = { value = sg_law_benefit_law_per_capita_based_taxation }
-		add = { value = sg_law_politics_law_per_capita_based_taxation }
-		subtract = { value = sg_law_risk_law_per_capita_based_taxation multiply = 0.5 }
+		add = { value = sg_law_merit_law_per_capita_based_taxation }
 		add = { value = sg_law_enactment_chance_law_per_capita_based_taxation multiply = 0.5 }
 	}
 	min = -100
@@ -10251,13 +11203,20 @@ sg_law_enactment_chance_law_proportional_taxation = {
 	max = 100
 }
 
+sg_law_merit_law_proportional_taxation = {
+	value = 0
+	add = { value = sg_law_benefit_law_proportional_taxation }
+	add = { value = sg_law_politics_law_proportional_taxation }
+	subtract = { value = sg_law_risk_law_proportional_taxation multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_proportional_taxation = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_proportional_taxation = yes }
-		add = { value = sg_law_benefit_law_proportional_taxation }
-		add = { value = sg_law_politics_law_proportional_taxation }
-		subtract = { value = sg_law_risk_law_proportional_taxation multiply = 0.5 }
+		add = { value = sg_law_merit_law_proportional_taxation }
 		add = { value = sg_law_enactment_chance_law_proportional_taxation multiply = 0.5 }
 	}
 	min = -100
@@ -10327,13 +11286,20 @@ sg_law_enactment_chance_law_canton_system = {
 	max = 100
 }
 
+sg_law_merit_law_canton_system = {
+	value = 0
+	add = { value = sg_law_benefit_law_canton_system }
+	add = { value = sg_law_politics_law_canton_system }
+	subtract = { value = sg_law_risk_law_canton_system multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_canton_system = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_canton_system = yes }
-		add = { value = sg_law_benefit_law_canton_system }
-		add = { value = sg_law_politics_law_canton_system }
-		subtract = { value = sg_law_risk_law_canton_system multiply = 0.5 }
+		add = { value = sg_law_merit_law_canton_system }
 		add = { value = sg_law_enactment_chance_law_canton_system multiply = 0.5 }
 	}
 	min = -100
@@ -10403,13 +11369,20 @@ sg_law_enactment_chance_law_free_trade = {
 	max = 100
 }
 
+sg_law_merit_law_free_trade = {
+	value = 0
+	add = { value = sg_law_benefit_law_free_trade }
+	add = { value = sg_law_politics_law_free_trade }
+	subtract = { value = sg_law_risk_law_free_trade multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_free_trade = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_free_trade = yes }
-		add = { value = sg_law_benefit_law_free_trade }
-		add = { value = sg_law_politics_law_free_trade }
-		subtract = { value = sg_law_risk_law_free_trade multiply = 0.5 }
+		add = { value = sg_law_merit_law_free_trade }
 		add = { value = sg_law_enactment_chance_law_free_trade multiply = 0.5 }
 	}
 	min = -100
@@ -10479,13 +11452,20 @@ sg_law_enactment_chance_law_isolationism = {
 	max = 100
 }
 
+sg_law_merit_law_isolationism = {
+	value = 0
+	add = { value = sg_law_benefit_law_isolationism }
+	add = { value = sg_law_politics_law_isolationism }
+	subtract = { value = sg_law_risk_law_isolationism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_isolationism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_isolationism = yes }
-		add = { value = sg_law_benefit_law_isolationism }
-		add = { value = sg_law_politics_law_isolationism }
-		subtract = { value = sg_law_risk_law_isolationism multiply = 0.5 }
+		add = { value = sg_law_merit_law_isolationism }
 		add = { value = sg_law_enactment_chance_law_isolationism multiply = 0.5 }
 	}
 	min = -100
@@ -10555,13 +11535,20 @@ sg_law_enactment_chance_law_mercantilism = {
 	max = 100
 }
 
+sg_law_merit_law_mercantilism = {
+	value = 0
+	add = { value = sg_law_benefit_law_mercantilism }
+	add = { value = sg_law_politics_law_mercantilism }
+	subtract = { value = sg_law_risk_law_mercantilism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_mercantilism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_mercantilism = yes }
-		add = { value = sg_law_benefit_law_mercantilism }
-		add = { value = sg_law_politics_law_mercantilism }
-		subtract = { value = sg_law_risk_law_mercantilism multiply = 0.5 }
+		add = { value = sg_law_merit_law_mercantilism }
 		add = { value = sg_law_enactment_chance_law_mercantilism multiply = 0.5 }
 	}
 	min = -100
@@ -10631,13 +11618,20 @@ sg_law_enactment_chance_law_protectionism = {
 	max = 100
 }
 
+sg_law_merit_law_protectionism = {
+	value = 0
+	add = { value = sg_law_benefit_law_protectionism }
+	add = { value = sg_law_politics_law_protectionism }
+	subtract = { value = sg_law_risk_law_protectionism multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_protectionism = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_protectionism = yes }
-		add = { value = sg_law_benefit_law_protectionism }
-		add = { value = sg_law_politics_law_protectionism }
-		subtract = { value = sg_law_risk_law_protectionism multiply = 0.5 }
+		add = { value = sg_law_merit_law_protectionism }
 		add = { value = sg_law_enactment_chance_law_protectionism multiply = 0.5 }
 	}
 	min = -100
@@ -10707,13 +11701,20 @@ sg_law_enactment_chance_law_sakoku = {
 	max = 100
 }
 
+sg_law_merit_law_sakoku = {
+	value = 0
+	add = { value = sg_law_benefit_law_sakoku }
+	add = { value = sg_law_politics_law_sakoku }
+	subtract = { value = sg_law_risk_law_sakoku multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_sakoku = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_sakoku = yes }
-		add = { value = sg_law_benefit_law_sakoku }
-		add = { value = sg_law_politics_law_sakoku }
-		subtract = { value = sg_law_risk_law_sakoku multiply = 0.5 }
+		add = { value = sg_law_merit_law_sakoku }
 		add = { value = sg_law_enactment_chance_law_sakoku multiply = 0.5 }
 	}
 	min = -100
@@ -10782,13 +11783,20 @@ sg_law_enactment_chance_law_chiefs_distribute_aid = {
 	max = 100
 }
 
+sg_law_merit_law_chiefs_distribute_aid = {
+	value = 0
+	add = { value = sg_law_benefit_law_chiefs_distribute_aid }
+	add = { value = sg_law_politics_law_chiefs_distribute_aid }
+	subtract = { value = sg_law_risk_law_chiefs_distribute_aid multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_chiefs_distribute_aid = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_chiefs_distribute_aid = yes }
-		add = { value = sg_law_benefit_law_chiefs_distribute_aid }
-		add = { value = sg_law_politics_law_chiefs_distribute_aid }
-		subtract = { value = sg_law_risk_law_chiefs_distribute_aid multiply = 0.5 }
+		add = { value = sg_law_merit_law_chiefs_distribute_aid }
 		add = { value = sg_law_enactment_chance_law_chiefs_distribute_aid multiply = 0.5 }
 	}
 	min = -100
@@ -10856,13 +11864,20 @@ sg_law_enactment_chance_law_no_social_security = {
 	max = 100
 }
 
+sg_law_merit_law_no_social_security = {
+	value = 0
+	add = { value = sg_law_benefit_law_no_social_security }
+	add = { value = sg_law_politics_law_no_social_security }
+	subtract = { value = sg_law_risk_law_no_social_security multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_no_social_security = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_no_social_security = yes }
-		add = { value = sg_law_benefit_law_no_social_security }
-		add = { value = sg_law_politics_law_no_social_security }
-		subtract = { value = sg_law_risk_law_no_social_security multiply = 0.5 }
+		add = { value = sg_law_merit_law_no_social_security }
 		add = { value = sg_law_enactment_chance_law_no_social_security multiply = 0.5 }
 	}
 	min = -100
@@ -10931,13 +11946,20 @@ sg_law_enactment_chance_law_old_age_pension = {
 	max = 100
 }
 
+sg_law_merit_law_old_age_pension = {
+	value = 0
+	add = { value = sg_law_benefit_law_old_age_pension }
+	add = { value = sg_law_politics_law_old_age_pension }
+	subtract = { value = sg_law_risk_law_old_age_pension multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_old_age_pension = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_old_age_pension = yes }
-		add = { value = sg_law_benefit_law_old_age_pension }
-		add = { value = sg_law_politics_law_old_age_pension }
-		subtract = { value = sg_law_risk_law_old_age_pension multiply = 0.5 }
+		add = { value = sg_law_merit_law_old_age_pension }
 		add = { value = sg_law_enactment_chance_law_old_age_pension multiply = 0.5 }
 	}
 	min = -100
@@ -11005,13 +12027,20 @@ sg_law_enactment_chance_law_poor_laws = {
 	max = 100
 }
 
+sg_law_merit_law_poor_laws = {
+	value = 0
+	add = { value = sg_law_benefit_law_poor_laws }
+	add = { value = sg_law_politics_law_poor_laws }
+	subtract = { value = sg_law_risk_law_poor_laws multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_poor_laws = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_poor_laws = yes }
-		add = { value = sg_law_benefit_law_poor_laws }
-		add = { value = sg_law_politics_law_poor_laws }
-		subtract = { value = sg_law_risk_law_poor_laws multiply = 0.5 }
+		add = { value = sg_law_merit_law_poor_laws }
 		add = { value = sg_law_enactment_chance_law_poor_laws multiply = 0.5 }
 	}
 	min = -100
@@ -11080,15 +12109,900 @@ sg_law_enactment_chance_law_wage_subsidies = {
 	max = 100
 }
 
+sg_law_merit_law_wage_subsidies = {
+	value = 0
+	add = { value = sg_law_benefit_law_wage_subsidies }
+	add = { value = sg_law_politics_law_wage_subsidies }
+	subtract = { value = sg_law_risk_law_wage_subsidies multiply = 0.5 }
+	min = -100
+	max = 150
+}
+
 sg_law_score_law_wage_subsidies = {
 	value = 0
 	if = {
 		limit = { sg_law_available_law_wage_subsidies = yes }
-		add = { value = sg_law_benefit_law_wage_subsidies }
-		add = { value = sg_law_politics_law_wage_subsidies }
-		subtract = { value = sg_law_risk_law_wage_subsidies multiply = 0.5 }
+		add = { value = sg_law_merit_law_wage_subsidies }
 		add = { value = sg_law_enactment_chance_law_wage_subsidies multiply = 0.5 }
 	}
 	min = -100
 	max = 200
+}
+
+sg_law_current_merit_lawgroup_army_model = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_mass_conscription }
+		add = { value = sg_law_merit_law_mass_conscription }
+	}
+	if = {
+		limit = { has_law = law_type:law_national_militia }
+		add = { value = sg_law_merit_law_national_militia }
+	}
+	if = {
+		limit = { has_law = law_type:law_peasant_levies }
+		add = { value = sg_law_merit_law_peasant_levies }
+	}
+	if = {
+		limit = { has_law = law_type:law_professional_army }
+		add = { value = sg_law_merit_law_professional_army }
+	}
+	if = {
+		limit = { has_law = law_type:law_revolutionary_guard }
+		add = { value = sg_law_merit_law_revolutionary_guard }
+	}
+	if = {
+		limit = { has_law = law_type:law_warrior_caste }
+		add = { value = sg_law_merit_law_warrior_caste }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_army_model = {
+	value = sg_law_current_merit_lawgroup_army_model
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_bureaucracy = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_appointed_bureaucrats }
+		add = { value = sg_law_merit_law_appointed_bureaucrats }
+	}
+	if = {
+		limit = { has_law = law_type:law_communal_administration }
+		add = { value = sg_law_merit_law_communal_administration }
+	}
+	if = {
+		limit = { has_law = law_type:law_crownland_diets }
+		add = { value = sg_law_merit_law_crownland_diets }
+	}
+	if = {
+		limit = { has_law = law_type:law_elected_bureaucrats }
+		add = { value = sg_law_merit_law_elected_bureaucrats }
+	}
+	if = {
+		limit = { has_law = law_type:law_hereditary_bureaucrats }
+		add = { value = sg_law_merit_law_hereditary_bureaucrats }
+	}
+	if = {
+		limit = { has_law = law_type:law_military_bureaucrats }
+		add = { value = sg_law_merit_law_military_bureaucrats }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_bureaucracy = {
+	value = sg_law_current_merit_lawgroup_bureaucracy
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_caste_hegemony = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_affirmative_action }
+		add = { value = sg_law_merit_law_affirmative_action }
+	}
+	if = {
+		limit = { has_law = law_type:law_hindu_caste_codified }
+		add = { value = sg_law_merit_law_hindu_caste_codified }
+	}
+	if = {
+		limit = { has_law = law_type:law_hindu_caste_enforced }
+		add = { value = sg_law_merit_law_hindu_caste_enforced }
+	}
+	if = {
+		limit = { has_law = law_type:law_hindu_caste_not_enforced }
+		add = { value = sg_law_merit_law_hindu_caste_not_enforced }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_caste_hegemony = {
+	value = sg_law_current_merit_lawgroup_caste_hegemony
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_childrens_rights = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_child_labor_allowed }
+		add = { value = sg_law_merit_law_child_labor_allowed }
+	}
+	if = {
+		limit = { has_law = law_type:law_compulsory_primary_school }
+		add = { value = sg_law_merit_law_compulsory_primary_school }
+	}
+	if = {
+		limit = { has_law = law_type:law_restricted_child_labor }
+		add = { value = sg_law_merit_law_restricted_child_labor }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_childrens_rights = {
+	value = sg_law_current_merit_lawgroup_childrens_rights
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_church_and_state = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_caesaropapism }
+		add = { value = sg_law_merit_law_caesaropapism }
+	}
+	if = {
+		limit = { has_law = law_type:law_freedom_of_conscience }
+		add = { value = sg_law_merit_law_freedom_of_conscience }
+	}
+	if = {
+		limit = { has_law = law_type:law_millet_system }
+		add = { value = sg_law_merit_law_millet_system }
+	}
+	if = {
+		limit = { has_law = law_type:law_people_of_the_book }
+		add = { value = sg_law_merit_law_people_of_the_book }
+	}
+	if = {
+		limit = { has_law = law_type:law_state_atheism }
+		add = { value = sg_law_merit_law_state_atheism }
+	}
+	if = {
+		limit = { has_law = law_type:law_state_religion }
+		add = { value = sg_law_merit_law_state_religion }
+	}
+	if = {
+		limit = { has_law = law_type:law_total_separation }
+		add = { value = sg_law_merit_law_total_separation }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_church_and_state = {
+	value = sg_law_current_merit_lawgroup_church_and_state
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_citizenship = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_cultural_exclusion }
+		add = { value = sg_law_merit_law_cultural_exclusion }
+	}
+	if = {
+		limit = { has_law = law_type:law_ethnostate }
+		add = { value = sg_law_merit_law_ethnostate }
+	}
+	if = {
+		limit = { has_law = law_type:law_multicultural }
+		add = { value = sg_law_merit_law_multicultural }
+	}
+	if = {
+		limit = { has_law = law_type:law_national_supremacy }
+		add = { value = sg_law_merit_law_national_supremacy }
+	}
+	if = {
+		limit = { has_law = law_type:law_official_nationality }
+		add = { value = sg_law_merit_law_official_nationality }
+	}
+	if = {
+		limit = { has_law = law_type:law_racial_segregation }
+		add = { value = sg_law_merit_law_racial_segregation }
+	}
+	if = {
+		limit = { has_law = law_type:law_subjecthood }
+		add = { value = sg_law_merit_law_subjecthood }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_citizenship = {
+	value = sg_law_current_merit_lawgroup_citizenship
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_colonization = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_colonial_exploitation }
+		add = { value = sg_law_merit_law_colonial_exploitation }
+	}
+	if = {
+		limit = { has_law = law_type:law_colonial_resettlement }
+		add = { value = sg_law_merit_law_colonial_resettlement }
+	}
+	if = {
+		limit = { has_law = law_type:law_frontier_colonization }
+		add = { value = sg_law_merit_law_frontier_colonization }
+	}
+	if = {
+		limit = { has_law = law_type:law_internal_colonization }
+		add = { value = sg_law_merit_law_internal_colonization }
+	}
+	if = {
+		limit = { has_law = law_type:law_no_colonial_affairs }
+		add = { value = sg_law_merit_law_no_colonial_affairs }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_colonization = {
+	value = sg_law_current_merit_lawgroup_colonization
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_distribution_of_power = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_anarchy }
+		add = { value = sg_law_merit_law_anarchy }
+	}
+	if = {
+		limit = { has_law = law_type:law_autocracy }
+		add = { value = sg_law_merit_law_autocracy }
+	}
+	if = {
+		limit = { has_law = law_type:law_bakufu }
+		add = { value = sg_law_merit_law_bakufu }
+	}
+	if = {
+		limit = { has_law = law_type:law_census_voting }
+		add = { value = sg_law_merit_law_census_voting }
+	}
+	if = {
+		limit = { has_law = law_type:law_elder_council }
+		add = { value = sg_law_merit_law_elder_council }
+	}
+	if = {
+		limit = { has_law = law_type:law_labour_suffrage }
+		add = { value = sg_law_merit_law_labour_suffrage }
+	}
+	if = {
+		limit = { has_law = law_type:law_landed_voting }
+		add = { value = sg_law_merit_law_landed_voting }
+	}
+	if = {
+		limit = { has_law = law_type:law_neo_absolutism }
+		add = { value = sg_law_merit_law_neo_absolutism }
+	}
+	if = {
+		limit = { has_law = law_type:law_oligarchy }
+		add = { value = sg_law_merit_law_oligarchy }
+	}
+	if = {
+		limit = { has_law = law_type:law_organic_regulation }
+		add = { value = sg_law_merit_law_organic_regulation }
+	}
+	if = {
+		limit = { has_law = law_type:law_single_party_state }
+		add = { value = sg_law_merit_law_single_party_state }
+	}
+	if = {
+		limit = { has_law = law_type:law_technocracy }
+		add = { value = sg_law_merit_law_technocracy }
+	}
+	if = {
+		limit = { has_law = law_type:law_universal_suffrage }
+		add = { value = sg_law_merit_law_universal_suffrage }
+	}
+	if = {
+		limit = { has_law = law_type:law_wealth_voting }
+		add = { value = sg_law_merit_law_wealth_voting }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_distribution_of_power = {
+	value = sg_law_current_merit_lawgroup_distribution_of_power
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_economic_system = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_agrarianism }
+		add = { value = sg_law_merit_law_agrarianism }
+	}
+	if = {
+		limit = { has_law = law_type:law_command_economy }
+		add = { value = sg_law_merit_law_command_economy }
+	}
+	if = {
+		limit = { has_law = law_type:law_cooperative_ownership }
+		add = { value = sg_law_merit_law_cooperative_ownership }
+	}
+	if = {
+		limit = { has_law = law_type:law_extraction_economy }
+		add = { value = sg_law_merit_law_extraction_economy }
+	}
+	if = {
+		limit = { has_law = law_type:law_industry_banned }
+		add = { value = sg_law_merit_law_industry_banned }
+	}
+	if = {
+		limit = { has_law = law_type:law_interventionism }
+		add = { value = sg_law_merit_law_interventionism }
+	}
+	if = {
+		limit = { has_law = law_type:law_laissez_faire }
+		add = { value = sg_law_merit_law_laissez_faire }
+	}
+	if = {
+		limit = { has_law = law_type:law_traditionalism }
+		add = { value = sg_law_merit_law_traditionalism }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_economic_system = {
+	value = sg_law_current_merit_lawgroup_economic_system
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_edo_social_system = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_intermediate_edo_system }
+		add = { value = sg_law_merit_law_intermediate_edo_system }
+	}
+	if = {
+		limit = { has_law = law_type:law_lax_edo_system }
+		add = { value = sg_law_merit_law_lax_edo_system }
+	}
+	if = {
+		limit = { has_law = law_type:law_strict_edo_system }
+		add = { value = sg_law_merit_law_strict_edo_system }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_edo_social_system = {
+	value = sg_law_current_merit_lawgroup_edo_social_system
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_education_system = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_no_schools }
+		add = { value = sg_law_merit_law_no_schools }
+	}
+	if = {
+		limit = { has_law = law_type:law_private_schools }
+		add = { value = sg_law_merit_law_private_schools }
+	}
+	if = {
+		limit = { has_law = law_type:law_public_schools }
+		add = { value = sg_law_merit_law_public_schools }
+	}
+	if = {
+		limit = { has_law = law_type:law_religious_schools }
+		add = { value = sg_law_merit_law_religious_schools }
+	}
+	if = {
+		limit = { has_law = law_type:law_terakoya }
+		add = { value = sg_law_merit_law_terakoya }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_education_system = {
+	value = sg_law_current_merit_lawgroup_education_system
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_free_speech = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_censorship }
+		add = { value = sg_law_merit_law_censorship }
+	}
+	if = {
+		limit = { has_law = law_type:law_outlawed_dissent }
+		add = { value = sg_law_merit_law_outlawed_dissent }
+	}
+	if = {
+		limit = { has_law = law_type:law_protected_speech }
+		add = { value = sg_law_merit_law_protected_speech }
+	}
+	if = {
+		limit = { has_law = law_type:law_right_of_assembly }
+		add = { value = sg_law_merit_law_right_of_assembly }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_free_speech = {
+	value = sg_law_current_merit_lawgroup_free_speech
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_governance_principles = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_chiefdom }
+		add = { value = sg_law_merit_law_chiefdom }
+	}
+	if = {
+		limit = { has_law = law_type:law_colonial_administration }
+		add = { value = sg_law_merit_law_colonial_administration }
+	}
+	if = {
+		limit = { has_law = law_type:law_corporate_state }
+		add = { value = sg_law_merit_law_corporate_state }
+	}
+	if = {
+		limit = { has_law = law_type:law_council_republic }
+		add = { value = sg_law_merit_law_council_republic }
+	}
+	if = {
+		limit = { has_law = law_type:law_monarchy }
+		add = { value = sg_law_merit_law_monarchy }
+	}
+	if = {
+		limit = { has_law = law_type:law_parliamentary_republic }
+		add = { value = sg_law_merit_law_parliamentary_republic }
+	}
+	if = {
+		limit = { has_law = law_type:law_presidential_republic }
+		add = { value = sg_law_merit_law_presidential_republic }
+	}
+	if = {
+		limit = { has_law = law_type:law_social_monarchy }
+		add = { value = sg_law_merit_law_social_monarchy }
+	}
+	if = {
+		limit = { has_law = law_type:law_theocracy }
+		add = { value = sg_law_merit_law_theocracy }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_governance_principles = {
+	value = sg_law_current_merit_lawgroup_governance_principles
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_health_system = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_charitable_health_system }
+		add = { value = sg_law_merit_law_charitable_health_system }
+	}
+	if = {
+		limit = { has_law = law_type:law_no_health_system }
+		add = { value = sg_law_merit_law_no_health_system }
+	}
+	if = {
+		limit = { has_law = law_type:law_private_health_insurance }
+		add = { value = sg_law_merit_law_private_health_insurance }
+	}
+	if = {
+		limit = { has_law = law_type:law_public_health_insurance }
+		add = { value = sg_law_merit_law_public_health_insurance }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_health_system = {
+	value = sg_law_current_merit_lawgroup_health_system
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_internal_security = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_extraordinary_commission }
+		add = { value = sg_law_merit_law_extraordinary_commission }
+	}
+	if = {
+		limit = { has_law = law_type:law_guaranteed_liberties }
+		add = { value = sg_law_merit_law_guaranteed_liberties }
+	}
+	if = {
+		limit = { has_law = law_type:law_national_guard }
+		add = { value = sg_law_merit_law_national_guard }
+	}
+	if = {
+		limit = { has_law = law_type:law_no_home_affairs }
+		add = { value = sg_law_merit_law_no_home_affairs }
+	}
+	if = {
+		limit = { has_law = law_type:law_okhrana }
+		add = { value = sg_law_merit_law_okhrana }
+	}
+	if = {
+		limit = { has_law = law_type:law_secret_police }
+		add = { value = sg_law_merit_law_secret_police }
+	}
+	if = {
+		limit = { has_law = law_type:law_shinsengumi }
+		add = { value = sg_law_merit_law_shinsengumi }
+	}
+	if = {
+		limit = { has_law = law_type:law_third_section }
+		add = { value = sg_law_merit_law_third_section }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_internal_security = {
+	value = sg_law_current_merit_lawgroup_internal_security
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_labor_rights = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_no_workers_rights }
+		add = { value = sg_law_merit_law_no_workers_rights }
+	}
+	if = {
+		limit = { has_law = law_type:law_regulatory_bodies }
+		add = { value = sg_law_merit_law_regulatory_bodies }
+	}
+	if = {
+		limit = { has_law = law_type:law_worker_protections }
+		add = { value = sg_law_merit_law_worker_protections }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_labor_rights = {
+	value = sg_law_current_merit_lawgroup_labor_rights
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_labour_associations = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_anti_strike_laws }
+		add = { value = sg_law_merit_law_anti_strike_laws }
+	}
+	if = {
+		limit = { has_law = law_type:law_combination_acts }
+		add = { value = sg_law_merit_law_combination_acts }
+	}
+	if = {
+		limit = { has_law = law_type:law_corporatized_unions }
+		add = { value = sg_law_merit_law_corporatized_unions }
+	}
+	if = {
+		limit = { has_law = law_type:law_factory_councils }
+		add = { value = sg_law_merit_law_factory_councils }
+	}
+	if = {
+		limit = { has_law = law_type:law_guild_system }
+		add = { value = sg_law_merit_law_guild_system }
+	}
+	if = {
+		limit = { has_law = law_type:law_right_to_associate }
+		add = { value = sg_law_merit_law_right_to_associate }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_labour_associations = {
+	value = sg_law_current_merit_lawgroup_labour_associations
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_land_reform = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_collectivized_agriculture }
+		add = { value = sg_law_merit_law_collectivized_agriculture }
+	}
+	if = {
+		limit = { has_law = law_type:law_commercialized_agriculture }
+		add = { value = sg_law_merit_law_commercialized_agriculture }
+	}
+	if = {
+		limit = { has_law = law_type:law_expanded_latifundias }
+		add = { value = sg_law_merit_law_expanded_latifundias }
+	}
+	if = {
+		limit = { has_law = law_type:law_homesteading }
+		add = { value = sg_law_merit_law_homesteading }
+	}
+	if = {
+		limit = { has_law = law_type:law_latifundias }
+		add = { value = sg_law_merit_law_latifundias }
+	}
+	if = {
+		limit = { has_law = law_type:law_manorialism }
+		add = { value = sg_law_merit_law_manorialism }
+	}
+	if = {
+		limit = { has_law = law_type:law_peasant_proprietorship }
+		add = { value = sg_law_merit_law_peasant_proprietorship }
+	}
+	if = {
+		limit = { has_law = law_type:law_serfdom }
+		add = { value = sg_law_merit_law_serfdom }
+	}
+	if = {
+		limit = { has_law = law_type:law_tenant_farmers }
+		add = { value = sg_law_merit_law_tenant_farmers }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_land_reform = {
+	value = sg_law_current_merit_lawgroup_land_reform
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_migration = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_closed_borders }
+		add = { value = sg_law_merit_law_closed_borders }
+	}
+	if = {
+		limit = { has_law = law_type:law_migration_controls }
+		add = { value = sg_law_merit_law_migration_controls }
+	}
+	if = {
+		limit = { has_law = law_type:law_no_migration_controls }
+		add = { value = sg_law_merit_law_no_migration_controls }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_migration = {
+	value = sg_law_current_merit_lawgroup_migration
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_navy_model = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_diplomatic_navy }
+		add = { value = sg_law_merit_law_diplomatic_navy }
+	}
+	if = {
+		limit = { has_law = law_type:law_jeune_ecole }
+		add = { value = sg_law_merit_law_jeune_ecole }
+	}
+	if = {
+		limit = { has_law = law_type:law_merchant_navy }
+		add = { value = sg_law_merit_law_merchant_navy }
+	}
+	if = {
+		limit = { has_law = law_type:law_professional_navy }
+		add = { value = sg_law_merit_law_professional_navy }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_navy_model = {
+	value = sg_law_current_merit_lawgroup_navy_model
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_policing = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_dedicated_police }
+		add = { value = sg_law_merit_law_dedicated_police }
+	}
+	if = {
+		limit = { has_law = law_type:law_local_police }
+		add = { value = sg_law_merit_law_local_police }
+	}
+	if = {
+		limit = { has_law = law_type:law_militarized_police }
+		add = { value = sg_law_merit_law_militarized_police }
+	}
+	if = {
+		limit = { has_law = law_type:law_no_police }
+		add = { value = sg_law_merit_law_no_police }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_policing = {
+	value = sg_law_current_merit_lawgroup_policing
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_rights_of_women = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_no_womens_rights }
+		add = { value = sg_law_merit_law_no_womens_rights }
+	}
+	if = {
+		limit = { has_law = law_type:law_women_in_the_fields }
+		add = { value = sg_law_merit_law_women_in_the_fields }
+	}
+	if = {
+		limit = { has_law = law_type:law_women_in_the_workplace }
+		add = { value = sg_law_merit_law_women_in_the_workplace }
+	}
+	if = {
+		limit = { has_law = law_type:law_women_own_property }
+		add = { value = sg_law_merit_law_women_own_property }
+	}
+	if = {
+		limit = { has_law = law_type:law_womens_suffrage }
+		add = { value = sg_law_merit_law_womens_suffrage }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_rights_of_women = {
+	value = sg_law_current_merit_lawgroup_rights_of_women
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_slavery = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_colonial_slavery }
+		add = { value = sg_law_merit_law_colonial_slavery }
+	}
+	if = {
+		limit = { has_law = law_type:law_debt_slavery }
+		add = { value = sg_law_merit_law_debt_slavery }
+	}
+	if = {
+		limit = { has_law = law_type:law_legacy_slavery }
+		add = { value = sg_law_merit_law_legacy_slavery }
+	}
+	if = {
+		limit = { has_law = law_type:law_slave_trade }
+		add = { value = sg_law_merit_law_slave_trade }
+	}
+	if = {
+		limit = { has_law = law_type:law_slavery_banned }
+		add = { value = sg_law_merit_law_slavery_banned }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_slavery = {
+	value = sg_law_current_merit_lawgroup_slavery
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_taxation = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_consumption_based_taxation }
+		add = { value = sg_law_merit_law_consumption_based_taxation }
+	}
+	if = {
+		limit = { has_law = law_type:law_graduated_taxation }
+		add = { value = sg_law_merit_law_graduated_taxation }
+	}
+	if = {
+		limit = { has_law = law_type:law_land_based_taxation }
+		add = { value = sg_law_merit_law_land_based_taxation }
+	}
+	if = {
+		limit = { has_law = law_type:law_per_capita_based_taxation }
+		add = { value = sg_law_merit_law_per_capita_based_taxation }
+	}
+	if = {
+		limit = { has_law = law_type:law_proportional_taxation }
+		add = { value = sg_law_merit_law_proportional_taxation }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_taxation = {
+	value = sg_law_current_merit_lawgroup_taxation
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_trade_policy = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_canton_system }
+		add = { value = sg_law_merit_law_canton_system }
+	}
+	if = {
+		limit = { has_law = law_type:law_free_trade }
+		add = { value = sg_law_merit_law_free_trade }
+	}
+	if = {
+		limit = { has_law = law_type:law_isolationism }
+		add = { value = sg_law_merit_law_isolationism }
+	}
+	if = {
+		limit = { has_law = law_type:law_mercantilism }
+		add = { value = sg_law_merit_law_mercantilism }
+	}
+	if = {
+		limit = { has_law = law_type:law_protectionism }
+		add = { value = sg_law_merit_law_protectionism }
+	}
+	if = {
+		limit = { has_law = law_type:law_sakoku }
+		add = { value = sg_law_merit_law_sakoku }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_trade_policy = {
+	value = sg_law_current_merit_lawgroup_trade_policy
+	add = 5.0
+}
+
+sg_law_current_merit_lawgroup_welfare = {
+	value = 0
+	if = {
+		limit = { has_law = law_type:law_chiefs_distribute_aid }
+		add = { value = sg_law_merit_law_chiefs_distribute_aid }
+	}
+	if = {
+		limit = { has_law = law_type:law_no_social_security }
+		add = { value = sg_law_merit_law_no_social_security }
+	}
+	if = {
+		limit = { has_law = law_type:law_old_age_pension }
+		add = { value = sg_law_merit_law_old_age_pension }
+	}
+	if = {
+		limit = { has_law = law_type:law_poor_laws }
+		add = { value = sg_law_merit_law_poor_laws }
+	}
+	if = {
+		limit = { has_law = law_type:law_wage_subsidies }
+		add = { value = sg_law_merit_law_wage_subsidies }
+	}
+	min = -100
+	max = 150
+}
+
+sg_law_upgrade_floor_lawgroup_welfare = {
+	value = sg_law_current_merit_lawgroup_welfare
+	add = 5.0
 }

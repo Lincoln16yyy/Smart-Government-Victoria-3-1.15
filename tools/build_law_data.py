@@ -30,6 +30,10 @@ TAX_BRACKETS = ("very_low", "low", "medium", "high", "very_high")
 # un-namespaced form is rejected at load time with "Invalid define, expected
 # 'Namespace|Name'". LAW_MIN_SUCCESS_CHANCE is defined in NPolitics.
 MIN_SUCCESS_CHANCE_DEFINE = "define:NPolitics|LAW_MIN_SUCCESS_CHANCE"
+# A law only enters the recommendations when its merit beats the law already
+# in force in its group by this margin. The point is to avoid filling the list
+# with alternatives that are effectively sidegrades.
+MIN_IMPROVEMENT = 5.0
 
 
 def game_candidates() -> list[Path]:
@@ -817,19 +821,56 @@ def emit_values(laws) -> str:
         out.append("}")
         out.append("")
 
+        # Merit measures whether the law improves the country: benefit plus
+        # government support minus half of the risk. Enactment chance is a
+        # viability factor, so it belongs to the ranking score but not to the
+        # improvement comparison against the current law.
+        out.append(f"sg_law_merit_{lid} = {{")
+        out.append("\tvalue = 0")
+        out.append(f"\tadd = {{ value = sg_law_benefit_{lid} }}")
+        out.append(f"\tadd = {{ value = sg_law_politics_{lid} }}")
+        out.append(f"\tsubtract = {{ value = sg_law_risk_{lid} multiply = 0.5 }}")
+        out.append("\tmin = -100")
+        out.append("\tmax = 150")
+        out.append("}")
+        out.append("")
+
         out.append(f"sg_law_score_{lid} = {{")
         out.append("\tvalue = 0")
         out.append("\tif = {")
         out.append(f"\t\tlimit = {{ sg_law_available_{lid} = yes }}")
-        out.append(f"\t\tadd = {{ value = sg_law_benefit_{lid} }}")
-        out.append(f"\t\tadd = {{ value = sg_law_politics_{lid} }}")
-        out.append(f"\t\tsubtract = {{ value = sg_law_risk_{lid} multiply = 0.5 }}")
+        out.append(f"\t\tadd = {{ value = sg_law_merit_{lid} }}")
         out.append(
             f"\t\tadd = {{ value = sg_law_enactment_chance_{lid} multiply = 0.5 }}"
         )
         out.append("\t}")
         out.append("\tmin = -100")
         out.append("\tmax = 200")
+        out.append("}")
+        out.append("")
+
+    by_group: dict[str, list[dict]] = {}
+    for law in laws:
+        by_group.setdefault(law["group"], []).append(law)
+    for group in sorted(by_group):
+        out.append(f"sg_law_current_merit_{group} = {{")
+        out.append("\tvalue = 0")
+        for law in sorted(by_group[group], key=lambda item: item["sid"]):
+            # Use the exact law, not has_law_or_variant: a law and its variant
+            # can both match the variant check, which would add two merits.
+            out.append("\tif = {")
+            out.append(f"\t\tlimit = {{ has_law = law_type:{law['id']} }}")
+            out.append(f"\t\tadd = {{ value = sg_law_merit_{law['id']} }}")
+            out.append("\t}")
+        out.append("\tmin = -100")
+        out.append("\tmax = 150")
+        out.append("}")
+        out.append("")
+        # The comparison is done against the current law's merit plus the
+        # minimum improvement, so a tie or a sidegrade never fills a slot.
+        out.append(f"sg_law_upgrade_floor_{group} = {{")
+        out.append(f"\tvalue = sg_law_current_merit_{group}")
+        out.append(f"\tadd = {MIN_IMPROVEMENT}")
         out.append("}")
         out.append("")
     return "\n".join(out)
@@ -913,7 +954,7 @@ def emit_rank(laws) -> str:
     out.append(f"\tset_variable = {{ name = sg_last_rank_evaluated value = {len(laws)} }}")
     out.append("\tset_variable = { name = sg_last_rank_available value = 0 }")
     out.append("\tset_variable = { name = sg_last_rank_ignored value = 0 }")
-    out.append("\tset_variable = { name = sg_last_rank_group_filtered value = 0 }")
+    out.append("\tset_variable = { name = sg_last_rank_upgrade_filtered value = 0 }")
     out.append("\tset_variable = { name = sg_last_rank_eligible value = 0 }")
     out.append("\tset_variable = { name = sg_last_ranked_count value = 0 }")
     fields = [
@@ -954,12 +995,16 @@ def emit_rank(laws) -> str:
         out.append("\t\t\tchange_variable = { name = sg_last_rank_ignored add = 1 }")
         out.append("\t\t}")
         out.append("\t\telse = {")
-        # Laws in the same group are mutually exclusive alternatives, so a
-        # recommendation list with three variants of one group is useless.
-        # Only the group's highest-scored available, non-ignored law may enter
-        # the top three; sg_law_group_leader_<law> resolves that comparison.
+        # Rank globally, but only keep laws that improve on the law currently
+        # in force in their own group. The comparison is merit (benefit +
+        # government support - half the risk) against the group's current law
+        # plus MIN_IMPROVEMENT. No qualifying law means an empty list, never a
+        # forced recommendation.
         out.append("\t\t\tif = {")
-        out.append(f"\t\t\t\tlimit = {{ sg_law_group_leader_{lid} = yes }}")
+        out.append(
+            f"\t\t\t\tlimit = {{ sg_law_merit_{lid} >= "
+            f"sg_law_upgrade_floor_{law['group']} }}"
+        )
         out.append("\t\t\t\tchange_variable = { name = sg_last_rank_eligible add = 1 }")
         out.append("\t\t\t\tif = {")
         out.append(f"\t\t\t\t\tlimit = {{ {score} > var:sg_top_1_score }}")
@@ -977,7 +1022,7 @@ def emit_rank(laws) -> str:
         out.append("\t\t\t\t}")
         out.append("\t\t\t}")
         out.append("\t\t\telse = {")
-        out.append("\t\t\t\tchange_variable = { name = sg_last_rank_group_filtered add = 1 }")
+        out.append("\t\t\t\tchange_variable = { name = sg_last_rank_upgrade_filtered add = 1 }")
         out.append("\t\t\t}")
         out.append("\t\t}")
         out.append("\t}")
@@ -986,56 +1031,6 @@ def emit_rank(laws) -> str:
     out.append("\tif = { limit = { var:sg_top_3_id > 0 } change_variable = { name = sg_last_ranked_count add = 1 } }")
     out.append("}")
     out.append("")
-    return "\n".join(out)
-
-
-def emit_group_triggers(laws) -> str:
-    """One candidate and one group-leader trigger per law.
-
-    Laws in the same group are mutually exclusive alternatives, so the advisor
-    recommends at most one law per group. A law is a group leader when no other
-    candidate in its group has a higher score. Ties are broken by the stable
-    numeric id, which keeps the choice independent from file order. An ignored
-    law stops being a candidate, so restoring it makes it compete again.
-    """
-    by_group: dict[str, list[dict]] = {}
-    for law in laws:
-        by_group.setdefault(law["group"], []).append(law)
-
-    out = [
-        "# Generated by tools/build_law_data.py - do not edit by hand.",
-        "# A candidate is available and not ignored. The group leader is the",
-        "# highest-scored candidate of its law group (stable-id tie-break).",
-        "",
-    ]
-    for law in sorted(laws, key=lambda item: item["id"]):
-        lid = law["id"]
-        out.append(f"sg_law_candidate_{lid} = {{")
-        out.append(f"\tsg_law_available_{lid} = yes")
-        out.append(f"\tNOT = {{ {ignored_list_trigger(law)} }}")
-        out.append("}")
-        out.append("")
-
-    for law in sorted(laws, key=lambda item: item["id"]):
-        lid = law["id"]
-        peers = [peer for peer in by_group[law["group"]] if peer["id"] != lid]
-        out.append(f"sg_law_group_leader_{lid} = {{")
-        if not peers:
-            # A group with a single law is always its own representative.
-            out.append("\talways = yes")
-        for peer in sorted(peers, key=lambda item: item["sid"]):
-            # Lower stable id wins an exact tie, so only one law can lead.
-            operator = ">=" if peer["sid"] < law["sid"] else ">"
-            out.append("\tNOT = {")
-            out.append("\t\tAND = {")
-            out.append(f"\t\t\tsg_law_candidate_{peer['id']} = yes")
-            out.append(
-                f"\t\t\tsg_law_score_{peer['id']} {operator} sg_law_score_{lid}"
-            )
-            out.append("\t\t}")
-            out.append("\t}")
-        out.append("}")
-        out.append("")
     return "\n".join(out)
 
 
@@ -1234,9 +1229,6 @@ def main() -> int:
     # a BOM are not loaded at all, so all text output is written with utf-8-sig.
     (out / "common" / "scripted_triggers" / "sg_law_availability.txt").write_text(
         emit_availability(groups, laws), encoding="utf-8-sig"
-    )
-    (out / "common" / "scripted_triggers" / "sg_law_groups.txt").write_text(
-        emit_group_triggers(laws), encoding="utf-8-sig"
     )
     (out / "common" / "script_values" / "sg_law_scores.txt").write_text(
         emit_values(laws), encoding="utf-8-sig"

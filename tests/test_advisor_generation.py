@@ -97,10 +97,13 @@ class GeneratedScriptTests(unittest.TestCase):
         expected_values = [
             f"sg_law_{field}_{law_id}"
             for law_id in sorted(ids)
-            for field in ("benefit", "risk", "politics", "score")
+            for field in ("benefit", "risk", "politics", "enactment_chance", "score")
         ]
         actual_values = definition_names(
             self.values, r"^(sg_law_(?:benefit|risk|politics|score)_[A-Za-z0-9_]+)\s*="
+        )
+        actual_values += definition_names(
+            self.values, r"^(sg_law_enactment_chance_[A-Za-z0-9_]+)\s*="
         )
         self.assertEqual(Counter(actual_values), Counter(expected_values))
 
@@ -144,6 +147,24 @@ class GeneratedScriptTests(unittest.TestCase):
             "law_enactment_stance = { law = law_type:law_no_schools",
             politics,
         )
+        self.assertIn(
+            "add = { value = sg_law_enactment_chance_law_no_schools multiply = 0.5 }",
+            block,
+        )
+
+    def test_availability_matches_runtime_promulgation_constraints(self) -> None:
+        for law_id in (
+            "law_hindu_caste_enforced",
+            "law_hindu_caste_codified",
+            "law_national_supremacy",
+        ):
+            block = extract_block(self.availability, f"sg_law_available_{law_id}")
+            self.assertIn("NOT = { enacting_any_law = yes }", block)
+            self.assertIn(
+                f'"enactment_chance_for_law(law_type:{law_id})" >= '
+                "define:LAW_MIN_SUCCESS_CHANCE",
+                block,
+            )
 
     def test_ranking_initializes_sentinel_slots_and_tracks_counts(self) -> None:
         self.assertIn("set_variable = { name = sg_top_1_id value = 0 }", self.rank)
@@ -161,6 +182,8 @@ class GeneratedScriptTests(unittest.TestCase):
             ),
             3,
         )
+        for slot in (1, 2, 3):
+            self.assertIn(f"sg_top_{slot}_enactment_chance", self.rank)
         for slot in (1, 2, 3):
             self.assertIn(f"var:sg_top_{slot}_id > 0", self.rank)
 
@@ -215,6 +238,11 @@ class RuntimeSurfaceTests(unittest.TestCase):
         ):
             self.assertIn(f"remove_variable = {variable}", body)
         self.assertIn("sg_clear_rank = yes", body)
+        for slot in (1, 2, 3):
+            self.assertIn(
+                f"remove_variable = sg_top_{slot}_enactment_chance",
+                self.effects,
+            )
         self.assertNotIn("remove_variable = sg_schema_version", body)
 
     def test_empty_state_and_explanations_are_rendered(self) -> None:
@@ -225,6 +253,7 @@ class RuntimeSurfaceTests(unittest.TestCase):
             self.assertIn(f"sg_top_{slot}_benefit_score", self.english)
             self.assertIn(f"sg_top_{slot}_politics", self.english)
             self.assertIn(f"sg_top_{slot}_risk_score", self.english)
+            self.assertIn(f"sg_top_{slot}_enactment_chance", self.english)
         self.assertIn("benefit + government support", self.english)
         self.assertIn("metade de", read("localization/braz_por/sg_l_braz_por.yml"))
 

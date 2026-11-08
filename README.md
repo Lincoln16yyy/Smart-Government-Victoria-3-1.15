@@ -96,12 +96,16 @@ Cada lei recebe:
   comerciais, custo orçamentário e pressão burocrática.
 - **Apoio do governo (−50..50):** posição dos grupos de interesse **no governo**,
   ponderada por influência (`ig_clout`), mais a posição do governante.
-- **Pontuação final:** `benefício + apoio − risco × 0,5`.
+- **Pontuação final:** `benefício + apoio − risco × 0,5 + chance estimada × 0,5`.
 
 Na linha de cada recomendação, o conselheiro mostra essa decomposição com os
-valores calculados para a lei. As frases de benefício e risco são resumos dos
-modificadores mensuráveis usados no cálculo; passe o mouse sobre o nome para
-ver os efeitos e requisitos exatos fornecidos pelo jogo.
+valores calculados para a lei e a chance estimada de promulgação. A chance é
+obtida do mesmo valor vanilla usado pelo jogo: leis com 0% de sucesso são
+excluídas, enquanto leis difíceis mas possíveis recebem uma penalidade de
+viabilidade. Isso não promete que uma lei será aprovada. As frases de
+benefício e risco são resumos dos modificadores mensuráveis usados no cálculo;
+passe o mouse sobre o nome para ver os efeitos e requisitos exatos fornecidos
+pelo jogo.
 
 Modificadores que apenas transferem poder entre grupos de interesse, poder de
 voto ou “progressividade” ideológica são deliberadamente ignorados para evitar

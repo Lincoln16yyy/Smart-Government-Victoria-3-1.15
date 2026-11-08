@@ -197,6 +197,7 @@ Top slots (`N` = 1, 2, 3):
 - `sg_top_N_benefit_score` — numeric benefit
 - `sg_top_N_risk_score` — numeric risk
 - `sg_top_N_politics` — numeric government support
+- `sg_top_N_enactment_chance` — current estimated enactment chance, 0–100
 
 Other variables:
 
@@ -221,6 +222,11 @@ For every law, `tools/build_law_data.py` writes
 `sg_law_available_<law_id>`. It contains:
 
 - `NOT = { has_law_or_variant = law_type:<law> }` (do not recommend current law)
+- `NOT = { enacting_any_law = yes }` (do not recommend while another law is
+  in progress)
+- the vanilla estimated enactment chance must be at least
+  `define:LAW_MIN_SUCCESS_CHANCE` (the 1.15 minimum is 1%; a 0% law is not a
+  viable recommendation)
 - the law group's `enable` block
 - the law group's `change_allowed_trigger`
 - the law's `is_visible` block
@@ -239,6 +245,14 @@ Semantics used (confirmed from vanilla examples):
 - `requires_law_or` = at least one of the listed laws
 - `disallowing_laws` = none of the listed laws may be active
 - `unlocking_technologies` = all listed technologies
+
+This is deliberately stricter than the legal availability shown by the
+politics panel. The panel can show a law with a Promulgar button while its
+current checkpoint success chance is 0% (for example Supremacia Nacional in
+the reported screenshot: 0% success, 52% debate and 47% delay). The advisor
+uses the same engine value exposed by vanilla as
+`enactment_chance_for_law(law_type:<law>)`, so it excludes only the impossible
+case and does not invent a promise of success.
 
 ---
 
@@ -269,7 +283,10 @@ For each law:
   for disapprove/strongly disapprove, then adds the ruler's
   `law_enactment_stance` (±8/±15). Clamped −50..50.
 - `sg_law_score_<law>`: only if available:
-  `benefit + politics - risk * 0.5`, clamped −100..200.
+  `benefit + politics - risk * 0.5 + enactment_chance * 0.5`, clamped −100..200.
+  `enactment_chance` is the current vanilla estimate expressed as 0–100; it
+  penalizes difficult but possible laws without treating the estimate as a
+  guarantee.
 
 The final score is intentionally simple and explainable. The GUI shows the
 three components separately so the player can see why a law is ranked.
@@ -287,7 +304,8 @@ three components separately so the player can see why a law is ranked.
 - three recommendation rows, each with:
   - rank, law name, group and focus theme (hover = real effects + blocking requirements)
   - score, government support, benefit score, risk score
-  - explicit score decomposition: benefit + government support - half of risk
+  - explicit score decomposition: benefit + government support - half of risk +
+    half of estimated enactment chance
   - benefit sentence
   - risk sentence
   - one Enact and one Ignore button **per law**, visible only for the law the

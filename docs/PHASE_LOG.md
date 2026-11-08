@@ -222,3 +222,19 @@ Installation performed:
 - Regenerated and installed the visual layout; static validation, 15 tests,
   Python compilation and whitespace checks pass. Final visual confirmation
   still requires opening the test save in the game.
+
+## Phase 13 — viability-aware recommendations
+
+- Compared generated availability with vanilla legal requirements and the
+  politics panel's current enactment state. The reported laws were legally
+  visible but the panel showed 0% success, so the defect was a combination of
+  missing feasibility filtering and benefit-only ranking pressure, not a
+  missing `is_visible` or `can_enact` requirement in those three definitions.
+- Added the vanilla `LAW_MIN_SUCCESS_CHANCE` gate (1%), excluded countries
+  already enacting another law, and added the current
+  `enactment_chance_for_law(law_type:...)` value as a bounded ranking factor.
+- Stored and displayed the current estimated chance in each recommendation
+  explanation; no success guarantee or enactment-process change was added.
+- Added regression cases for Hindu Caste Enforced, Hindu Caste Codified and
+  National Supremacy. Generators and all requested static checks pass; the
+  remaining validation is the manual save/UI test.

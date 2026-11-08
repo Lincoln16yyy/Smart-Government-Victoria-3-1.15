@@ -30,6 +30,11 @@ copy of a campaign.
 
    `save games/haiti_1836_06_30_SG_TEST.v3`
 
+After installation, close and reopen the journal entry before judging the
+widget so the game reloads the generated GUI. The current build uses a
+country-scope scripted GUI for each law branch; opening the widget must not
+produce a `FetchData failed` entry.
+
 ## Action checklist
 
 Use the journal entry **Smart Government**. Record the visible recommendation

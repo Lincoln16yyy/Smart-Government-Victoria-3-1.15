@@ -986,6 +986,16 @@ def emit_sguis(laws) -> str:
         out.append(f"\teffect = {{ sg_ignore_law_{lid} = yes }}")
         out.append("}")
         out.append("")
+        sid = law["sid"]
+        for slot in (1, 2, 3):
+            out.append(f"sg_top_{slot}_law_{lid}_visible_sgui = {{")
+            out.append("\tscope = country")
+            out.append(
+                f"\tis_shown = {{ has_variable = sg_top_{slot}_id "
+                f"var:sg_top_{slot}_id = {sid} }}"
+            )
+            out.append("}")
+            out.append("")
     return "\n".join(out)
 
 

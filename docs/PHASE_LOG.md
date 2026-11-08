@@ -192,3 +192,33 @@ Installation performed:
   authoritative source for exact effects and requirements.
 - Replaced the generic positive-benefit sentence with a neutral description of
   measurable score input, avoiding an unsupported claim about state capacity.
+
+## Phase 11 — GUI visibility stabilization
+
+- Reproduced the reported overlap against the installed build and found
+  `FetchData failed` entries for direct `EqualTo_int32` comparisons against
+  `JournalEntry.GetCountry.MakeScope.Var(...).GetValue`.
+- Replaced direct GUI variable comparisons with generated country-scope
+  visibility SGUIs, one per recommendation slot and law.
+- Rendered law-specific benefit and risk explanations only inside the matching
+  visible branch, removing the failing dynamic theme selector.
+- Regenerated and installed the mod; `validate.py`, the 14-test regression
+  suite, `py_compile` and `git diff --check` pass. The executable starts under
+  Wine without new advisor/GUI/localization matches in the logs.
+- Interactive save loading and clicks remain blocked by the lack of reliable
+  graphical control in this environment; the repeatable checklist remains in
+  `docs/MANUAL_RUNTIME_TEST.md`.
+
+## Phase 12 — layout stabilization and review fixes
+
+- Reworked each recommendation into a vertical card with explicit minimum and
+  maximum heights, separated header, fixed-width metric boxes, bounded
+  explanation panel and isolated action buttons.
+- Restored the per-law focus theme inside the matching law branch without
+  reintroducing direct variable comparisons or dynamic selector chains.
+- Added regression coverage for every slot and every law: each header,
+  explanation and action branch must reference its matching visibility SGUI, and
+  each generated SGUI must compare the correct stable id.
+- Regenerated and installed the visual layout; static validation, 15 tests,
+  Python compilation and whitespace checks pass. Final visual confirmation
+  still requires opening the test save in the game.

@@ -5,7 +5,7 @@ repository. It records the design, the exact game/save paths on the original
 machine, what is generated, what is hand-written, what has been verified, and
 what still needs a runtime test.
 
-Last updated: 2026-11-08 (phase 11: GUI visibility stabilization; schema 2).
+Last updated: 2026-11-08 (phase 12: layout stabilization and review fixes; schema 2).
 
 ---
 
@@ -285,8 +285,8 @@ three components separately so the player can see why a law is ranked.
 - last-refresh line showing the game month and year of the latest ranking
 - explanatory header
 - three recommendation rows, each with:
-  - rank, law name and group (hover = real effects + blocking requirements)
-  - focus theme, score, government support, benefit score, risk score
+  - rank, law name, group and focus theme (hover = real effects + blocking requirements)
+  - score, government support, benefit score, risk score
   - explicit score decomposition: benefit + government support - half of risk
   - benefit sentence
   - risk sentence
@@ -301,10 +301,12 @@ branch whose id matches `sg_top_N_id`; the branch uses localization keys such as
 `sg_law_name_<sid>` and `sg_law_tip_<sid>`, whose text calls
 `GetLawType('law_x')`. No law-type value is stored in a country variable.
 
-Theme sentences are selected from numeric variables with nested
-`SelectLocalization(EqualTo_int32(...), ...)`. Index 0 is a neutral fallback
-for the short moment before a row variable is written. The per-law localization
-keys `sg_law_benefit_<law>` and `sg_law_risk_<law>` still exist for modders.
+Each recommendation is laid out as a vertical card with a separated header,
+four fixed-width metric boxes, a bounded explanation panel and isolated action
+buttons. The focus theme is rendered from the matching law branch, while the
+benefit and risk sentences use that branch's law-specific localization keys.
+This avoids a second dynamic selector and prevents long names, labels and
+values from competing for the same horizontal line.
 The visible decomposition is generated from the same stored component variables
 used by the ranking formula; theme sentences are only summaries of measurable
 modifier families, while the hover tooltip remains the authoritative source for

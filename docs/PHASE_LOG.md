@@ -208,3 +208,17 @@ Installation performed:
 - Interactive save loading and clicks remain blocked by the lack of reliable
   graphical control in this environment; the repeatable checklist remains in
   `docs/MANUAL_RUNTIME_TEST.md`.
+
+## Phase 12 — layout stabilization and review fixes
+
+- Reworked each recommendation into a vertical card with explicit minimum and
+  maximum heights, separated header, fixed-width metric boxes, bounded
+  explanation panel and isolated action buttons.
+- Restored the per-law focus theme inside the matching law branch without
+  reintroducing direct variable comparisons or dynamic selector chains.
+- Added regression coverage for every slot and every law: each header,
+  explanation and action branch must reference its matching visibility SGUI, and
+  each generated SGUI must compare the correct stable id.
+- Regenerated and installed the visual layout; static validation, 15 tests,
+  Python compilation and whitespace checks pass. Final visual confirmation
+  still requires opening the test save in the game.

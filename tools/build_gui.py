@@ -42,12 +42,15 @@ def law_header(slot: int, laws: list[dict]) -> str:
 					visible = "{law_visible(slot, lid)}"
 					autoresize = yes
 					flowcontainer = {{
-						direction = horizontal
-						spacing = 6
+						direction = vertical
+						spacing = 1
 						ignoreinvisible = yes
+						minimumsize = {{ 440 -1 }}
+						maximumsize = {{ 440 42 }}
 
 						textbox = {{
 							autoresize = yes
+							multiline = yes
 							align = left|nobaseline
 							using = fontsize_medium
 							text = "sg_law_name_{sid}"
@@ -56,10 +59,18 @@ def law_header(slot: int, laws: list[dict]) -> str:
 						}}
 						textbox = {{
 							autoresize = yes
+							multiline = yes
 							align = left|nobaseline
 							using = fontsize_medium
 							default_format = "#weak"
 							text = "sg_law_group_{sid}"
+						}}
+						textbox = {{
+							autoresize = yes
+							align = left|nobaseline
+							using = fontsize_small
+							default_format = "#weak"
+							text = "sg_focus_{law['focus']}"
 						}}
 					}}
 				}}"""
@@ -83,11 +94,11 @@ def law_actions(slot: int, laws: list[dict]) -> str:
 					autoresize = yes
 					flowcontainer = {{
 						direction = horizontal
-						spacing = 8
+						spacing = 10
 						ignoreinvisible = yes
 
 						button = {{
-							size = {{ 100 28 }}
+							size = {{ 116 30 }}
 							using = select_button_sound
 							using = tooltip_se
 							text = "sg_enact"
@@ -96,7 +107,7 @@ def law_actions(slot: int, laws: list[dict]) -> str:
 							onclick = "[GetScriptedGui('sg_enact_law_{lid}_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 						}}
 						button = {{
-							size = {{ 100 28 }}
+							size = {{ 116 30 }}
 							using = select_button_sound
 							using = tooltip_se
 							text = "sg_ignore"
@@ -119,25 +130,25 @@ def row(slot: int, laws: list[dict]) -> str:
 	# ---- recommendation {slot} -------------------------------------------------
 	widget = {{
 		visible = "{visible}"
-		minimumsize = {{ 500 -1 }}
-		maximumsize = {{ 500 -1 }}
+		minimumsize = {{ 500 190 }}
+		maximumsize = {{ 500 230 }}
 		background = {{ using = dark_area }}
 
 		flowcontainer = {{
-			position = {{ 10 7 }}
+			margin = {{ 10 8 }}
 			direction = vertical
-			spacing = 2
+			spacing = 6
 			ignoreinvisible = yes
 			minimumsize = {{ 480 -1 }}
 			maximumsize = {{ 480 -1 }}
 
 			flowcontainer = {{
 				direction = horizontal
-				spacing = 6
+				spacing = 8
 				ignoreinvisible = yes
 
 				textbox = {{
-					autoresize = yes
+					size = {{ 28 28 }}
 					align = left|nobaseline
 					using = fontsize_medium
 					default_format = "#high"
@@ -148,58 +159,12 @@ def row(slot: int, laws: list[dict]) -> str:
 
 			flowcontainer = {{
 				direction = horizontal
-				spacing = 10
+				spacing = 6
 				ignoreinvisible = yes
-
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					text = "sg_score_label"
-				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					default_format = "#high"
-					raw_text = "[{var(slot, 'score')}.GetValue|0]"
-				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					text = "sg_support_label"
-				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					raw_text = "[{var(slot, 'politics')}.GetValue|0]"
-				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					text = "sg_benefit_label"
-				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					raw_text = "[{var(slot, 'benefit_score')}.GetValue|0]"
-				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					text = "sg_risk_label"
-				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					raw_text = "[{var(slot, 'risk_score')}.GetValue|0]"
-				}}
+{metric_box("sg_score_label", f"[{var(slot, 'score')}.GetValue|0", "#high")}
+{metric_box("sg_support_label", f"[{var(slot, 'politics')}.GetValue|0", "#normal")}
+{metric_box("sg_benefit_label", f"[{var(slot, 'benefit_score')}.GetValue|0", "#positive_value")}
+{metric_box("sg_risk_label", f"[{var(slot, 'risk_score')}.GetValue|0", "#warning")}
 			}}
 
 			textbox = {{
@@ -211,16 +176,53 @@ def row(slot: int, laws: list[dict]) -> str:
 				maximumsize = {{ 480 -1 }}
 				text = "sg_why_ranked_{slot}"
 			}}
+			flowcontainer = {{
+				direction = vertical
+				spacing = 2
+				ignoreinvisible = yes
+				minimumsize = {{ 480 36 }}
+				maximumsize = {{ 480 56 }}
+				background = {{ using = entry_bg_simple }}
 {law_explanations(slot, laws)}
+			}}
 			flowcontainer = {{
 				direction = horizontal
-				spacing = 8
+				spacing = 10
+				parentanchor = hcenter
 				ignoreinvisible = yes
 {law_actions(slot, laws)}
 			}}
 		}}
 	}}
 """
+
+
+def metric_box(label: str, value: str, value_format: str) -> str:
+    return f"""
+				widget = {{
+					size = {{ 115 34 }}
+					background = {{ using = entry_bg_simple }}
+					flowcontainer = {{
+						direction = vertical
+						spacing = 0
+						margin = {{ 5 3 }}
+						ignoreinvisible = yes
+						textbox = {{
+							autoresize = yes
+							align = left|nobaseline
+							using = fontsize_small
+							default_format = "#weak"
+							text = "{label}"
+						}}
+						textbox = {{
+							autoresize = yes
+							align = left|nobaseline
+							using = fontsize_small
+							default_format = "{value_format}"
+							raw_text = "{value}]"
+						}}
+					}}
+				}}"""
 
 
 def law_explanations(slot: int, laws: list[dict]) -> str:

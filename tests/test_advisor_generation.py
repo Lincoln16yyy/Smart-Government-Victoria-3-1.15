@@ -181,6 +181,7 @@ class RuntimeSurfaceTests(unittest.TestCase):
         self.effects = read("common/scripted_effects/sg_effects.txt")
         self.journal = read("common/journal_entries/sg_journal_entries.txt")
         self.gui = read("gui/journal_entry_widgets/sg_law_advisor.gui")
+        self.sguis = read("common/scripted_guis/sg_law_sguis.txt")
         self.english = read("localization/english/sg_l_english.yml")
         self.generated_english = read("localization/english/sg_generated_l_english.yml")
         self.generated_portuguese = read("localization/braz_por/sg_generated_l_braz_por.yml")
@@ -237,6 +238,26 @@ class RuntimeSurfaceTests(unittest.TestCase):
         self.assertIn("raw_text = \"[JournalEntry.GetCountry", self.gui)
         self.assertNotIn("EqualTo_int32(", self.gui)
         self.assertIn("_law_law_mass_conscription_visible_sgui", self.gui)
+        self.assertIn("minimumsize = { 500 190 }", self.gui)
+        self.assertIn("size = { 115 34 }", self.gui)
+        self.assertIn("size = { 116 30 }", self.gui)
+        self.assertIn('text = "sg_focus_1"', self.gui)
+
+    def test_each_slot_law_branch_uses_its_matching_visibility_sgui(self) -> None:
+        for slot in (1, 2, 3):
+            for law in LAWS:
+                marker = (
+                    f"GetScriptedGui('sg_top_{slot}_law_{law['id']}_visible_sgui')"
+                )
+                self.assertEqual(self.gui.count(marker), 3, marker)
+                sgui = (
+                    f"sg_top_{slot}_law_{law['id']}_visible_sgui = {{"
+                )
+                self.assertIn(sgui, self.sguis)
+                self.assertIn(
+                    f"var:sg_top_{slot}_id = {law['sid']}",
+                    self.sguis,
+                )
 
     def test_every_law_has_bilingual_generated_explanations_and_tooltip_keys(self) -> None:
         for law in LAWS:

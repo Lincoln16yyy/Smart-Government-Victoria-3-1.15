@@ -1,4 +1,7 @@
-﻿l_braz_por:
+l_braz_por:
+ je_sg_law_advisor:0 "Conselheiro de Governo Inteligente"
+ je_sg_law_advisor_reason:0 "Avaliação estratégica contínua das melhores opções de leis para a sua nação."
+ sg_disabled_desc:0 "O Conselheiro de Governo Inteligente foi desativado."
  sg_je_activation_tt:0 "Exibido enquanto o Conselheiro de Governo Inteligente estiver ativo (decisão $sg_enable_smart_government$, ou automaticamente no primeiro pulso mensal depois que o mod é adicionado a um save)."
  sg_enable_smart_government:0 "Ativar Conselheiro de Governo Inteligente"
  sg_enable_smart_government_desc:0 "Cria o registro de diário do Governo Inteligente e executa a primeira avaliação. Funciona em campanha nova e em save em andamento. O conselheiro apenas recomenda leis; ele nunca as aprova por você."

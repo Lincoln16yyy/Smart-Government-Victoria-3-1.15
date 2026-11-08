@@ -1,4 +1,7 @@
-﻿l_english:
+l_english:
+ je_sg_law_advisor:0 "Smart Government Advisor"
+ je_sg_law_advisor_reason:0 "Continuous strategic evaluation of the best laws for your nation."
+ sg_disabled_desc:0 "The Smart Government Advisor has been deactivated."
  sg_je_activation_tt:0 "Shown while the Smart Government Advisor is enabled (the $sg_enable_smart_government$ decision, or automatically on the first monthly pulse after the mod is added to a save)."
  sg_enable_smart_government:0 "Enable Smart Government Advisor"
  sg_enable_smart_government_desc:0 "Creates the Smart Government journal entry and runs the first evaluation. Works in a new campaign and in a running save. The advisor only recommends laws; it never approves them for you."

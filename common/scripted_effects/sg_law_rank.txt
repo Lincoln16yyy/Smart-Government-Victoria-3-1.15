@@ -3985,7 +3985,7 @@ sg_rank_laws = {
 			sg_shift_top_for_1 = yes
 			set_variable = { name = sg_top_1_id value = 148 }
 			set_variable = { name = sg_top_1_score value = sg_law_score_law_worker_protections }
-			set_variable = { name = sg_top_1_benefit value = 17 }
+			set_variable = { name = sg_top_1_benefit value = 3 }
 			set_variable = { name = sg_top_1_risk value = 13 }
 			set_variable = { name = sg_top_1_focus value = 3 }
 			set_variable = { name = sg_top_1_benefit_score value = sg_law_benefit_law_worker_protections }
@@ -3997,7 +3997,7 @@ sg_rank_laws = {
 			sg_shift_top_for_2 = yes
 			set_variable = { name = sg_top_2_id value = 148 }
 			set_variable = { name = sg_top_2_score value = sg_law_score_law_worker_protections }
-			set_variable = { name = sg_top_2_benefit value = 17 }
+			set_variable = { name = sg_top_2_benefit value = 3 }
 			set_variable = { name = sg_top_2_risk value = 13 }
 			set_variable = { name = sg_top_2_focus value = 3 }
 			set_variable = { name = sg_top_2_benefit_score value = sg_law_benefit_law_worker_protections }
@@ -4008,7 +4008,7 @@ sg_rank_laws = {
 			limit = { sg_law_score_law_worker_protections > var:sg_top_3_score }
 			set_variable = { name = sg_top_3_id value = 148 }
 			set_variable = { name = sg_top_3_score value = sg_law_score_law_worker_protections }
-			set_variable = { name = sg_top_3_benefit value = 17 }
+			set_variable = { name = sg_top_3_benefit value = 3 }
 			set_variable = { name = sg_top_3_risk value = 13 }
 			set_variable = { name = sg_top_3_focus value = 3 }
 			set_variable = { name = sg_top_3_benefit_score value = sg_law_benefit_law_worker_protections }
@@ -6117,7 +6117,7 @@ sg_rank_laws = {
 			sg_shift_top_for_1 = yes
 			set_variable = { name = sg_top_1_id value = 141 }
 			set_variable = { name = sg_top_1_score value = sg_law_score_law_wage_subsidies }
-			set_variable = { name = sg_top_1_benefit value = 17 }
+			set_variable = { name = sg_top_1_benefit value = 3 }
 			set_variable = { name = sg_top_1_risk value = 13 }
 			set_variable = { name = sg_top_1_focus value = 3 }
 			set_variable = { name = sg_top_1_benefit_score value = sg_law_benefit_law_wage_subsidies }
@@ -6129,7 +6129,7 @@ sg_rank_laws = {
 			sg_shift_top_for_2 = yes
 			set_variable = { name = sg_top_2_id value = 141 }
 			set_variable = { name = sg_top_2_score value = sg_law_score_law_wage_subsidies }
-			set_variable = { name = sg_top_2_benefit value = 17 }
+			set_variable = { name = sg_top_2_benefit value = 3 }
 			set_variable = { name = sg_top_2_risk value = 13 }
 			set_variable = { name = sg_top_2_focus value = 3 }
 			set_variable = { name = sg_top_2_benefit_score value = sg_law_benefit_law_wage_subsidies }
@@ -6140,7 +6140,7 @@ sg_rank_laws = {
 			limit = { sg_law_score_law_wage_subsidies > var:sg_top_3_score }
 			set_variable = { name = sg_top_3_id value = 141 }
 			set_variable = { name = sg_top_3_score value = sg_law_score_law_wage_subsidies }
-			set_variable = { name = sg_top_3_benefit value = 17 }
+			set_variable = { name = sg_top_3_benefit value = 3 }
 			set_variable = { name = sg_top_3_risk value = 13 }
 			set_variable = { name = sg_top_3_focus value = 3 }
 			set_variable = { name = sg_top_3_benefit_score value = sg_law_benefit_law_wage_subsidies }

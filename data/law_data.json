@@ -6769,17 +6769,17 @@
    "file": "02_labor_rights.txt",
    "group": "lawgroup_labor_rights",
    "category": "human_rights",
-   "benefit": 30.0,
+   "benefit": 48.0,
    "risk": 5.0,
-   "benefit_theme": 17,
+   "benefit_theme": 3,
    "risk_theme": 13,
    "focus": 3,
-   "has_positive_signal": false,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "building_minimum_wage_mult",
      "value": "0.1",
-     "benefit": 0.0,
+     "benefit": 3.0,
      "risk": 0.0
     }
    ],
@@ -9123,7 +9123,7 @@
    "file": "02_welfare.txt",
    "group": "lawgroup_welfare",
    "category": "human_rights",
-   "benefit": 46.5,
+   "benefit": 51.0,
    "risk": 5.0,
    "benefit_theme": 5,
    "risk_theme": 13,
@@ -9163,7 +9163,7 @@
     {
      "key": "building_minimum_wage_mult",
      "value": "0.15",
-     "benefit": 0.0,
+     "benefit": 4.5,
      "risk": 0.0
     }
    ],
@@ -9213,17 +9213,17 @@
    "file": "02_welfare.txt",
    "group": "lawgroup_welfare",
    "category": "human_rights",
-   "benefit": 30.0,
+   "benefit": 48.0,
    "risk": 5.0,
-   "benefit_theme": 17,
+   "benefit_theme": 3,
    "risk_theme": 13,
    "focus": 3,
-   "has_positive_signal": false,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "building_minimum_wage_mult",
      "value": "0.1",
-     "benefit": 0.0,
+     "benefit": 3.0,
      "risk": 0.0
     }
    ],

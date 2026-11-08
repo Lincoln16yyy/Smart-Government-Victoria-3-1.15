@@ -6268,7 +6268,8 @@ sg_law_score_law_regulatory_bodies = {
 }
 
 sg_law_benefit_law_worker_protections = {
-	value = 30.0
+	value = 48.0
+	if = { limit = { average_sol < 12 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -9564,7 +9565,7 @@ sg_law_score_law_no_social_security = {
 }
 
 sg_law_benefit_law_old_age_pension = {
-	value = 46.5
+	value = 51.0
 	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
@@ -9695,7 +9696,8 @@ sg_law_score_law_poor_laws = {
 }
 
 sg_law_benefit_law_wage_subsidies = {
-	value = 30.0
+	value = 48.0
+	if = { limit = { average_sol < 12 } add = 6 }
 	min = 0
 	max = 100
 }

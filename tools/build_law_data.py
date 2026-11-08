@@ -258,6 +258,7 @@ BENEFIT_RULES: list[tuple[str, float]] = [
     (r"state_birth_rate_mult$", 20.0),
     (r"state_working_adult_ratio_add$", 25.0),
     (r"state_dependent_wage_mult$", 8.0),
+    (r"building_minimum_wage_mult$", 30.0),
     (r"state_dependent_political_participation_add$", 5.0),
     (r"building_group_.*_throughput_add$", 60.0),
     (r"building_unincorporated_subsistence_output_mult$", 20.0),

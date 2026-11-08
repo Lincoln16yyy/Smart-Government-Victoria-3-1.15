@@ -1,0 +1,15 @@
+{
+  "name": "Smart Government Advisor",
+  "id": "",
+  "version": "1.0.0",
+  "supported_game_version": "1.15.*",
+  "short_description": "Recommends laws without automating enactment.",
+  "tags": [
+    "Utilities",
+    "Politics"
+  ],
+  "relationships": [],
+  "game_custom_data": {
+    "multiplayer_synchronized": true
+  }
+}

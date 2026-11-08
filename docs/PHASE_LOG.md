@@ -128,3 +128,20 @@ Installation performed:
   Portuguese.
 - Re-validated with `tools/validate.py` (0 errors) and reinstalled via
   `tools/install_mod.py --force`.
+
+## Phase 6 — startup runtime check
+
+- Reinstalled the current branch into the Hydra/Wine user-data directory; the
+  previously installed copy was stale and still contained the old
+  `GreaterThan_int32`/`LessThan_int32` GUI expressions.
+- Started `binaries/victoria3.exe` with the known Wine prefix and
+  `-debug_mode`. The process reached normal GUI initialization and produced no
+  advisor script, localization, or GUI parse errors.
+- Found one real installation issue: the game logged a missing
+  `.metadata/metadata.json` for the local mod. Added the same minimal metadata
+  structure used by the other installed local mods.
+- The test save copy remains separate:
+  `save games/haiti_1836_06_30_SG_TEST.v3`.
+- The environment does not provide reliable graphical control for loading that
+  save and clicking the journal actions, so enact/ignore/disable/re-enable
+  behavior remains unverified interactively.

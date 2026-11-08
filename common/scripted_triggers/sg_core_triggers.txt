@@ -1,4 +1,4 @@
-# Smart Government Advisor - small shared triggers.
+﻿# Smart Government Advisor - small shared triggers.
 # All names are prefixed with sg_ so they cannot collide with other mods.
 
 sg_is_enabled = {

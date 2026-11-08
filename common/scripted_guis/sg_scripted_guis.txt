@@ -1,4 +1,4 @@
-# Smart Government Advisor - buttons used by the journal-entry widget.
+﻿# Smart Government Advisor - buttons used by the journal-entry widget.
 # All of them are country-scope and only valid while sg_enabled exists.
 
 sg_refresh_sgui = {

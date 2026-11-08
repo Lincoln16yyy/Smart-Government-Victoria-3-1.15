@@ -1,4 +1,4 @@
-# Smart Government Advisor - discoverable enable/disable decisions.
+﻿# Smart Government Advisor - discoverable enable/disable decisions.
 # The journal entry itself is only visible while enabled, so the enable
 # decision is the entry point for a save the mod was added to.
 

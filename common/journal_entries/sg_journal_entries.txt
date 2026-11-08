@@ -1,4 +1,4 @@
-# Smart Government Advisor - single always-present journal entry.
+﻿# Smart Government Advisor - single always-present journal entry.
 # The entry is only created while sg_enabled exists; disabling removes it
 # through disable_evaluation, so the mod can be taken out of an existing save.
 

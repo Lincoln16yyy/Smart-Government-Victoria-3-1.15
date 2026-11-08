@@ -26,7 +26,10 @@ ROOT = Path(__file__).resolve().parent.parent
 LAW_IDS_FILE = ROOT / "data" / "law_ids.json"
 SCHEMA_VERSION = 2
 TAX_BRACKETS = ("very_low", "low", "medium", "high", "very_high")
-MIN_SUCCESS_CHANCE_DEFINE = "define:LAW_MIN_SUCCESS_CHANCE"
+# 1.15 defines live under a namespace (NCountry, NPolitics, NWar, ...). The
+# un-namespaced form is rejected at load time with "Invalid define, expected
+# 'Namespace|Name'". LAW_MIN_SUCCESS_CHANCE is defined in NPolitics.
+MIN_SUCCESS_CHANCE_DEFINE = "define:NPolitics|LAW_MIN_SUCCESS_CHANCE"
 
 
 def game_candidates() -> list[Path]:
@@ -672,7 +675,8 @@ def dynamic_benefit(law) -> list[str]:
     elif theme == 7:
         lines.append("if = { limit = { legitimacy < 50 } add = 6 }")
     elif theme in (8, 9, 10):
-        lines.append("if = { limit = { radical_fraction > 0.1 } add = 5 }")
+        # radical_fraction is a block trigger in 1.15, not a script value.
+        lines.append("if = { limit = { radical_fraction = { value >= 0.1 } } add = 5 }")
     elif theme == 11:
         lines.append("if = { limit = { is_at_war = yes } add = 8 }")
     elif theme == 12:
@@ -685,7 +689,7 @@ def dynamic_benefit(law) -> list[str]:
         lines.append("if = { limit = { is_at_war = yes } subtract = 4 }")
         lines.append("else = { add = 3 }")
     elif theme == 16:
-        lines.append("if = { limit = { radical_fraction > 0.15 } add = 6 }")
+        lines.append("if = { limit = { radical_fraction = { value >= 0.15 } } add = 6 }")
     return lines
 
 
@@ -699,9 +703,9 @@ def dynamic_risk(law) -> list[str]:
     elif theme == 8:
         lines.append("if = { limit = { legitimacy < 40 } add = 8 }")
     elif theme == 9:
-        lines.append("if = { limit = { radical_fraction > 0.2 } add = 8 }")
+        lines.append("if = { limit = { radical_fraction = { value >= 0.2 } } add = 8 }")
     lines.append(
-        "if = { limit = { any_scope_interest_group = { "
+        "if = { limit = { any_interest_group = { "
         "is_powerful = yes "
         f"law_stance = {{ law = law_type:{law['id']} value <= strongly_disapprove }} "
         "} } add = 12 }"
@@ -737,7 +741,7 @@ def emit_values(laws) -> str:
 
         out.append(f"sg_law_politics_{lid} = {{")
         out.append("\tvalue = 0")
-        out.append("\tevery_scope_interest_group = {")
+        out.append("\tevery_interest_group = {")
         out.append("\t\tlimit = { is_in_government = yes }")
         out.append(
             "\t\tif = { limit = { law_stance = { law = "
@@ -880,19 +884,20 @@ def shift_effects() -> str:
     return "\n".join(out)
 
 
-def store_block(law, slot: int) -> str:
+def store_block(law, slot: int, indent: int = 3) -> str:
     lid = law["id"]
+    pad = "\t" * indent
     return "\n".join(
         [
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_id value = {law['sid']} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_score value = sg_law_score_{lid} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_benefit value = {law['benefit_theme']} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_risk value = {law['risk_theme']} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_focus value = {law['focus']} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_benefit_score value = sg_law_benefit_{lid} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_risk_score value = sg_law_risk_{lid} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_politics value = sg_law_politics_{lid} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_enactment_chance value = sg_law_enactment_chance_{lid} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_id value = {law['sid']} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_score value = sg_law_score_{lid} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_benefit value = {law['benefit_theme']} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_risk value = {law['risk_theme']} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_focus value = {law['focus']} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_benefit_score value = sg_law_benefit_{lid} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_risk_score value = sg_law_risk_{lid} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_politics value = sg_law_politics_{lid} }}",
+            f"{pad}set_variable = {{ name = sg_top_{slot}_enactment_chance value = sg_law_enactment_chance_{lid} }}",
         ]
     )
 
@@ -908,6 +913,7 @@ def emit_rank(laws) -> str:
     out.append(f"\tset_variable = {{ name = sg_last_rank_evaluated value = {len(laws)} }}")
     out.append("\tset_variable = { name = sg_last_rank_available value = 0 }")
     out.append("\tset_variable = { name = sg_last_rank_ignored value = 0 }")
+    out.append("\tset_variable = { name = sg_last_rank_group_filtered value = 0 }")
     out.append("\tset_variable = { name = sg_last_rank_eligible value = 0 }")
     out.append("\tset_variable = { name = sg_last_ranked_count value = 0 }")
     fields = [
@@ -948,21 +954,31 @@ def emit_rank(laws) -> str:
         out.append("\t\t\tchange_variable = { name = sg_last_rank_ignored add = 1 }")
         out.append("\t\t}")
         out.append("\t\telse = {")
-        out.append("\t\t\tchange_variable = { name = sg_last_rank_eligible add = 1 }")
-        out.append(f"\t\tif = {{")
-        out.append(f"\t\t\tlimit = {{ {score} > var:sg_top_1_score }}")
-        out.append("\t\t\tsg_shift_top_for_1 = yes")
-        out.append(store_block(law, 1))
-        out.append("\t\t}")
-        out.append(f"\t\telse_if = {{")
-        out.append(f"\t\t\tlimit = {{ {score} > var:sg_top_2_score }}")
-        out.append("\t\t\tsg_shift_top_for_2 = yes")
-        out.append(store_block(law, 2))
-        out.append("\t\t}")
-        out.append(f"\t\telse_if = {{")
-        out.append(f"\t\t\tlimit = {{ {score} > var:sg_top_3_score }}")
-        out.append(store_block(law, 3))
-        out.append("\t\t}")
+        # Laws in the same group are mutually exclusive alternatives, so a
+        # recommendation list with three variants of one group is useless.
+        # Only the group's highest-scored available, non-ignored law may enter
+        # the top three; sg_law_group_leader_<law> resolves that comparison.
+        out.append("\t\t\tif = {")
+        out.append(f"\t\t\t\tlimit = {{ sg_law_group_leader_{lid} = yes }}")
+        out.append("\t\t\t\tchange_variable = { name = sg_last_rank_eligible add = 1 }")
+        out.append("\t\t\t\tif = {")
+        out.append(f"\t\t\t\t\tlimit = {{ {score} > var:sg_top_1_score }}")
+        out.append("\t\t\t\t\tsg_shift_top_for_1 = yes")
+        out.append(store_block(law, 1, 5))
+        out.append("\t\t\t\t}")
+        out.append("\t\t\t\telse_if = {")
+        out.append(f"\t\t\t\t\tlimit = {{ {score} > var:sg_top_2_score }}")
+        out.append("\t\t\t\t\tsg_shift_top_for_2 = yes")
+        out.append(store_block(law, 2, 5))
+        out.append("\t\t\t\t}")
+        out.append("\t\t\t\telse_if = {")
+        out.append(f"\t\t\t\t\tlimit = {{ {score} > var:sg_top_3_score }}")
+        out.append(store_block(law, 3, 5))
+        out.append("\t\t\t\t}")
+        out.append("\t\t\t}")
+        out.append("\t\t\telse = {")
+        out.append("\t\t\t\tchange_variable = { name = sg_last_rank_group_filtered add = 1 }")
+        out.append("\t\t\t}")
         out.append("\t\t}")
         out.append("\t}")
     out.append("\tif = { limit = { var:sg_top_1_id > 0 } change_variable = { name = sg_last_ranked_count add = 1 } }")
@@ -970,6 +986,56 @@ def emit_rank(laws) -> str:
     out.append("\tif = { limit = { var:sg_top_3_id > 0 } change_variable = { name = sg_last_ranked_count add = 1 } }")
     out.append("}")
     out.append("")
+    return "\n".join(out)
+
+
+def emit_group_triggers(laws) -> str:
+    """One candidate and one group-leader trigger per law.
+
+    Laws in the same group are mutually exclusive alternatives, so the advisor
+    recommends at most one law per group. A law is a group leader when no other
+    candidate in its group has a higher score. Ties are broken by the stable
+    numeric id, which keeps the choice independent from file order. An ignored
+    law stops being a candidate, so restoring it makes it compete again.
+    """
+    by_group: dict[str, list[dict]] = {}
+    for law in laws:
+        by_group.setdefault(law["group"], []).append(law)
+
+    out = [
+        "# Generated by tools/build_law_data.py - do not edit by hand.",
+        "# A candidate is available and not ignored. The group leader is the",
+        "# highest-scored candidate of its law group (stable-id tie-break).",
+        "",
+    ]
+    for law in sorted(laws, key=lambda item: item["id"]):
+        lid = law["id"]
+        out.append(f"sg_law_candidate_{lid} = {{")
+        out.append(f"\tsg_law_available_{lid} = yes")
+        out.append(f"\tNOT = {{ {ignored_list_trigger(law)} }}")
+        out.append("}")
+        out.append("")
+
+    for law in sorted(laws, key=lambda item: item["id"]):
+        lid = law["id"]
+        peers = [peer for peer in by_group[law["group"]] if peer["id"] != lid]
+        out.append(f"sg_law_group_leader_{lid} = {{")
+        if not peers:
+            # A group with a single law is always its own representative.
+            out.append("\talways = yes")
+        for peer in sorted(peers, key=lambda item: item["sid"]):
+            # Lower stable id wins an exact tie, so only one law can lead.
+            operator = ">=" if peer["sid"] < law["sid"] else ">"
+            out.append("\tNOT = {")
+            out.append("\t\tAND = {")
+            out.append(f"\t\t\tsg_law_candidate_{peer['id']} = yes")
+            out.append(
+                f"\t\t\tsg_law_score_{peer['id']} {operator} sg_law_score_{lid}"
+            )
+            out.append("\t\t}")
+            out.append("\t}")
+        out.append("}")
+        out.append("")
     return "\n".join(out)
 
 
@@ -1163,21 +1229,27 @@ def main() -> int:
     (out / "localization" / "braz_por").mkdir(parents=True, exist_ok=True)
     (out / "data").mkdir(parents=True, exist_ok=True)
 
+    # 1.15 asks every script file for a UTF-8 BOM; without it the file is still
+    # parsed, but each load logs an encoding warning. Localization files without
+    # a BOM are not loaded at all, so all text output is written with utf-8-sig.
     (out / "common" / "scripted_triggers" / "sg_law_availability.txt").write_text(
-        emit_availability(groups, laws), encoding="utf-8"
+        emit_availability(groups, laws), encoding="utf-8-sig"
+    )
+    (out / "common" / "scripted_triggers" / "sg_law_groups.txt").write_text(
+        emit_group_triggers(laws), encoding="utf-8-sig"
     )
     (out / "common" / "script_values" / "sg_law_scores.txt").write_text(
-        emit_values(laws), encoding="utf-8"
+        emit_values(laws), encoding="utf-8-sig"
     )
     (out / "common" / "scripted_effects" / "sg_law_rank.txt").write_text(
-        shift_effects() + emit_rank(laws), encoding="utf-8"
+        shift_effects() + emit_rank(laws), encoding="utf-8-sig"
     )
     (out / "common" / "scripted_effects" / "sg_law_actions.txt").write_text(
-        emit_actions(laws), encoding="utf-8"
+        emit_actions(laws), encoding="utf-8-sig"
     )
     (out / "common" / "scripted_guis").mkdir(parents=True, exist_ok=True)
     (out / "common" / "scripted_guis" / "sg_law_sguis.txt").write_text(
-        emit_sguis(laws), encoding="utf-8"
+        emit_sguis(laws), encoding="utf-8-sig"
     )
     (out / "localization" / "english" / "sg_generated_l_english.yml").write_text(
         emit_loc(laws, "english"), encoding="utf-8-sig"

@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
  je_sg_law_advisor:0 "Smart Government Advisor"
  je_sg_law_advisor_reason:0 "Continuous strategic evaluation of the best laws for your nation."
  sg_disabled_desc:0 "The Smart Government Advisor has been deactivated."
@@ -10,11 +10,11 @@ l_english:
  sg_status_title:0 "Smart Government"
  sg_status_enabled:0 "Advisor active"
  sg_last_refresh:0 "Last refreshed: month [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_month').GetValue|v0], [JournalEntry.GetCountry.MakeScope.Var('sg_last_refresh_year').GetValue|v0]"
- sg_rank_diagnostic:0 "Ranking cycle: [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_evaluated').GetValue|v0] laws checked · [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_available').GetValue|v0] available · [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_eligible').GetValue|v0] eligible · [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_ignored').GetValue|v0] ignored · [JournalEntry.GetCountry.MakeScope.Var('sg_last_ranked_count').GetValue|v0] shown"
+ sg_rank_diagnostic:0 "Ranking cycle: [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_evaluated').GetValue|v0] laws checked · [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_available').GetValue|v0] available · [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_ignored').GetValue|v0] ignored · [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_group_filtered').GetValue|v0] group-filtered · [JournalEntry.GetCountry.MakeScope.Var('sg_last_rank_eligible').GetValue|v0] eligible · [JournalEntry.GetCountry.MakeScope.Var('sg_last_ranked_count').GetValue|v0] shown"
  sg_disable:0 "Disable"
  sg_disable_tt:0 "Disable the advisor and remove its journal entry. No law is changed."
  sg_refresh_tt:0 "Reassess now. The advisor also reassesses every month."
- sg_header:0 "Recommendations are reassessed every month. Each score is benefit + government support − half of risk + half of the estimated enactment chance. Laws with 0% success are excluded; difficult but possible laws are penalized by their current chance. Benefit and risk summarize measurable law modifiers; government support uses the stances of interest groups in government (weighted by clout) plus the ruler's stance. Hover a law name for the game's current effects and requirements. Nothing is enacted automatically."
+ sg_header:0 "Recommendations are reassessed every month and always come from different law groups, because laws in the same group are mutually exclusive alternatives. Each score is benefit + government support − half of risk + half of the estimated enactment chance. Laws with 0% success are excluded; difficult but possible laws are penalized by their current chance. Benefit and risk summarize measurable law modifiers; government support uses the stances of interest groups in government (weighted by clout) plus the ruler's stance. Hover a law name for the game's current effects and requirements. Nothing is enacted automatically."
  sg_score_label:0 "Score:"
  sg_support_label:0 "Gov. support:"
  sg_risk_label:0 "Risk:"

@@ -5,7 +5,7 @@ repository. It records the design, the exact game/save paths on the original
 machine, what is generated, what is hand-written, what has been verified, and
 what still needs a runtime test.
 
-Last updated: 2026-11-08 (phase 12: layout stabilization and review fixes; schema 2).
+Last updated: 2026-11-08 (phase 15: one law per group and GUI log cleanup; schema 2).
 
 ---
 
@@ -77,6 +77,13 @@ These were checked against the game files and/or a working 1.15 reference mod
 | `var:x ?= / =` and `set_variable value = var:y` | variable copying |
 | On-actions with `on_actions = { dispatcher }` | additive, preserves vanilla |
 | `SelectLocalization(bool, key, key)` and `LessThan_int32` | dynamic localized text in GUI |
+| script value comparison in a trigger (both sides) | group-leader selection; vanilla uses `political_movement_radicalism >= india_independence_radicalism_threshold` |
+| `autoresize = yes` is a textbox property, rejected on a plain `widget` | fixed in phase 15; `error.log` reported "Property 'autoresize' not handled" for 1,776 generated widget wrappers |
+| `define:Namespace|Name` (for example `define:NPolitics|LAW_MIN_SUCCESS_CHANCE`) | availability gate; an un-namespaced define is rejected at load with "Invalid define, expected 'Namespace|Name'" |
+| `any_interest_group` / `every_interest_group` in a script value | politics score and powerful-opposition risk; `any_scope_interest_group` and `every_scope_interest_group` are not valid list names in 1.15 |
+| `radical_fraction = { value >= X }` | situational adjustments; it is a block trigger, not a comparable script value |
+| UTF-8 BOM in every `.txt`, `.gui` and `.yml` | scripts log an encoding warning without it; localization files are not loaded without it |
+| `HasVariable()` is not a GUI data function | direct use produced "Malformed token"; the diagnostic line uses `sg_rank_diagnostic_visible_sgui` instead |
 
 Unverified at runtime (still marked as risk):
 
@@ -122,6 +129,7 @@ Generated files (do not edit by hand; rerun the tools):
 
 ```
 common/scripted_triggers/sg_law_availability.txt
+common/scripted_triggers/sg_law_groups.txt
 common/script_values/sg_law_scores.txt
 common/scripted_effects/sg_law_rank.txt
 common/scripted_effects/sg_law_actions.txt
@@ -161,9 +169,11 @@ somewhere else.
 3. **Evaluation.** `sg_rank_laws` first calls `sg_migrate_schema` (schema 1
    positional state is discarded), sets every top slot to `-1000`, then iterates
    all 148 laws. For each law it checks `sg_law_available_<law>` and the ignored
-   list, compares `sg_law_score_<law>` against the current top three and stores
-   the **stable numeric law id**, score, benefit theme, risk theme, focus theme,
-   benefit score, risk score and political score.
+   list. An available, non-ignored law must also pass
+   `sg_law_group_leader_<law>` (no candidate of the same group scores higher) so
+   the three recommendations always come from different law groups. The leader's
+   **stable numeric law id**, score, benefit theme, risk theme, focus theme,
+   benefit score, risk score and political score are stored in the top slots.
 4. **Monthly.** The JE `on_monthly_pulse` calls `sg_monthly_update`, which
    ensures the entry exists and reruns `sg_rank_laws`.
 5. **Enact.** Each row contains one Enact button per law, bound to
@@ -210,7 +220,9 @@ Other variables:
 - `sg_last_rank_evaluated` — total laws traversed by the generated ranking cycle
 - `sg_last_rank_available` — laws passing availability before ignore filtering
 - `sg_last_rank_ignored` — available laws excluded by the ignored list
-- `sg_last_rank_eligible` — available laws that reached score comparison
+- `sg_last_rank_group_filtered` — available, non-ignored laws suppressed because
+  another law of the same group scored higher (or won the stable-id tie-break)
+- `sg_last_rank_eligible` — group leaders that reached score comparison
 - `sg_last_ranked_count` — number of populated recommendation slots after ranking
 - `sg_debug` — optional; enables lifecycle `debug_log` messages
 
@@ -238,6 +250,21 @@ For every law, `tools/build_law_data.py` writes
 
 `scope:law` inside copied vanilla triggers is rewritten to the concrete
 `law_type:<law>`.
+
+### Group diversity
+
+`common/scripted_triggers/sg_law_groups.txt` is generated with two triggers per
+law:
+
+- `sg_law_candidate_<law>` — the law is available and not on the ignored list.
+- `sg_law_group_leader_<law>` — no other candidate in the same law group has a
+  higher `sg_law_score_<law>`. An exact score tie goes to the lower stable id,
+  so exactly one law can lead a group. A group with a single law uses
+  `always = yes`.
+
+The ranking only inserts a law after this gate. Ignoring a law removes it from
+`sg_law_candidate_*`, which lets the next-best law of that group compete. This
+is intentional: the player ignores a specific law, not the whole group.
 
 Semantics used (confirmed from vanilla examples):
 
@@ -288,6 +315,10 @@ For each law:
   penalizes difficult but possible laws without treating the estimate as a
   guarantee.
 
+The final top three is built from the per-group leaders, never from two laws of
+the same group, because laws in one group are mutually exclusive alternatives.
+This is a presentation/filtering rule; it does not change any generated score.
+
 The final score is intentionally simple and explainable. The GUI shows the
 three components separately so the player can see why a law is ranked.
 
@@ -330,10 +361,22 @@ used by the ranking formula; theme sentences are only summaries of measurable
 modifier families, while the hover tooltip remains the authoritative source for
 the game's exact effects and blocking requirements.
 
+The widget wrappers do not set `autoresize`. In 1.15 that property is only
+handled by textboxes; on a plain `widget` it produced 1,776 ignored-property
+errors per load. `tools/validate.py` and the regression suite now reject it.
+The diagnostic textbox visibility also uses a country-scope SGUI
+(`sg_rank_diagnostic_visible_sgui`) because a direct
+`MakeScope.HasVariable(...)` expression is not a valid data function and
+aborted the GUI parse with a malformed-token error.
+
+Law headers, action rows, explanation panels and ignored-law entries are plain
+`widget` wrappers around a flowcontainer; removing the property changed no
+layout because the engine already ignored it.
+
 The status area also shows the latest ranking-cycle counters: laws checked,
-available, ignored, eligible and displayed. These counters are reset at the
-start of every ranking pass and are removed when the advisor is disabled, so a
-stale diagnostic cannot survive a deliberate disable.
+available, ignored, group-filtered, eligible and displayed. These counters are
+reset at the start of every ranking pass and are removed when the advisor is
+disabled, so a stale diagnostic cannot survive a deliberate disable.
 
 ---
 
@@ -341,6 +384,19 @@ stale diagnostic cannot survive a deliberate disable.
 
 Done in this phase:
 
+- Added per-group candidate/leader triggers and a ranking gate, so the top three
+  always come from three different law groups.
+- Fixed the 1.15 `autoresize`-on-widget GUI errors reported by the live log.
+  Added static validation and a regression test for the property.
+- Fixed the GUI diagnostic visibility (`HasVariable` is not a data function) by
+  using `sg_rank_diagnostic_visible_sgui`.
+- Fixed three load-time script errors found in the live log: missing BOM in
+  every script/localization file, `*_scope_interest_group` list names, the
+  `radical_fraction` block-trigger syntax and the un-namespaced
+  `LAW_MIN_SUCCESS_CHANCE` define.
+- Verified a clean runtime load: the last startup produced zero errors from the
+  mod, only nine benign "variable never set" warnings for legacy migration
+  variables and the optional `sg_debug` switch.
 - Parsed 148 laws across 26 groups from the real 1.15 install.
 - Generated availability triggers, benefit/risk/politics/score values, ranking
   effect, enact/ignore effects, GUI and theme localization.
@@ -357,12 +413,12 @@ Still to do:
 
 1. **Static validation.** Run `python3 tools/validate.py` after every generator
    run. It checks brace balance, law/technology references, scripted-name
-   resolution, GUI SGUI references, localization keys, duplicate blocks and
-   stable ids.
+   resolution, GUI SGUI references, localization keys, duplicate blocks,
+   stable ids, group-leader triggers and the rejected `autoresize` property.
    The standard-library regression suite is `python3 -m unittest discover -s
    tests -v`; it checks the 148-law inventory, stable ids, ranking sentinels,
-   score formula wiring, lifecycle cleanup, explanations and generated-file
-   consistency.
+   score formula wiring, the one-law-per-group rule, lifecycle cleanup,
+   explanations and generated-file consistency.
 2. **Runtime test.** Copy a save, back up `content_load.json`, install the mod,
    enable it, load the copy, open the journal, click Enact, ignore, refresh,
    disable and re-enable. Check `error.log` for script/GUI errors. The
@@ -402,6 +458,11 @@ desktop-driven test session.
 - **Storing law types in variables fails.** Not used anymore: the widget binds
   rows to stable numeric ids and resolves names through `GetLawType` inside
   localization. Do not reintroduce law-type variables.
+- **Comparing two script values in a trigger fails.** Replace
+  `sg_law_group_leader_<law>` with a two-pass ranking: store each group's best
+  id/score/fields in temporary `sg_group_*` variables during a first sweep, then
+  insert those group winners into the top three. Do not fall back to allowing
+two laws of the same group.
 
 ---
 

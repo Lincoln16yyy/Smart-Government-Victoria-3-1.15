@@ -12,14 +12,20 @@ registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativa
 
 - Recomenda até três leis, com pontuação, benefício, risco, apoio do governo e
   explicação.
+- Recomenda no máximo uma lei por grupo de leis. Variantes do mesmo grupo são
+  alternativas mutuamente exclusivas, então o conselheiro escolhe a melhor de
+  cada grupo antes de montar o top três.
 - Usa o processo **normal** de promulgação (`start_enactment`). Não aprova leis
   automaticamente e não altera legitimidade, grupos de interesse ou oposição.
 - Reavalia todo mês e também por um botão de atualização.
 - Mostra o mês e o ano da última atualização das recomendações.
 - Mostra quantas leis foram verificadas, ficaram disponíveis, foram filtradas
-  por ignoradas, entraram na comparação e foram exibidas no último ranking.
-- Permite promulgar, ignorar até três leis, limpar a lista de ignoradas e
-  desativar o conselheiro.
+  por ignoradas, foram descartadas pela regra de um por grupo, entraram na
+  comparação e foram exibidas no último ranking.
+- Permite promulgar, ignorar até três leis, restaurar uma ignorada por vez,
+  limpar a lista de ignoradas e desativar o conselheiro. Se a lei líder de um
+  grupo for ignorada, a próxima melhor alternativa do grupo pode entrar no
+  lugar.
 - Mostra os efeitos e requisitos reais da lei ao passar o mouse sobre o nome.
 - Interface em português do Brasil, com inglês como fallback.
 - Não edita nenhum arquivo original do jogo.
@@ -98,6 +104,12 @@ Cada lei recebe:
   ponderada por influência (`ig_clout`), mais a posição do governante.
 - **Pontuação final:** `benefício + apoio − risco × 0,5 + chance estimada × 0,5`.
 
+As três recomendações sempre vêm de grupos de leis diferentes. O conselheiro
+elege primeiro a lei de maior pontuação de cada grupo (empates são resolvidos
+pelo id estável) e só então compara essas líderes para formar o top três. Uma
+lei ignorada deixa de concorrer como líder do grupo, permitindo que a próxima
+melhor alternativa apareça.
+
 Na linha de cada recomendação, o conselheiro mostra essa decomposição com os
 valores calculados para a lei e a chance estimada de promulgação. A chance é
 obtida do mesmo valor vanilla usado pelo jogo: leis com 0% de sucesso são
@@ -164,14 +176,17 @@ git diff --check
 ```
 
 Os testes verificam os dados reais gerados, os 148 IDs estáveis, o ranking e
-seus sentinelas, a fórmula de pontuação, datas de atualização, limpeza ao
-desativar, estado vazio, explicações e consistência entre scripts, GUI e
+seus sentinelas, a fórmula de pontuação, a eleição de uma lei por grupo, datas
+de atualização, limpeza ao desativar, estado vazio, explicações, ausência de
+propriedades de GUI rejeitadas pela engine, codificação UTF-8 com BOM,
+referências a defines com namespace e consistência entre scripts, GUI e
 localização. Eles não substituem o teste interativo no jogo: o motor Clausewitz
 e os cliques do diário continuam cobertos pelo procedimento manual abaixo.
 
 Arquivos gerados (não edite à mão):
 
 - `common/scripted_triggers/sg_law_availability.txt`
+- `common/scripted_triggers/sg_law_groups.txt`
 - `common/script_values/sg_law_scores.txt`
 - `common/scripted_effects/sg_law_rank.txt`
 - `common/scripted_effects/sg_law_actions.txt`
@@ -192,8 +207,10 @@ O contexto completo para outro desenvolvedor ou IA está em
   no `error.log`/log de script.
 - O botão **Diagnóstico** no registro de diário grava uma mensagem e reavalia.
 - A linha de diagnóstico do registro mostra os contadores do último ciclo de
-  ranking; isso ajuda a distinguir ausência real de leis de filtragem por
-  requisitos ou pela lista de ignoradas.
+  ranking, incluindo quantas leis disponíveis foram descartadas por já haver
+  outra do mesmo grupo; isso ajuda a distinguir ausência real de leis de
+  filtragem por requisitos, pela lista de ignoradas ou pela regra de um por
+  grupo.
 - Logs do jogo (Hydra/Wine):
 
   ```
@@ -209,9 +226,11 @@ desativar, reativar e pulso mensal, além da verificação dos logs.
 
 ## Limitações conhecidas
 
-- O executável inicia em Wine, mas este ambiente não permite conduzir de forma
-  confiável a interface gráfica para carregar o save de teste e clicar nas
-  ações do diário.
+- A inicialização em Wine foi verificada e o log de runtime mais recente não
+  contém erros do mod. Este ambiente ainda não permite conduzir de forma
+  confiável a interface gráfica para carregar o save de teste e clicar nas ações
+  do diário; restam apenas avisos benignos de variáveis legadas da migração e do
+  interruptor opcional `sg_debug`.
 - Algumas funções de GUI e de posição política ainda precisam de confirmação em
   runtime; os fallbacks estão documentados em `docs/AI_CONTEXT.md`.
 - O texto de benefício/risco é temático (derivado dos modificadores), enquanto os

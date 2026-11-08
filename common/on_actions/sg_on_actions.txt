@@ -1,4 +1,4 @@
-# Smart Government Advisor - additive dispatchers.
+﻿# Smart Government Advisor - additive dispatchers.
 # These use the on_actions = { ... } form so vanilla entries are preserved.
 
 on_game_started_after_lobby = {

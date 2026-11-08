@@ -81,6 +81,7 @@ class GeneratedDataTests(unittest.TestCase):
 class GeneratedScriptTests(unittest.TestCase):
     def setUp(self) -> None:
         self.availability = read("common/scripted_triggers/sg_law_availability.txt")
+        self.groups = read("common/scripted_triggers/sg_law_groups.txt")
         self.values = read("common/script_values/sg_law_scores.txt")
         self.rank = read("common/scripted_effects/sg_law_rank.txt")
         self.actions = read("common/scripted_effects/sg_law_actions.txt")
@@ -152,6 +153,87 @@ class GeneratedScriptTests(unittest.TestCase):
             block,
         )
 
+    def test_group_leader_triggers_compare_only_same_group_peers(self) -> None:
+        by_group: dict[str, set[str]] = {}
+        for law in LAWS:
+            by_group.setdefault(law["group"], set()).add(law["id"])
+        self.assertEqual(len(by_group), 26)
+        for law in LAWS:
+            candidate = extract_block(
+                self.groups, f"sg_law_candidate_{law['id']}"
+            )
+            self.assertIn(f"sg_law_available_{law['id']} = yes", candidate)
+            self.assertIn("sg_ignored_1", candidate)
+
+            block = extract_block(
+                self.groups, f"sg_law_group_leader_{law['id']}"
+            )
+            peers = by_group[law["group"]] - {law["id"]}
+            referenced = set(
+                re.findall(r"sg_law_candidate_([A-Za-z0-9_]+) = yes", block)
+            )
+            self.assertEqual(referenced, peers, law["id"])
+            for peer in peers:
+                operator = ">=" if LAW_IDS[peer] < LAW_IDS[law["id"]] else ">"
+                self.assertIn(
+                    f"sg_law_score_{peer} {operator} sg_law_score_{law['id']}",
+                    block,
+                )
+
+    def test_group_leader_rule_selects_exactly_one_law_per_group(self) -> None:
+        rules: dict[str, list[tuple[str, str]]] = {}
+        for law in LAWS:
+            block = extract_block(
+                self.groups, f"sg_law_group_leader_{law['id']}"
+            )
+            rules[law["id"]] = re.findall(
+                r"sg_law_score_([A-Za-z0-9_]+) (>=|>) sg_law_score_", block
+            )
+
+        def leads(law_id: str, scores: dict[str, float]) -> bool:
+            return all(
+                not (
+                    scores[peer] > scores[law_id]
+                    or (scores[peer] == scores[law_id] and operator == ">=")
+                )
+                for peer, operator in rules[law_id]
+            )
+
+        scores = {
+            law["id"]: law["benefit"] - 0.5 * law["risk"] for law in LAWS
+        }
+        for group in {law["group"] for law in LAWS}:
+            leaders = [
+                law["id"]
+                for law in LAWS
+                if law["group"] == group and leads(law["id"], scores)
+            ]
+            self.assertEqual(len(leaders), 1, f"{group}: {leaders}")
+
+    def test_ranking_promotes_only_group_leaders_and_counts_the_rest(self) -> None:
+        for law in LAWS:
+            self.assertIn(
+                f"limit = {{ sg_law_group_leader_{law['id']} = yes }}",
+                self.rank,
+            )
+        self.assertIn(
+            "set_variable = { name = sg_last_rank_group_filtered value = 0 }",
+            self.rank,
+        )
+        self.assertEqual(
+            self.rank.count(
+                "change_variable = { name = sg_last_rank_group_filtered add = 1 }"
+            ),
+            len(LAWS),
+        )
+
+    def test_generated_values_use_valid_interest_group_and_fraction_syntax(self) -> None:
+        self.assertNotIn("scope_interest_group", self.values)
+        self.assertNotIn("radical_fraction >", self.values)
+        self.assertIn("every_interest_group = {", self.values)
+        self.assertIn("any_interest_group = {", self.values)
+        self.assertIn("radical_fraction = { value >=", self.values)
+
     def test_powerful_interest_group_opposition_penalizes_risk(self) -> None:
         sample = extract_block(self.values, "sg_law_risk_law_monarchy")
         self.assertIn("is_powerful = yes", sample)
@@ -168,9 +250,10 @@ class GeneratedScriptTests(unittest.TestCase):
             self.assertIn("NOT = { enacting_any_law = yes }", block)
             self.assertIn(
                 f'"enactment_chance_for_law(law_type:{law_id})" >= '
-                "define:LAW_MIN_SUCCESS_CHANCE",
+                "define:NPolitics|LAW_MIN_SUCCESS_CHANCE",
                 block,
             )
+            self.assertNotIn("define:LAW_MIN_SUCCESS_CHANCE", block)
 
     def test_ranking_initializes_sentinel_slots_and_tracks_counts(self) -> None:
         self.assertIn("set_variable = { name = sg_top_1_id value = 0 }", self.rank)
@@ -236,6 +319,7 @@ class RuntimeSurfaceTests(unittest.TestCase):
             "sg_last_rank_evaluated",
             "sg_last_rank_available",
             "sg_last_rank_ignored",
+            "sg_last_rank_group_filtered",
             "sg_last_rank_eligible",
             "sg_last_ranked_count",
             "sg_ignored_1",
@@ -261,7 +345,12 @@ class RuntimeSurfaceTests(unittest.TestCase):
             self.assertIn(f"sg_top_{slot}_risk_score", self.english)
             self.assertIn(f"sg_top_{slot}_enactment_chance", self.english)
         self.assertIn("benefit + government support", self.english)
-        self.assertIn("metade de", read("localization/braz_por/sg_l_braz_por.yml"))
+        self.assertIn("mutually exclusive alternatives", self.english)
+        self.assertIn("sg_last_rank_group_filtered", self.english)
+        portuguese = read("localization/braz_por/sg_l_braz_por.yml")
+        self.assertIn("metade de", portuguese)
+        self.assertIn("mutuamente exclusivas", portuguese)
+        self.assertIn("sg_last_rank_group_filtered", portuguese)
 
     def test_dynamic_gui_expressions_use_raw_text_and_known_formats(self) -> None:
         self.assertNotRegex(
@@ -277,6 +366,47 @@ class RuntimeSurfaceTests(unittest.TestCase):
         self.assertIn("size = { 115 34 }", self.gui)
         self.assertIn("size = { 116 30 }", self.gui)
         self.assertIn('text = "sg_focus_1"', self.gui)
+
+    def test_gui_does_not_use_invalid_hasvariable_function(self) -> None:
+        self.assertNotIn("HasVariable(", self.gui)
+        self.assertIn(
+            "GetScriptedGui('sg_rank_diagnostic_visible_sgui')", self.gui
+        )
+        self.assertIn(
+            "sg_rank_diagnostic_visible_sgui = {",
+            read("common/scripted_guis/sg_scripted_guis.txt"),
+        )
+
+    def test_all_game_text_files_use_utf8_bom(self) -> None:
+        patterns = ("localization/**/*.yml", "common/**/*.txt", "gui/**/*.gui")
+        for pattern in patterns:
+            for path in ROOT.glob(pattern):
+                self.assertTrue(
+                    path.read_bytes().startswith(b"\xef\xbb\xbf"),
+                    str(path.relative_to(ROOT)),
+                )
+
+
+    def test_gui_does_not_set_autoresize_on_plain_widgets(self) -> None:
+        lines = self.gui.splitlines()
+        offenders: list[int] = []
+        for index, line in enumerate(lines):
+            if not re.match(r"^\s*widget\s*=\s*\{\s*$", line):
+                continue
+            indent = len(line) - len(line.lstrip("\t"))
+            for child_index in range(index + 1, min(index + 8, len(lines))):
+                child = lines[child_index]
+                if not child.strip():
+                    continue
+                child_indent = len(child) - len(child.lstrip("\t"))
+                if child_indent <= indent:
+                    break
+                if child_indent == indent + 1 and child.strip() == "autoresize = yes":
+                    offenders.append(child_index + 1)
+                    break
+        self.assertEqual(offenders, [])
+        # The property is valid on textboxes and must stay there.
+        self.assertIn("autoresize = yes", self.gui)
 
     def test_each_slot_law_branch_uses_its_matching_visibility_sgui(self) -> None:
         for slot in (1, 2, 3):

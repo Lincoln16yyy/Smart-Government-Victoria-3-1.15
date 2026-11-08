@@ -1,4 +1,4 @@
-# Smart Government Advisor - lifecycle, ignore list and diagnostics effects.
+﻿# Smart Government Advisor - lifecycle, ignore list and diagnostics effects.
 # Country scope unless noted.
 
 # Schema 2 replaces the old positional law index with a stable numeric id
@@ -65,6 +65,7 @@ sg_disable_country = {
 	remove_variable = sg_last_rank_evaluated
 	remove_variable = sg_last_rank_available
 	remove_variable = sg_last_rank_ignored
+	remove_variable = sg_last_rank_group_filtered
 	remove_variable = sg_last_rank_eligible
 	remove_variable = sg_last_ranked_count
 	sg_clear_rank = yes

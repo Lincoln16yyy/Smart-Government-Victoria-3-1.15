@@ -1,4 +1,4 @@
-# Smart Government Advisor - buttons used by the journal-entry widget.
+﻿# Smart Government Advisor - buttons used by the journal-entry widget.
 # All of them are country-scope and only valid while sg_enabled exists.
 
 sg_refresh_sgui = {
@@ -30,6 +30,11 @@ sg_top_2_visible_sgui = {
 sg_top_3_visible_sgui = {
 	scope = country
 	is_shown = { has_variable = sg_top_3_id var:sg_top_3_id > 0 }
+}
+
+sg_rank_diagnostic_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_last_rank_evaluated }
 }
 
 sg_ignored_1_visible_sgui = {

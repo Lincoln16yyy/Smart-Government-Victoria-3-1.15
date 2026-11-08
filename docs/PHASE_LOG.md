@@ -256,3 +256,51 @@ Installation performed:
   and powerful opposition risk scoring in `tests/test_advisor_generation.py`.
 - Re-ran generators, passed all 18 regression tests, static validation and
   reinstalled the mod via `tools/install_mod.py --force`.
+
+## Phase 15 — one recommendation per law group and GUI log cleanup
+
+- Found 2,300 `Property 'autoresize' not handled` errors in the live 1.15
+  `error.log`, all pointing at generated plain `widget` wrappers. `autoresize`
+  is valid on textboxes only in this version. Removed it from the four wrapper
+  generators; the engine was already ignoring the property, so layout is
+  unchanged and the log noise disappears.
+- Added `tools/validate.py` and regression coverage that reject
+  `autoresize` directly on a `widget`, so the generator cannot reintroduce it.
+- The ranking could show three mutually exclusive laws of the same group in the
+  top three (the static top ten is dominated by citizenship variants). Added
+  generated `sg_law_candidate_<law>` and `sg_law_group_leader_<law>` triggers in
+  `common/scripted_triggers/sg_law_groups.txt`. Only the highest-scored
+  available, non-ignored law of each group can enter the top three; exact ties
+  go to the lower stable id. Ignoring a group leader lets the next-best law of
+  that group compete.
+- Added the `sg_last_rank_group_filtered` diagnostic counter to the ranking
+  cycle, the journal status line and the disable cleanup.
+- Updated English and Brazilian Portuguese header text to explain the
+  one-per-group rule.
+- Regenerated 148 laws and 26 groups; 22 regression tests, `validate.py`,
+  `py_compile` and `git diff --check` pass. Reinstalled the mod with
+  `tools/install_mod.py --force`.
+- Launched the game under Wine and read the rotating `error*.log` files. The
+  startup exposed further issues that static checks could not see:
+  - `MakeScope.HasVariable(...)` is not a GUI data function and produced a
+    malformed-token error. The diagnostic line now uses the generated-pattern
+    SGUI `sg_rank_diagnostic_visible_sgui`.
+  - Hand-written localization files had no UTF-8 BOM and were not loaded, so
+    the journal entry reported an unknown `sg_je_activation_tt` key and every
+    hand-written GUI string was unlocalized. All `.yml`, `.txt` and `.gui`
+    files are now written or saved with a BOM, and `validate.py` rejects a file
+    without one.
+  - `sg_law_scores.txt` used `any_scope_interest_group` and
+    `every_scope_interest_group`; 1.15 names the lists `any_interest_group` and
+    `every_interest_group`. It also compared `radical_fraction > X` directly,
+    but `radical_fraction` is a block trigger. Both were fixed, removing 662
+    load-time errors.
+  - `define:LAW_MIN_SUCCESS_CHANCE` was missing its namespace; 1.15 requires
+    `define:NPolitics|LAW_MIN_SUCCESS_CHANCE`. This was the last load-time
+    error (296 occurrences across the 148 availability triggers).
+- Final runtime check: the mod produced zero errors in the new `error*.log`
+  files (no `autoresize`, `HasVariable`, unlocalized `sg_` key, missing-BOM or
+  parse error). Nine benign "variable never set" warnings remain for the
+  schema-1 migration variables and the optional `sg_debug` switch.
+- 25 regression tests, `validate.py`, `py_compile` and `git diff --check` pass.
+  The mod was reinstalled before the final launch.

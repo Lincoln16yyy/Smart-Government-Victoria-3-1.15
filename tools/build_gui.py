@@ -40,7 +40,6 @@ def law_header(slot: int, laws: list[dict]) -> str:
             f"""
 				widget = {{
 					visible = "{law_visible(slot, lid)}"
-					autoresize = yes
 					flowcontainer = {{
 						direction = vertical
 						spacing = 1
@@ -91,7 +90,6 @@ def law_actions(slot: int, laws: list[dict]) -> str:
             f"""
 				widget = {{
 					visible = "{law_visible(slot, lid)}"
-					autoresize = yes
 					flowcontainer = {{
 						direction = horizontal
 						spacing = 10
@@ -233,7 +231,6 @@ def law_explanations(slot: int, laws: list[dict]) -> str:
             f"""
 				widget = {{
 					visible = "{law_visible(slot, lid)}"
-					autoresize = yes
 					flowcontainer = {{
 						direction = vertical
 						spacing = 1
@@ -272,7 +269,6 @@ def ignored_law_entry(slot: int, laws: list[dict]) -> str:
             f"""
 						widget = {{
 							visible = "[GetScriptedGui('sg_ignored_{slot}_law_{lid}_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
-							autoresize = yes
 							flowcontainer = {{
 								direction = horizontal
 								spacing = 6
@@ -436,7 +432,7 @@ flowcontainer = {{
 	}}
 
 	textbox = {{
-		visible = "[JournalEntry.GetCountry.MakeScope.HasVariable('sg_last_rank_evaluated')]"
+		visible = "[GetScriptedGui('sg_rank_diagnostic_visible_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 		autoresize = yes
 		multiline = yes
 		align = left|nobaseline
@@ -534,7 +530,7 @@ def main() -> int:
             f"Missing {DATA}. Run tools/build_law_data.py before tools/build_gui.py."
         )
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(build(), encoding="utf-8")
+    OUT.write_text(build(), encoding="utf-8-sig")
     print(f"Wrote {OUT}")
     return 0
 

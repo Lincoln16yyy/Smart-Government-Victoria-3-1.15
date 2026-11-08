@@ -148,6 +148,23 @@ python3 tools/build_gui.py
 Não há caminho de máquina fixo no gerador. Se a descoberta falhar, ele para com
 uma mensagem pedindo `--game` ou `VICTORIA3_GAME`.
 
+Validação automatizada (somente biblioteca padrão):
+
+```bash
+python3 tools/build_law_data.py
+python3 tools/build_gui.py
+python3 -m unittest discover -s tests -v
+python3 tools/validate.py
+python3 -m py_compile tools/*.py tests/*.py
+git diff --check
+```
+
+Os testes verificam os dados reais gerados, os 148 IDs estáveis, o ranking e
+seus sentinelas, a fórmula de pontuação, datas de atualização, limpeza ao
+desativar, estado vazio, explicações e consistência entre scripts, GUI e
+localização. Eles não substituem o teste interativo no jogo: o motor Clausewitz
+e os cliques do diário continuam cobertos pelo procedimento manual abaixo.
+
 Arquivos gerados (não edite à mão):
 
 - `common/scripted_triggers/sg_law_availability.txt`

@@ -82,15 +82,43 @@ Static checks after regeneration: balanced braces, all law and technology
 references exist, every `sg_*` call resolves, every GUI SGUI exists, every
 static localization key exists, no duplicate keys or top-level blocks.
 
-## Phase 4 — validation and runtime test (next)
+## Phase 4 — hardening, install and runtime test
 
-- Add `tools/validate.py` and `tools/install_mod.py`.
-- Run the validator.
-- Back up `content_load.json`, install to the real mod folder, copy a save.
-- Load the copy and check `error.log`.
-- Test enable, monthly reassessment, enact, ignore, clear, disable and
-  re-enable.
-- Fix runtime issues, especially `Var(...).GetLawType`, `law_stance` and
-  `law_enactment_stance`.
-- Write install/test/disable/diagnostics/compatibility docs.
-- Commit on a branch, open a PR, address Sourcery review, merge to `main`.
+Tooling:
+
+- added `tools/validate.py`; it passes on the current generated tree;
+- added `tools/install_mod.py` and the launcher-facing
+  `Smart Government Advisor.mod`.
+
+Extra hardening after the review:
+
+- risk themes now use only positive risk contributions, so a law that reduces
+  radicalism cannot show a radicalism warning;
+- the generic risk sentence no longer claims local-autonomy tension for
+  unrelated effects;
+- ranking writes sentinel top ids (`0`) instead of removing them, and row
+  visibility requires `id > 0`, so the widget never reads a missing variable
+  when there are no recommendations;
+- README and AI context were updated for `validate.py`, `install_mod.py` and
+  the removal of law-type variables.
+
+Installation performed:
+
+- installed to
+  `.../Documents/Paradox Interactive/Victoria 3/mod/Smart Government Advisor`
+  and wrote `.../mod/Smart Government Advisor.mod`;
+- created a separate test save copy:
+  `save games/haiti_1836_06_30_SG_TEST.v3`;
+- `content_load.json` was **not** edited; the mod is installed but inactive.
+
+Runtime test still pending (must be done by launching the game):
+
+1. Back up `content_load.json`.
+2. Enable the mod in the launcher and load `haiti_1836_06_30_SG_TEST.v3`.
+3. Check `error.log` for script/GUI errors, especially the generated
+   `GreaterThan_int32`/`LessThan_int32` id branches and the
+   `GetLawType('law_x')` localization calls.
+4. Test enable, monthly reassessment, enact, ignore, clear ignored, refresh,
+   disable and re-enable.
+5. Fix any runtime issue here and rerun `tools/validate.py`.
+

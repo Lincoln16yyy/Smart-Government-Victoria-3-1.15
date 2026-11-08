@@ -240,6 +240,15 @@ def row(slot: int, laws: list[dict]) -> str:
 				using = fontsize_small
 				minimumsize = {{ 480 -1 }}
 				maximumsize = {{ 480 -1 }}
+				text = "sg_why_ranked_{slot}"
+			}}
+			textbox = {{
+				autoresize = yes
+				multiline = yes
+				align = left|nobaseline
+				using = fontsize_small
+				minimumsize = {{ 480 -1 }}
+				maximumsize = {{ 480 -1 }}
 				text = "{benefit}"
 			}}
 			textbox = {{

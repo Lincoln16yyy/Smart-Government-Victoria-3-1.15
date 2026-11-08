@@ -281,6 +281,7 @@ three components separately so the player can see why a law is ranked.
 - three recommendation rows, each with:
   - rank, law name and group (hover = real effects + blocking requirements)
   - focus theme, score, government support, benefit score, risk score
+  - explicit score decomposition: benefit + government support - half of risk
   - benefit sentence
   - risk sentence
   - one Enact and one Ignore button **per law**, visible only for the law the
@@ -295,9 +296,13 @@ branch whose id matches `sg_top_N_id`; the branch uses localization keys such as
 `GetLawType('law_x')`. No law-type value is stored in a country variable.
 
 Theme sentences are selected from numeric variables with nested
-`SelectLocalization(LessThan_int32(...), ...)`. Index 0 is a neutral fallback
+`SelectLocalization(EqualTo_int32(...), ...)`. Index 0 is a neutral fallback
 for the short moment before a row variable is written. The per-law localization
 keys `sg_law_benefit_<law>` and `sg_law_risk_<law>` still exist for modders.
+The visible decomposition is generated from the same stored component variables
+used by the ranking formula; theme sentences are only summaries of measurable
+modifier families, while the hover tooltip remains the authoritative source for
+the game's exact effects and blocking requirements.
 
 The status area also shows the latest ranking-cycle counters: laws checked,
 available, ignored, eligible and displayed. These counters are reset at the

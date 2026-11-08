@@ -3904,6 +3904,15 @@ flowcontainer = {
 				using = fontsize_small
 				minimumsize = { 480 -1 }
 				maximumsize = { 480 -1 }
+				text = "sg_why_ranked_1"
+			}
+			textbox = {
+				autoresize = yes
+				multiline = yes
+				align = left|nobaseline
+				using = fontsize_small
+				minimumsize = { 480 -1 }
+				maximumsize = { 480 -1 }
 				text = "[SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)1'), 'sg_benefit_1', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)2'), 'sg_benefit_2', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)3'), 'sg_benefit_3', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)4'), 'sg_benefit_4', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)5'), 'sg_benefit_5', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)6'), 'sg_benefit_6', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)7'), 'sg_benefit_7', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)8'), 'sg_benefit_8', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)9'), 'sg_benefit_9', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)10'), 'sg_benefit_10', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)11'), 'sg_benefit_11', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)12'), 'sg_benefit_12', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)13'), 'sg_benefit_13', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)14'), 'sg_benefit_14', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)15'), 'sg_benefit_15', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)16'), 'sg_benefit_16', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)17'), 'sg_benefit_17', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_1_benefit').GetValue, '(int32)18'), 'sg_benefit_18', 'sg_benefit_0'))))))))))))))))))]"
 			}
 			textbox = {
@@ -11869,6 +11878,15 @@ flowcontainer = {
 				using = fontsize_small
 				minimumsize = { 480 -1 }
 				maximumsize = { 480 -1 }
+				text = "sg_why_ranked_2"
+			}
+			textbox = {
+				autoresize = yes
+				multiline = yes
+				align = left|nobaseline
+				using = fontsize_small
+				minimumsize = { 480 -1 }
+				maximumsize = { 480 -1 }
 				text = "[SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)1'), 'sg_benefit_1', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)2'), 'sg_benefit_2', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)3'), 'sg_benefit_3', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)4'), 'sg_benefit_4', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)5'), 'sg_benefit_5', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)6'), 'sg_benefit_6', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)7'), 'sg_benefit_7', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)8'), 'sg_benefit_8', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)9'), 'sg_benefit_9', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)10'), 'sg_benefit_10', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)11'), 'sg_benefit_11', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)12'), 'sg_benefit_12', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)13'), 'sg_benefit_13', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)14'), 'sg_benefit_14', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)15'), 'sg_benefit_15', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)16'), 'sg_benefit_16', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)17'), 'sg_benefit_17', SelectLocalization(EqualTo_int32(JournalEntry.GetCountry.MakeScope.Var('sg_top_2_benefit').GetValue, '(int32)18'), 'sg_benefit_18', 'sg_benefit_0'))))))))))))))))))]"
 			}
 			textbox = {
@@ -19827,6 +19845,15 @@ flowcontainer = {
 				}
 			}
 
+			textbox = {
+				autoresize = yes
+				multiline = yes
+				align = left|nobaseline
+				using = fontsize_small
+				minimumsize = { 480 -1 }
+				maximumsize = { 480 -1 }
+				text = "sg_why_ranked_3"
+			}
 			textbox = {
 				autoresize = yes
 				multiline = yes

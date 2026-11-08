@@ -64,8 +64,8 @@ dentro) e o arquivo `Smart Government Advisor.mod` ao lado dela.
 
 6. Carregue um **save separado** para testar. Não use o único save da campanha.
 
-> Alternativa: `python3 tools/install_mod.py` copia a pasta e cria o `.mod` com
-> o caminho absoluto correto. Use `--dry-run` para apenas mostrar o destino.
+> Alternativa: `python3 tools/install_mod.py` copia a pasta e cria o `.mod`
+> correspondente. Use `--dry-run` para apenas mostrar o destino.
 
 ## Uso
 

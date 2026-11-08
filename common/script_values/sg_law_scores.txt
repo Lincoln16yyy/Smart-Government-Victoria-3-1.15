@@ -142,6 +142,7 @@ sg_law_benefit_law_peasant_levies = {
 
 sg_law_risk_law_peasant_levies = {
 	value = 12.5
+	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -473,7 +474,6 @@ sg_law_benefit_law_communal_administration = {
 
 sg_law_risk_law_communal_administration = {
 	value = 0.5
-	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 60
 }
@@ -606,7 +606,6 @@ sg_law_benefit_law_elected_bureaucrats = {
 
 sg_law_risk_law_elected_bureaucrats = {
 	value = 4.2
-	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 60
 }
@@ -2193,7 +2192,6 @@ sg_law_benefit_law_colonial_exploitation = {
 
 sg_law_risk_law_colonial_exploitation = {
 	value = 7.0
-	if = { limit = { weeks_until_bankruptcy < 26 } add = 10 }
 	min = 0
 	max = 60
 }
@@ -3515,7 +3513,6 @@ sg_law_benefit_law_command_economy = {
 
 sg_law_risk_law_command_economy = {
 	value = 0
-	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -3846,7 +3843,6 @@ sg_law_benefit_law_laissez_faire = {
 
 sg_law_risk_law_laissez_faire = {
 	value = 0
-	if = { limit = { weeks_until_bankruptcy < 26 } add = 10 }
 	min = 0
 	max = 60
 }
@@ -4242,7 +4238,6 @@ sg_law_benefit_law_private_schools = {
 
 sg_law_risk_law_private_schools = {
 	value = 1.8
-	if = { limit = { weeks_until_bankruptcy < 26 } add = 10 }
 	min = 0
 	max = 60
 }
@@ -4507,7 +4502,6 @@ sg_law_benefit_law_censorship = {
 
 sg_law_risk_law_censorship = {
 	value = 0
-	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -4574,7 +4568,6 @@ sg_law_benefit_law_outlawed_dissent = {
 
 sg_law_risk_law_outlawed_dissent = {
 	value = 0
-	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -4707,7 +4700,6 @@ sg_law_benefit_law_right_of_assembly = {
 
 sg_law_risk_law_right_of_assembly = {
 	value = 0
-	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -5499,7 +5491,6 @@ sg_law_benefit_law_private_health_insurance = {
 
 sg_law_risk_law_private_health_insurance = {
 	value = 1.8
-	if = { limit = { weeks_until_bankruptcy < 26 } add = 10 }
 	min = 0
 	max = 60
 }
@@ -5696,7 +5687,6 @@ sg_law_benefit_law_guaranteed_liberties = {
 
 sg_law_risk_law_guaranteed_liberties = {
 	value = 3.0
-	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -5893,6 +5883,7 @@ sg_law_benefit_law_okhrana = {
 
 sg_law_risk_law_okhrana = {
 	value = 3.5
+	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -6349,6 +6340,7 @@ sg_law_benefit_law_anti_strike_laws = {
 
 sg_law_risk_law_anti_strike_laws = {
 	value = 9.0
+	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -6414,6 +6406,7 @@ sg_law_benefit_law_combination_acts = {
 
 sg_law_risk_law_combination_acts = {
 	value = 15.0
+	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -8714,7 +8707,6 @@ sg_law_benefit_law_consumption_based_taxation = {
 
 sg_law_risk_law_consumption_based_taxation = {
 	value = 5.0
-	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 60
 }

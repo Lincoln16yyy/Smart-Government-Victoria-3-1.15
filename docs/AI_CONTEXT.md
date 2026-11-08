@@ -308,10 +308,10 @@ Done in this phase:
 
 Still to do:
 
-1. **Static validation.** Re-check brace balance, every `law_type:` and
-   `has_technology_researched` reference, every scripted trigger/value/effect
-   reference, duplicate localization keys, and GUI function names after every
-   generator run. A `tools/validate.py` is still desirable.
+1. **Static validation.** Run `python3 tools/validate.py` after every generator
+   run. It checks brace balance, law/technology references, scripted-name
+   resolution, GUI SGUI references, localization keys, duplicate blocks and
+   stable ids.
 2. **Runtime test.** Copy a save, back up `content_load.json`, install the mod,
    enable it, load the copy, open the journal, click Enact, ignore, refresh,
    disable and re-enable. Check `error.log` for script/GUI errors.
@@ -319,9 +319,7 @@ Still to do:
    `GreaterThan_int32`/`LessThan_int32` id branches, the
    `law_stance`/`law_enactment_stance` values, or a vanilla trigger copied from
    `is_visible` that assumes a different scope.
-4. **Installer/validator tools.** `tools/install_mod.py` exists; add
-   `tools/validate.py`.
-5. **Git/PR.** Commit, push branch, reply to the Sourcery review, merge.
+4. **Git/PR.** Commit, push branch, reply to the Sourcery review, merge.
 
 ---
 
@@ -343,8 +341,9 @@ Still to do:
 - **A copied `is_visible`/`can_enact` trigger errors.** Drop that block for the
   specific law and document the law as "availability not modelled"; never
   invent a replacement condition.
-- **Storing law types in variables fails.** Store indices only and replace the
-  GUI name/effect display with a generated per-index localization tree.
+- **Storing law types in variables fails.** Not used anymore: the widget binds
+  rows to stable numeric ids and resolves names through `GetLawType` inside
+  localization. Do not reintroduce law-type variables.
 
 ---
 

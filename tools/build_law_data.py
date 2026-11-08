@@ -459,10 +459,17 @@ def choose_benefit_theme(annotated: list[dict]) -> int:
     return BENEFIT_GENERIC_THEME
 
 
-def choose_risk_theme(keys: list[str], group: str, annotated: list[dict]) -> int:
-    if not keys and not any(item["risk"] > 0 for item in annotated):
+def choose_risk_theme(group: str, annotated: list[dict]) -> int:
+    """Describe only risks the law actually carries.
+
+    Like the benefit theme, this uses the sign of the real risk contribution,
+    never the law group alone. A law that reduces radicalism must not display
+    "may increase radicalism" because it belongs to the policing group.
+    """
+    positive = [item["key"] for item in annotated if item["risk"] > 0]
+    if not positive:
         return RISK_NEUTRAL_THEME
-    joined = " ".join(keys)
+    joined = " ".join(positive)
     if re.search(r"landowners|aristocrats", joined):
         return 1
     if re.search(r"devout|clergymen", joined):
@@ -483,13 +490,11 @@ def choose_risk_theme(keys: list[str], group: str, annotated: list[dict]) -> int
         return 7
     if re.search(r"institution_cost|wages|goods_cost|consumption_tax|loan_interest", joined):
         return 6
-    if re.search(r"internal_security|policing", group):
+    # Positive contribution with no specific family: the generic risk sentence
+    # may be vague, but it is truthful about the law's direction.
+    if re.search(r"internal_security|policing|army_model|navy_model", group):
         return 9
-    if re.search(r"army_model|navy_model", group):
-        return 5
-    if any(item["risk"] > 0 for item in annotated):
-        return 11
-    return RISK_NEUTRAL_THEME
+    return 11
 
 
 def choose_focus(group: str, category: str) -> int:
@@ -548,7 +553,6 @@ def build(game: Path):
             pair_list += tax_pairs
 
             benefit_total, risk_total, annotated = score_modifiers(pair_list)
-            keys = [p[0] for p in pair_list]
             category = groups[group]["category"]
             benefit_theme = choose_benefit_theme(annotated)
             # A law with no positive measurable effect must not inherit the
@@ -565,7 +569,7 @@ def build(game: Path):
                     "benefit": round(benefit, 1),
                     "risk": round(risk, 1),
                     "benefit_theme": benefit_theme,
-                    "risk_theme": choose_risk_theme(keys, group, annotated),
+                    "risk_theme": choose_risk_theme(group, annotated),
                     "focus": choose_focus(group, category),
                     "has_positive_signal": has_positive_signal,
                     "modifiers": annotated,
@@ -864,6 +868,15 @@ def emit_rank(laws) -> str:
     for slot in (1, 2, 3):
         for field in fields:
             out.append(f"\tremove_variable = sg_top_{slot}_{field}")
+        # Keep the id variable present with a sentinel so the widget never asks
+        # GetValue on a missing variable. Id 0 matches no generated law branch.
+        out.append(f"\tset_variable = {{ name = sg_top_{slot}_id value = 0 }}")
+        out.append(f"\tset_variable = {{ name = sg_top_{slot}_benefit value = 17 }}")
+        out.append(f"\tset_variable = {{ name = sg_top_{slot}_risk value = 13 }}")
+        out.append(f"\tset_variable = {{ name = sg_top_{slot}_focus value = 1 }}")
+        out.append(f"\tset_variable = {{ name = sg_top_{slot}_benefit_score value = 0 }}")
+        out.append(f"\tset_variable = {{ name = sg_top_{slot}_risk_score value = 0 }}")
+        out.append(f"\tset_variable = {{ name = sg_top_{slot}_politics value = 0 }}")
         out.append(f"\tset_variable = {{ name = sg_top_{slot}_score value = -1000 }}")
     out.append("")
     for law in laws:
@@ -992,7 +1005,7 @@ def emit_loc(laws, lang: str) -> str:
             L("May reduce legitimacy if society is not ready.", "Pode reduzir a legitimidade se a sociedade não estiver pronta."),
             L("May increase radicalism and political violence.", "Pode aumentar o radicalismo e a violência política."),
             L("May deepen discrimination or social exclusion.", "Pode aprofundar a discriminação ou a exclusão social."),
-            L("Creates tension between central power and local autonomy.", "Cria tensão entre o poder central e a autonomia local."),
+            L("May create costs, rigidity or political tension.", "Pode gerar custos, rigidez ou tensão política."),
             L("May isolate the economy or invite diplomatic friction.", "Pode isolar a economia ou gerar atrito diplomático."),
             L("No direct measurable risk beyond the normal enactment process.", "Sem risco direto mensurável além do processo normal de promulgação."),
         ],

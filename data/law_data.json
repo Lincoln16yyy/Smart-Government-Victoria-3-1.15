@@ -168,7 +168,7 @@
    "benefit": 92.9,
    "risk": 5.0,
    "benefit_theme": 11,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 4,
    "has_positive_signal": true,
    "modifiers": [
@@ -231,7 +231,7 @@
    "benefit": 80.7,
    "risk": 5.0,
    "benefit_theme": 11,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 4,
    "has_positive_signal": true,
    "modifiers": [
@@ -294,7 +294,7 @@
    "benefit": 85.2,
    "risk": 12.5,
    "benefit_theme": 11,
-   "risk_theme": 1,
+   "risk_theme": 9,
    "focus": 4,
    "has_positive_signal": true,
    "modifiers": [
@@ -364,7 +364,7 @@
    "benefit": 91.7,
    "risk": 5.0,
    "benefit_theme": 11,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 4,
    "has_positive_signal": true,
    "modifiers": [
@@ -427,7 +427,7 @@
    "benefit": 93.4,
    "risk": 5.0,
    "benefit_theme": 11,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 4,
    "has_positive_signal": true,
    "modifiers": [
@@ -606,7 +606,7 @@
    "benefit": 54.8,
    "risk": 0.5,
    "benefit_theme": 6,
-   "risk_theme": 7,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -651,7 +651,7 @@
    "benefit": 52.5,
    "risk": 1.2,
    "benefit_theme": 6,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -687,7 +687,7 @@
    "benefit": 48.0,
    "risk": 4.2,
    "benefit_theme": 6,
-   "risk_theme": 7,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -718,7 +718,7 @@
    "benefit": 52.5,
    "risk": 1.2,
    "benefit_theme": 6,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -754,7 +754,7 @@
    "benefit": 52.5,
    "risk": 1.2,
    "benefit_theme": 6,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -872,7 +872,7 @@
    "benefit": 100,
    "risk": 2.8,
    "benefit_theme": 6,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1002,7 +1002,7 @@
    "benefit": 100,
    "risk": 1.2,
    "benefit_theme": 6,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1138,7 +1138,7 @@
    "benefit": 63.2,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1329,7 +1329,7 @@
    "benefit": 34.8,
    "risk": 28.0,
    "benefit_theme": 9,
-   "risk_theme": 4,
+   "risk_theme": 10,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1435,7 +1435,7 @@
    "benefit": 99.9,
    "risk": 26.0,
    "benefit_theme": 9,
-   "risk_theme": 4,
+   "risk_theme": 10,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1539,7 +1539,7 @@
    "benefit": 99.3,
    "risk": 28.0,
    "benefit_theme": 9,
-   "risk_theme": 4,
+   "risk_theme": 10,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1651,7 +1651,7 @@
    "benefit": 79.3,
    "risk": 28.0,
    "benefit_theme": 9,
-   "risk_theme": 4,
+   "risk_theme": 10,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1763,7 +1763,7 @@
    "benefit": 46.2,
    "risk": 28.0,
    "benefit_theme": 9,
-   "risk_theme": 4,
+   "risk_theme": 10,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1861,7 +1861,7 @@
    "benefit": 34.8,
    "risk": 28.0,
    "benefit_theme": 9,
-   "risk_theme": 4,
+   "risk_theme": 10,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -1961,7 +1961,7 @@
    "benefit": 100,
    "risk": 5.0,
    "benefit_theme": 9,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -2041,7 +2041,7 @@
    "benefit": 100,
    "risk": 4.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -2145,7 +2145,7 @@
    "benefit": 100,
    "risk": 1.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -2247,7 +2247,7 @@
    "benefit": 100,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -2351,7 +2351,7 @@
    "benefit": 100,
    "risk": 2.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -2451,7 +2451,7 @@
    "benefit": 100,
    "risk": 3.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -2561,7 +2561,7 @@
    "benefit": 100,
    "risk": 3.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -2649,7 +2649,7 @@
    "benefit": 100,
    "risk": 3.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -2766,7 +2766,7 @@
    "benefit": 83.0,
    "risk": 7.0,
    "benefit_theme": 2,
-   "risk_theme": 6,
+   "risk_theme": 11,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -2840,7 +2840,7 @@
    "benefit": 49.0,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -2872,7 +2872,7 @@
    "benefit": 49.0,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -2904,7 +2904,7 @@
    "benefit": 47.0,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -2946,7 +2946,7 @@
    "benefit": 65.0,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -3030,7 +3030,7 @@
    "benefit": 66.0,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3090,7 +3090,7 @@
    "benefit": 66.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3238,7 +3238,7 @@
    "benefit": 86.6,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3310,7 +3310,7 @@
    "benefit": 77.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 5,
+   "risk_theme": 11,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3414,7 +3414,7 @@
    "benefit": 72.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3501,7 +3501,7 @@
    "benefit": 68.5,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 5,
+   "risk_theme": 11,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3561,7 +3561,7 @@
    "benefit": 75.6,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3631,7 +3631,7 @@
    "benefit": 75.6,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3761,7 +3761,7 @@
    "benefit": 87.6,
    "risk": 0,
    "benefit_theme": 2,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -3971,7 +3971,7 @@
    "benefit": 79.0,
    "risk": 15.0,
    "benefit_theme": 14,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -4059,7 +4059,7 @@
    "benefit": 73.8,
    "risk": 0,
    "benefit_theme": 14,
-   "risk_theme": 9,
+   "risk_theme": 11,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -4279,7 +4279,7 @@
    "benefit": 54.5,
    "risk": 15.0,
    "benefit_theme": 13,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -4384,7 +4384,7 @@
    "benefit": 70.0,
    "risk": 15.0,
    "benefit_theme": 13,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -4566,7 +4566,7 @@
    "benefit": 83.8,
    "risk": 0,
    "benefit_theme": 14,
-   "risk_theme": 6,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -4651,7 +4651,7 @@
    "benefit": 30.2,
    "risk": 11.2,
    "benefit_theme": 6,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -4775,7 +4775,7 @@
    "benefit": 100,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -4899,7 +4899,7 @@
    "benefit": 100,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -5023,7 +5023,7 @@
    "benefit": 100,
    "risk": 5.0,
    "benefit_theme": 10,
-   "risk_theme": 10,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -5182,7 +5182,7 @@
    "benefit": 51.0,
    "risk": 1.8,
    "benefit_theme": 6,
-   "risk_theme": 6,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -5277,7 +5277,7 @@
    "benefit": 55.0,
    "risk": 3.4,
    "benefit_theme": 4,
-   "risk_theme": 4,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -5371,7 +5371,7 @@
    "benefit": 53.6,
    "risk": 0,
    "benefit_theme": 11,
-   "risk_theme": 9,
+   "risk_theme": 13,
    "focus": 3,
    "has_positive_signal": true,
    "modifiers": [
@@ -5449,7 +5449,7 @@
    "benefit": 61.5,
    "risk": 0,
    "benefit_theme": 11,
-   "risk_theme": 9,
+   "risk_theme": 13,
    "focus": 3,
    "has_positive_signal": true,
    "modifiers": [
@@ -5587,7 +5587,7 @@
    "benefit": 47.3,
    "risk": 0,
    "benefit_theme": 11,
-   "risk_theme": 9,
+   "risk_theme": 13,
    "focus": 3,
    "has_positive_signal": true,
    "modifiers": [
@@ -5685,7 +5685,7 @@
    "benefit": 46.0,
    "risk": 6.0,
    "benefit_theme": 7,
-   "risk_theme": 5,
+   "risk_theme": 11,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -5787,7 +5787,7 @@
    "benefit": 50.3,
    "risk": 1.9,
    "benefit_theme": 7,
-   "risk_theme": 3,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -5841,7 +5841,7 @@
    "benefit": 56.0,
    "risk": 1.0,
    "benefit_theme": 7,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6029,7 +6029,7 @@
    "benefit": 56.0,
    "risk": 1.0,
    "benefit_theme": 7,
-   "risk_theme": 4,
+   "risk_theme": 11,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6077,7 +6077,7 @@
    "benefit": 49.8,
    "risk": 1.6,
    "benefit_theme": 5,
-   "risk_theme": 4,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -6152,7 +6152,7 @@
    "benefit": 63.5,
    "risk": 1.8,
    "benefit_theme": 5,
-   "risk_theme": 6,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -6248,7 +6248,7 @@
    "benefit": 73.5,
    "risk": 2.2,
    "benefit_theme": 18,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6326,7 +6326,7 @@
    "benefit": 50.0,
    "risk": 3.0,
    "benefit_theme": 18,
-   "risk_theme": 9,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6369,7 +6369,7 @@
    "benefit": 50.0,
    "risk": 4.1,
    "benefit_theme": 11,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6468,7 +6468,7 @@
    "benefit": 73.5,
    "risk": 3.5,
    "benefit_theme": 18,
-   "risk_theme": 5,
+   "risk_theme": 9,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6540,7 +6540,7 @@
    "benefit": 73.5,
    "risk": 2.2,
    "benefit_theme": 18,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6606,7 +6606,7 @@
    "benefit": 72.5,
    "risk": 1.0,
    "benefit_theme": 18,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6668,7 +6668,7 @@
    "benefit": 37.8,
    "risk": 0,
    "benefit_theme": 6,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 1,
    "has_positive_signal": true,
    "modifiers": [
@@ -6802,7 +6802,7 @@
    "benefit": 30.0,
    "risk": 9.0,
    "benefit_theme": 17,
-   "risk_theme": 3,
+   "risk_theme": 9,
    "focus": 3,
    "has_positive_signal": false,
    "modifiers": [
@@ -6860,7 +6860,7 @@
    "benefit": 30.0,
    "risk": 15.0,
    "benefit_theme": 17,
-   "risk_theme": 3,
+   "risk_theme": 9,
    "focus": 3,
    "has_positive_signal": false,
    "modifiers": [
@@ -6966,7 +6966,7 @@
    "benefit": 30.0,
    "risk": 5.0,
    "benefit_theme": 17,
-   "risk_theme": 3,
+   "risk_theme": 13,
    "focus": 3,
    "has_positive_signal": false,
    "modifiers": [
@@ -7122,7 +7122,7 @@
    "benefit": 30.0,
    "risk": 1.0,
    "benefit_theme": 17,
-   "risk_theme": 3,
+   "risk_theme": 13,
    "focus": 3,
    "has_positive_signal": false,
    "modifiers": [
@@ -7239,7 +7239,7 @@
    "benefit": 46.2,
    "risk": 5.0,
    "benefit_theme": 14,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -7327,7 +7327,7 @@
    "benefit": 28.8,
    "risk": 5.0,
    "benefit_theme": 17,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": false,
    "modifiers": [
@@ -7369,7 +7369,7 @@
    "benefit": 50.0,
    "risk": 5.0,
    "benefit_theme": 13,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -7473,7 +7473,7 @@
    "benefit": 51.2,
    "risk": 21.0,
    "benefit_theme": 13,
-   "risk_theme": 1,
+   "risk_theme": 10,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -7529,7 +7529,7 @@
    "benefit": 46.2,
    "risk": 13.0,
    "benefit_theme": 13,
-   "risk_theme": 1,
+   "risk_theme": 10,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -7669,7 +7669,7 @@
    "benefit": 48.2,
    "risk": 5.0,
    "benefit_theme": 12,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 6,
    "has_positive_signal": true,
    "modifiers": [
@@ -7711,7 +7711,7 @@
    "benefit": 72.1,
    "risk": 4.5,
    "benefit_theme": 12,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 6,
    "has_positive_signal": true,
    "modifiers": [
@@ -7777,7 +7777,7 @@
    "benefit": 49.8,
    "risk": 5.0,
    "benefit_theme": 12,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 6,
    "has_positive_signal": true,
    "modifiers": [
@@ -7829,7 +7829,7 @@
    "benefit": 69.0,
    "risk": 5.0,
    "benefit_theme": 12,
-   "risk_theme": 5,
+   "risk_theme": 13,
    "focus": 6,
    "has_positive_signal": true,
    "modifiers": [
@@ -7919,7 +7919,7 @@
    "benefit": 30.0,
    "risk": 5.0,
    "benefit_theme": 17,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 2,
    "has_positive_signal": false,
    "modifiers": [
@@ -8275,7 +8275,7 @@
    "benefit": 30.0,
    "risk": 5.0,
    "benefit_theme": 17,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 3,
    "has_positive_signal": false,
    "modifiers": [
@@ -8306,7 +8306,7 @@
    "benefit": 29.0,
    "risk": 5.0,
    "benefit_theme": 17,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 3,
    "has_positive_signal": false,
    "modifiers": [
@@ -8342,7 +8342,7 @@
    "benefit": 27.5,
    "risk": 5.0,
    "benefit_theme": 17,
-   "risk_theme": 1,
+   "risk_theme": 13,
    "focus": 3,
    "has_positive_signal": false,
    "modifiers": [
@@ -8401,7 +8401,7 @@
    "benefit": 67.5,
    "risk": 5.0,
    "benefit_theme": 6,
-   "risk_theme": 7,
+   "risk_theme": 11,
    "focus": 2,
    "has_positive_signal": true,
    "modifiers": [
@@ -9041,7 +9041,7 @@
    "benefit": 65.4,
    "risk": 21.0,
    "benefit_theme": 5,
-   "risk_theme": 1,
+   "risk_theme": 11,
    "focus": 3,
    "has_positive_signal": true,
    "modifiers": [

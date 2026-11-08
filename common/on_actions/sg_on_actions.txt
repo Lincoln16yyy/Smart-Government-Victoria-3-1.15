@@ -1,0 +1,38 @@
+# Smart Government Advisor - additive dispatchers.
+# These use the on_actions = { ... } form so vanilla entries are preserved.
+
+on_game_started_after_lobby = {
+	on_actions = { sg_game_start }
+}
+
+on_monthly_pulse_country = {
+	on_actions = { sg_monthly_country_dispatcher }
+}
+
+sg_game_start = {
+	effect = {
+		every_country = {
+			limit = { is_player = yes }
+			sg_initialize_country = yes
+		}
+	}
+}
+
+# A save the mod was added to has no journal entry and no sg_schema_version.
+# The first monthly pulse initializes it once. After a deliberate disable the
+# schema marker remains, so the advisor is not silently re-enabled.
+sg_monthly_country_dispatcher = {
+	trigger = {
+		is_player = yes
+	}
+	effect = {
+		if = {
+			limit = { NOT = { has_variable = sg_schema_version } }
+			sg_initialize_country = yes
+		}
+		else_if = {
+			limit = { has_variable = sg_enabled }
+			sg_ensure_journal_entry = yes
+		}
+	}
+}

@@ -1,0 +1,33 @@
+# Smart Government Advisor - small shared triggers.
+# All names are prefixed with sg_ so they cannot collide with other mods.
+
+sg_is_enabled = {
+	has_variable = sg_enabled
+}
+
+sg_has_top_1 = {
+	has_variable = sg_top_1_law
+}
+
+sg_has_top_2 = {
+	has_variable = sg_top_2_law
+}
+
+sg_has_top_3 = {
+	has_variable = sg_top_3_law
+}
+
+sg_has_ignored = {
+	OR = {
+		has_variable = sg_ignored_1
+		has_variable = sg_ignored_2
+		has_variable = sg_ignored_3
+	}
+}
+
+sg_can_start_enactment = {
+	is_player = yes
+	has_variable = sg_enabled
+	NOT = { enacting_any_law = yes }
+	NOT = { is_revolutionary = yes }
+}

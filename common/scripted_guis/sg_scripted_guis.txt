@@ -1,0 +1,100 @@
+# Smart Government Advisor - buttons used by the journal-entry widget.
+# All of them are country-scope and only valid while sg_enabled exists.
+
+sg_refresh_sgui = {
+	scope = country
+	is_shown = { is_player = yes has_variable = sg_enabled }
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = {
+		sg_rank_laws = yes
+	}
+}
+
+sg_disable_sgui = {
+	scope = country
+	is_shown = { is_player = yes has_variable = sg_enabled }
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = {
+		sg_disable_country = yes
+	}
+}
+
+sg_top_1_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_law }
+}
+sg_top_2_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_law }
+}
+sg_top_3_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_law }
+}
+
+sg_ignored_1_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_ignored_1 }
+}
+sg_ignored_2_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_ignored_2 }
+}
+sg_ignored_3_visible_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_ignored_3 }
+}
+
+# Enact buttons. The actual effect re-checks the law's availability and the
+# enacting_any_law guard, so a recommendation cannot bypass normal enactment.
+sg_enact_1_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_index }
+	is_valid = { sg_can_start_enactment = yes has_variable = sg_top_1_index }
+	effect = { sg_enact_top_1 = yes }
+}
+sg_enact_2_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_index }
+	is_valid = { sg_can_start_enactment = yes has_variable = sg_top_2_index }
+	effect = { sg_enact_top_2 = yes }
+}
+sg_enact_3_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_index }
+	is_valid = { sg_can_start_enactment = yes has_variable = sg_top_3_index }
+	effect = { sg_enact_top_3 = yes }
+}
+
+sg_ignore_1_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_1_index }
+	is_valid = { is_player = yes has_variable = sg_enabled has_variable = sg_top_1_index }
+	effect = { sg_ignore_top_1 = yes }
+}
+sg_ignore_2_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_2_index }
+	is_valid = { is_player = yes has_variable = sg_enabled has_variable = sg_top_2_index }
+	effect = { sg_ignore_top_2 = yes }
+}
+sg_ignore_3_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_top_3_index }
+	is_valid = { is_player = yes has_variable = sg_enabled has_variable = sg_top_3_index }
+	effect = { sg_ignore_top_3 = yes }
+}
+
+sg_clear_ignored_sgui = {
+	scope = country
+	is_shown = { sg_has_ignored = yes }
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = { sg_clear_ignored = yes }
+}
+
+sg_diagnostics_sgui = {
+	scope = country
+	is_shown = { is_player = yes has_variable = sg_enabled }
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = { sg_log_diagnostics = yes }
+}

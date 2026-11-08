@@ -48,6 +48,8 @@ sg_initialize_country = {
 # that was deliberately disabled is never auto-enabled again.
 sg_disable_country = {
 	remove_variable = sg_enabled
+	remove_variable = sg_last_refresh_year
+	remove_variable = sg_last_refresh_month
 	sg_clear_rank = yes
 	remove_variable = sg_ignored_1
 	remove_variable = sg_ignored_2

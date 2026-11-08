@@ -145,3 +145,12 @@ Installation performed:
 - The environment does not provide reliable graphical control for loading that
   save and clicking the journal actions, so enact/ignore/disable/re-enable
   behavior remains unverified interactively.
+
+## Phase 7 — advisor status UX
+
+- Recorded the game month and year at the shared ranking refresh point, so both
+  monthly reassessments and the manual refresh button update the displayed
+  timestamp.
+- Added a player-facing last-refresh line to the journal widget.
+- Reworded the empty state to explicitly say that no available law can be
+  recommended and explain the active, blocked and ignored cases.

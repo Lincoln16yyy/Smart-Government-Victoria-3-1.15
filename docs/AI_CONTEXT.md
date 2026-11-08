@@ -196,6 +196,8 @@ Other variables:
 - `sg_schema_version` — schema marker (2; never removed on disable)
 - `sg_ignored_1..3` — stable numeric law ids
 - `sg_ignored_selected` — short-lived helper for the ignore effect
+- `sg_last_refresh_year` / `sg_last_refresh_month` — game date recorded by
+  every monthly or manual ranking refresh
 - `sg_debug` — optional; enables lifecycle `debug_log` messages
 
 ---
@@ -267,6 +269,7 @@ three components separately so the player can see why a law is ranked.
 `tools/build_gui.py`. It is a 500-pixel vertical widget with:
 
 - status bar: title, "advisor active", Disable button, refresh button
+- last-refresh line showing the game month and year of the latest ranking
 - explanatory header
 - three recommendation rows, each with:
   - rank, law name and group (hover = real effects + blocking requirements)
@@ -275,7 +278,8 @@ three components separately so the player can see why a law is ranked.
   - risk sentence
   - one Enact and one Ignore button **per law**, visible only for the law the
     row currently displays
-- empty state
+- explicit empty state explaining that no available law can currently be
+  recommended and pointing to requirements, active laws and ignored laws
 - footer: Clear ignored, Diagnostics, "recommendations only" note
 
 Law names and tooltips are generated per stable numeric id. A row shows the

@@ -3,6 +3,8 @@
 
 sg_law_available_law_mass_conscription = {
 	NOT = { has_law_or_variant = law_type:law_mass_conscription }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_mass_conscription)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_strict_edo_system
@@ -14,6 +16,8 @@ sg_law_available_law_mass_conscription = {
 
 sg_law_available_law_national_militia = {
 	NOT = { has_law_or_variant = law_type:law_national_militia }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_national_militia)" >= define:LAW_MIN_SUCCESS_CHANCE
 			OR = {
 				is_power_bloc_leader = no
 				power_bloc ?= {
@@ -31,6 +35,8 @@ sg_law_available_law_national_militia = {
 
 sg_law_available_law_peasant_levies = {
 	NOT = { has_law_or_variant = law_type:law_peasant_levies }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_peasant_levies)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				country_has_primary_culture = cu:japanese
 			}
@@ -38,6 +44,8 @@ sg_law_available_law_peasant_levies = {
 
 sg_law_available_law_professional_army = {
 	NOT = { has_law_or_variant = law_type:law_professional_army }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_professional_army)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_strict_edo_system
@@ -49,6 +57,8 @@ sg_law_available_law_professional_army = {
 
 sg_law_available_law_revolutionary_guard = {
 	NOT = { has_law_or_variant = law_type:law_revolutionary_guard }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_revolutionary_guard)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_council_republic
 		has_law_or_variant = law_type:law_factory_councils
@@ -58,15 +68,21 @@ sg_law_available_law_revolutionary_guard = {
 
 sg_law_available_law_warrior_caste = {
 	NOT = { has_law_or_variant = law_type:law_warrior_caste }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_warrior_caste)" >= define:LAW_MIN_SUCCESS_CHANCE
 			country_has_primary_culture = cu:japanese
 }
 
 sg_law_available_law_appointed_bureaucrats = {
 	NOT = { has_law_or_variant = law_type:law_appointed_bureaucrats }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_appointed_bureaucrats)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_communal_administration = {
 	NOT = { has_law_or_variant = law_type:law_communal_administration }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_communal_administration)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_council_republic
 		has_law_or_variant = law_type:law_factory_councils
@@ -76,6 +92,8 @@ sg_law_available_law_communal_administration = {
 
 sg_law_available_law_crownland_diets = {
 	NOT = { has_law_or_variant = law_type:law_crownland_diets }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_crownland_diets)" >= define:LAW_MIN_SUCCESS_CHANCE
 			OR = {
 				c:AUS ?= this 
 				AND = {
@@ -92,6 +110,8 @@ sg_law_available_law_crownland_diets = {
 
 sg_law_available_law_elected_bureaucrats = {
 	NOT = { has_law_or_variant = law_type:law_elected_bureaucrats }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_elected_bureaucrats)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_technocracy
@@ -102,6 +122,8 @@ sg_law_available_law_elected_bureaucrats = {
 
 sg_law_available_law_hereditary_bureaucrats = {
 	NOT = { has_law_or_variant = law_type:law_hereditary_bureaucrats }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_hereditary_bureaucrats)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOR = {
 				c:AUS ?= this 
 				AND = {
@@ -118,10 +140,14 @@ sg_law_available_law_hereditary_bureaucrats = {
 
 sg_law_available_law_military_bureaucrats = {
 	NOT = { has_law_or_variant = law_type:law_military_bureaucrats }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_military_bureaucrats)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_affirmative_action = {
 	NOT = { has_law_or_variant = law_type:law_affirmative_action }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_affirmative_action)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_slavery_banned
 	}
@@ -129,22 +155,32 @@ sg_law_available_law_affirmative_action = {
 
 sg_law_available_law_hindu_caste_codified = {
 	NOT = { has_law_or_variant = law_type:law_hindu_caste_codified }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_hindu_caste_codified)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_hindu_caste_enforced = {
 	NOT = { has_law_or_variant = law_type:law_hindu_caste_enforced }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_hindu_caste_enforced)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_hindu_caste_not_enforced = {
 	NOT = { has_law_or_variant = law_type:law_hindu_caste_not_enforced }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_hindu_caste_not_enforced)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_child_labor_allowed = {
 	NOT = { has_law_or_variant = law_type:law_child_labor_allowed }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_child_labor_allowed)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_compulsory_primary_school = {
 	NOT = { has_law_or_variant = law_type:law_compulsory_primary_school }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_compulsory_primary_school)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_no_schools
@@ -156,11 +192,15 @@ sg_law_available_law_compulsory_primary_school = {
 
 sg_law_available_law_restricted_child_labor = {
 	NOT = { has_law_or_variant = law_type:law_restricted_child_labor }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_restricted_child_labor)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = labor_movement
 }
 
 sg_law_available_law_caesaropapism = {
 	NOT = { has_law_or_variant = law_type:law_caesaropapism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_caesaropapism)" >= define:LAW_MIN_SUCCESS_CHANCE
 			OR = {
 				c:RUS ?= this
 				AND = {
@@ -176,6 +216,8 @@ sg_law_available_law_caesaropapism = {
 
 sg_law_available_law_freedom_of_conscience = {
 	NOT = { has_law_or_variant = law_type:law_freedom_of_conscience }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_freedom_of_conscience)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_theocracy
@@ -186,6 +228,8 @@ sg_law_available_law_freedom_of_conscience = {
 
 sg_law_available_law_millet_system = {
 	NOT = { has_law_or_variant = law_type:law_millet_system }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_millet_system)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:TUR ?= this
 	OR = {
 		has_law_or_variant = law_type:law_theocracy
@@ -196,6 +240,8 @@ sg_law_available_law_millet_system = {
 
 sg_law_available_law_people_of_the_book = {
 	NOT = { has_law_or_variant = law_type:law_people_of_the_book }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_people_of_the_book)" >= define:LAW_MIN_SUCCESS_CHANCE
 			country_is_islamic = yes
 			NOT = {
 				c:TUR ?= this 
@@ -209,6 +255,8 @@ sg_law_available_law_people_of_the_book = {
 
 sg_law_available_law_state_atheism = {
 	NOT = { has_law_or_variant = law_type:law_state_atheism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_state_atheism)" >= define:LAW_MIN_SUCCESS_CHANCE
 			ig:ig_devout ?= {
 				is_in_government = no
 			}
@@ -228,6 +276,8 @@ sg_law_available_law_state_atheism = {
 
 sg_law_available_law_state_religion = {
 	NOT = { has_law_or_variant = law_type:law_state_religion }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_state_religion)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOR = { 
 				has_law = law_type:law_millet_system
 				has_law = law_type:law_people_of_the_book
@@ -249,6 +299,8 @@ sg_law_available_law_state_religion = {
 
 sg_law_available_law_total_separation = {
 	NOT = { has_law_or_variant = law_type:law_total_separation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_total_separation)" >= define:LAW_MIN_SUCCESS_CHANCE
 			OR = {
 				is_power_bloc_leader = no
 				power_bloc ?= {
@@ -265,6 +317,8 @@ sg_law_available_law_total_separation = {
 
 sg_law_available_law_cultural_exclusion = {
 	NOT = { has_law_or_variant = law_type:law_cultural_exclusion }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_cultural_exclusion)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_slavery_banned
 		has_law_or_variant = law_type:law_debt_slavery
@@ -274,11 +328,15 @@ sg_law_available_law_cultural_exclusion = {
 
 sg_law_available_law_ethnostate = {
 	NOT = { has_law_or_variant = law_type:law_ethnostate }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_ethnostate)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = nationalism
 }
 
 sg_law_available_law_multicultural = {
 	NOT = { has_law_or_variant = law_type:law_multicultural }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_multicultural)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_slavery_banned
 	}
@@ -287,10 +345,14 @@ sg_law_available_law_multicultural = {
 
 sg_law_available_law_national_supremacy = {
 	NOT = { has_law_or_variant = law_type:law_national_supremacy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_national_supremacy)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_official_nationality = {
 	NOT = { has_law_or_variant = law_type:law_official_nationality }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_official_nationality)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:RUS ?= this
 	OR = {
 		has_law_or_variant = law_type:law_monarchy
@@ -301,10 +363,14 @@ sg_law_available_law_official_nationality = {
 
 sg_law_available_law_racial_segregation = {
 	NOT = { has_law_or_variant = law_type:law_racial_segregation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_racial_segregation)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_subjecthood = {
 	NOT = { has_law_or_variant = law_type:law_subjecthood }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_subjecthood)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				c:RUS ?= this 
 			}
@@ -318,6 +384,8 @@ sg_law_available_law_subjecthood = {
 
 sg_law_available_law_colonial_exploitation = {
 	NOT = { has_law_or_variant = law_type:law_colonial_exploitation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_colonial_exploitation)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_sakoku
@@ -328,6 +396,8 @@ sg_law_available_law_colonial_exploitation = {
 
 sg_law_available_law_colonial_resettlement = {
 	NOT = { has_law_or_variant = law_type:law_colonial_resettlement }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_colonial_resettlement)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_sakoku
@@ -338,6 +408,8 @@ sg_law_available_law_colonial_resettlement = {
 
 sg_law_available_law_frontier_colonization = {
 	NOT = { has_law_or_variant = law_type:law_frontier_colonization }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_frontier_colonization)" >= define:LAW_MIN_SUCCESS_CHANCE
 			OR = {
 				AND = {
 					country_is_colonial_or_company = yes
@@ -364,6 +436,8 @@ sg_law_available_law_frontier_colonization = {
 
 sg_law_available_law_internal_colonization = {
 	NOT = { has_law_or_variant = law_type:law_internal_colonization }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_internal_colonization)" >= define:LAW_MIN_SUCCESS_CHANCE
 			OR = {
 				is_country_type = colonial
 				any_scope_state = {
@@ -375,6 +449,8 @@ sg_law_available_law_internal_colonization = {
 
 sg_law_available_law_no_colonial_affairs = {
 	NOT = { has_law_or_variant = law_type:law_no_colonial_affairs }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_colonial_affairs)" >= define:LAW_MIN_SUCCESS_CHANCE
 			custom_tooltip = {
 				modifier:country_disallow_law_no_colonial_affairs_bool = no
 				text = disallow_law_no_colonial_affairs_tt
@@ -383,6 +459,8 @@ sg_law_available_law_no_colonial_affairs = {
 
 sg_law_available_law_anarchy = {
 	NOT = { has_law_or_variant = law_type:law_anarchy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_anarchy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			trigger_if = {
 				limit = {
 					c:BIC ?= ROOT
@@ -402,6 +480,8 @@ sg_law_available_law_anarchy = {
 
 sg_law_available_law_autocracy = {
 	NOT = { has_law_or_variant = law_type:law_autocracy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_autocracy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOR = { 
 				has_law = law_type:law_neo_absolutism
 				has_law = law_type:law_bakufu
@@ -426,6 +506,8 @@ sg_law_available_law_autocracy = {
 
 sg_law_available_law_bakufu = {
 	NOT = { has_law_or_variant = law_type:law_bakufu }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_bakufu)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:JAP ?= this
 			NOT = {
 				has_law = law_type:law_autocracy
@@ -438,6 +520,8 @@ sg_law_available_law_bakufu = {
 
 sg_law_available_law_census_voting = {
 	NOT = { has_law_or_variant = law_type:law_census_voting }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_census_voting)" >= define:LAW_MIN_SUCCESS_CHANCE
 			trigger_if = {
 				limit = {
 					c:BIC ?= ROOT
@@ -460,6 +544,8 @@ sg_law_available_law_census_voting = {
 
 sg_law_available_law_elder_council = {
 	NOT = { has_law_or_variant = law_type:law_elder_council }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_elder_council)" >= define:LAW_MIN_SUCCESS_CHANCE
 			is_country_type = decentralized
 	OR = {
 		has_law_or_variant = law_type:law_chiefdom
@@ -468,6 +554,8 @@ sg_law_available_law_elder_council = {
 
 sg_law_available_law_labour_suffrage = {
 	NOT = { has_law_or_variant = law_type:law_labour_suffrage }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_labour_suffrage)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_council_republic
 	}
@@ -476,6 +564,8 @@ sg_law_available_law_labour_suffrage = {
 
 sg_law_available_law_landed_voting = {
 	NOT = { has_law_or_variant = law_type:law_landed_voting }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_landed_voting)" >= define:LAW_MIN_SUCCESS_CHANCE
 			trigger_if = {
 				limit = {
 					c:BIC ?= ROOT
@@ -498,6 +588,8 @@ sg_law_available_law_landed_voting = {
 
 sg_law_available_law_neo_absolutism = {
 	NOT = { has_law_or_variant = law_type:law_neo_absolutism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_neo_absolutism)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:AUS ?= this
 			has_global_variable = neo_absolutism_victory
 	OR = {
@@ -507,6 +599,8 @@ sg_law_available_law_neo_absolutism = {
 
 sg_law_available_law_oligarchy = {
 	NOT = { has_law_or_variant = law_type:law_oligarchy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_oligarchy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				country_has_primary_culture = cu:romanian
 				is_subject = yes
@@ -528,6 +622,8 @@ sg_law_available_law_oligarchy = {
 
 sg_law_available_law_organic_regulation = {
 	NOT = { has_law_or_variant = law_type:law_organic_regulation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_organic_regulation)" >= define:LAW_MIN_SUCCESS_CHANCE
 			country_has_primary_culture = cu:romanian
 			is_subject = yes
 			country_has_primary_culture = cu:romanian
@@ -536,6 +632,8 @@ sg_law_available_law_organic_regulation = {
 
 sg_law_available_law_single_party_state = {
 	NOT = { has_law_or_variant = law_type:law_single_party_state }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_single_party_state)" >= define:LAW_MIN_SUCCESS_CHANCE
 			OR = {
 				custom_tooltip = {
 					text = ruler_in_party_tt
@@ -569,6 +667,8 @@ sg_law_available_law_single_party_state = {
 
 sg_law_available_law_technocracy = {
 	NOT = { has_law_or_variant = law_type:law_technocracy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_technocracy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			trigger_if = {
 				limit = {
 					c:BIC ?= ROOT
@@ -585,6 +685,8 @@ sg_law_available_law_technocracy = {
 
 sg_law_available_law_universal_suffrage = {
 	NOT = { has_law_or_variant = law_type:law_universal_suffrage }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_universal_suffrage)" >= define:LAW_MIN_SUCCESS_CHANCE
 			trigger_if = {
 				limit = {
 					c:BIC ?= ROOT
@@ -607,6 +709,8 @@ sg_law_available_law_universal_suffrage = {
 
 sg_law_available_law_wealth_voting = {
 	NOT = { has_law_or_variant = law_type:law_wealth_voting }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_wealth_voting)" >= define:LAW_MIN_SUCCESS_CHANCE
 			trigger_if = {
 				limit = {
 					c:BIC ?= ROOT
@@ -629,6 +733,8 @@ sg_law_available_law_wealth_voting = {
 
 sg_law_available_law_agrarianism = {
 	NOT = { has_law_or_variant = law_type:law_agrarianism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_agrarianism)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_anarchy
@@ -641,6 +747,8 @@ sg_law_available_law_agrarianism = {
 
 sg_law_available_law_command_economy = {
 	NOT = { has_law_or_variant = law_type:law_command_economy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_command_economy)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_serfdom
@@ -662,6 +770,8 @@ sg_law_available_law_command_economy = {
 
 sg_law_available_law_cooperative_ownership = {
 	NOT = { has_law_or_variant = law_type:law_cooperative_ownership }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_cooperative_ownership)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_serfdom
@@ -676,6 +786,8 @@ sg_law_available_law_cooperative_ownership = {
 
 sg_law_available_law_extraction_economy = {
 	NOT = { has_law_or_variant = law_type:law_extraction_economy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_extraction_economy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			is_subject = yes
 	NOT = {
 		OR = {
@@ -688,6 +800,8 @@ sg_law_available_law_extraction_economy = {
 
 sg_law_available_law_industry_banned = {
 	NOT = { has_law_or_variant = law_type:law_industry_banned }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_industry_banned)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_anarchy
@@ -699,6 +813,8 @@ sg_law_available_law_industry_banned = {
 
 sg_law_available_law_interventionism = {
 	NOT = { has_law_or_variant = law_type:law_interventionism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_interventionism)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_serfdom
@@ -712,6 +828,8 @@ sg_law_available_law_interventionism = {
 
 sg_law_available_law_laissez_faire = {
 	NOT = { has_law_or_variant = law_type:law_laissez_faire }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_laissez_faire)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_serfdom
@@ -727,6 +845,8 @@ sg_law_available_law_laissez_faire = {
 
 sg_law_available_law_traditionalism = {
 	NOT = { has_law_or_variant = law_type:law_traditionalism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_traditionalism)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_per_capita_based_taxation
@@ -740,18 +860,26 @@ sg_law_available_law_traditionalism = {
 
 sg_law_available_law_intermediate_edo_system = {
 	NOT = { has_law_or_variant = law_type:law_intermediate_edo_system }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_intermediate_edo_system)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_lax_edo_system = {
 	NOT = { has_law_or_variant = law_type:law_lax_edo_system }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_lax_edo_system)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_strict_edo_system = {
 	NOT = { has_law_or_variant = law_type:law_strict_edo_system }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_strict_edo_system)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_no_schools = {
 	NOT = { has_law_or_variant = law_type:law_no_schools }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_schools)" >= define:LAW_MIN_SUCCESS_CHANCE
 			custom_tooltip = {
 				modifier:country_disallow_law_no_schools_bool = no
 				text = disallow_law_no_schools_tt
@@ -765,6 +893,8 @@ sg_law_available_law_no_schools = {
 
 sg_law_available_law_private_schools = {
 	NOT = { has_law_or_variant = law_type:law_private_schools }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_private_schools)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				c:JAP ?= this
 				has_law = law_type:law_terakoya
@@ -779,6 +909,8 @@ sg_law_available_law_private_schools = {
 
 sg_law_available_law_public_schools = {
 	NOT = { has_law_or_variant = law_type:law_public_schools }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_public_schools)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_state_religion
@@ -790,6 +922,8 @@ sg_law_available_law_public_schools = {
 
 sg_law_available_law_religious_schools = {
 	NOT = { has_law_or_variant = law_type:law_religious_schools }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_religious_schools)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_total_separation
@@ -802,6 +936,8 @@ sg_law_available_law_religious_schools = {
 
 sg_law_available_law_terakoya = {
 	NOT = { has_law_or_variant = law_type:law_terakoya }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_terakoya)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:JAP ?= this
 			NOT = {
 				has_law = law_type:law_private_schools
@@ -811,25 +947,35 @@ sg_law_available_law_terakoya = {
 
 sg_law_available_law_censorship = {
 	NOT = { has_law_or_variant = law_type:law_censorship }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_censorship)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = law_enforcement
 }
 
 sg_law_available_law_outlawed_dissent = {
 	NOT = { has_law_or_variant = law_type:law_outlawed_dissent }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_outlawed_dissent)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = political_agitation
 }
 
 sg_law_available_law_protected_speech = {
 	NOT = { has_law_or_variant = law_type:law_protected_speech }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_protected_speech)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = human_rights
 }
 
 sg_law_available_law_right_of_assembly = {
 	NOT = { has_law_or_variant = law_type:law_right_of_assembly }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_right_of_assembly)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_chiefdom = {
 	NOT = { has_law_or_variant = law_type:law_chiefdom }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_chiefdom)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -844,6 +990,8 @@ sg_law_available_law_chiefdom = {
 
 sg_law_available_law_colonial_administration = {
 	NOT = { has_law_or_variant = law_type:law_colonial_administration }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_colonial_administration)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -863,6 +1011,8 @@ sg_law_available_law_colonial_administration = {
 
 sg_law_available_law_corporate_state = {
 	NOT = { has_law_or_variant = law_type:law_corporate_state }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_corporate_state)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -888,6 +1038,8 @@ sg_law_available_law_corporate_state = {
 
 sg_law_available_law_council_republic = {
 	NOT = { has_law_or_variant = law_type:law_council_republic }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_council_republic)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -921,6 +1073,8 @@ sg_law_available_law_council_republic = {
 
 sg_law_available_law_monarchy = {
 	NOT = { has_law_or_variant = law_type:law_monarchy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_monarchy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -947,6 +1101,8 @@ sg_law_available_law_monarchy = {
 
 sg_law_available_law_parliamentary_republic = {
 	NOT = { has_law_or_variant = law_type:law_parliamentary_republic }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_parliamentary_republic)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -977,6 +1133,8 @@ sg_law_available_law_parliamentary_republic = {
 
 sg_law_available_law_presidential_republic = {
 	NOT = { has_law_or_variant = law_type:law_presidential_republic }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_presidential_republic)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -1002,6 +1160,8 @@ sg_law_available_law_presidential_republic = {
 
 sg_law_available_law_social_monarchy = {
 	NOT = { has_law_or_variant = law_type:law_social_monarchy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_social_monarchy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -1027,6 +1187,8 @@ sg_law_available_law_social_monarchy = {
 
 sg_law_available_law_theocracy = {
 	NOT = { has_law_or_variant = law_type:law_theocracy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_theocracy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				is_subject = yes
 				OR = {
@@ -1056,30 +1218,42 @@ sg_law_available_law_theocracy = {
 
 sg_law_available_law_charitable_health_system = {
 	NOT = { has_law_or_variant = law_type:law_charitable_health_system }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_charitable_health_system)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = medical_degrees
 }
 
 sg_law_available_law_no_health_system = {
 	NOT = { has_law_or_variant = law_type:law_no_health_system }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_health_system)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_private_health_insurance = {
 	NOT = { has_law_or_variant = law_type:law_private_health_insurance }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_private_health_insurance)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = pharmaceuticals
 }
 
 sg_law_available_law_public_health_insurance = {
 	NOT = { has_law_or_variant = law_type:law_public_health_insurance }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_public_health_insurance)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = pharmaceuticals
 }
 
 sg_law_available_law_extraordinary_commission = {
 	NOT = { has_law_or_variant = law_type:law_extraordinary_commission }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_extraordinary_commission)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = political_agitation
 }
 
 sg_law_available_law_guaranteed_liberties = {
 	NOT = { has_law_or_variant = law_type:law_guaranteed_liberties }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_guaranteed_liberties)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_right_of_assembly
 		has_law_or_variant = law_type:law_protected_speech
@@ -1088,15 +1262,21 @@ sg_law_available_law_guaranteed_liberties = {
 
 sg_law_available_law_national_guard = {
 	NOT = { has_law_or_variant = law_type:law_national_guard }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_national_guard)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = law_enforcement
 }
 
 sg_law_available_law_no_home_affairs = {
 	NOT = { has_law_or_variant = law_type:law_no_home_affairs }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_home_affairs)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_okhrana = {
 	NOT = { has_law_or_variant = law_type:law_okhrana }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_okhrana)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:RUS ?= this
 			country_has_monarchy_law = yes
 	has_technology_researched = central_archives
@@ -1104,6 +1284,8 @@ sg_law_available_law_okhrana = {
 
 sg_law_available_law_secret_police = {
 	NOT = { has_law_or_variant = law_type:law_secret_police }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_secret_police)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NAND = {
 				c:RUS ?= this
 				country_has_monarchy_law = yes
@@ -1113,6 +1295,8 @@ sg_law_available_law_secret_police = {
 
 sg_law_available_law_shinsengumi = {
 	NOT = { has_law_or_variant = law_type:law_shinsengumi }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_shinsengumi)" >= define:LAW_MIN_SUCCESS_CHANCE
 			country_has_primary_culture = cu:japanese
 	OR = {
 		has_law_or_variant = law_type:law_bakufu
@@ -1122,6 +1306,8 @@ sg_law_available_law_shinsengumi = {
 
 sg_law_available_law_third_section = {
 	NOT = { has_law_or_variant = law_type:law_third_section }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_third_section)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:RUS ?= this
 			country_has_monarchy_law = yes
 			NAND = {
@@ -1135,33 +1321,47 @@ sg_law_available_law_third_section = {
 
 sg_law_available_law_no_workers_rights = {
 	NOT = { has_law_or_variant = law_type:law_no_workers_rights }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_workers_rights)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_regulatory_bodies = {
 	NOT = { has_law_or_variant = law_type:law_regulatory_bodies }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_regulatory_bodies)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = labor_movement
 }
 
 sg_law_available_law_worker_protections = {
 	NOT = { has_law_or_variant = law_type:law_worker_protections }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_worker_protections)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = human_rights
 }
 
 sg_law_available_law_anti_strike_laws = {
 	NOT = { has_law_or_variant = law_type:law_anti_strike_laws }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_anti_strike_laws)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_combination_acts = {
 	NOT = { has_law_or_variant = law_type:law_combination_acts }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_combination_acts)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_corporatized_unions = {
 	NOT = { has_law_or_variant = law_type:law_corporatized_unions }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_corporatized_unions)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = corporatism
 }
 
 sg_law_available_law_factory_councils = {
 	NOT = { has_law_or_variant = law_type:law_factory_councils }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_factory_councils)" >= define:LAW_MIN_SUCCESS_CHANCE
 			is_revolutionary = yes
 			custom_tooltip = {
 				text = will_automatically_activate_on_labor_revolution_tt
@@ -1172,6 +1372,8 @@ sg_law_available_law_factory_councils = {
 
 sg_law_available_law_guild_system = {
 	NOT = { has_law_or_variant = law_type:law_guild_system }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_guild_system)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_laissez_faire
@@ -1181,10 +1383,14 @@ sg_law_available_law_guild_system = {
 
 sg_law_available_law_right_to_associate = {
 	NOT = { has_law_or_variant = law_type:law_right_to_associate }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_right_to_associate)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_collectivized_agriculture = {
 	NOT = { has_law_or_variant = law_type:law_collectivized_agriculture }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_collectivized_agriculture)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_command_economy
 		has_law_or_variant = law_type:law_cooperative_ownership
@@ -1194,6 +1400,8 @@ sg_law_available_law_collectivized_agriculture = {
 
 sg_law_available_law_commercialized_agriculture = {
 	NOT = { has_law_or_variant = law_type:law_commercialized_agriculture }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_commercialized_agriculture)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_traditionalism
@@ -1204,6 +1412,8 @@ sg_law_available_law_commercialized_agriculture = {
 
 sg_law_available_law_expanded_latifundias = {
 	NOT = { has_law_or_variant = law_type:law_expanded_latifundias }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_expanded_latifundias)" >= define:LAW_MIN_SUCCESS_CHANCE
 			any_primary_culture = {
 				OR = {
 					has_discrimination_trait = language_hispanophone
@@ -1224,6 +1434,8 @@ sg_law_available_law_expanded_latifundias = {
 
 sg_law_available_law_homesteading = {
 	NOT = { has_law_or_variant = law_type:law_homesteading }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_homesteading)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_law = law_type:law_peasant_proprietorship
 			}
@@ -1237,6 +1449,8 @@ sg_law_available_law_homesteading = {
 
 sg_law_available_law_latifundias = {
 	NOT = { has_law_or_variant = law_type:law_latifundias }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_latifundias)" >= define:LAW_MIN_SUCCESS_CHANCE
 			any_primary_culture = {
 				OR = {
 					has_discrimination_trait = language_hispanophone
@@ -1262,6 +1476,8 @@ sg_law_available_law_latifundias = {
 
 sg_law_available_law_manorialism = {
 	NOT = { has_law_or_variant = law_type:law_manorialism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_manorialism)" >= define:LAW_MIN_SUCCESS_CHANCE
 			OR = {
 				c:AUS ?= this 
 				AND = {
@@ -1280,6 +1496,8 @@ sg_law_available_law_manorialism = {
 
 sg_law_available_law_peasant_proprietorship = {
 	NOT = { has_law_or_variant = law_type:law_peasant_proprietorship }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_peasant_proprietorship)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_law = law_type:law_homesteading
 			}
@@ -1293,6 +1511,8 @@ sg_law_available_law_peasant_proprietorship = {
 
 sg_law_available_law_serfdom = {
 	NOT = { has_law_or_variant = law_type:law_serfdom }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_serfdom)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOR = {
 				c:AUS ?= this 
 				AND = {
@@ -1317,6 +1537,8 @@ sg_law_available_law_serfdom = {
 
 sg_law_available_law_tenant_farmers = {
 	NOT = { has_law_or_variant = law_type:law_tenant_farmers }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_tenant_farmers)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOR = {
 				has_law = law_type:law_latifundias
 				has_law = law_type:law_expanded_latifundias
@@ -1325,10 +1547,14 @@ sg_law_available_law_tenant_farmers = {
 
 sg_law_available_law_closed_borders = {
 	NOT = { has_law_or_variant = law_type:law_closed_borders }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_closed_borders)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_migration_controls = {
 	NOT = { has_law_or_variant = law_type:law_migration_controls }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_migration_controls)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_sakoku
@@ -1338,6 +1564,8 @@ sg_law_available_law_migration_controls = {
 
 sg_law_available_law_no_migration_controls = {
 	NOT = { has_law_or_variant = law_type:law_no_migration_controls }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_migration_controls)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_sakoku
@@ -1347,6 +1575,8 @@ sg_law_available_law_no_migration_controls = {
 
 sg_law_available_law_diplomatic_navy = {
 	NOT = { has_law_or_variant = law_type:law_diplomatic_navy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_diplomatic_navy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			any_scope_state = {
 				is_coastal = yes
 			}
@@ -1358,6 +1588,8 @@ sg_law_available_law_diplomatic_navy = {
 
 sg_law_available_law_jeune_ecole = {
 	NOT = { has_law_or_variant = law_type:law_jeune_ecole }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_jeune_ecole)" >= define:LAW_MIN_SUCCESS_CHANCE
 			any_scope_state = {
 				is_coastal = yes
 			}
@@ -1369,6 +1601,8 @@ sg_law_available_law_jeune_ecole = {
 
 sg_law_available_law_merchant_navy = {
 	NOT = { has_law_or_variant = law_type:law_merchant_navy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_merchant_navy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			any_scope_state = {
 				is_coastal = yes
 			}
@@ -1379,6 +1613,8 @@ sg_law_available_law_merchant_navy = {
 
 sg_law_available_law_professional_navy = {
 	NOT = { has_law_or_variant = law_type:law_professional_navy }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_professional_navy)" >= define:LAW_MIN_SUCCESS_CHANCE
 			any_scope_state = {
 				is_coastal = yes
 			}
@@ -1390,21 +1626,29 @@ sg_law_available_law_professional_navy = {
 
 sg_law_available_law_dedicated_police = {
 	NOT = { has_law_or_variant = law_type:law_dedicated_police }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_dedicated_police)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = law_enforcement
 }
 
 sg_law_available_law_local_police = {
 	NOT = { has_law_or_variant = law_type:law_local_police }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_local_police)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = tech_bureaucracy
 }
 
 sg_law_available_law_militarized_police = {
 	NOT = { has_law_or_variant = law_type:law_militarized_police }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_militarized_police)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = mass_surveillance
 }
 
 sg_law_available_law_no_police = {
 	NOT = { has_law_or_variant = law_type:law_no_police }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_police)" >= define:LAW_MIN_SUCCESS_CHANCE
 			custom_tooltip = {
 				modifier:country_disallow_law_no_police_bool = no
 				text = disallow_law_no_police_tt
@@ -1413,6 +1657,8 @@ sg_law_available_law_no_police = {
 
 sg_law_available_law_no_womens_rights = {
 	NOT = { has_law_or_variant = law_type:law_no_womens_rights }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_womens_rights)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_law = law_type:law_women_in_the_fields
 			}
@@ -1420,6 +1666,8 @@ sg_law_available_law_no_womens_rights = {
 
 sg_law_available_law_women_in_the_fields = {
 	NOT = { has_law_or_variant = law_type:law_women_in_the_fields }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_women_in_the_fields)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:MON ?= this
 			NOR = {
 				has_law = law_type:law_no_womens_rights
@@ -1431,15 +1679,21 @@ sg_law_available_law_women_in_the_fields = {
 
 sg_law_available_law_women_in_the_workplace = {
 	NOT = { has_law_or_variant = law_type:law_women_in_the_workplace }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_women_in_the_workplace)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = feminism
 }
 
 sg_law_available_law_women_own_property = {
 	NOT = { has_law_or_variant = law_type:law_women_own_property }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_women_own_property)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_womens_suffrage = {
 	NOT = { has_law_or_variant = law_type:law_womens_suffrage }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_womens_suffrage)" >= define:LAW_MIN_SUCCESS_CHANCE
 	OR = {
 		has_law_or_variant = law_type:law_census_voting
 		has_law_or_variant = law_type:law_landed_voting
@@ -1454,6 +1708,8 @@ sg_law_available_law_womens_suffrage = {
 
 sg_law_available_law_colonial_slavery = {
 	NOT = { has_law_or_variant = law_type:law_colonial_slavery }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_colonial_slavery)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_slavery_ban
 			}
@@ -1464,6 +1720,8 @@ sg_law_available_law_colonial_slavery = {
 
 sg_law_available_law_debt_slavery = {
 	NOT = { has_law_or_variant = law_type:law_debt_slavery }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_debt_slavery)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_slavery_ban
 			}
@@ -1477,6 +1735,8 @@ sg_law_available_law_debt_slavery = {
 
 sg_law_available_law_legacy_slavery = {
 	NOT = { has_law_or_variant = law_type:law_legacy_slavery }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_legacy_slavery)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_slavery_ban
 			}
@@ -1487,6 +1747,8 @@ sg_law_available_law_legacy_slavery = {
 
 sg_law_available_law_slave_trade = {
 	NOT = { has_law_or_variant = law_type:law_slave_trade }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_slave_trade)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_slavery_ban
 			}
@@ -1501,6 +1763,8 @@ sg_law_available_law_slave_trade = {
 
 sg_law_available_law_slavery_banned = {
 	NOT = { has_law_or_variant = law_type:law_slavery_banned }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_slavery_banned)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_slavery_ban
 			}
@@ -1508,10 +1772,14 @@ sg_law_available_law_slavery_banned = {
 
 sg_law_available_law_consumption_based_taxation = {
 	NOT = { has_law_or_variant = law_type:law_consumption_based_taxation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_consumption_based_taxation)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_graduated_taxation = {
 	NOT = { has_law_or_variant = law_type:law_graduated_taxation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_graduated_taxation)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_traditionalism
@@ -1522,10 +1790,14 @@ sg_law_available_law_graduated_taxation = {
 
 sg_law_available_law_land_based_taxation = {
 	NOT = { has_law_or_variant = law_type:law_land_based_taxation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_land_based_taxation)" >= define:LAW_MIN_SUCCESS_CHANCE
 }
 
 sg_law_available_law_per_capita_based_taxation = {
 	NOT = { has_law_or_variant = law_type:law_per_capita_based_taxation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_per_capita_based_taxation)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_traditionalism
@@ -1536,6 +1808,8 @@ sg_law_available_law_per_capita_based_taxation = {
 
 sg_law_available_law_proportional_taxation = {
 	NOT = { has_law_or_variant = law_type:law_proportional_taxation }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_proportional_taxation)" >= define:LAW_MIN_SUCCESS_CHANCE
 	NOT = {
 		OR = {
 			has_law_or_variant = law_type:law_traditionalism
@@ -1546,6 +1820,8 @@ sg_law_available_law_proportional_taxation = {
 
 sg_law_available_law_canton_system = {
 	NOT = { has_law_or_variant = law_type:law_canton_system }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_canton_system)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_market_opening
 			}
@@ -1563,6 +1839,8 @@ sg_law_available_law_canton_system = {
 
 sg_law_available_law_free_trade = {
 	NOT = { has_law_or_variant = law_type:law_free_trade }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_free_trade)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_market_opening
 			}
@@ -1576,6 +1854,8 @@ sg_law_available_law_free_trade = {
 
 sg_law_available_law_isolationism = {
 	NOT = { has_law_or_variant = law_type:law_isolationism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_isolationism)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_market_opening
 			}
@@ -1610,6 +1890,8 @@ sg_law_available_law_isolationism = {
 
 sg_law_available_law_mercantilism = {
 	NOT = { has_law_or_variant = law_type:law_mercantilism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_mercantilism)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_market_opening
 			}
@@ -1618,6 +1900,8 @@ sg_law_available_law_mercantilism = {
 
 sg_law_available_law_protectionism = {
 	NOT = { has_law_or_variant = law_type:law_protectionism }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_protectionism)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_market_opening
 			}
@@ -1626,6 +1910,8 @@ sg_law_available_law_protectionism = {
 
 sg_law_available_law_sakoku = {
 	NOT = { has_law_or_variant = law_type:law_sakoku }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_sakoku)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				has_modifier = forced_market_opening
 			}
@@ -1641,11 +1927,15 @@ sg_law_available_law_sakoku = {
 
 sg_law_available_law_chiefs_distribute_aid = {
 	NOT = { has_law_or_variant = law_type:law_chiefs_distribute_aid }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_chiefs_distribute_aid)" >= define:LAW_MIN_SUCCESS_CHANCE
 			c:MON ?= this
 }
 
 sg_law_available_law_no_social_security = {
 	NOT = { has_law_or_variant = law_type:law_no_social_security }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_no_social_security)" >= define:LAW_MIN_SUCCESS_CHANCE
 			NOT = {
 				c:MON ?= this
 			}
@@ -1653,15 +1943,21 @@ sg_law_available_law_no_social_security = {
 
 sg_law_available_law_old_age_pension = {
 	NOT = { has_law_or_variant = law_type:law_old_age_pension }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_old_age_pension)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = human_rights
 }
 
 sg_law_available_law_poor_laws = {
 	NOT = { has_law_or_variant = law_type:law_poor_laws }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_poor_laws)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = democracy
 }
 
 sg_law_available_law_wage_subsidies = {
 	NOT = { has_law_or_variant = law_type:law_wage_subsidies }
+	NOT = { enacting_any_law = yes }
+	"enactment_chance_for_law(law_type:law_wage_subsidies)" >= define:LAW_MIN_SUCCESS_CHANCE
 	has_technology_researched = labor_movement
 }

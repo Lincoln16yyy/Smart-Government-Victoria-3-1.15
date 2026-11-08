@@ -89,6 +89,7 @@ sg_clear_rank = {
 	remove_variable = sg_top_1_benefit_score
 	remove_variable = sg_top_1_risk_score
 	remove_variable = sg_top_1_politics
+	remove_variable = sg_top_1_enactment_chance
 	remove_variable = sg_top_2_id
 	remove_variable = sg_top_2_score
 	remove_variable = sg_top_2_benefit
@@ -97,6 +98,7 @@ sg_clear_rank = {
 	remove_variable = sg_top_2_benefit_score
 	remove_variable = sg_top_2_risk_score
 	remove_variable = sg_top_2_politics
+	remove_variable = sg_top_2_enactment_chance
 	remove_variable = sg_top_3_id
 	remove_variable = sg_top_3_score
 	remove_variable = sg_top_3_benefit
@@ -105,6 +107,7 @@ sg_clear_rank = {
 	remove_variable = sg_top_3_benefit_score
 	remove_variable = sg_top_3_risk_score
 	remove_variable = sg_top_3_politics
+	remove_variable = sg_top_3_enactment_chance
 }
 
 sg_ensure_journal_entry = {

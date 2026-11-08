@@ -33,6 +33,14 @@ je_sg_law_advisor = {
 	can_deactivate = yes
 	should_be_pinned_by_default_uninvolved_or_context = yes
 
+	outcome = {
+		flags = { hidden invalid_outcome }
+		conclusion_desc = "sg_disabled_desc"
+		trigger = {
+			NOT = { has_variable = sg_enabled }
+		}
+	}
+
 	# The 1.15 journal-entry pulse: no on_action file needs to be modified for
 	# the periodic reassessment.
 	on_monthly_pulse = {

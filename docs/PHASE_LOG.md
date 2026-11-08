@@ -111,14 +111,20 @@ Installation performed:
   `save games/haiti_1836_06_30_SG_TEST.v3`;
 - `content_load.json` was **not** edited; the mod is installed but inactive.
 
-Runtime test still pending (must be done by launching the game):
+## Phase 5 — in-game runtime test fixes
 
-1. Back up `content_load.json`.
-2. Enable the mod in the launcher and load `haiti_1836_06_30_SG_TEST.v3`.
-3. Check `error.log` for script/GUI errors, especially the generated
-   `GreaterThan_int32`/`LessThan_int32` id branches and the
-   `GetLawType('law_x')` localization calls.
-4. Test enable, monthly reassessment, enact, ignore, clear ignored, refresh,
-   disable and re-enable.
-5. Fix any runtime issue here and rerun `tools/validate.py`.
-
+- Fixed overlapping row text: replaced `GreaterThan_int32`/`LessThan_int32`
+  with `EqualTo_int32` in `tools/build_gui.py` to prevent `FetchData` errors in
+  the Clausewitz GUI engine which previously caused all 148 laws to render
+  simultaneously.
+- Fixed theme selector mapping: `EqualTo_int32` now covers the generated
+  1..N values and falls back to the explicit zero-indexed localization key,
+  so the initial value `0` no longer displays theme 1.
+- Fixed journal entry disable lifecycle: `je_sg_law_advisor` uses
+  `disable_evaluation` alongside its invalid outcome, removing the inactive
+  entry after disable so the enable decision can create a fresh active entry.
+- Fixed missing localization keys: added `je_sg_law_advisor`,
+  `je_sg_law_advisor_reason` and `sg_disabled_desc` in English and Brazilian
+  Portuguese.
+- Re-validated with `tools/validate.py` (0 errors) and reinstalled via
+  `tools/install_mod.py --force`.

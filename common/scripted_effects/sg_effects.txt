@@ -1,4 +1,4 @@
-﻿# Smart Government Advisor - lifecycle, ignore list and diagnostics effects.
+# Smart Government Advisor - lifecycle, ignore list and diagnostics effects.
 # Country scope unless noted.
 
 # Schema 2 replaces the old positional law index with a stable numeric id
@@ -153,6 +153,36 @@ sg_store_ignored_selected = {
 		# The list is full; replace the oldest slot so the button always works.
 		set_variable = { name = sg_ignored_3 value = var:sg_ignored_selected }
 	}
+}
+
+sg_restore_ignored_1 = {
+	remove_variable = sg_ignored_1
+	if = {
+		limit = { has_variable = sg_ignored_2 }
+		set_variable = { name = sg_ignored_1 value = var:sg_ignored_2 }
+		remove_variable = sg_ignored_2
+		if = {
+			limit = { has_variable = sg_ignored_3 }
+			set_variable = { name = sg_ignored_2 value = var:sg_ignored_3 }
+			remove_variable = sg_ignored_3
+		}
+	}
+	sg_rank_laws = yes
+}
+
+sg_restore_ignored_2 = {
+	remove_variable = sg_ignored_2
+	if = {
+		limit = { has_variable = sg_ignored_3 }
+		set_variable = { name = sg_ignored_2 value = var:sg_ignored_3 }
+		remove_variable = sg_ignored_3
+	}
+	sg_rank_laws = yes
+}
+
+sg_restore_ignored_3 = {
+	remove_variable = sg_ignored_3
+	sg_rank_laws = yes
 }
 
 sg_clear_ignored = {

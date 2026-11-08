@@ -700,6 +700,12 @@ def dynamic_risk(law) -> list[str]:
         lines.append("if = { limit = { legitimacy < 40 } add = 8 }")
     elif theme == 9:
         lines.append("if = { limit = { radical_fraction > 0.2 } add = 8 }")
+    lines.append(
+        "if = { limit = { any_scope_interest_group = { "
+        "is_powerful = yes "
+        f"law_stance = {{ law = law_type:{law['id']} value <= strongly_disapprove }} "
+        "} } add = 12 }"
+    )
     return lines
 
 
@@ -1031,6 +1037,14 @@ def emit_sguis(laws) -> str:
             out.append(
                 f"\tis_shown = {{ has_variable = sg_top_{slot}_id "
                 f"var:sg_top_{slot}_id = {sid} }}"
+            )
+            out.append("}")
+            out.append("")
+            out.append(f"sg_ignored_{slot}_law_{lid}_visible_sgui = {{")
+            out.append("\tscope = country")
+            out.append(
+                f"\tis_shown = {{ has_variable = sg_ignored_{slot} "
+                f"var:sg_ignored_{slot} = {sid} }}"
             )
             out.append("}")
             out.append("")

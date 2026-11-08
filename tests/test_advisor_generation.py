@@ -152,6 +152,12 @@ class GeneratedScriptTests(unittest.TestCase):
             block,
         )
 
+    def test_powerful_interest_group_opposition_penalizes_risk(self) -> None:
+        sample = extract_block(self.values, "sg_law_risk_law_monarchy")
+        self.assertIn("is_powerful = yes", sample)
+        self.assertIn("strongly_disapprove", sample)
+        self.assertIn("add = 12", sample)
+
     def test_availability_matches_runtime_promulgation_constraints(self) -> None:
         for law_id in (
             "law_hindu_caste_enforced",
@@ -310,6 +316,20 @@ class RuntimeSurfaceTests(unittest.TestCase):
         }
         for law in LAWS:
             self.assertTrue(required <= law.keys())
+
+    def test_ignored_laws_management_and_individual_restore_sguis(self) -> None:
+        for slot in (1, 2, 3):
+            self.assertIn(f"sg_restore_ignored_{slot} = {{", self.effects)
+            self.assertIn(f"sg_restore_ignored_{slot}_sgui = {{", read("common/scripted_guis/sg_scripted_guis.txt"))
+            for law in LAWS:
+                marker = f"GetScriptedGui('sg_ignored_{slot}_law_{law['id']}_visible_sgui')"
+                self.assertEqual(self.gui.count(marker), 1, marker)
+                sgui = f"sg_ignored_{slot}_law_{law['id']}_visible_sgui = {{"
+                self.assertIn(sgui, self.sguis)
+        self.assertIn("text = \"sg_ignored_title\"", self.gui)
+        self.assertIn("text = \"sg_restore\"", self.gui)
+        self.assertIn("sg_restore:0", self.english)
+        self.assertIn("sg_restore:0", read("localization/braz_por/sg_l_braz_por.yml"))
 
 
 if __name__ == "__main__":

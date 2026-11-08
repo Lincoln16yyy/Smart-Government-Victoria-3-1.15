@@ -1,4 +1,4 @@
-﻿l_braz_por:
+l_braz_por:
  je_sg_law_advisor:0 "Conselheiro de Governo Inteligente"
  je_sg_law_advisor_reason:0 "Avaliação estratégica contínua das melhores opções de leis para a sua nação."
  sg_disabled_desc:0 "O Conselheiro de Governo Inteligente foi desativado."
@@ -29,8 +29,11 @@
  sg_requirements_hint:0 "Requisitos não atendidos — passe o mouse"
  sg_effects_hint:0 "Efeitos — passe o mouse"
  sg_empty:0 "Nenhuma lei disponível pode ser recomendada no momento. As leis podem já estar ativas, bloqueadas pelos requisitos atuais ou na lista de ignoradas. Use o botão de reavaliar ou limpe a lista de ignoradas."
- sg_clear_ignored:0 "Limpar ignoradas"
- sg_clear_ignored_tt:0 "Esquece as leis ignoradas e reavalia imediatamente."
+ sg_ignored_title:0 "Leis ignoradas:"
+ sg_restore:0 "Restaurar"
+ sg_restore_tt:0 "Remove esta lei da lista de ignoradas e reavalia as recomendações."
+ sg_clear_ignored:0 "Limpar todas"
+ sg_clear_ignored_tt:0 "Esquece todas as leis ignoradas e reavalia imediatamente."
  sg_diagnostics:0 "Diagnóstico"
  sg_diagnostics_tt:0 "Reavalia agora e mantém visíveis no registro os contadores do ranking. Defina a variável de país sg_debug para também registrar mensagens de ciclo de vida."
  sg_footer_note:0 "Apenas recomendações. As leis seguem o processo normal de promulgação."

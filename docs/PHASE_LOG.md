@@ -238,3 +238,21 @@ Installation performed:
 - Added regression cases for Hindu Caste Enforced, Hindu Caste Codified and
   National Supremacy. Generators and all requested static checks pass; the
   remaining validation is the manual save/UI test.
+
+## Phase 14 — interactive ignored laws management and powerful opposition risk
+
+- Added individual restore buttons and visible rows for ignored laws in the
+  journal entry widget, showing the law name, group, and a dedicated Restore
+  action for each active ignored slot.
+- Implemented `sg_restore_ignored_1`, `sg_restore_ignored_2`, and
+  `sg_restore_ignored_3` effects that compact the remaining ignored variables
+  and rerank immediately.
+- Generated `sg_ignored_{slot}_law_{lid}_visible_sgui` to ensure stable,
+  flicker-free display of ignored laws without direct GUI variable comparison.
+- Added situational risk penalty (`+12`) to laws that strongly alienate a
+  powerful interest group (`is_powerful = yes` with `strongly_disapprove`),
+  mitigating revolution and insurrection risk in recommended laws.
+- Added unit tests covering individual restore SGUIs, ignored laws rendering,
+  and powerful opposition risk scoring in `tests/test_advisor_generation.py`.
+- Re-ran generators, passed all 18 regression tests, static validation and
+  reinstalled the mod via `tools/install_mod.py --force`.

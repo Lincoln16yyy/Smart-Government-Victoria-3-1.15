@@ -1014,7 +1014,7 @@ def emit_loc(laws, lang: str) -> str:
             L("Improves trade access and market reach.", "Melhora o acesso ao comércio e ao mercado."),
             L("Improves internal security and public order.", "Melhora a segurança interna e a ordem pública."),
             L("No direct measurable bonus; it mainly changes the legal framework.", "Sem bônus direto mensurável; a lei principalmente altera o marco legal."),
-            L("Strengthens state capacity and internal stability.", "Fortalece a capacidade do Estado e a estabilidade interna."),
+            L("Has positive measurable effects included in the benefit score.", "Tem efeitos positivos mensuráveis incluídos na pontuação de benefício."),
         ],
         "risk": [
             L("May provoke landowner and aristocratic backlash.", "Pode provocar reação de latifundiários e aristocratas."),

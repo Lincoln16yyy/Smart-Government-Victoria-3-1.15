@@ -182,3 +182,13 @@ Installation performed:
   diagnostics action text to point to the visible counters.
 - Regenerated the 148-law output and passed static validation, Python
   compilation and whitespace checks.
+
+## Phase 10 — recommendation explanations
+
+- Added a visible per-row decomposition of the ranking formula:
+  `benefit + government support - half of risk`.
+- Clarified in English and Brazilian Portuguese that benefit/risk themes
+  summarize measurable modifier families and that the law tooltip is the
+  authoritative source for exact effects and requirements.
+- Replaced the generic positive-benefit sentence with a neutral description of
+  measurable score input, avoiding an unsupported claim about state capacity.

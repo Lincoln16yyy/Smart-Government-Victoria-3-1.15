@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 """Generate the journal-entry widget.
 
-The only generated part is the nested SelectLocalization expression that turns
-a numeric theme code stored in a country variable into a localized sentence.
-Keeping that expression generated avoids hand-editing a very long line.
+The widget renders three ranked rows. Each row is bound to the stable numeric
+law id stored in `sg_top_<slot>_id`; a generated per-law branch provides the
+name, group and tooltip through localization keys that call GetLawType by key.
+No law-type value is stored in a country variable.
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+DATA = ROOT / "data" / "law_data.json"
 OUT = ROOT / "gui" / "journal_entry_widgets" / "sg_law_advisor.gui"
 
-BENEFIT_COUNT = 16
-RISK_COUNT = 12
+BENEFIT_COUNT = 18  # 16 specific + neutral + generic positive
+RISK_COUNT = 13  # 12 specific themes + neutral
 FOCUS_COUNT = 6
 
 
@@ -32,11 +35,95 @@ def var(slot: int, field: str) -> str:
     return f"JournalEntry.GetCountry.MakeScope.Var('sg_top_{slot}_{field}')"
 
 
-def law(slot: int) -> str:
-    return f"{var(slot, 'law')}.GetLawType"
+def exact_id(slot: int, sid: int) -> str:
+    """Return a GUI boolean expression that is true for exactly one id."""
+    value = f"{var(slot, 'id')}.GetValue"
+    return (
+        f"And(GreaterThan_int32({value}, '(int32){sid - 1}'), "
+        f"LessThan_int32({value}, '(int32){sid + 1}'))"
+    )
 
 
-def row(slot: int) -> str:
+def law_header(slot: int, laws: list[dict]) -> str:
+    branches = []
+    for law in laws:
+        sid = law["sid"]
+        branches.append(
+            f"""
+				widget = {{
+					visible = "[{exact_id(slot, sid)}]"
+					autoresize = yes
+					flowcontainer = {{
+						direction = horizontal
+						spacing = 6
+						ignoreinvisible = yes
+
+						textbox = {{
+							autoresize = yes
+							align = left|nobaseline
+							using = fontsize_medium
+							text = "sg_law_name_{sid}"
+							tooltip = "sg_law_tip_{sid}"
+							using = tooltip_se
+						}}
+						textbox = {{
+							autoresize = yes
+							align = left|nobaseline
+							using = fontsize_medium
+							default_format = "#weak"
+							text = "sg_law_group_{sid}"
+						}}
+					}}
+				}}"""
+        )
+    return "".join(branches)
+
+
+def law_actions(slot: int, laws: list[dict]) -> str:
+    """Generate one button pair per law, bound to that law's own SGUI.
+
+    The pair is only visible while the row's stable id equals the law id, so the
+    button the player clicks always belongs to the law the row displays.
+    """
+    branches = []
+    for law in laws:
+        lid = law["id"]
+        sid = law["sid"]
+        branches.append(
+            f"""
+				widget = {{
+					visible = "[{exact_id(slot, sid)}]"
+					autoresize = yes
+					flowcontainer = {{
+						direction = horizontal
+						spacing = 8
+						ignoreinvisible = yes
+
+						button = {{
+							size = {{ 100 28 }}
+							using = select_button_sound
+							using = tooltip_se
+							text = "sg_enact"
+							tooltip = "sg_enact_tt"
+							enabled = "[GetScriptedGui('sg_enact_law_{lid}_sgui').IsValid(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+							onclick = "[GetScriptedGui('sg_enact_law_{lid}_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+						}}
+						button = {{
+							size = {{ 100 28 }}
+							using = select_button_sound
+							using = tooltip_se
+							text = "sg_ignore"
+							tooltip = "sg_ignore_tt"
+							enabled = "[GetScriptedGui('sg_ignore_law_{lid}_sgui').IsValid(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+							onclick = "[GetScriptedGui('sg_ignore_law_{lid}_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+						}}
+					}}
+				}}"""
+        )
+    return "".join(branches)
+
+
+def row(slot: int, laws: list[dict]) -> str:
     benefit = selector(f"sg_top_{slot}_benefit", "sg_benefit", BENEFIT_COUNT)
     risk = selector(f"sg_top_{slot}_risk", "sg_risk", RISK_COUNT)
     focus = selector(f"sg_top_{slot}_focus", "sg_focus", FOCUS_COUNT)
@@ -44,8 +131,6 @@ def row(slot: int) -> str:
         f"[GetScriptedGui('sg_top_{slot}_visible_sgui')"
         ".IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
     )
-    effect_tip = f"[{law(slot)}.GetEffectDesc(GetPlayer.Self)]"
-    block_tip = f"[{law(slot)}.GetBlockingRequirements(GetPlayer.Self)]"
     return f"""
 	# ---- recommendation {slot} -------------------------------------------------
 	widget = {{
@@ -74,21 +159,7 @@ def row(slot: int) -> str:
 					default_format = "#high"
 					raw_text = "{slot}."
 				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_medium
-					text = "[{law(slot)}.GetName]"
-					tooltip = "{effect_tip}"
-					using = tooltip_se
-				}}
-				textbox = {{
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_medium
-					default_format = "#weak"
-					text = "[{law(slot)}.GetGroup.GetName]"
-				}}
+{law_header(slot, laws)}
 			}}
 
 			flowcontainer = {{
@@ -107,7 +178,7 @@ def row(slot: int) -> str:
 					autoresize = yes
 					align = left|nobaseline
 					using = fontsize_small
-					text = "SG_SCORE_LABEL"
+					text = "sg_score_label"
 				}}
 				textbox = {{
 					autoresize = yes
@@ -120,7 +191,7 @@ def row(slot: int) -> str:
 					autoresize = yes
 					align = left|nobaseline
 					using = fontsize_small
-					text = "SG_SUPPORT_LABEL"
+					text = "sg_support_label"
 				}}
 				textbox = {{
 					autoresize = yes
@@ -132,7 +203,19 @@ def row(slot: int) -> str:
 					autoresize = yes
 					align = left|nobaseline
 					using = fontsize_small
-					text = "SG_RISK_LABEL"
+					text = "sg_benefit_label"
+				}}
+				textbox = {{
+					autoresize = yes
+					align = left|nobaseline
+					using = fontsize_small
+					raw_text = "[{var(slot, 'benefit_score')}.GetValue|0]"
+				}}
+				textbox = {{
+					autoresize = yes
+					align = left|nobaseline
+					using = fontsize_small
+					text = "sg_risk_label"
 				}}
 				textbox = {{
 					autoresize = yes
@@ -165,45 +248,7 @@ def row(slot: int) -> str:
 				direction = horizontal
 				spacing = 8
 				ignoreinvisible = yes
-
-				button = {{
-					size = {{ 100 28 }}
-					using = select_button_sound
-					using = tooltip_se
-					text = "SG_ENACT"
-					tooltip = "SG_ENACT_TT"
-					enabled = "[GetScriptedGui('sg_enact_{slot}_sgui').IsValid(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
-					onclick = "[GetScriptedGui('sg_enact_{slot}_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
-				}}
-				button = {{
-					size = {{ 100 28 }}
-					using = select_button_sound
-					using = tooltip_se
-					text = "SG_IGNORE"
-					tooltip = "SG_IGNORE_TT"
-					enabled = "[GetScriptedGui('sg_ignore_{slot}_sgui').IsValid(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
-					onclick = "[GetScriptedGui('sg_ignore_{slot}_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
-				}}
-				textbox = {{
-					visible = "[Not(StringIsEmpty({block_tip}))]"
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					default_format = "#warning"
-					text = "SG_REQUIREMENTS_HINT"
-					tooltip = "{block_tip}"
-					using = tooltip_se
-				}}
-				textbox = {{
-					visible = "[Not(StringIsEmpty({effect_tip}))]"
-					autoresize = yes
-					align = left|nobaseline
-					using = fontsize_small
-					default_format = "#weak"
-					text = "SG_EFFECTS_HINT"
-					tooltip = "{effect_tip}"
-					using = tooltip_se
-				}}
+{law_actions(slot, laws)}
 			}}
 		}}
 	}}
@@ -211,7 +256,9 @@ def row(slot: int) -> str:
 
 
 def build() -> str:
-    rows = "".join(row(slot) for slot in (1, 2, 3))
+    data = json.loads(DATA.read_text(encoding="utf-8"))
+    laws = data["laws"]
+    rows = "".join(row(slot, laws) for slot in (1, 2, 3))
     empty_visible = (
         "[Not(GetScriptedGui('sg_top_1_visible_sgui')"
         ".IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End))]"
@@ -257,7 +304,7 @@ flowcontainer = {{
 				autoresize = yes
 				align = left|nobaseline
 				using = fontsize_medium
-				text = "SG_STATUS_TITLE"
+				text = "sg_status_title"
 			}}
 			textbox = {{
 				parentanchor = vcenter
@@ -265,7 +312,7 @@ flowcontainer = {{
 				align = left|nobaseline
 				using = fontsize_medium
 				default_format = "#P"
-				text = "SG_STATUS_ENABLED"
+				text = "sg_status_enabled"
 			}}
 		}}
 
@@ -275,8 +322,8 @@ flowcontainer = {{
 			size = {{ 96 30 }}
 			using = select_button_sound
 			using = tooltip_se
-			text = "SG_DISABLE"
-			tooltip = "SG_DISABLE_TT"
+			text = "sg_disable"
+			tooltip = "sg_disable_tt"
 			enabled = "[GetScriptedGui('sg_disable_sgui').IsValid(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 			onclick = "[GetScriptedGui('sg_disable_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 		}}
@@ -289,7 +336,7 @@ flowcontainer = {{
 			}}
 			using = select_button_sound
 			using = tooltip_se
-			tooltip = "SG_REFRESH_TT"
+			tooltip = "sg_refresh_tt"
 			enabled = "[GetScriptedGui('sg_refresh_sgui').IsValid(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 			onclick = "[GetScriptedGui('sg_refresh_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 		}}
@@ -303,7 +350,7 @@ flowcontainer = {{
 		default_format = "#weak"
 		minimumsize = {{ 500 -1 }}
 		maximumsize = {{ 500 -1 }}
-		text = "SG_HEADER"
+		text = "sg_header"
 	}}
 
 {rows}
@@ -317,7 +364,7 @@ flowcontainer = {{
 		default_format = "#weak"
 		minimumsize = {{ 500 -1 }}
 		maximumsize = {{ 500 -1 }}
-		text = "SG_EMPTY"
+		text = "sg_empty"
 	}}
 
 	# ---- footer ---------------------------------------------------------------
@@ -331,16 +378,16 @@ flowcontainer = {{
 			size = {{ 150 28 }}
 			using = select_button_sound
 			using = tooltip_se
-			text = "SG_CLEAR_IGNORED"
-			tooltip = "SG_CLEAR_IGNORED_TT"
+			text = "sg_clear_ignored"
+			tooltip = "sg_clear_ignored_tt"
 			onclick = "[GetScriptedGui('sg_clear_ignored_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 		}}
 		button = {{
 			size = {{ 150 28 }}
 			using = select_button_sound
 			using = tooltip_se
-			text = "SG_DIAGNOSTICS"
-			tooltip = "SG_DIAGNOSTICS_TT"
+			text = "sg_diagnostics"
+			tooltip = "sg_diagnostics_tt"
 			onclick = "[GetScriptedGui('sg_diagnostics_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 		}}
 		textbox = {{
@@ -348,7 +395,7 @@ flowcontainer = {{
 			align = left|nobaseline
 			using = fontsize_small
 			default_format = "#weak"
-			text = "SG_FOOTER_NOTE"
+			text = "sg_footer_note"
 		}}
 	}}
 }}
@@ -356,6 +403,10 @@ flowcontainer = {{
 
 
 def main() -> int:
+    if not DATA.is_file():
+        raise SystemExit(
+            f"Missing {DATA}. Run tools/build_law_data.py before tools/build_gui.py."
+        )
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(build(), encoding="utf-8")
     print(f"Wrote {OUT}")

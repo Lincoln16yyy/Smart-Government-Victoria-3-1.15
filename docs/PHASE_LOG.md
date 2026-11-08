@@ -55,7 +55,34 @@ Static checks already run:
 - every static localization key used by the widget exists in English;
 - no duplicate top-level script blocks.
 
-## Phase 3 — validation and runtime test (next)
+## Phase 3 — Sourcery review fixes
+
+Addressed all 11 findings on PR #1:
+
+- replaced positional law indexes with stable numeric ids in
+  `data/law_ids.json`, preserved across list changes;
+- added schema 2 migration that discards old positional state;
+- generated one Enact and one Ignore button per law, so a click is bound to the
+  law displayed and cannot be retargeted by a rerank;
+- always reranked after an enact attempt, including a failed availability guard;
+- selected benefit/risk themes from actual modifier contributions, with neutral
+  themes for laws that have no measurable effect (`law_no_schools`, etc.);
+- applied situational bonuses only when the law's real effects support them;
+- scored all five tax brackets (average per key);
+- replaced the hardcoded game path with `--game`, `VICTORIA3_GAME` and
+  Steam/Hydra/manual-install discovery;
+- added the launcher-facing `Smart Government Advisor.mod` and
+  `tools/install_mod.py`;
+- switched all widget localization keys to lowercase;
+- rendered the numeric benefit score in each row;
+- removed the law-type-variable path: the GUI selects per-law localization keys
+  by stable id and calls `GetLawType('law_x')` in localization.
+
+Static checks after regeneration: balanced braces, all law and technology
+references exist, every `sg_*` call resolves, every GUI SGUI exists, every
+static localization key exists, no duplicate keys or top-level blocks.
+
+## Phase 4 — validation and runtime test (next)
 
 - Add `tools/validate.py` and `tools/install_mod.py`.
 - Run the validator.

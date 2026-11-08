@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -21,7 +22,107 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pdx_parse import parse, strip_comments  # noqa: E402
 
-DEFAULT_GAME = Path("/home/lincoln-ii/Games/Victoria 3/game")
+ROOT = Path(__file__).resolve().parent.parent
+LAW_IDS_FILE = ROOT / "data" / "law_ids.json"
+SCHEMA_VERSION = 2
+TAX_BRACKETS = ("very_low", "low", "medium", "high", "very_high")
+
+
+def game_candidates() -> list[Path]:
+    """Portable locations to try before giving up on automatic discovery."""
+    candidates: list[Path] = []
+    env = os.environ.get("VICTORIA3_GAME")
+    if env:
+        candidates.append(Path(env).expanduser())
+    candidates.append(Path.cwd() / "game")
+    candidates.append(ROOT / "game")
+
+    home = Path.home()
+    steam_roots = [
+        home / ".steam" / "steam",
+        home / ".local" / "share" / "Steam",
+        home / ".var" / "app" / "com.valvesoftware.Steam" / ".local" / "share" / "Steam",
+        Path("C:/Program Files (x86)/Steam"),
+        Path("C:/Program Files/Steam"),
+        home / "Library" / "Application Support" / "Steam",
+    ]
+    for steam in steam_roots:
+        candidates.append(steam / "steamapps" / "common" / "Victoria 3" / "game")
+
+    # Common manual installs (including the layout used by this project).
+    games = home / "Games"
+    candidates.append(games / "Victoria 3" / "game")
+    if games.is_dir():
+        candidates.extend(path / "game" for path in games.iterdir() if path.is_dir())
+
+    # Hydra and other Wine launchers: the prefix name is not fixed, so scan.
+    for prefixes in (
+        home / ".config" / "hydralauncher" / "wine-prefixes",
+        home / ".local" / "share" / "hydralauncher" / "wine-prefixes",
+    ):
+        if not prefixes.is_dir():
+            continue
+        for prefix in prefixes.iterdir():
+            drive = prefix / "drive_c"
+            candidates.extend(
+                [
+                    drive / "Program Files (x86)" / "Steam" / "steamapps" / "common" / "Victoria 3" / "game",
+                    drive / "Program Files" / "Steam" / "steamapps" / "common" / "Victoria 3" / "game",
+                    drive / "Games" / "Victoria 3" / "game",
+                ]
+            )
+    return candidates
+
+
+def resolve_game_path(value: str | None) -> Path:
+    """Accept an install root, a game folder, or discover a normal install."""
+    if value:
+        raw = Path(value).expanduser()
+        if (raw / "common" / "laws").is_dir():
+            return raw
+        if (raw / "game" / "common" / "laws").is_dir():
+            return raw / "game"
+        raise SystemExit(
+            f"Could not find common/laws under {raw}. Point --game at the Victoria 3 "
+            "'game' folder (the one that contains common/ and gui/)."
+        )
+    for candidate in game_candidates():
+        if (candidate / "common" / "laws").is_dir():
+            return candidate
+        if (candidate / "game" / "common" / "laws").is_dir():
+            return candidate / "game"
+    raise SystemExit(
+        "Could not find Victoria 3 automatically. Run with "
+        "--game '/path/to/Victoria 3/game' or set VICTORIA3_GAME."
+    )
+
+
+def load_law_ids() -> dict[str, int]:
+    if not LAW_IDS_FILE.is_file():
+        return {}
+    try:
+        raw = json.loads(LAW_IDS_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return {str(k): int(v) for k, v in raw.items()}
+
+
+def assign_stable_ids(laws: list[dict], mapping: dict[str, int]) -> dict[str, int]:
+    """Give every law a numeric id that never changes when the list is reordered.
+
+    Existing ids are preserved from data/law_ids.json. New laws get the next
+    free number. Ids of removed laws stay reserved so they are never reused for
+    a different law in an old save.
+    """
+    used = set(mapping.values())
+    next_id = max(used, default=0) + 1
+    for law in sorted(laws, key=lambda item: item["id"]):
+        if law["id"] not in mapping:
+            mapping[law["id"]] = next_id
+            next_id += 1
+    for law in laws:
+        law["sid"] = mapping[law["id"]]
+    return mapping
 
 # ---------------------------------------------------------------------------
 # Parsing helpers
@@ -151,9 +252,9 @@ BENEFIT_RULES: list[tuple[str, float]] = [
     (r".*qualification_growth.*$", 5.0),
     (r".*education_access_mult$", 8.0),
     (r".*cultural_acceptance_mult$", 6.0),
-    (r"state_.*_mortality_mult$", -60.0),
-    (r"state_.*_standard_of_living_add$", 25.0),
-    (r"state_.*_expected_sol_(add|mult)$", 12.0),
+    (r"state_.*mortality_mult$", -60.0),
+    (r"state_.*standard_of_living_add$", 25.0),
+    (r"state_.*expected_sol_(add|mult)$", 12.0),
     (r"state_birth_rate_mult$", 20.0),
     (r"state_working_adult_ratio_add$", 25.0),
     (r"state_dependent_wage_mult$", 8.0),
@@ -207,7 +308,7 @@ BENEFIT_RULES: list[tuple[str, float]] = [
     (r"country_primary_culture_fervor_from_laws_add$", 4.0),
     (r"country_non_state_religion_wages_mult$", 6.0),
     (r"country_state_religion_wages_mult$", 4.0),
-    (r"state_.*_investment_pool_(efficiency|contribution).*$", 6.0),
+    (r"state_.*investment_pool_(efficiency|contribution).*$", 6.0),
     (r"interest_group_in_government_attraction_mult$", 5.0),
     (r"interest_group_ig_.*_pol_str_mult$", 0.0),
     (r"country_.*_pol_str_mult$", 0.0),
@@ -232,7 +333,7 @@ RISK_RULES: list[tuple[str, float]] = [
     (r"building_nationalization_radicals_mult$", 30.0),
     (r"country_suppression_attraction_factor$", 25.0),
     (r"country_tension_decay_mult$", -8.0),
-    (r"state_.*_mortality_mult$", 60.0),
+    (r"state_.*mortality_mult$", 60.0),
     (r"country_allow_conversion_violent_hostility_bool$", 10.0),
     (r"country_allow_conversion_cultural_erasure_bool$", 8.0),
     (r"country_allow_conversion_open_prejudice_bool$", 5.0),
@@ -273,34 +374,33 @@ RISK_RULES: list[tuple[str, float]] = [
 COMPILED_BENEFIT = [(re.compile(p), w) for p, w in BENEFIT_RULES]
 COMPILED_RISK = [(re.compile(p), w) for p, w in RISK_RULES]
 
-BENEFIT_BY_GROUP = {
-    "lawgroup_taxation": 1,
-    "lawgroup_economic_system": 2,
-    "lawgroup_trade_policy": 15,
-    "lawgroup_land_reform": 13,
-    "lawgroup_education_system": 4,
-    "lawgroup_health_system": 5,
-    "lawgroup_bureaucracy": 6,
-    "lawgroup_governance_principles": 7,
-    "lawgroup_distribution_of_power": 8,
-    "lawgroup_citizenship": 10,
-    "lawgroup_church_and_state": 9,
-    "lawgroup_army_model": 11,
-    "lawgroup_navy_model": 12,
-    "lawgroup_internal_security": 16,
-    "lawgroup_policing": 16,
-    "lawgroup_labor_rights": 3,
-    "lawgroup_labour_associations": 3,
-    "lawgroup_welfare": 3,
-    "lawgroup_migration": 10,
-    "lawgroup_childrens_rights": 10,
-    "lawgroup_rights_of_women": 8,
-    "lawgroup_slavery": 10,
-    "lawgroup_free_speech": 8,
-    "lawgroup_colonial_affairs": 10,
-    "lawgroup_caste_hegemony": 10,
-    "lawgroup_edo_social_system": 10,
-}
+# Benefit themes are selected from the law's *positive* modifier
+# contributions, never from its group. Two laws in the same group can have
+# opposite effects (autocracy vs. universal suffrage), so a group-wide claim is
+# misleading.
+BENEFIT_THEME_RULES: list[tuple[str, int]] = [
+    (r"education_access|qualification|literacy|research", 4),
+    (r"mortality|health|standard_of_living|birth_rate|working_adult|dependent_wage", 5),
+    (r"bureaucracy|institution_cost", 6),
+    (r"religion", 9),
+    (r"acceptance|cultural|assimilation|conversion|migration", 10),
+    (r"army|conscription|morale|war_support|officer", 11),
+    (r"navy|ship|naval", 12),
+    (r"agriculture|rural|subsistence|arable|land", 13),
+    (r"construction|infrastructure|investment_pool", 14),
+    (r"trade|tariff|market_access|import|export", 15),
+    (r"internal_security|policing|radicals|suppression", 16),
+    (r"wage|welfare|labor|working", 3),
+    (r"tax|income|dividend", 1),
+    (r"throughput|investment|company|private_construction|loan_interest|goods_cost|government_wages|free_charters|max_companies|nationalization|subvention|production", 2),
+    # Authority/legitimacy is deliberately late: a law that broadens political
+    # participation should be described by that real effect, not by legitimacy.
+    (r"authority|legitimacy", 7),
+]
+
+BENEFIT_NEUTRAL_THEME = 17
+BENEFIT_GENERIC_THEME = 18
+RISK_NEUTRAL_THEME = 13
 
 FOCUS_BY_GROUP = {
     "lawgroup_army_model": 4,
@@ -336,12 +436,32 @@ def score_modifiers(pairs: list[tuple[str, str]]):
                 "risk": round(r_contrib, 2),
             }
         )
-    benefit = max(0, min(100, 45 + benefit_total))
-    risk = max(0, min(60, 5 + risk_total))
-    return round(benefit, 1), round(risk, 1), annotated
+    return round(benefit_total, 2), round(risk_total, 2), annotated
 
 
-def choose_risk_theme(keys: list[str], group: str) -> int:
+def choose_benefit_theme(annotated: list[dict]) -> int:
+    """Describe only effects the law actually has.
+
+    A law with no positive measurable modifier (for example law_no_schools,
+    whose modifier block is empty) gets the neutral theme instead of a
+    positive group claim.
+    """
+    positive = [item["key"] for item in annotated if item["benefit"] > 0]
+    if not positive:
+        return BENEFIT_NEUTRAL_THEME
+    joined = " ".join(positive)
+    for pattern, theme in BENEFIT_THEME_RULES:
+        if re.search(pattern, joined):
+            return theme
+    # The law does have a measurable positive effect, but none of the specific
+    # families above describe it. A generic state-capacity sentence is safer
+    # than claiming "no bonus" while the score includes a real contribution.
+    return BENEFIT_GENERIC_THEME
+
+
+def choose_risk_theme(keys: list[str], group: str, annotated: list[dict]) -> int:
+    if not keys and not any(item["risk"] > 0 for item in annotated):
+        return RISK_NEUTRAL_THEME
     joined = " ".join(keys)
     if re.search(r"landowners|aristocrats", joined):
         return 1
@@ -367,7 +487,9 @@ def choose_risk_theme(keys: list[str], group: str) -> int:
         return 9
     if re.search(r"army_model|navy_model", group):
         return 5
-    return 11
+    if any(item["risk"] > 0 for item in annotated):
+        return 11
+    return RISK_NEUTRAL_THEME
 
 
 def choose_focus(group: str, category: str) -> int:
@@ -412,23 +534,45 @@ def build(game: Path):
 
             pair_list = flat_pairs(field_block(body, "modifier"))
             pair_list += flat_pairs(field_block(body, "institution_modifier"))
-            pair_list += flat_pairs(field_block(body, "tax_modifier_medium"))
 
-            benefit, risk, annotated = score_modifiers(pair_list)
+            # Tax laws define a different block per tax level. Score the
+            # average per key so low/high brackets are not silently ignored.
+            tax_values: dict[str, list[float]] = {}
+            for bracket in TAX_BRACKETS:
+                for key, value in flat_pairs(field_block(body, f"tax_modifier_{bracket}")):
+                    tax_values.setdefault(key, []).append(numeric(value))
+            tax_pairs = [
+                (key, str(round(sum(values) / len(values), 4)))
+                for key, values in tax_values.items()
+            ]
+            pair_list += tax_pairs
+
+            benefit_total, risk_total, annotated = score_modifiers(pair_list)
             keys = [p[0] for p in pair_list]
             category = groups[group]["category"]
+            benefit_theme = choose_benefit_theme(annotated)
+            # A law with no positive measurable effect must not inherit the
+            # baseline that laws with real benefits receive.
+            has_positive_signal = any(item["benefit"] > 0 for item in annotated)
+            benefit = max(0, min(100, (45 if has_positive_signal else 30) + benefit_total))
+            risk = max(0, min(60, 5 + risk_total))
             laws.append(
                 {
                     "id": name,
                     "file": path.name,
                     "group": group,
                     "category": category,
-                    "benefit": benefit,
-                    "risk": risk,
-                    "benefit_theme": BENEFIT_BY_GROUP.get(group, 7),
-                    "risk_theme": choose_risk_theme(keys, group),
+                    "benefit": round(benefit, 1),
+                    "risk": round(risk, 1),
+                    "benefit_theme": benefit_theme,
+                    "risk_theme": choose_risk_theme(keys, group, annotated),
                     "focus": choose_focus(group, category),
+                    "has_positive_signal": has_positive_signal,
                     "modifiers": annotated,
+                    "tax_brackets": {
+                        key: round(sum(values) / len(values), 4)
+                        for key, values in tax_values.items()
+                    },
                     "is_visible": field_block(body, "is_visible"),
                     "can_enact": field_block(body, "can_enact"),
                     "unlocking_laws": list_values(body, "unlocking_laws"),
@@ -439,8 +583,6 @@ def build(game: Path):
             )
 
     laws.sort(key=lambda law: (law["group"], law["id"]))
-    for index, law in enumerate(laws, start=1):
-        law["index"] = index
     return groups, laws
 
 
@@ -666,13 +808,13 @@ def ignored_trigger(law) -> str:
     for slot in (1, 2, 3):
         parts.append(
             f"AND = {{ has_variable = sg_ignored_{slot} "
-            f"var:sg_ignored_{slot} = {law['index']} }}"
+            f"var:sg_ignored_{slot} = {law['sid']} }}"
         )
     return "NOT = { OR = { " + " ".join(parts) + " } }"
 
 
 def shift_effects() -> str:
-    fields = ["law", "index", "score", "benefit", "risk", "focus", "benefit_score", "risk_score", "politics"]
+    fields = ["id", "score", "benefit", "risk", "focus", "benefit_score", "risk_score", "politics"]
     out = ["# Generated by tools/build_law_data.py - do not edit by hand.", ""]
     for source, target in (("1", "2"), ("2", "3")):
         name = f"sg_copy_top_{source}_to_{target}"
@@ -685,12 +827,12 @@ def shift_effects() -> str:
         out.append("}")
         out.append("")
     out.append("sg_shift_top_for_1 = {")
-    out.append("\tif = { limit = { has_variable = sg_top_2_law } sg_copy_top_2_to_3 = yes }")
-    out.append("\tif = { limit = { has_variable = sg_top_1_law } sg_copy_top_1_to_2 = yes }")
+    out.append("\tif = { limit = { has_variable = sg_top_2_id } sg_copy_top_2_to_3 = yes }")
+    out.append("\tif = { limit = { has_variable = sg_top_1_id } sg_copy_top_1_to_2 = yes }")
     out.append("}")
     out.append("")
     out.append("sg_shift_top_for_2 = {")
-    out.append("\tif = { limit = { has_variable = sg_top_2_law } sg_copy_top_2_to_3 = yes }")
+    out.append("\tif = { limit = { has_variable = sg_top_2_id } sg_copy_top_2_to_3 = yes }")
     out.append("}")
     out.append("")
     return "\n".join(out)
@@ -700,8 +842,7 @@ def store_block(law, slot: int) -> str:
     lid = law["id"]
     return "\n".join(
         [
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_law value = law_type:{lid} }}",
-            f"\t\t\tset_variable = {{ name = sg_top_{slot}_index value = {law['index']} }}",
+            f"\t\t\tset_variable = {{ name = sg_top_{slot}_id value = {law['sid']} }}",
             f"\t\t\tset_variable = {{ name = sg_top_{slot}_score value = sg_law_score_{lid} }}",
             f"\t\t\tset_variable = {{ name = sg_top_{slot}_benefit value = {law['benefit_theme']} }}",
             f"\t\t\tset_variable = {{ name = sg_top_{slot}_risk value = {law['risk_theme']} }}",
@@ -716,7 +857,10 @@ def store_block(law, slot: int) -> str:
 def emit_rank(laws) -> str:
     out = ["# Generated by tools/build_law_data.py - do not edit by hand.", ""]
     out.append("sg_rank_laws = {")
-    fields = ["law", "index", "benefit", "risk", "focus", "benefit_score", "risk_score", "politics"]
+    # Migrate a save created by the old positional-index schema before any
+    # stored id is compared.
+    out.append("\tsg_migrate_schema = yes")
+    fields = ["id", "benefit", "risk", "focus", "benefit_score", "risk_score", "politics"]
     for slot in (1, 2, 3):
         for field in fields:
             out.append(f"\tremove_variable = sg_top_{slot}_{field}")
@@ -751,28 +895,60 @@ def emit_rank(laws) -> str:
 
 
 def emit_actions(laws) -> str:
+    """One enact/ignore effect per law.
+
+    The GUI button for a law calls that law's effect directly, so a rerank
+    between rendering and clicking can never redirect the action to a different
+    recommendation by slot number.
+    """
     out = ["# Generated by tools/build_law_data.py - do not edit by hand.", ""]
-    out.append("sg_enact_selected = {")
     for law in laws:
         lid = law["id"]
-        out.append(f"\tif = {{")
-        out.append(f"\t\tlimit = {{ var:sg_selected_index = {law['index']} }}")
-        out.append(f"\t\tif = {{")
-        out.append(f"\t\t\tlimit = {{ sg_law_available_{lid} = yes NOT = {{ enacting_any_law = yes }} }}")
-        out.append(f"\t\t\tstart_enactment = law_type:{lid}")
-        out.append("\t\t\tsg_rank_laws = yes")
-        out.append("\t\t}")
+        sid = law["sid"]
+        out.append(f"sg_enact_law_{lid} = {{")
+        out.append("\tif = {")
+        out.append(f"\t\tlimit = {{ sg_law_available_{lid} = yes NOT = {{ enacting_any_law = yes }} }}")
+        out.append(f"\t\tstart_enactment = law_type:{lid}")
         out.append("\t}")
-    out.append("}")
-    out.append("")
-    for slot in (1, 2, 3):
-        out.append(f"sg_enact_top_{slot} = {{")
-        out.append(f"\tif = {{")
-        out.append(f"\t\tlimit = {{ has_variable = sg_top_{slot}_index }}")
-        out.append(f"\t\tset_variable = {{ name = sg_selected_index value = var:sg_top_{slot}_index }}")
-        out.append("\t\tsg_enact_selected = yes")
-        out.append("\t\tremove_variable = sg_selected_index")
-        out.append("\t}")
+        out.append("\t# Rerank even when the guard failed: the row is stale and must")
+        out.append("\t# disappear or change instead of looking like a dead click.")
+        out.append("\tsg_rank_laws = yes")
+        out.append("}")
+        out.append("")
+        out.append(f"sg_ignore_law_{lid} = {{")
+        out.append(f"\tset_variable = {{ name = sg_ignored_selected value = {sid} }}")
+        out.append("\tsg_store_ignored_selected = yes")
+        out.append("\tremove_variable = sg_ignored_selected")
+        out.append("\tsg_rank_laws = yes")
+        out.append("}")
+        out.append("")
+    return "\n".join(out)
+
+
+def emit_sguis(laws) -> str:
+    out = [
+        "# Generated by tools/build_law_data.py - do not edit by hand.",
+        "# One scripted GUI per law and action, so each button is bound to the",
+        "# law it displays rather than to a mutable recommendation slot.",
+        "",
+    ]
+    for law in laws:
+        lid = law["id"]
+        out.append(f"sg_enact_law_{lid}_sgui = {{")
+        out.append("\tscope = country")
+        out.append("\tis_shown = { is_player = yes has_variable = sg_enabled }")
+        # Availability is checked inside the effect, not in is_valid: if the law
+        # became unavailable the button must still be clickable so the click
+        # can rerank and remove the stale row.
+        out.append("\tis_valid = { sg_can_start_enactment = yes }")
+        out.append(f"\teffect = {{ sg_enact_law_{lid} = yes }}")
+        out.append("}")
+        out.append("")
+        out.append(f"sg_ignore_law_{lid}_sgui = {{")
+        out.append("\tscope = country")
+        out.append("\tis_shown = { is_player = yes has_variable = sg_enabled }")
+        out.append("\tis_valid = { is_player = yes has_variable = sg_enabled }")
+        out.append(f"\teffect = {{ sg_ignore_law_{lid} = yes }}")
         out.append("}")
         out.append("")
     return "\n".join(out)
@@ -802,6 +978,8 @@ def emit_loc(laws, lang: str) -> str:
             L("Supports construction and infrastructure.", "Apoia a construção e a infraestrutura."),
             L("Improves trade access and market reach.", "Melhora o acesso ao comércio e ao mercado."),
             L("Improves internal security and public order.", "Melhora a segurança interna e a ordem pública."),
+            L("No direct measurable bonus; it mainly changes the legal framework.", "Sem bônus direto mensurável; a lei principalmente altera o marco legal."),
+            L("Strengthens state capacity and internal stability.", "Fortalece a capacidade do Estado e a estabilidade interna."),
         ],
         "risk": [
             L("May provoke landowner and aristocratic backlash.", "Pode provocar reação de latifundiários e aristocratas."),
@@ -816,6 +994,7 @@ def emit_loc(laws, lang: str) -> str:
             L("May deepen discrimination or social exclusion.", "Pode aprofundar a discriminação ou a exclusão social."),
             L("Creates tension between central power and local autonomy.", "Cria tensão entre o poder central e a autonomia local."),
             L("May isolate the economy or invite diplomatic friction.", "Pode isolar a economia ou gerar atrito diplomático."),
+            L("No direct measurable risk beyond the normal enactment process.", "Sem risco direto mensurável além do processo normal de promulgação."),
         ],
         "focus": [
             L("Governance", "Governança"),
@@ -828,19 +1007,34 @@ def emit_loc(laws, lang: str) -> str:
     }
 
     out = [f"l_{lang}:"]
+    # Index 0 is the safe fallback while a row variable is being written.
+    out.append(f' sg_benefit_0:0 "{themes["benefit"][BENEFIT_NEUTRAL_THEME - 1]}"')
     for i, text in enumerate(themes["benefit"], start=1):
         out.append(f' sg_benefit_{i}:0 "{text}"')
+    out.append(f' sg_risk_0:0 "{themes["risk"][RISK_NEUTRAL_THEME - 1]}"')
     for i, text in enumerate(themes["risk"], start=1):
         out.append(f' sg_risk_{i}:0 "{text}"')
+    out.append(f' sg_focus_0:0 "{themes["focus"][0]}"')
     for i, text in enumerate(themes["focus"], start=1):
         out.append(f' sg_focus_{i}:0 "{text}"')
     out.append("")
+    effect_label = L("Effects:", "Efeitos:")
+    req_label = L("Requirements:", "Requisitos:")
     for law in laws:
         lid = law["id"]
+        sid = law["sid"]
         benefit_text = themes["benefit"][law["benefit_theme"] - 1]
         risk_text = themes["risk"][law["risk_theme"] - 1]
-        # Per-law strings are kept for the JSON dump and for modders; the GUI
-        # renders the theme through a compact localization selector.
+        # The GUI selects these by stable numeric id. GetLawType is a global
+        # localization function, so the row never depends on a law-type value
+        # stored in a country variable.
+        out.append(f' sg_law_name_{sid}:0 "[GetLawType(\'{lid}\').GetName]"')
+        out.append(f' sg_law_group_{sid}:0 "[GetLawType(\'{lid}\').GetGroup.GetName]"')
+        out.append(
+            f' sg_law_tip_{sid}:0 "{effect_label}\\n'
+            f"[GetLawType('{lid}').GetEffectDesc(GetPlayer.Self)]\\n\\n"
+            f"{req_label}\\n[GetLawType('{lid}').GetBlockingRequirements(GetPlayer.Self)]\""
+        )
         out.append(f' sg_law_benefit_{lid}:0 "{benefit_text}"')
         out.append(f' sg_law_risk_{lid}:0 "{risk_text}"')
     return "\n".join(out) + "\n"
@@ -848,16 +1042,22 @@ def emit_loc(laws, lang: str) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--game", default=str(DEFAULT_GAME))
-    parser.add_argument("--out", default=str(Path(__file__).resolve().parent.parent))
+    parser.add_argument(
+        "--game",
+        default=None,
+        help="Victoria 3 game folder (contains common/ and gui/). "
+        "Defaults to VICTORIA3_GAME or automatic Steam/Hydra discovery.",
+    )
+    parser.add_argument("--out", default=str(ROOT))
     args = parser.parse_args()
 
-    game = Path(args.game)
+    game = resolve_game_path(args.game)
     out = Path(args.out)
     groups, laws = build(game)
     if not laws:
-        print("No laws parsed; check --game", file=sys.stderr)
+        print(f"No laws parsed under {game}; check --game", file=sys.stderr)
         return 1
+    law_ids = assign_stable_ids(laws, load_law_ids())
 
     (out / "common" / "scripted_triggers").mkdir(parents=True, exist_ok=True)
     (out / "common" / "script_values").mkdir(parents=True, exist_ok=True)
@@ -878,17 +1078,37 @@ def main() -> int:
     (out / "common" / "scripted_effects" / "sg_law_actions.txt").write_text(
         emit_actions(laws), encoding="utf-8"
     )
+    (out / "common" / "scripted_guis").mkdir(parents=True, exist_ok=True)
+    (out / "common" / "scripted_guis" / "sg_law_sguis.txt").write_text(
+        emit_sguis(laws), encoding="utf-8"
+    )
     (out / "localization" / "english" / "sg_generated_l_english.yml").write_text(
         emit_loc(laws, "english"), encoding="utf-8-sig"
     )
     (out / "localization" / "braz_por" / "sg_generated_l_braz_por.yml").write_text(
         emit_loc(laws, "braz_por"), encoding="utf-8-sig"
     )
-    (out / "data" / "law_data.json").write_text(
-        json.dumps({"groups": groups, "laws": laws}, indent=1, ensure_ascii=False),
+    (out / "data" / "law_ids.json").write_text(
+        json.dumps(dict(sorted(law_ids.items())), indent=1, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
-    print(f"Wrote {len(laws)} laws across {len(groups)} groups.")
+    (out / "data" / "law_data.json").write_text(
+        json.dumps(
+            {
+                "schema_version": SCHEMA_VERSION,
+                "game": str(game),
+                "groups": groups,
+                "laws": laws,
+            },
+            indent=1,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    print(
+        f"Wrote {len(laws)} laws across {len(groups)} groups "
+        f"from {game} (schema {SCHEMA_VERSION})."
+    )
     return 0
 
 

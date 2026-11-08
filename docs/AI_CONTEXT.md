@@ -5,7 +5,7 @@ repository. It records the design, the exact game/save paths on the original
 machine, what is generated, what is hand-written, what has been verified, and
 what still needs a runtime test.
 
-Last updated: 2026-11-07 (phase 2: generated data + core runtime files).
+Last updated: 2026-11-07 (phase 4: Sourcery review fixes; schema 2).
 
 ---
 
@@ -69,23 +69,27 @@ These were checked against the game files and/or a working 1.15 reference mod
 | `add_journal_entry = { type = je_x }` | create the entry |
 | `has_inactive_journal_entry = je_x` | avoid duplicate creation |
 | `debug_log = "..."` | diagnostics |
-| `law_type:law_x` in variables | stored for the GUI (`Var('x').GetLawType`) |
-| `LawType.GetEffectDesc(GetPlayer.Self)` | real current effects |
-| `LawType.GetBlockingRequirements(GetPlayer.Self)` | real blocking requirements |
-| `LawType.GetGroup.GetName` | law group name |
+| `GetLawType('law_x')` in localization | law name, group and tooltips in the generated row lookups |
+| `GetLawType('law_x').GetEffectDesc(GetPlayer.Self)` | real current effects |
+| `GetLawType('law_x').GetBlockingRequirements(GetPlayer.Self)` | real blocking requirements |
+| `GetLawType('law_x').GetGroup.GetName` | law group name |
+| `GetScriptedGui('sg_enact_law_x_sgui')` | one button per law, cannot be retargeted by a rerank |
 | `var:x ?= / =` and `set_variable value = var:y` | variable copying |
 | On-actions with `on_actions = { dispatcher }` | additive, preserves vanilla |
 | `SelectLocalization(bool, key, key)` and `LessThan_int32` | dynamic localized text in GUI |
 
 Unverified at runtime (still marked as risk):
 
-- `Var('sg_top_1_law').GetLawType` from a journal-entry widget. It mirrors the
-  verified `Var('x').GetBuildingType` pattern and `GetLawType` is present in
-  the executable strings, but the GUI path must be confirmed in `error.log`.
 - `law_stance` inside `every_scope_interest_group` in a script value (vanilla
   uses it in interest-group triggers; script-value lists should work).
 - `law_enactment_stance` on `ruler` in a country-scope script value.
-- Storing and copying a `law_type` through `set_variable`.
+- `GreaterThan_int32` / `LessThan_int32` exact-id visibility branches in this
+  widget (the functions are used by vanilla GUI; the generated chain must be
+  confirmed in `error.log`).
+
+The old risk about law-type values in country variables was removed together
+with that design: the GUI now looks laws up by stable numeric id and calls
+`GetLawType('law_x')` inside localization.
 
 If any of these fail, the fallback is documented in section 10.
 
@@ -108,6 +112,8 @@ localization/braz_por/sg_l_braz_por.yml
 tools/build_law_data.py
 tools/build_gui.py
 tools/pdx_parse.py
+tools/install_mod.py
+Smart Government Advisor.mod
 docs/AI_CONTEXT.md
 docs/PHASE_LOG.md
 ```
@@ -119,10 +125,12 @@ common/scripted_triggers/sg_law_availability.txt
 common/script_values/sg_law_scores.txt
 common/scripted_effects/sg_law_rank.txt
 common/scripted_effects/sg_law_actions.txt
+common/scripted_guis/sg_law_sguis.txt
 gui/journal_entry_widgets/sg_law_advisor.gui
 localization/english/sg_generated_l_english.yml
 localization/braz_por/sg_generated_l_braz_por.yml
 data/law_data.json
+data/law_ids.json
 ```
 
 Build commands:
@@ -148,18 +156,22 @@ somewhere else.
    `sg_schema_version` behind, so the advisor never silently re-enables.
 2. **Journal entry.** `sg_ensure_journal_entry` adds
    `je_sg_law_advisor` if neither the active nor the inactive entry exists.
-3. **Evaluation.** `sg_rank_laws` sets every top slot to `-1000`, then iterates
+3. **Evaluation.** `sg_rank_laws` first calls `sg_migrate_schema` (schema 1
+   positional state is discarded), sets every top slot to `-1000`, then iterates
    all 148 laws. For each law it checks `sg_law_available_<law>` and the ignored
    list, compares `sg_law_score_<law>` against the current top three and stores
-   the law type, index, score, benefit theme, risk theme, focus theme, benefit
-   score, risk score and political score.
+   the **stable numeric law id**, score, benefit theme, risk theme, focus theme,
+   benefit score, risk score and political score.
 4. **Monthly.** The JE `on_monthly_pulse` calls `sg_monthly_update`, which
    ensures the entry exists and reruns `sg_rank_laws`.
-5. **Enact.** The GUI calls `sg_enact_top_N`; it copies the stored index to
-   `sg_selected_index` and calls `sg_enact_selected`. The generated if-chain
-   re-checks `sg_law_available_<law>` and `NOT = { enacting_any_law = yes }`
-   before `start_enactment = law_type:<law>`.
-6. **Ignore.** `sg_ignore_top_N` stores the numeric law index in the first free
+5. **Enact.** Each row contains one Enact button per law, bound to
+   `sg_enact_law_<law>_sgui` and visible only while `sg_top_N_id` equals that
+   law. The effect re-checks `sg_law_available_<law>` and
+   `NOT = { enacting_any_law = yes }`, runs `start_enactment = law_type:<law>`,
+   then always reranks. A stale click therefore cannot target another law or
+   leave a dead row on screen.
+6. **Ignore.** Each row contains one Ignore button per law, bound to
+   `sg_ignore_law_<law>_sgui`. It stores that law's stable id in the first free
    `sg_ignored_1..3` slot and reranks. `sg_clear_ignored` removes the three
    slots and reranks.
 7. **Disable.** `sg_disable_country` removes all runtime variables. The JE's
@@ -169,11 +181,10 @@ somewhere else.
 
 Top slots (`N` = 1, 2, 3):
 
-- `sg_top_N_law` — `law_type` value, used by the GUI
-- `sg_top_N_index` — integer, used by the enact/ignore logic
+- `sg_top_N_id` — stable numeric law id from `data/law_ids.json`
 - `sg_top_N_score` — final score
-- `sg_top_N_benefit` — benefit theme code (1–16)
-- `sg_top_N_risk` — risk theme code (1–12)
+- `sg_top_N_benefit` — benefit theme code (1–17; 17 is neutral)
+- `sg_top_N_risk` — risk theme code (1–13; 13 is neutral)
 - `sg_top_N_focus` — focus code (1–6)
 - `sg_top_N_benefit_score` — numeric benefit
 - `sg_top_N_risk_score` — numeric risk
@@ -182,9 +193,9 @@ Top slots (`N` = 1, 2, 3):
 Other variables:
 
 - `sg_enabled` — advisor is on
-- `sg_schema_version` — initialized marker (never removed on disable)
-- `sg_ignored_1..3` — numeric law indices
-- `sg_ignored_selected`, `sg_selected_index` — short-lived helpers
+- `sg_schema_version` — schema marker (2; never removed on disable)
+- `sg_ignored_1..3` — stable numeric law ids
+- `sg_ignored_selected` — short-lived helper for the ignore effect
 - `sg_debug` — optional; enables lifecycle `debug_log` messages
 
 ---
@@ -222,16 +233,22 @@ All values are generated in `common/script_values/sg_law_scores.txt`.
 
 For each law:
 
-- `sg_law_benefit_<law>`: `45 + sum(modifier contributions)`, clamped 0–100.
-  Contributions come from a hand-written rule table in
+- `sg_law_benefit_<law>`: `45 + sum(modifier contributions)` when the law has
+  at least one positive measurable modifier; otherwise `30 + sum(...)`, clamped
+  0–100. Contributions come from a hand-written rule table in
   `tools/build_law_data.py`. Pure interest-group power, voting-power and
   ideological `progressiveness` modifiers are deliberately ignored. A small
-  situational adjustment is added by benefit theme (bankruptcy risk, bureaucracy
-  shortage, low literacy, low SoL, war, radicals).
+  situational adjustment is added only when the law's actual modifiers support
+  that theme (bankruptcy risk, bureaucracy shortage, low literacy, low SoL, war,
+  radicals). A law with no positive signal gets the neutral theme and no
+  situational bonus.
+- Tax laws are scored from the **average** of `tax_modifier_very_low`, `_low`,
+  `_medium`, `_high` and `_very_high` per key, so brackets are not ignored.
 - `sg_law_risk_<law>`: `5 + sum(risk contributions)`, clamped 0–60. Risk covers
   radicals, mortality, repression, discrimination, trade bans, migration bans,
   budget/bureaucracy cost, and similar real penalties. A small situational
-  adjustment is added by risk theme.
+  adjustment is added by risk theme; a law with no measurable risk uses the
+  neutral risk theme.
 - `sg_law_politics_<law>`: iterates interest groups **in government**, adds
   `ig_clout * 60` for strongly approve, `* 30` for approve, subtracts the same
   for disapprove/strongly disapprove, then adds the ruler's
@@ -252,20 +269,24 @@ three components separately so the player can see why a law is ranked.
 - status bar: title, "advisor active", Disable button, refresh button
 - explanatory header
 - three recommendation rows, each with:
-  - rank, law name (hover = real `GetEffectDesc`), law group
-  - focus theme, score, government support, risk
+  - rank, law name and group (hover = real effects + blocking requirements)
+  - focus theme, score, government support, benefit score, risk score
   - benefit sentence
   - risk sentence
-  - Enact and Ignore buttons
-  - "requirements not met" and "effects" hover hints
+  - one Enact and one Ignore button **per law**, visible only for the law the
+    row currently displays
 - empty state
 - footer: Clear ignored, Diagnostics, "recommendations only" note
 
+Law names and tooltips are generated per stable numeric id. A row shows the
+branch whose id matches `sg_top_N_id`; the branch uses localization keys such as
+`sg_law_name_<sid>` and `sg_law_tip_<sid>`, whose text calls
+`GetLawType('law_x')`. No law-type value is stored in a country variable.
+
 Theme sentences are selected from numeric variables with nested
-`SelectLocalization(LessThan_int32(...), ...)`. That avoids 148 per-law GUI
-branches. The per-law localization keys `sg_law_benefit_<law>` and
-`sg_law_risk_<law>` still exist in the generated localization file for
-documentation and future use.
+`SelectLocalization(LessThan_int32(...), ...)`. Index 0 is a neutral fallback
+for the short moment before a row variable is written. The per-law localization
+keys `sg_law_benefit_<law>` and `sg_law_risk_<law>` still exist for modders.
 
 ---
 
@@ -278,32 +299,42 @@ Done in this phase:
   effect, enact/ignore effects, GUI and theme localization.
 - Wrote the journal entry, lifecycle effects, scripted GUIs, decisions,
   additive on-actions and English/Portuguese UI localization.
+- Addressed the Sourcery review: stable ids, schema migration, per-law button
+  binding, rerank on failed enactment, modifier-based benefit/risk themes,
+  neutral themes, all tax brackets, portable game discovery, launcher `.mod`
+  file, lowercase localization keys, visible benefit score, and removal of the
+  law-type variable path.
 - Wrote this context file.
 
 Still to do:
 
-1. **Static validation.** Check brace balance, every `law_type:` and
+1. **Static validation.** Re-check brace balance, every `law_type:` and
    `has_technology_researched` reference, every scripted trigger/value/effect
-   reference, duplicate localization keys, and GUI function names.
+   reference, duplicate localization keys, and GUI function names after every
+   generator run. A `tools/validate.py` is still desirable.
 2. **Runtime test.** Copy a save, back up `content_load.json`, install the mod,
    enable it, load the copy, open the journal, click Enact, ignore, refresh,
    disable and re-enable. Check `error.log` for script/GUI errors.
-3. **Fix runtime issues.** Most likely areas: `Var(...).GetLawType`, the
+3. **Fix runtime issues.** Most likely areas: the
+   `GreaterThan_int32`/`LessThan_int32` id branches, the
    `law_stance`/`law_enactment_stance` values, or a vanilla trigger copied from
    `is_visible` that assumes a different scope.
-4. **Docs.** Install/test/disable/diagnostics/compatibility/scoring docs and a
-   phase log.
-5. **Installer/validator tools.** A copy-and-backup installer and a validator.
-6. **Git/PR.** Commit, push branch, open PR, address Sourcery review, merge.
+4. **Installer/validator tools.** `tools/install_mod.py` exists; add
+   `tools/validate.py`.
+5. **Git/PR.** Commit, push branch, reply to the Sourcery review, merge.
 
 ---
 
 ## 10. Fallbacks if a runtime feature fails
 
-- **`Var('x').GetLawType` fails.** Store the law's localization key in a
-  separate variable and render the name with a generated
-  `SelectLocalization` tree, or switch the row to a scripted-GUI-only list that
-  uses `GetLawType` from a scope saved at ranking time.
+- **`GetLawType('law_x')` inside generated localization fails.** Fall back to
+  per-law localization strings containing only static text, or store a law
+  scope with `save_scope_as`/`value = PREV` and use the vanilla
+  `Var('x').GetLaw.GetName` pattern. Do not return to storing a `law_type`
+  token in a country variable.
+- **`GreaterThan_int32`/`LessThan_int32` id branches fail.** Replace the exact
+  id check with one `<` chain generated by `build_gui.py`, or use
+  `SelectLocalization` to choose a per-law localization key.
 - **`law_enactment_stance` on ruler fails.** Remove the ruler block from
   `sg_law_politics_<law>`; interest-group stance alone is still valid.
 - **`law_stance` in a script value fails.** Convert the politics value into a

@@ -32,22 +32,40 @@ registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativa
 
 ## Instalação manual
 
-1. Copie esta pasta para o diretório de mods do jogo. No Linux com Hydra/Wine,
-   o caminho usado no desenvolvimento é:
+O launcher precisa de **dois** itens: a pasta do mod (com `descriptor.mod`
+dentro) e o arquivo `Smart Government Advisor.mod` ao lado dela.
+
+1. Localize a pasta de mods do jogo. No Linux com Hydra/Wine, o caminho usado no
+   desenvolvimento é:
 
    ```
-   ~/.config/hydralauncher/wine-prefixes/529340/drive_c/users/steamuser/Documents/Paradox Interactive/Victoria 3/mod/Smart Government Advisor/
+   ~/.config/hydralauncher/wine-prefixes/529340/drive_c/users/steamuser/Documents/Paradox Interactive/Victoria 3/mod/
    ```
 
-   O diretório precisa conter `descriptor.mod` na raiz.
+   Em uma instalação normal, é a pasta `mod` dentro de
+   `Documents/Paradox Interactive/Victoria 3`.
 
-2. **Faça backup** de
+2. Copie esta pasta para dentro de `mod/` com o nome
+   `Smart Government Advisor`, de modo que exista:
+
+   ```
+   mod/Smart Government Advisor/descriptor.mod
+   ```
+
+3. Copie o arquivo `Smart Government Advisor.mod` (da raiz deste repositório)
+   para `mod/`. Ele contém `path="mod/Smart Government Advisor"`, que é o que o
+   launcher usa para registrar a pasta.
+
+4. **Faça backup** de
    `.../Paradox Interactive/Victoria 3/content_load.json`.
 
-3. Ative o mod no launcher do jogo (ou adicione-o ao `content_load.json`,
+5. Ative o mod no launcher do jogo (ou adicione-o ao `content_load.json`,
    preferindo o launcher).
 
-4. Carregue um **save separado** para testar. Não use o único save da campanha.
+6. Carregue um **save separado** para testar. Não use o único save da campanha.
+
+> Alternativa: `python3 tools/install_mod.py` copia a pasta e cria o `.mod` com
+> o caminho absoluto correto. Use `--dry-run` para apenas mostrar o destino.
 
 ## Uso
 
@@ -105,13 +123,19 @@ Kuromi's AI. O teste de convivência em tempo de jogo ainda precisa ser feito.
 
 ## Desenvolvimento
 
-Os dados são gerados a partir da instalação do jogo:
+Os dados são gerados a partir da instalação do jogo. O caminho é descoberto
+automaticamente (Steam, Hydra/Wine e instalações comuns) ou pode ser informado
+de forma portátil:
 
 ```bash
-cd /home/lincoln-ii/Victoria3_mod
-python3 tools/build_law_data.py
+python3 tools/build_law_data.py --game "/caminho/para/Victoria 3/game"
+# ou:
+VICTORIA3_GAME="/caminho/para/Victoria 3/game" python3 tools/build_law_data.py
 python3 tools/build_gui.py
 ```
+
+Não há caminho de máquina fixo no gerador. Se a descoberta falhar, ele para com
+uma mensagem pedindo `--game` ou `VICTORIA3_GAME`.
 
 Arquivos gerados (não edite à mão):
 
@@ -119,10 +143,12 @@ Arquivos gerados (não edite à mão):
 - `common/script_values/sg_law_scores.txt`
 - `common/scripted_effects/sg_law_rank.txt`
 - `common/scripted_effects/sg_law_actions.txt`
+- `common/scripted_guis/sg_law_sguis.txt`
 - `gui/journal_entry_widgets/sg_law_advisor.gui`
 - `localization/english/sg_generated_l_english.yml`
 - `localization/braz_por/sg_generated_l_braz_por.yml`
 - `data/law_data.json`
+- `data/law_ids.json` (stable numeric law ids; commit it)
 
 O contexto completo para outro desenvolvedor ou IA está em
 [`docs/AI_CONTEXT.md`](docs/AI_CONTEXT.md). O histórico de fases está em

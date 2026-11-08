@@ -1,4 +1,6 @@
 {
+ "schema_version": 2,
+ "game": "/home/lincoln-ii/Games/Victoria 3/game",
  "groups": {
   "lawgroup_governance_principles": {
    "category": "power_structure",
@@ -168,6 +170,7 @@
    "benefit_theme": 11,
    "risk_theme": 5,
    "focus": 4,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "unit_morale_loss_mult",
@@ -206,6 +209,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -217,7 +221,7 @@
     "law_strict_edo_system",
     "law_intermediate_edo_system"
    ],
-   "index": 1
+   "sid": 70
   },
   {
    "id": "law_national_militia",
@@ -229,6 +233,7 @@
    "benefit_theme": 11,
    "risk_theme": 5,
    "focus": 4,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "unit_morale_loss_mult",
@@ -267,6 +272,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tOR = {\n\t\t\tis_power_bloc_leader = no\n\t\t\tpower_bloc ?= {\n\t\t\t\tNOT = { has_identity = identity:identity_military_treaty_organization }\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -278,7 +284,7 @@
     "law_strict_edo_system",
     "law_intermediate_edo_system"
    ],
-   "index": 2
+   "sid": 80
   },
   {
    "id": "law_peasant_levies",
@@ -290,6 +296,7 @@
    "benefit_theme": 11,
    "risk_theme": 1,
    "focus": 4,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_can_only_conscript_peasants_bool",
@@ -340,13 +347,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOT = {\n\t\t\tcountry_has_primary_culture = cu:japanese\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 3
+   "sid": 99
   },
   {
    "id": "law_professional_army",
@@ -358,6 +366,7 @@
    "benefit_theme": 11,
    "risk_theme": 5,
    "focus": 4,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "unit_morale_loss_mult",
@@ -396,6 +405,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -407,7 +417,7 @@
     "law_strict_edo_system",
     "law_intermediate_edo_system"
    ],
-   "index": 4
+   "sid": 107
   },
   {
    "id": "law_revolutionary_guard",
@@ -419,6 +429,7 @@
    "benefit_theme": 11,
    "risk_theme": 5,
    "focus": 4,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_conscription_rate_add",
@@ -463,6 +474,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -474,7 +486,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 5
+   "sid": 118
   },
   {
    "id": "law_warrior_caste",
@@ -486,6 +498,7 @@
    "benefit_theme": 11,
    "risk_theme": 5,
    "focus": 4,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_limit_officers_qualifications_to_upper_strata",
@@ -542,13 +555,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tcountry_has_primary_culture = cu:japanese\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 6
+   "sid": 142
   },
   {
    "id": "law_appointed_bureaucrats",
@@ -557,9 +571,10 @@
    "category": "power_structure",
    "benefit": 52.5,
    "risk": 5.0,
-   "benefit_theme": 6,
-   "risk_theme": 11,
+   "benefit_theme": 1,
+   "risk_theme": 13,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_bureaucrats_pol_str_mult",
@@ -574,13 +589,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 7
+   "sid": 5
   },
   {
    "id": "law_communal_administration",
@@ -592,6 +608,7 @@
    "benefit_theme": 6,
    "risk_theme": 7,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_bureaucracy_population_base_cost_factor_mult",
@@ -612,6 +629,7 @@
      "risk": -0.75
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -623,7 +641,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 8
+   "sid": 25
   },
   {
    "id": "law_crownland_diets",
@@ -635,6 +653,7 @@
    "benefit_theme": 6,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_bureaucracy_population_base_cost_factor_mult",
@@ -649,6 +668,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tOR = {\n\t\t\tc:AUS ?= this \n\t\t\tAND = {\n\t\t\t\texists = c:AUS\n\t\t\t\tis_subject_of = c:AUS\n\t\t\t}\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -657,7 +677,7 @@
    "disallowing_laws": [
     "law_council_republic"
    ],
-   "index": 9
+   "sid": 32
   },
   {
    "id": "law_elected_bureaucrats",
@@ -669,6 +689,7 @@
    "benefit_theme": 6,
    "risk_theme": 7,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_bureaucracy_investment_cost_factor_mult",
@@ -677,6 +698,7 @@
      "risk": -0.75
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -686,7 +708,7 @@
     "law_technocracy",
     "law_elder_council"
    ],
-   "index": 10
+   "sid": 38
   },
   {
    "id": "law_hereditary_bureaucrats",
@@ -698,6 +720,7 @@
    "benefit_theme": 6,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_bureaucracy_population_base_cost_factor_mult",
@@ -712,6 +735,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOR = {\n\t\t\tc:AUS ?= this \n\t\t\tAND = {\n\t\t\t\texists = c:AUS\n\t\t\t\tis_subject_of = c:AUS\n\t\t\t}\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -720,7 +744,7 @@
    "disallowing_laws": [
     "law_council_republic"
    ],
-   "index": 11
+   "sid": 50
   },
   {
    "id": "law_military_bureaucrats",
@@ -732,6 +756,7 @@
    "benefit_theme": 6,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_bureaucracy_population_base_cost_factor_mult",
@@ -752,13 +777,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 12
+   "sid": 75
   },
   {
    "id": "law_affirmative_action",
@@ -767,9 +793,10 @@
    "category": "power_structure",
    "benefit": 50.6,
    "risk": 6.6,
-   "benefit_theme": 10,
+   "benefit_theme": 4,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_kshatriyas_education_access_mult",
@@ -826,6 +853,7 @@
      "risk": 1.6
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -834,7 +862,7 @@
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 13
+   "sid": 1
   },
   {
    "id": "law_hindu_caste_codified",
@@ -843,9 +871,10 @@
    "category": "power_structure",
    "benefit": 100,
    "risk": 2.8,
-   "benefit_theme": 10,
+   "benefit_theme": 6,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_bureaucracy_population_base_cost_factor_mult",
@@ -956,13 +985,14 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 14
+   "sid": 51
   },
   {
    "id": "law_hindu_caste_enforced",
@@ -971,9 +1001,10 @@
    "category": "power_structure",
    "benefit": 100,
    "risk": 1.2,
-   "benefit_theme": 10,
+   "benefit_theme": 6,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_bureaucracy_population_base_cost_factor_mult",
@@ -1090,13 +1121,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 15
+   "sid": 52
   },
   {
    "id": "law_hindu_caste_not_enforced",
@@ -1108,6 +1140,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_kshatriyas_cultural_acceptance_mult",
@@ -1140,13 +1173,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 16
+   "sid": 53
   },
   {
    "id": "law_child_labor_allowed",
@@ -1155,9 +1189,10 @@
    "category": "human_rights",
    "benefit": 35.4,
    "risk": 17.0,
-   "benefit_theme": 10,
+   "benefit_theme": 5,
    "risk_theme": 3,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_laborers_mortality_mult",
@@ -1190,13 +1225,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 17
+   "sid": 15
   },
   {
    "id": "law_compulsory_primary_school",
@@ -1205,9 +1241,10 @@
    "category": "human_rights",
    "benefit": 61.0,
    "risk": 13.0,
-   "benefit_theme": 10,
+   "benefit_theme": 2,
    "risk_theme": 11,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_institution_schools_max_investment_add",
@@ -1216,6 +1253,7 @@
      "risk": 8.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -1227,7 +1265,7 @@
     "law_no_schools",
     "law_terakoya"
    ],
-   "index": 18
+   "sid": 26
   },
   {
    "id": "law_restricted_child_labor",
@@ -1236,9 +1274,10 @@
    "category": "human_rights",
    "benefit": 50.6,
    "risk": 12.6,
-   "benefit_theme": 10,
+   "benefit_theme": 5,
    "risk_theme": 3,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_laborers_mortality_mult",
@@ -1271,6 +1310,7 @@
      "risk": 4.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -1279,7 +1319,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 19
+   "sid": 117
   },
   {
    "id": "law_caesaropapism",
@@ -1291,6 +1331,7 @@
    "benefit_theme": 9,
    "risk_theme": 4,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_devout_pol_str_mult",
@@ -1377,13 +1418,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tOR = {\n\t\t\tc:RUS ?= this\n\t\t\tAND = {\n\t\t\t\texists = c:RUS\n\t\t\t\tis_subject_of = c:RUS\n\t\t\t\tcountry_is_subject_type_valid_for_caesaropapism = yes\n\t\t\t}\n\t\t}\n\t\tNOT = {\n\t\t\thas_law_or_variant = law_type:law_theocracy\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 20
+   "sid": 8
   },
   {
    "id": "law_freedom_of_conscience",
@@ -1395,6 +1437,7 @@
    "benefit_theme": 9,
    "risk_theme": 4,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_devout_pol_str_mult",
@@ -1475,6 +1518,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -1485,7 +1529,7 @@
    "disallowing_laws": [
     "law_theocracy"
    ],
-   "index": 21
+   "sid": 45
   },
   {
    "id": "law_millet_system",
@@ -1497,6 +1541,7 @@
    "benefit_theme": 9,
    "risk_theme": 4,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_devout_pol_str_mult",
@@ -1583,6 +1628,9 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {
+    "tax_heathen_add": 0.5
+   },
    "is_visible": "\n\t\tc:TUR ?= this \n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -1593,7 +1641,7 @@
     "law_chiefdom"
    ],
    "disallowing_laws": [],
-   "index": 22
+   "sid": 76
   },
   {
    "id": "law_people_of_the_book",
@@ -1605,6 +1653,7 @@
    "benefit_theme": 9,
    "risk_theme": 4,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_devout_pol_str_mult",
@@ -1691,6 +1740,9 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {
+    "tax_heathen_add": 0.5
+   },
    "is_visible": "\n\t\tcountry_is_islamic = yes\n\t\tNOT = {\n\t\t\tc:TUR ?= this \n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -1701,7 +1753,7 @@
     "law_chiefdom"
    ],
    "disallowing_laws": [],
-   "index": 23
+   "sid": 101
   },
   {
    "id": "law_state_atheism",
@@ -1713,6 +1765,7 @@
    "benefit_theme": 9,
    "risk_theme": 4,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_devout_pol_str_mult",
@@ -1787,6 +1840,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tig:ig_devout ?= {\n\t\t\tis_in_government = no\n\t\t}\n\t\tOR = {\n\t\t\tis_power_bloc_leader = no\n\t\t\tpower_bloc ?= {\n\t\t\t\tNOT = { has_identity = identity:identity_religious }\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -1797,7 +1851,7 @@
    "disallowing_laws": [
     "law_theocracy"
    ],
-   "index": 24
+   "sid": 129
   },
   {
    "id": "law_state_religion",
@@ -1809,6 +1863,7 @@
    "benefit_theme": 9,
    "risk_theme": 4,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_devout_pol_str_mult",
@@ -1889,13 +1944,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOR = { \n\t\t\thas_law = law_type:law_millet_system\n\t\t\thas_law = law_type:law_people_of_the_book\n\t\t}\n\t\tNAND = {\n\t\t\tOR = {\n\t\t\t\tc:RUS ?= this\n\t\t\t\tAND = {\n\t\t\t\t\texists = c:RUS\n\t\t\t\t\tis_subject_of = c:RUS\n\t\t\t\t\tcountry_is_subject_type_valid_for_caesaropapism = yes\n\t\t\t\t}\n\t\t\t}\n\t\t\tNOT = {\n\t\t\t\thas_law_or_variant = law_type:law_theocracy\n\t\t\t}\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 25
+   "sid": 130
   },
   {
    "id": "law_total_separation",
@@ -1907,6 +1963,7 @@
    "benefit_theme": 9,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_acceptance_state_religion_add",
@@ -1963,6 +2020,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tOR = {\n\t\t\tis_power_bloc_leader = no\n\t\t\tpower_bloc ?= {\n\t\t\t\tNOT = { has_identity = identity:identity_religious }\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -1973,7 +2031,7 @@
    "disallowing_laws": [
     "law_theocracy"
    ],
-   "index": 26
+   "sid": 138
   },
   {
    "id": "law_cultural_exclusion",
@@ -1985,6 +2043,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -2065,6 +2124,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -2075,7 +2135,7 @@
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 27
+   "sid": 33
   },
   {
    "id": "law_ethnostate",
@@ -2087,6 +2147,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -2167,6 +2228,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -2175,7 +2237,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 28
+   "sid": 39
   },
   {
    "id": "law_multicultural",
@@ -2187,6 +2249,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_acceptance_primary_culture_add",
@@ -2267,6 +2330,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -2277,7 +2341,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 29
+   "sid": 78
   },
   {
    "id": "law_national_supremacy",
@@ -2289,6 +2353,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -2369,13 +2434,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 30
+   "sid": 81
   },
   {
    "id": "law_official_nationality",
@@ -2387,6 +2453,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -2473,6 +2540,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tc:RUS ?= this \n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -2483,7 +2551,7 @@
     "law_chiefdom"
    ],
    "disallowing_laws": [],
-   "index": 31
+   "sid": 92
   },
   {
    "id": "law_racial_segregation",
@@ -2495,6 +2563,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -2563,13 +2632,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 32
+   "sid": 114
   },
   {
    "id": "law_subjecthood",
@@ -2581,6 +2651,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -2673,6 +2744,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOT = {\n\t\t\tc:RUS ?= this \n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [
@@ -2684,7 +2756,7 @@
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 33
+   "sid": 132
   },
   {
    "id": "law_colonial_exploitation",
@@ -2693,9 +2765,10 @@
    "category": "economy",
    "benefit": 83.0,
    "risk": 7.0,
-   "benefit_theme": 7,
+   "benefit_theme": 2,
    "risk_theme": 6,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "building_group_bg_manufacturing_unincorporated_throughput_add",
@@ -2746,6 +2819,7 @@
      "risk": 2.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -2756,7 +2830,7 @@
    "disallowing_laws": [
     "law_sakoku"
    ],
-   "index": 34
+   "sid": 19
   },
   {
    "id": "law_colonial_resettlement",
@@ -2765,9 +2839,10 @@
    "category": "economy",
    "benefit": 49.0,
    "risk": 5.0,
-   "benefit_theme": 7,
+   "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_migration_pull_unincorporated_mult",
@@ -2776,6 +2851,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -2786,7 +2862,7 @@
    "disallowing_laws": [
     "law_sakoku"
    ],
-   "index": 35
+   "sid": 20
   },
   {
    "id": "law_frontier_colonization",
@@ -2795,9 +2871,10 @@
    "category": "economy",
    "benefit": 49.0,
    "risk": 5.0,
-   "benefit_theme": 7,
+   "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_migration_pull_unincorporated_mult",
@@ -2806,6 +2883,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tOR = {\n\t\t\tAND = {\n\t\t\t\tcountry_is_colonial_or_company = yes\n\t\t\t\tany_decentralized_country = {\n\t\t\t\t\tis_adjacent_to_country = root\n\t\t\t\t}\n\t\t\t}\n\t\t\tany_scope_state = {\n\t\t\t\tis_homeland_of_country_cultures = ROOT\n\t\t\t\tany_neighbouring_state = {\n\t\t\t\t\towner = {\n\t\t\t\t\t\tis_country_type = decentralized\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -2816,7 +2894,7 @@
    "disallowing_laws": [
     "law_sakoku"
    ],
-   "index": 36
+   "sid": 46
   },
   {
    "id": "law_internal_colonization",
@@ -2825,9 +2903,10 @@
    "category": "economy",
    "benefit": 47.0,
    "risk": 5.0,
-   "benefit_theme": 7,
+   "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_colony_growth_creation_factor",
@@ -2848,6 +2927,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tOR = {\n\t\t\tis_country_type = colonial\n\t\t\tany_scope_state = {\n\t\t\t\tis_incorporated = no\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -2856,7 +2936,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 37
+   "sid": 57
   },
   {
    "id": "law_no_colonial_affairs",
@@ -2865,9 +2945,10 @@
    "category": "economy",
    "benefit": 65.0,
    "risk": 5.0,
-   "benefit_theme": 7,
+   "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_acceptance_homeland_add",
@@ -2876,13 +2957,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tcustom_tooltip = {\n\t\t\tmodifier:country_disallow_law_no_colonial_affairs_bool = no\n\t\t\ttext = disallow_law_no_colonial_affairs_tt\n\t\t}\n\t",
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 38
+   "sid": 83
   },
   {
    "id": "law_anarchy",
@@ -2891,9 +2973,10 @@
    "category": "power_structure",
    "benefit": 58.1,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 11,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_pop_pol_str_add",
@@ -2926,6 +3009,7 @@
      "risk": -0.2
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\thas_variable = britain_granted_dop_permission\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [
@@ -2936,7 +3020,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 39
+   "sid": 3
   },
   {
    "id": "law_autocracy",
@@ -2945,9 +3029,10 @@
    "category": "power_structure",
    "benefit": 66.0,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -2986,6 +3071,7 @@
      "risk": -4.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOR = { \n\t\t\thas_law = law_type:law_neo_absolutism\n\t\t\thas_law = law_type:law_bakufu\n\t\t}\n\t",
    "can_enact": "\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\thas_variable = britain_granted_dop_permission\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -2994,7 +3080,7 @@
    "disallowing_laws": [
     "law_parliamentary_republic"
    ],
-   "index": 40
+   "sid": 6
   },
   {
    "id": "law_bakufu",
@@ -3003,9 +3089,10 @@
    "category": "power_structure",
    "benefit": 66.3,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -3056,6 +3143,7 @@
      "risk": -4.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tc:JAP ?= this\n\t\tNOT = {\n\t\t\thas_law = law_type:law_autocracy\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [
@@ -3065,7 +3153,7 @@
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 41
+   "sid": 7
   },
   {
    "id": "law_census_voting",
@@ -3074,9 +3162,10 @@
    "category": "power_structure",
    "benefit": 78.3,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 11,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_total_votes_add",
@@ -3127,6 +3216,7 @@
      "risk": -0.5
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\thas_variable = britain_granted_dop_permission\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -3138,7 +3228,7 @@
     "law_chiefdom",
     "law_command_economy"
    ],
-   "index": 42
+   "sid": 11
   },
   {
    "id": "law_elder_council",
@@ -3147,9 +3237,10 @@
    "category": "power_structure",
    "benefit": 86.6,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_base_add",
@@ -3200,6 +3291,7 @@
      "risk": -4.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tis_country_type = decentralized\n\t",
    "can_enact": null,
    "unlocking_laws": [
@@ -3208,7 +3300,7 @@
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 43
+   "sid": 37
   },
   {
    "id": "law_labour_suffrage",
@@ -3217,9 +3309,10 @@
    "category": "power_structure",
    "benefit": 77.3,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_total_votes_add",
@@ -3300,6 +3393,7 @@
      "risk": -2.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -3310,7 +3404,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 44
+   "sid": 61
   },
   {
    "id": "law_landed_voting",
@@ -3319,9 +3413,10 @@
    "category": "power_structure",
    "benefit": 72.3,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_total_votes_add",
@@ -3384,6 +3479,7 @@
      "risk": -1.5
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\thas_variable = britain_granted_dop_permission\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -3395,7 +3491,7 @@
     "law_chiefdom",
     "law_command_economy"
    ],
-   "index": 45
+   "sid": 64
   },
   {
    "id": "law_neo_absolutism",
@@ -3404,9 +3500,10 @@
    "category": "power_structure",
    "benefit": 68.5,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -3445,6 +3542,7 @@
      "risk": -5.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tc:AUS ?= this\n\t\thas_global_variable = neo_absolutism_victory\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -3453,7 +3551,7 @@
     "law_monarchy"
    ],
    "disallowing_laws": [],
-   "index": 46
+   "sid": 82
   },
   {
    "id": "law_oligarchy",
@@ -3462,9 +3560,10 @@
    "category": "power_structure",
    "benefit": 75.6,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -3515,13 +3614,14 @@
      "risk": -2.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNAND = {\n\t\t\tcountry_has_primary_culture = cu:romanian\n\t\t\tis_subject = yes\n\t\t}\n\t",
    "can_enact": "\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\tNOT = {\n\t\t\t\t\tc:BIC ?= ROOT\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 47
+   "sid": 95
   },
   {
    "id": "law_organic_regulation",
@@ -3530,9 +3630,10 @@
    "category": "power_structure",
    "benefit": 75.6,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -3583,13 +3684,14 @@
      "risk": -2.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tcountry_has_primary_culture = cu:romanian\n\t\tis_subject = yes\n\t",
    "can_enact": "\n\t\tcountry_has_primary_culture = cu:romanian\n\t\tis_subject = yes\n\t",
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 48
+   "sid": 96
   },
   {
    "id": "law_single_party_state",
@@ -3598,9 +3700,10 @@
    "category": "power_structure",
    "benefit": 86.0,
    "risk": 0,
-   "benefit_theme": 8,
-   "risk_theme": 11,
+   "benefit_theme": 7,
+   "risk_theme": 13,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_total_votes_add",
@@ -3639,6 +3742,7 @@
      "risk": -5.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tOR = {\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = ruler_in_party_tt\n\t\t\t\texists = ruler\n\t\t\t\tOR = {\n\t\t\t\t\truler = {\n\t\t\t\t\t\tthis.interest_group ?= {\n\t\t\t\t\t\t\thas_party = yes\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = sps_no_party_tt\n\t\t\t\tcountry_has_voting_franchise = no\n\t\t\t}\n\t\t}\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\thas_variable = britain_granted_dop_permission\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -3647,7 +3751,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 49
+   "sid": 125
   },
   {
    "id": "law_technocracy",
@@ -3656,9 +3760,10 @@
    "category": "power_structure",
    "benefit": 87.6,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 2,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -3721,6 +3826,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\thas_variable = britain_granted_dop_permission\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -3729,7 +3835,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 50
+   "sid": 133
   },
   {
    "id": "law_universal_suffrage",
@@ -3738,9 +3844,10 @@
    "category": "power_structure",
    "benefit": 72.8,
    "risk": 0,
-   "benefit_theme": 8,
-   "risk_theme": 11,
+   "benefit_theme": 7,
+   "risk_theme": 13,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_total_votes_add",
@@ -3767,6 +3874,7 @@
      "risk": -0.1
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\thas_variable = britain_granted_dop_permission\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -3778,7 +3886,7 @@
     "law_chiefdom",
     "law_command_economy"
    ],
-   "index": 51
+   "sid": 140
   },
   {
    "id": "law_wealth_voting",
@@ -3787,9 +3895,10 @@
    "category": "power_structure",
    "benefit": 77.3,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 7,
    "risk_theme": 11,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_total_votes_add",
@@ -3840,6 +3949,7 @@
      "risk": -1.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:BIC ?= ROOT\n\t\t\t\tis_subject = yes\n\t\t\t\tNOT = { has_law = scope:law }\n\t\t\t}\n\t\t\tcustom_tooltip = {\n\t\t\t\ttext = BIC_not_able_to_change_distribution_of_power_tt\n\t\t\t\thas_variable = britain_granted_dop_permission\n\t\t\t}\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -3851,7 +3961,7 @@
     "law_chiefdom",
     "law_command_economy"
    ],
-   "index": 52
+   "sid": 143
   },
   {
    "id": "law_agrarianism",
@@ -3860,9 +3970,10 @@
    "category": "economy",
    "benefit": 79.0,
    "risk": 15.0,
-   "benefit_theme": 2,
+   "benefit_theme": 14,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_aristocrats_investment_pool_efficiency_mult",
@@ -3925,6 +4036,7 @@
      "risk": 10.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -3937,7 +4049,7 @@
     "law_factory_councils",
     "law_women_in_the_fields"
    ],
-   "index": 53
+   "sid": 2
   },
   {
    "id": "law_command_economy",
@@ -3946,9 +4058,10 @@
    "category": "economy",
    "benefit": 73.8,
    "risk": 0,
-   "benefit_theme": 2,
+   "benefit_theme": 14,
    "risk_theme": 9,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_disable_investment_pool_bool",
@@ -4029,6 +4142,7 @@
      "risk": 5.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -4049,7 +4163,7 @@
     "law_anarchy",
     "law_women_in_the_fields"
    ],
-   "index": 54
+   "sid": 23
   },
   {
    "id": "law_cooperative_ownership",
@@ -4058,9 +4172,10 @@
    "category": "economy",
    "benefit": 75.0,
    "risk": 0,
-   "benefit_theme": 2,
-   "risk_theme": 11,
+   "benefit_theme": 14,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_shopkeepers_investment_pool_efficiency_mult",
@@ -4141,6 +4256,7 @@
      "risk": -5.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -4153,7 +4269,7 @@
     "law_serfdom",
     "law_women_in_the_fields"
    ],
-   "index": 55
+   "sid": 28
   },
   {
    "id": "law_extraction_economy",
@@ -4162,9 +4278,10 @@
    "category": "economy",
    "benefit": 54.5,
    "risk": 15.0,
-   "benefit_theme": 2,
+   "benefit_theme": 13,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "building_group_bg_agriculture_throughput_add",
@@ -4245,6 +4362,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tis_subject = yes\n\t",
    "unlocking_laws": [],
@@ -4256,18 +4374,19 @@
     "law_anarchy",
     "law_factory_councils"
    ],
-   "index": 56
+   "sid": 41
   },
   {
    "id": "law_industry_banned",
    "file": "01_economic_system.txt",
    "group": "lawgroup_economic_system",
    "category": "economy",
-   "benefit": 71.2,
+   "benefit": 70.0,
    "risk": 15.0,
-   "benefit_theme": 2,
+   "benefit_theme": 13,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "building_group_bg_agriculture_throughput_add",
@@ -4284,7 +4403,7 @@
     {
      "key": "state_expected_sol_mult",
      "value": "-0.1",
-     "benefit": -0.0,
+     "benefit": -1.2,
      "risk": -0.0
     },
     {
@@ -4360,6 +4479,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -4371,7 +4491,7 @@
     "law_anarchy",
     "law_factory_councils"
    ],
-   "index": 57
+   "sid": 55
   },
   {
    "id": "law_interventionism",
@@ -4380,9 +4500,10 @@
    "category": "economy",
    "benefit": 71.0,
    "risk": 15.0,
-   "benefit_theme": 2,
+   "benefit_theme": 14,
    "risk_theme": 11,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_disable_nationalization_without_compensation_bool",
@@ -4421,6 +4542,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -4434,7 +4556,7 @@
     "law_factory_councils",
     "law_women_in_the_fields"
    ],
-   "index": 58
+   "sid": 58
   },
   {
    "id": "law_laissez_faire",
@@ -4443,9 +4565,10 @@
    "category": "economy",
    "benefit": 83.8,
    "risk": 0,
-   "benefit_theme": 2,
+   "benefit_theme": 14,
    "risk_theme": 6,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_loan_interest_rate_mult",
@@ -4502,6 +4625,7 @@
      "risk": -5.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -4517,7 +4641,7 @@
     "law_factory_councils",
     "law_women_in_the_fields"
    ],
-   "index": 59
+   "sid": 62
   },
   {
    "id": "law_traditionalism",
@@ -4526,9 +4650,10 @@
    "category": "economy",
    "benefit": 30.2,
    "risk": 11.2,
-   "benefit_theme": 2,
+   "benefit_theme": 6,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_shopkeepers_investment_pool_efficiency_mult",
@@ -4627,6 +4752,7 @@
      "risk": 10.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -4639,7 +4765,7 @@
     "law_anarchy",
     "law_factory_councils"
    ],
-   "index": 60
+   "sid": 139
   },
   {
    "id": "law_intermediate_edo_system",
@@ -4651,6 +4777,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_strata_samurai_high_qualification_growth_same_class_mult",
@@ -4755,13 +4882,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 61
+   "sid": 56
   },
   {
    "id": "law_lax_edo_system",
@@ -4773,6 +4901,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_strata_samurai_low_qualification_growth_same_class_mult",
@@ -4877,13 +5006,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 62
+   "sid": 66
   },
   {
    "id": "law_strict_edo_system",
@@ -4895,6 +5025,7 @@
    "benefit_theme": 10,
    "risk_theme": 10,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_strata_samurai_high_qualification_growth_same_class_mult",
@@ -5011,25 +5142,28 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 63
+   "sid": 131
   },
   {
    "id": "law_no_schools",
    "file": "01_education_system.txt",
    "group": "lawgroup_education_system",
    "category": "economy",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 4,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tcustom_tooltip = {\n\t\t\tmodifier:country_disallow_law_no_schools_bool = no\n\t\t\ttext = disallow_law_no_schools_tt\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -5038,7 +5172,7 @@
    "disallowing_laws": [
     "law_compulsory_primary_school"
    ],
-   "index": 64
+   "sid": 88
   },
   {
    "id": "law_private_schools",
@@ -5047,9 +5181,10 @@
    "category": "economy",
    "benefit": 51.0,
    "risk": 1.8,
-   "benefit_theme": 4,
+   "benefit_theme": 6,
    "risk_theme": 6,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_institution_cost_institution_schools_mult",
@@ -5070,6 +5205,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNAND = {\n\t\t\tc:JAP ?= this\n\t\t\thas_law = law_type:law_terakoya\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -5080,7 +5216,7 @@
    "disallowing_laws": [
     "law_state_religion"
    ],
-   "index": 65
+   "sid": 106
   },
   {
    "id": "law_public_schools",
@@ -5090,8 +5226,9 @@
    "benefit": 53.5,
    "risk": 5.0,
    "benefit_theme": 4,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_assimilation_mult",
@@ -5118,6 +5255,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -5129,7 +5267,7 @@
     "law_state_religion",
     "law_serfdom"
    ],
-   "index": 66
+   "sid": 113
   },
   {
    "id": "law_religious_schools",
@@ -5141,6 +5279,7 @@
    "benefit_theme": 4,
    "risk_theme": 4,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_institution_cost_institution_schools_mult",
@@ -5167,6 +5306,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -5179,7 +5319,7 @@
     "law_state_atheism",
     "law_serfdom"
    ],
-   "index": 67
+   "sid": 116
   },
   {
    "id": "law_terakoya",
@@ -5189,8 +5329,9 @@
    "benefit": 68.0,
    "risk": 5.0,
    "benefit_theme": 4,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_tech_research_speed_mult",
@@ -5211,6 +5352,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tc:JAP ?= this\n\t\tNOT = {\n\t\t\thas_law = law_type:law_private_schools\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -5219,7 +5361,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 68
+   "sid": 135
   },
   {
    "id": "law_censorship",
@@ -5228,9 +5370,10 @@
    "category": "human_rights",
    "benefit": 53.6,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 11,
    "risk_theme": 9,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -5287,6 +5430,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -5295,7 +5439,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 69
+   "sid": 10
   },
   {
    "id": "law_outlawed_dissent",
@@ -5304,9 +5448,10 @@
    "category": "human_rights",
    "benefit": 61.5,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 11,
    "risk_theme": 9,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -5363,6 +5508,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -5371,7 +5517,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 70
+   "sid": 97
   },
   {
    "id": "law_protected_speech",
@@ -5380,9 +5526,10 @@
    "category": "human_rights",
    "benefit": 45.5,
    "risk": 5.0,
-   "benefit_theme": 8,
-   "risk_theme": 11,
+   "benefit_theme": 11,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_tech_spread_mult",
@@ -5421,6 +5568,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -5429,7 +5577,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 71
+   "sid": 110
   },
   {
    "id": "law_right_of_assembly",
@@ -5438,9 +5586,10 @@
    "category": "human_rights",
    "benefit": 47.3,
    "risk": 0,
-   "benefit_theme": 8,
+   "benefit_theme": 11,
    "risk_theme": 9,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_add",
@@ -5485,13 +5634,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 72
+   "sid": 119
   },
   {
    "id": "law_chiefdom",
@@ -5501,8 +5651,9 @@
    "benefit": 54.0,
    "risk": 1.0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -5517,13 +5668,14 @@
      "risk": -2.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tis_country_type = decentralized\n\t",
    "can_enact": "\n\t\tis_country_type = decentralized\n\t",
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 73
+   "sid": 13
   },
   {
    "id": "law_colonial_administration",
@@ -5535,6 +5687,7 @@
    "benefit_theme": 7,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -5567,6 +5720,7 @@
      "risk": -2.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tcountry_is_colonial_or_company = yes\n\t",
    "can_enact": "\n\t\tcountry_is_colonial_or_company = yes\n\t",
    "unlocking_laws": [],
@@ -5575,7 +5729,7 @@
    "disallowing_laws": [
     "law_anarchy"
    ],
-   "index": 74
+   "sid": 18
   },
   {
    "id": "law_corporate_state",
@@ -5585,8 +5739,9 @@
    "benefit": 58.1,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_size_add",
@@ -5613,6 +5768,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if ={\n\t\t\tlimit = {\n\t\t\t\tis_subject = no\n\t\t\t}\n\t\t\tNOT = { has_government_type = gov_chartered_company }\n\t\t}\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:POL ?= THIS\n\t\t\t}\n\t\t\tNOT = { has_journal_entry = je_congress_poland }\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -5621,7 +5777,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 75
+   "sid": 29
   },
   {
    "id": "law_council_republic",
@@ -5633,6 +5789,7 @@
    "benefit_theme": 7,
    "risk_theme": 3,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_total_votes_add",
@@ -5665,6 +5822,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if ={\n\t\t\tlimit = {\n\t\t\t\tis_subject = no\n\t\t\t}\n\t\t\tNOT = { has_government_type = gov_chartered_company }\n\t\t}\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:POL ?= THIS\n\t\t\t}\n\t\t\tNOT = { has_journal_entry = je_congress_poland }\n\t\t}\n\t\tcustom_tooltip = {\n\t\t\ttext = has_factory_councils_law_or_amendment_tt\n\t\t\thas_factory_councils_law_or_amendment = yes\n\t\t}\n\t\tcustom_tooltip = {\n\t\t\ttext = had_proletarian_revolution_tt\n\t\t\thas_global_variable_map = first_proletarian_revolution\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -5673,7 +5831,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 76
+   "sid": 31
   },
   {
    "id": "law_monarchy",
@@ -5685,6 +5843,7 @@
    "benefit_theme": 7,
    "risk_theme": 1,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -5711,6 +5870,7 @@
      "risk": -4.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOT = {\n\t\t\thas_law = law_type:law_colonial_administration\n\t\t}\n\t",
    "can_enact": "\n\t\ttrigger_if ={\n\t\t\tlimit = {\n\t\t\t\tis_subject = no\n\t\t\t}\n\t\t\tNOT = { has_government_type = gov_chartered_company }\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -5719,7 +5879,7 @@
    "disallowing_laws": [
     "law_anarchy"
    ],
-   "index": 77
+   "sid": 77
   },
   {
    "id": "law_parliamentary_republic",
@@ -5729,8 +5889,9 @@
    "benefit": 49.3,
    "risk": 2.9,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_govt_total_votes_add",
@@ -5745,6 +5906,7 @@
      "risk": -0.1
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if ={\n\t\t\tlimit = {\n\t\t\t\tis_subject = no\n\t\t\t}\n\t\t\tNOT = { has_government_type = gov_chartered_company }\n\t\t}\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:POL ?= THIS\n\t\t\t}\n\t\t\tNOT = { has_journal_entry = je_congress_poland }\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -5755,7 +5917,7 @@
    "disallowing_laws": [
     "law_autocracy"
    ],
-   "index": 78
+   "sid": 98
   },
   {
    "id": "law_presidential_republic",
@@ -5767,6 +5929,7 @@
    "benefit_theme": 7,
    "risk_theme": 11,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -5793,6 +5956,7 @@
      "risk": -2.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if ={\n\t\t\tlimit = {\n\t\t\t\tis_subject = no\n\t\t\t}\n\t\t\tNOT = { has_government_type = gov_chartered_company }\n\t\t}\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:POL ?= THIS\n\t\t\t}\n\t\t\tNOT = { has_journal_entry = je_congress_poland }\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -5801,7 +5965,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 79
+   "sid": 104
   },
   {
    "id": "law_social_monarchy",
@@ -5811,8 +5975,9 @@
    "benefit": 55.3,
    "risk": 0,
    "benefit_theme": 7,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -5845,6 +6010,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if ={\n\t\t\tlimit = {\n\t\t\t\tis_subject = no\n\t\t\t}\n\t\t\tNOT = { has_government_type = gov_chartered_company }\n\t\t}\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:POL ?= THIS\n\t\t\t}\n\t\t\tNOT = { has_journal_entry = je_congress_poland }\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -5853,7 +6019,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 80
+   "sid": 128
   },
   {
    "id": "law_theocracy",
@@ -5865,6 +6031,7 @@
    "benefit_theme": 7,
    "risk_theme": 4,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_legitimacy_headofstate_add",
@@ -5891,6 +6058,7 @@
      "risk": -4.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\ttrigger_if ={\n\t\t\tlimit = {\n\t\t\t\tis_subject = no\n\t\t\t}\n\t\t\tNOT = { has_government_type = gov_chartered_company }\n\t\t}\n\t\ttrigger_if = {\n\t\t\tlimit = {\n\t\t\t\tc:POL ?= THIS\n\t\t\t}\n\t\t\tNOT = { has_journal_entry = je_congress_poland }\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -5899,18 +6067,19 @@
    "disallowing_laws": [
     "law_total_separation"
    ],
-   "index": 81
+   "sid": 136
   },
   {
    "id": "law_charitable_health_system",
    "file": "01_health_system.txt",
    "group": "lawgroup_health_system",
    "category": "economy",
-   "benefit": 48.0,
-   "risk": 3.4,
+   "benefit": 49.8,
+   "risk": 1.6,
    "benefit_theme": 5,
    "risk_theme": 4,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_institution_cost_institution_health_system_mult",
@@ -5921,8 +6090,8 @@
     {
      "key": "state_mortality_mult",
      "value": "-0.03",
-     "benefit": -0.0,
-     "risk": -0.0
+     "benefit": 1.8,
+     "risk": -1.8
     },
     {
      "key": "interest_group_ig_devout_pol_str_mult",
@@ -5943,6 +6112,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -5951,26 +6121,28 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 82
+   "sid": 12
   },
   {
    "id": "law_no_health_system",
    "file": "01_health_system.txt",
    "group": "lawgroup_health_system",
    "category": "economy",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 5,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 83
+   "sid": 84
   },
   {
    "id": "law_private_health_insurance",
@@ -5982,6 +6154,7 @@
    "benefit_theme": 5,
    "risk_theme": 6,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_institution_cost_institution_health_system_mult",
@@ -6014,6 +6187,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -6022,24 +6196,25 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 84
+   "sid": 105
   },
   {
    "id": "law_public_health_insurance",
    "file": "01_health_system.txt",
    "group": "lawgroup_health_system",
    "category": "economy",
-   "benefit": 45.0,
-   "risk": 5.0,
+   "benefit": 60.5,
+   "risk": 2.0,
    "benefit_theme": 5,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_mortality_mult",
      "value": "-0.05",
-     "benefit": -0.0,
-     "risk": -0.0
+     "benefit": 3.0,
+     "risk": -3.0
     },
     {
      "key": "state_pollution_reduction_health_mult",
@@ -6050,10 +6225,11 @@
     {
      "key": "state_standard_of_living_add",
      "value": "0.5",
-     "benefit": 0.0,
+     "benefit": 12.5,
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -6062,7 +6238,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 85
+   "sid": 112
   },
   {
    "id": "law_extraordinary_commission",
@@ -6071,9 +6247,10 @@
    "category": "power_structure",
    "benefit": 73.5,
    "risk": 2.2,
-   "benefit_theme": 16,
+   "benefit_theme": 18,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_soldiers_pol_str_mult",
@@ -6130,6 +6307,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -6138,7 +6316,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 86
+   "sid": 42
   },
   {
    "id": "law_guaranteed_liberties",
@@ -6147,9 +6325,10 @@
    "category": "power_structure",
    "benefit": 50.0,
    "risk": 3.0,
-   "benefit_theme": 16,
+   "benefit_theme": 18,
    "risk_theme": 9,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_radicals_from_political_movements_mult",
@@ -6170,6 +6349,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -6179,7 +6359,7 @@
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 87
+   "sid": 48
   },
   {
    "id": "law_national_guard",
@@ -6188,9 +6368,10 @@
    "category": "power_structure",
    "benefit": 50.0,
    "risk": 4.1,
-   "benefit_theme": 16,
+   "benefit_theme": 11,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_officers_pol_str_mult",
@@ -6247,6 +6428,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -6255,26 +6437,28 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 88
+   "sid": 79
   },
   {
    "id": "law_no_home_affairs",
    "file": "00_internal_security.txt",
    "group": "lawgroup_internal_security",
    "category": "power_structure",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 16,
-   "risk_theme": 9,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 1,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 89
+   "sid": 85
   },
   {
    "id": "law_okhrana",
@@ -6283,9 +6467,10 @@
    "category": "power_structure",
    "benefit": 73.5,
    "risk": 3.5,
-   "benefit_theme": 16,
+   "benefit_theme": 18,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_officers_pol_str_mult",
@@ -6336,6 +6521,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tc:RUS ?= this\n\t\tcountry_has_monarchy_law = yes\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -6344,7 +6530,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 90
+   "sid": 93
   },
   {
    "id": "law_secret_police",
@@ -6353,9 +6539,10 @@
    "category": "power_structure",
    "benefit": 73.5,
    "risk": 2.2,
-   "benefit_theme": 16,
+   "benefit_theme": 18,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_officers_pol_str_mult",
@@ -6400,6 +6587,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNAND = {\n\t\t\tc:RUS ?= this\n\t\t\tcountry_has_monarchy_law = yes\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -6408,7 +6596,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 91
+   "sid": 122
   },
   {
    "id": "law_shinsengumi",
@@ -6417,9 +6605,10 @@
    "category": "power_structure",
    "benefit": 72.5,
    "risk": 1.0,
-   "benefit_theme": 16,
+   "benefit_theme": 18,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_officers_pol_str_mult",
@@ -6458,6 +6647,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tcountry_has_primary_culture = cu:japanese\n\t",
    "can_enact": null,
    "unlocking_laws": [
@@ -6468,7 +6658,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 92
+   "sid": 124
   },
   {
    "id": "law_third_section",
@@ -6477,9 +6667,10 @@
    "category": "power_structure",
    "benefit": 37.8,
    "risk": 0,
-   "benefit_theme": 16,
+   "benefit_theme": 6,
    "risk_theme": 5,
    "focus": 1,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_officers_pol_str_mult",
@@ -6518,6 +6709,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tc:RUS ?= this\n\t\tcountry_has_monarchy_law = yes\n\t\tNAND = {\n\t\t\thas_technology_researched = central_archives \n\t\t\tNOT = {\n\t\t\t\thas_law = law_type:law_third_section\n\t\t\t}\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -6526,38 +6718,42 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 93
+   "sid": 137
   },
   {
    "id": "law_no_workers_rights",
    "file": "02_labor_rights.txt",
    "group": "lawgroup_labor_rights",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 3,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 94
+   "sid": 91
   },
   {
    "id": "law_regulatory_bodies",
    "file": "02_labor_rights.txt",
    "group": "lawgroup_labor_rights",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 3,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -6566,18 +6762,19 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 95
+   "sid": 115
   },
   {
    "id": "law_worker_protections",
    "file": "02_labor_rights.txt",
    "group": "lawgroup_labor_rights",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 3,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "building_minimum_wage_mult",
@@ -6586,6 +6783,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -6594,18 +6792,19 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 96
+   "sid": 148
   },
   {
    "id": "law_anti_strike_laws",
    "file": "02_labour_associations.txt",
    "group": "lawgroup_labour_associations",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 9.0,
-   "benefit_theme": 3,
+   "benefit_theme": 17,
    "risk_theme": 3,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "interest_group_ig_trade_unions_pol_str_mult",
@@ -6644,24 +6843,26 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 97
+   "sid": 4
   },
   {
    "id": "law_combination_acts",
    "file": "02_labour_associations.txt",
    "group": "lawgroup_labour_associations",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 15.0,
-   "benefit_theme": 3,
+   "benefit_theme": 17,
    "risk_theme": 3,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "interest_group_ig_trade_unions_pol_str_mult",
@@ -6700,24 +6901,26 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 98
+   "sid": 22
   },
   {
    "id": "law_corporatized_unions",
    "file": "02_labour_associations.txt",
    "group": "lawgroup_labour_associations",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 8.0,
-   "benefit_theme": 3,
+   "benefit_theme": 17,
    "risk_theme": 9,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "state_radicals_and_loyalists_from_sol_change_mult",
@@ -6744,6 +6947,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -6752,18 +6956,19 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 99
+   "sid": 30
   },
   {
    "id": "law_factory_councils",
    "file": "02_labour_associations.txt",
    "group": "lawgroup_labour_associations",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 3,
+   "benefit_theme": 17,
    "risk_theme": 3,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "interest_group_ig_trade_unions_pol_str_mult",
@@ -6826,6 +7031,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tis_revolutionary = yes\n\t\tcustom_tooltip = {\n\t\t\ttext = will_automatically_activate_on_labor_revolution_tt\n\t\t\tis_revolutionary = yes\n\t\t}\n\t",
    "unlocking_laws": [],
@@ -6834,7 +7040,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 100
+   "sid": 43
   },
   {
    "id": "law_guild_system",
@@ -6843,9 +7049,10 @@
    "category": "human_rights",
    "benefit": 45.8,
    "risk": 5.0,
-   "benefit_theme": 3,
-   "risk_theme": 11,
+   "benefit_theme": 2,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "building_group_bg_manufacturing_allowed_collectivization_add",
@@ -6896,6 +7103,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -6904,18 +7112,19 @@
    "disallowing_laws": [
     "law_laissez_faire"
    ],
-   "index": 101
+   "sid": 49
   },
   {
    "id": "law_right_to_associate",
    "file": "02_labour_associations.txt",
    "group": "lawgroup_labour_associations",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 1.0,
-   "benefit_theme": 3,
+   "benefit_theme": 17,
    "risk_theme": 3,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "interest_group_ig_trade_unions_pol_str_mult",
@@ -6936,24 +7145,26 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 102
+   "sid": 120
   },
   {
    "id": "law_collectivized_agriculture",
    "file": "01_land_reform.txt",
    "group": "lawgroup_land_reform",
    "category": "economy",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 13,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "building_group_bg_agriculture_allowed_collectivization_add",
@@ -6974,6 +7185,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -6985,18 +7197,19 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 103
+   "sid": 17
   },
   {
    "id": "law_commercialized_agriculture",
    "file": "01_land_reform.txt",
    "group": "lawgroup_land_reform",
    "category": "economy",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 13,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "country_financial_districts_buy_farms_likelihood",
@@ -7005,6 +7218,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -7015,7 +7229,7 @@
    "disallowing_laws": [
     "law_traditionalism"
    ],
-   "index": 104
+   "sid": 24
   },
   {
    "id": "law_expanded_latifundias",
@@ -7024,9 +7238,10 @@
    "category": "economy",
    "benefit": 46.2,
    "risk": 5.0,
-   "benefit_theme": 13,
+   "benefit_theme": 14,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_aristocrats_pol_str_mult",
@@ -7047,6 +7262,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tany_primary_culture = {\n\t\t\tOR = {\n\t\t\t\thas_discrimination_trait = language_hispanophone\n\t\t\t\thas_discrimination_trait = language_lusophone\n\t\t\t\thas_discrimination_trait = language_italian\n\t\t\t}\n\t\t}\n\t\thidden_trigger = {\n\t\t\thas_variable = upgraded_latifundias_law_var\n\t\t}\n\t",
    "can_enact": "\n\t\talways = yes\n\t",
    "unlocking_laws": [],
@@ -7055,7 +7271,7 @@
    "disallowing_laws": [
     "law_council_republic"
    ],
-   "index": 105
+   "sid": 40
   },
   {
    "id": "law_homesteading",
@@ -7065,8 +7281,9 @@
    "benefit": 46.8,
    "risk": 5.0,
    "benefit_theme": 13,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_farmers_pol_str_mult",
@@ -7093,24 +7310,26 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOT = {\n\t\t\thas_law = law_type:law_peasant_proprietorship\n\t\t}\n\t\tOR = {\n\t\t\tcountry_is_colonial_or_company = yes\n\t\t\tcapital ?= {\n\t\t\t\tis_in_geographic_region = geographic_region_new_world\n\t\t\t}\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 106
+   "sid": 54
   },
   {
    "id": "law_latifundias",
    "file": "01_land_reform.txt",
    "group": "lawgroup_land_reform",
    "category": "economy",
-   "benefit": 43.8,
+   "benefit": 28.8,
    "risk": 5.0,
-   "benefit_theme": 13,
+   "benefit_theme": 17,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "country_aristocrats_pol_str_mult",
@@ -7131,6 +7350,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tany_primary_culture = {\n\t\t\tOR = {\n\t\t\t\thas_discrimination_trait = language_hispanophone\n\t\t\t\thas_discrimination_trait = language_lusophone\n\t\t\t\thas_discrimination_trait = language_italian\n\t\t\t}\n\t\t}\n\t\thidden_trigger = {\n\t\t\tNOT = {\n\t\t\t\thas_variable = upgraded_latifundias_law_var\n\t\t\t}\n\t\t}\n\t\tNOT = {\n\t\t\thas_law = law_type:law_tenant_farmers\n\t\t}\n\t",
    "can_enact": "\n\t\talways = yes\n\t",
    "unlocking_laws": [],
@@ -7139,7 +7359,7 @@
    "disallowing_laws": [
     "law_council_republic"
    ],
-   "index": 107
+   "sid": 65
   },
   {
    "id": "law_manorialism",
@@ -7151,6 +7371,7 @@
    "benefit_theme": 13,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_landowners_pol_str_mult",
@@ -7171,13 +7392,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tOR = {\n\t\t\tc:AUS ?= this \n\t\t\tAND = {\n\t\t\t\texists = c:AUS\n\t\t\t\tis_subject_of = c:AUS\n\t\t\t\tOR = {\n\t\t\t\t\tis_subject_type = subject_type_crown_land\n\t\t\t\t\tis_subject_type = subject_type_personal_union\n\t\t\t\t}\n\t\t\t\tc:AUS ?= { has_law = law_type:law_manorialism }\n\t\t\t}\n\t\t\tcountry_has_primary_culture = cu:romanian \n\t\t\tcountry_has_primary_culture = cu:polish \n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 108
+   "sid": 69
   },
   {
    "id": "law_peasant_proprietorship",
@@ -7187,8 +7409,9 @@
    "benefit": 46.8,
    "risk": 5.0,
    "benefit_theme": 13,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_farmers_pol_str_mult",
@@ -7233,13 +7456,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOT = {\n\t\t\thas_law = law_type:law_homesteading\n\t\t}\n\t\tNOT = {\n\t\t\tcountry_is_colonial_or_company = yes\n\t\t}\n\t\tcapital ?= {\n\t\t\tis_in_geographic_region = geographic_region_old_world\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 109
+   "sid": 100
   },
   {
    "id": "law_serfdom",
@@ -7251,6 +7475,7 @@
    "benefit_theme": 13,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_landowners_pol_str_mult",
@@ -7283,6 +7508,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOR = {\n\t\t\tc:AUS ?= this \n\t\t\tAND = {\n\t\t\t\texists = c:AUS\n\t\t\t\tis_subject_of = c:AUS\n\t\t\t\tOR = {\n\t\t\t\t\tis_subject_type = subject_type_crown_land\n\t\t\t\t\tis_subject_type = subject_type_personal_union\n\t\t\t\t}\n\t\t\t\tc:AUS ?= { has_law = law_type:law_manorialism }\n\t\t\t}\n\t\t\tcountry_has_primary_culture = cu:romanian\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -7293,7 +7519,7 @@
     "law_laissez_faire",
     "law_command_economy"
    ],
-   "index": 110
+   "sid": 123
   },
   {
    "id": "law_tenant_farmers",
@@ -7305,6 +7531,7 @@
    "benefit_theme": 13,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "interest_group_ig_landowners_pol_str_mult",
@@ -7325,24 +7552,26 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOR = {\n\t\t\thas_law = law_type:law_latifundias\n\t\t\thas_law = law_type:law_expanded_latifundias\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 111
+   "sid": 134
   },
   {
    "id": "law_closed_borders",
    "file": "02_migration.txt",
    "group": "lawgroup_migration",
    "category": "human_rights",
-   "benefit": 25.0,
+   "benefit": 10.0,
    "risk": 31.0,
-   "benefit_theme": 10,
+   "benefit_theme": 17,
    "risk_theme": 10,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "country_migration_restrictiveness_add",
@@ -7363,24 +7592,26 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 112
+   "sid": 16
   },
   {
    "id": "law_migration_controls",
    "file": "02_migration.txt",
    "group": "lawgroup_migration",
    "category": "human_rights",
-   "benefit": 25.0,
+   "benefit": 10.0,
    "risk": 25.0,
-   "benefit_theme": 10,
+   "benefit_theme": 17,
    "risk_theme": 10,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "country_migration_restrictiveness_add",
@@ -7389,6 +7620,7 @@
      "risk": 20.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -7397,18 +7629,19 @@
    "disallowing_laws": [
     "law_sakoku"
    ],
-   "index": 113
+   "sid": 73
   },
   {
    "id": "law_no_migration_controls",
    "file": "02_migration.txt",
    "group": "lawgroup_migration",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 10,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "country_leverage_resistance_mult",
@@ -7417,6 +7650,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -7425,7 +7659,7 @@
    "disallowing_laws": [
     "law_sakoku"
    ],
-   "index": 114
+   "sid": 86
   },
   {
    "id": "law_diplomatic_navy",
@@ -7437,6 +7671,7 @@
    "benefit_theme": 12,
    "risk_theme": 5,
    "focus": 6,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "ship_power_projection_mult",
@@ -7457,6 +7692,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tany_scope_state = {\n\t\t\tis_coastal = yes\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -7465,7 +7701,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 115
+   "sid": 36
   },
   {
    "id": "law_jeune_ecole",
@@ -7477,6 +7713,7 @@
    "benefit_theme": 12,
    "risk_theme": 5,
    "focus": 6,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_ship_group_torpedo_craft_construction_efficiency_add",
@@ -7521,6 +7758,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tany_scope_state = {\n\t\t\tis_coastal = yes\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -7529,7 +7767,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 116
+   "sid": 60
   },
   {
    "id": "law_merchant_navy",
@@ -7541,6 +7779,7 @@
    "benefit_theme": 12,
    "risk_theme": 5,
    "focus": 6,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_ship_group_supply_ships_construction_efficiency_add",
@@ -7573,13 +7812,14 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tany_scope_state = {\n\t\t\tis_coastal = yes\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 117
+   "sid": 72
   },
   {
    "id": "law_professional_navy",
@@ -7591,6 +7831,7 @@
    "benefit_theme": 12,
    "risk_theme": 5,
    "focus": 6,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "building_naval_administration_hiring_rate_mult",
@@ -7623,6 +7864,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tany_scope_state = {\n\t\t\tis_coastal = yes\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -7631,7 +7873,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 118
+   "sid": 108
   },
   {
    "id": "law_dedicated_police",
@@ -7640,9 +7882,10 @@
    "category": "economy",
    "benefit": 61.0,
    "risk": 11.0,
-   "benefit_theme": 16,
+   "benefit_theme": 2,
    "risk_theme": 9,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_institution_police_max_investment_add",
@@ -7657,6 +7900,7 @@
      "risk": -2.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -7665,18 +7909,19 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 119
+   "sid": 35
   },
   {
    "id": "law_local_police",
    "file": "01_policing.txt",
    "group": "lawgroup_policing",
    "category": "economy",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 16,
+   "benefit_theme": 17,
    "risk_theme": 1,
    "focus": 2,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "interest_group_ig_landowners_pol_str_mult",
@@ -7691,6 +7936,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -7699,7 +7945,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 120
+   "sid": 68
   },
   {
    "id": "law_militarized_police",
@@ -7708,9 +7954,10 @@
    "category": "economy",
    "benefit": 61.0,
    "risk": 11.0,
-   "benefit_theme": 16,
+   "benefit_theme": 2,
    "risk_theme": 9,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_institution_police_max_investment_add",
@@ -7755,6 +8002,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -7763,26 +8011,28 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 121
+   "sid": 74
   },
   {
    "id": "law_no_police",
    "file": "01_policing.txt",
    "group": "lawgroup_policing",
    "category": "economy",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 16,
-   "risk_theme": 9,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 2,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tcustom_tooltip = {\n\t\t\tmodifier:country_disallow_law_no_police_bool = no\n\t\t\ttext = disallow_law_no_police_tt\n\t\t}\n\t",
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 122
+   "sid": 87
   },
   {
    "id": "law_no_womens_rights",
@@ -7791,9 +8041,10 @@
    "category": "human_rights",
    "benefit": 46.0,
    "risk": 5.0,
-   "benefit_theme": 8,
-   "risk_theme": 11,
+   "benefit_theme": 5,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_birth_rate_mult",
@@ -7802,13 +8053,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOT = {\n\t\t\thas_law = law_type:law_women_in_the_fields\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 123
+   "sid": 90
   },
   {
    "id": "law_women_in_the_fields",
@@ -7817,9 +8069,10 @@
    "category": "human_rights",
    "benefit": 0,
    "risk": 5.0,
-   "benefit_theme": 8,
-   "risk_theme": 11,
+   "benefit_theme": 5,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_birth_rate_mult",
@@ -7870,13 +8123,14 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tc:MON ?= this\n\t\tNOR = {\n\t\t\thas_law = law_type:law_no_womens_rights\n\t\t\thas_law_or_variant = law_type:law_women_own_property\n\t\t\thas_law_or_variant = law_type:law_women_in_the_workplace\n\t\t\thas_law_or_variant = law_type:law_womens_suffrage\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 124
+   "sid": 144
   },
   {
    "id": "law_women_in_the_workplace",
@@ -7885,9 +8139,10 @@
    "category": "human_rights",
    "benefit": 46.5,
    "risk": 5.0,
-   "benefit_theme": 8,
-   "risk_theme": 11,
+   "benefit_theme": 5,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_working_adult_ratio_add",
@@ -7902,6 +8157,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -7910,7 +8166,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 125
+   "sid": 145
   },
   {
    "id": "law_women_own_property",
@@ -7919,9 +8175,10 @@
    "category": "human_rights",
    "benefit": 46.2,
    "risk": 5.0,
-   "benefit_theme": 8,
-   "risk_theme": 11,
+   "benefit_theme": 5,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_working_adult_ratio_add",
@@ -7930,13 +8187,14 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 126
+   "sid": 146
   },
   {
    "id": "law_womens_suffrage",
@@ -7945,9 +8203,10 @@
    "category": "human_rights",
    "benefit": 49.4,
    "risk": 5.0,
-   "benefit_theme": 8,
-   "risk_theme": 11,
+   "benefit_theme": 5,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_working_adult_ratio_add",
@@ -7968,6 +8227,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -7984,37 +8244,40 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 127
+   "sid": 147
   },
   {
    "id": "law_colonial_slavery",
    "file": "02_slavery.txt",
    "group": "lawgroup_slavery",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 10,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": "\n\t\tany_scope_state = {\n\t\t\tis_incorporated = no\n\t\t}\n\t",
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 128
+   "sid": 21
   },
   {
    "id": "law_debt_slavery",
    "file": "02_slavery.txt",
    "group": "lawgroup_slavery",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 10,
+   "benefit_theme": 17,
    "risk_theme": 1,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "interest_group_ig_landowners_pol_str_mult",
@@ -8023,6 +8286,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8032,18 +8296,19 @@
     "law_multicultural",
     "law_affirmative_action"
    ],
-   "index": 129
+   "sid": 34
   },
   {
    "id": "law_legacy_slavery",
    "file": "02_slavery.txt",
    "group": "lawgroup_slavery",
    "category": "human_rights",
-   "benefit": 44.0,
+   "benefit": 29.0,
    "risk": 5.0,
-   "benefit_theme": 10,
+   "benefit_theme": 17,
    "risk_theme": 1,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "interest_group_ig_landowners_pol_str_mult",
@@ -8058,6 +8323,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [
@@ -8066,18 +8332,19 @@
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 130
+   "sid": 67
   },
   {
    "id": "law_slave_trade",
    "file": "02_slavery.txt",
    "group": "lawgroup_slavery",
    "category": "human_rights",
-   "benefit": 42.5,
+   "benefit": 27.5,
    "risk": 5.0,
-   "benefit_theme": 10,
+   "benefit_theme": 17,
    "risk_theme": 1,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "interest_group_ig_landowners_pol_str_mult",
@@ -8092,6 +8359,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8102,26 +8370,28 @@
     "law_multicultural",
     "law_affirmative_action"
    ],
-   "index": 131
+   "sid": 126
   },
   {
    "id": "law_slavery_banned",
    "file": "02_slavery.txt",
    "group": "lawgroup_slavery",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 10,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 132
+   "sid": 127
   },
   {
    "id": "law_consumption_based_taxation",
@@ -8130,9 +8400,10 @@
    "category": "economy",
    "benefit": 67.5,
    "risk": 5.0,
-   "benefit_theme": 1,
+   "benefit_theme": 6,
    "risk_theme": 7,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_bureaucracy_population_base_cost_factor_mult",
@@ -8153,13 +8424,16 @@
      "risk": 3.75
     }
    ],
+   "tax_brackets": {
+    "tax_consumption_add": 0.25
+   },
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 133
+   "sid": 27
   },
   {
    "id": "law_graduated_taxation",
@@ -8171,6 +8445,7 @@
    "benefit_theme": 1,
    "risk_theme": 11,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "tax_consumption_add",
@@ -8191,6 +8466,11 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {
+    "tax_consumption_add": 0.25,
+    "tax_income_add": 0.15,
+    "tax_dividends_add": 0.2
+   },
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8201,7 +8481,7 @@
    "disallowing_laws": [
     "law_traditionalism"
    ],
-   "index": 134
+   "sid": 47
   },
   {
    "id": "law_land_based_taxation",
@@ -8210,9 +8490,10 @@
    "category": "economy",
    "benefit": 72.5,
    "risk": 8.8,
-   "benefit_theme": 1,
+   "benefit_theme": 13,
    "risk_theme": 11,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "tax_consumption_add",
@@ -8227,13 +8508,17 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {
+    "tax_consumption_add": 0.25,
+    "tax_land_add": 0.7
+   },
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 135
+   "sid": 63
   },
   {
    "id": "law_per_capita_based_taxation",
@@ -8242,9 +8527,10 @@
    "category": "economy",
    "benefit": 91.5,
    "risk": 8.8,
-   "benefit_theme": 1,
+   "benefit_theme": 13,
    "risk_theme": 11,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "tax_consumption_add",
@@ -8254,7 +8540,7 @@
     },
     {
      "key": "tax_per_capita_add",
-     "value": "0.70",
+     "value": "0.7",
      "benefit": 20.0,
      "risk": 0.0
     },
@@ -8266,11 +8552,17 @@
     },
     {
      "key": "tax_income_add",
-     "value": "0.10",
+     "value": "0.1",
      "benefit": 5.0,
      "risk": 0.0
     }
    ],
+   "tax_brackets": {
+    "tax_consumption_add": 0.25,
+    "tax_per_capita_add": 0.7,
+    "tax_land_add": 0.35,
+    "tax_income_add": 0.1
+   },
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8281,18 +8573,19 @@
    "disallowing_laws": [
     "law_traditionalism"
    ],
-   "index": 136
+   "sid": 102
   },
   {
    "id": "law_proportional_taxation",
    "file": "01_taxation.txt",
    "group": "lawgroup_taxation",
    "category": "economy",
-   "benefit": 67.5,
+   "benefit": 67.8,
    "risk": 8.8,
    "benefit_theme": 1,
    "risk_theme": 11,
    "focus": 2,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "tax_consumption_add",
@@ -8302,17 +8595,22 @@
     },
     {
      "key": "tax_income_add",
-     "value": "0.20",
+     "value": "0.2",
      "benefit": 10.0,
      "risk": 0.0
     },
     {
      "key": "tax_dividends_add",
-     "value": "0.1",
-     "benefit": 5.0,
+     "value": "0.105",
+     "benefit": 5.25,
      "risk": 0.0
     }
    ],
+   "tax_brackets": {
+    "tax_consumption_add": 0.25,
+    "tax_income_add": 0.2,
+    "tax_dividends_add": 0.105
+   },
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8323,7 +8621,7 @@
    "disallowing_laws": [
     "law_traditionalism"
    ],
-   "index": 137
+   "sid": 109
   },
   {
    "id": "law_canton_system",
@@ -8335,6 +8633,7 @@
    "benefit_theme": 15,
    "risk_theme": 12,
    "focus": 5,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_mult",
@@ -8403,6 +8702,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tany_primary_culture = {\n\t\t\thas_discrimination_trait = heritage_han\n\t\t}\n\t\tany_scope_state = {\n\t\t\tstate_region = s:STATE_GUANGDONG\n\t\t\tis_largest_state_in_region = yes\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -8411,7 +8711,7 @@
     "law_traditionalism"
    ],
    "disallowing_laws": [],
-   "index": 138
+   "sid": 9
   },
   {
    "id": "law_free_trade",
@@ -8421,8 +8721,9 @@
    "benefit": 51.0,
    "risk": 5.0,
    "benefit_theme": 15,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 5,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_subvention_export_add",
@@ -8449,6 +8750,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8459,7 +8761,7 @@
    "disallowing_laws": [
     "law_command_economy"
    ],
-   "index": 139
+   "sid": 44
   },
   {
    "id": "law_isolationism",
@@ -8468,9 +8770,10 @@
    "category": "economy",
    "benefit": 62.8,
    "risk": 22.5,
-   "benefit_theme": 15,
+   "benefit_theme": 1,
    "risk_theme": 12,
    "focus": 5,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_mult",
@@ -8509,6 +8812,7 @@
      "risk": 20.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOR = {\n\t\t\tAND = {\n\t\t\t\tany_primary_culture = {\n\t\t\t\t\thas_discrimination_trait = heritage_han\n\t\t\t\t}\n\t\t\t\tany_scope_state = {\n\t\t\t\t\tstate_region = s:STATE_GUANGDONG\n\t\t\t\t\tis_largest_state_in_region = yes\n\t\t\t\t}\n\t\t\t}\n\t\t\tAND = {\n\t\t\t\tany_primary_culture = {\n\t\t\t\t\tcu:japanese = this\n\t\t\t\t}\n\t\t\t\ts:STATE_KYUSHU ?= {\n\t\t\t\t\tany_scope_state = {\n\t\t\t\t\t\towner ?= ROOT\n\t\t\t\t\t\tis_largest_state_in_region = yes\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -8517,7 +8821,7 @@
    "disallowing_laws": [
     "law_laissez_faire"
    ],
-   "index": 140
+   "sid": 59
   },
   {
    "id": "law_mercantilism",
@@ -8527,8 +8831,9 @@
    "benefit": 54.8,
    "risk": 5.0,
    "benefit_theme": 15,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 5,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_tariff_import_add",
@@ -8567,6 +8872,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8575,7 +8881,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 141
+   "sid": 71
   },
   {
    "id": "law_protectionism",
@@ -8585,8 +8891,9 @@
    "benefit": 59.0,
    "risk": 5.0,
    "benefit_theme": 15,
-   "risk_theme": 11,
+   "risk_theme": 13,
    "focus": 5,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_tariff_import_add",
@@ -8619,6 +8926,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8627,7 +8935,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 142
+   "sid": 111
   },
   {
    "id": "law_sakoku",
@@ -8639,6 +8947,7 @@
    "benefit_theme": 15,
    "risk_theme": 12,
    "focus": 5,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_authority_mult",
@@ -8713,6 +9022,7 @@
      "risk": -5.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tcountry_has_primary_culture = cu:japanese\n\t\tany_scope_state = {\n\t\t\tstate_region = s:STATE_KYUSHU\n\t\t\tis_largest_state_in_region = yes\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
@@ -8721,7 +9031,7 @@
     "law_traditionalism"
    ],
    "disallowing_laws": [],
-   "index": 143
+   "sid": 121
   },
   {
    "id": "law_chiefs_distribute_aid",
@@ -8730,9 +9040,10 @@
    "category": "human_rights",
    "benefit": 65.4,
    "risk": 21.0,
-   "benefit_theme": 3,
+   "benefit_theme": 5,
    "risk_theme": 1,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "country_institution_social_security_max_investment_add",
@@ -8777,32 +9088,35 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": "\n\t\tc:MON ?= this\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 144
+   "sid": 14
   },
   {
    "id": "law_no_social_security",
    "file": "02_welfare.txt",
    "group": "lawgroup_welfare",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 3,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [],
+   "tax_brackets": {},
    "is_visible": "\n\t\tNOT = {\n\t\t\tc:MON ?= this\n\t\t}\n\t",
    "can_enact": null,
    "unlocking_laws": [],
    "unlocking_technologies": [],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 145
+   "sid": 89
   },
   {
    "id": "law_old_age_pension",
@@ -8811,9 +9125,10 @@
    "category": "human_rights",
    "benefit": 46.5,
    "risk": 5.0,
-   "benefit_theme": 3,
-   "risk_theme": 11,
+   "benefit_theme": 5,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": true,
    "modifiers": [
     {
      "key": "state_welfare_payments_add",
@@ -8852,6 +9167,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8860,18 +9176,19 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 146
+   "sid": 94
   },
   {
    "id": "law_poor_laws",
    "file": "02_welfare.txt",
    "group": "lawgroup_welfare",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 3,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "state_political_strength_from_welfare_mult",
@@ -8880,6 +9197,7 @@
      "risk": -0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8888,18 +9206,19 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 147
+   "sid": 103
   },
   {
    "id": "law_wage_subsidies",
    "file": "02_welfare.txt",
    "group": "lawgroup_welfare",
    "category": "human_rights",
-   "benefit": 45.0,
+   "benefit": 30.0,
    "risk": 5.0,
-   "benefit_theme": 3,
-   "risk_theme": 11,
+   "benefit_theme": 17,
+   "risk_theme": 13,
    "focus": 3,
+   "has_positive_signal": false,
    "modifiers": [
     {
      "key": "building_minimum_wage_mult",
@@ -8908,6 +9227,7 @@
      "risk": 0.0
     }
    ],
+   "tax_brackets": {},
    "is_visible": null,
    "can_enact": null,
    "unlocking_laws": [],
@@ -8916,7 +9236,7 @@
    ],
    "requires_law_or": [],
    "disallowing_laws": [],
-   "index": 148
+   "sid": 141
   }
  ]
 }

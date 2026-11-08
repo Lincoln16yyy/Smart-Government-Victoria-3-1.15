@@ -399,7 +399,8 @@ sg_law_score_law_warrior_caste = {
 
 sg_law_benefit_law_appointed_bureaucrats = {
 	value = 52.5
-	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
+	if = { limit = { weeks_until_bankruptcy < 52 } add = 8 }
+	if = { limit = { net_total_income < 0 } add = 5 }
 	min = 0
 	max = 100
 }
@@ -797,7 +798,7 @@ sg_law_score_law_military_bureaucrats = {
 
 sg_law_benefit_law_affirmative_action = {
 	value = 50.6
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { literacy_rate < 0.6 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -863,7 +864,7 @@ sg_law_score_law_affirmative_action = {
 
 sg_law_benefit_law_hindu_caste_codified = {
 	value = 100
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -929,7 +930,7 @@ sg_law_score_law_hindu_caste_codified = {
 
 sg_law_benefit_law_hindu_caste_enforced = {
 	value = 100
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -1061,7 +1062,7 @@ sg_law_score_law_hindu_caste_not_enforced = {
 
 sg_law_benefit_law_child_labor_allowed = {
 	value = 35.4
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -1127,7 +1128,8 @@ sg_law_score_law_child_labor_allowed = {
 
 sg_law_benefit_law_compulsory_primary_school = {
 	value = 61.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { net_total_income < 0 } add = 6 }
+	if = { limit = { average_sol < average_expected_sol } add = 4 }
 	min = 0
 	max = 100
 }
@@ -1193,7 +1195,7 @@ sg_law_score_law_compulsory_primary_school = {
 
 sg_law_benefit_law_restricted_child_labor = {
 	value = 50.6
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -2183,7 +2185,8 @@ sg_law_score_law_subjecthood = {
 
 sg_law_benefit_law_colonial_exploitation = {
 	value = 83.0
-	if = { limit = { legitimacy < 50 } add = 6 }
+	if = { limit = { net_total_income < 0 } add = 6 }
+	if = { limit = { average_sol < average_expected_sol } add = 4 }
 	min = 0
 	max = 100
 }
@@ -2250,7 +2253,7 @@ sg_law_score_law_colonial_exploitation = {
 
 sg_law_benefit_law_colonial_resettlement = {
 	value = 49.0
-	if = { limit = { legitimacy < 50 } add = 6 }
+	if = { limit = { radical_fraction > 0.1 } add = 5 }
 	min = 0
 	max = 100
 }
@@ -2316,7 +2319,7 @@ sg_law_score_law_colonial_resettlement = {
 
 sg_law_benefit_law_frontier_colonization = {
 	value = 49.0
-	if = { limit = { legitimacy < 50 } add = 6 }
+	if = { limit = { radical_fraction > 0.1 } add = 5 }
 	min = 0
 	max = 100
 }
@@ -2382,7 +2385,7 @@ sg_law_score_law_frontier_colonization = {
 
 sg_law_benefit_law_internal_colonization = {
 	value = 47.0
-	if = { limit = { legitimacy < 50 } add = 6 }
+	if = { limit = { radical_fraction > 0.1 } add = 5 }
 	min = 0
 	max = 100
 }
@@ -2448,7 +2451,7 @@ sg_law_score_law_internal_colonization = {
 
 sg_law_benefit_law_no_colonial_affairs = {
 	value = 65.0
-	if = { limit = { legitimacy < 50 } add = 6 }
+	if = { limit = { radical_fraction > 0.1 } add = 5 }
 	min = 0
 	max = 100
 }
@@ -2514,7 +2517,7 @@ sg_law_score_law_no_colonial_affairs = {
 
 sg_law_benefit_law_anarchy = {
 	value = 58.1
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -2580,7 +2583,7 @@ sg_law_score_law_anarchy = {
 
 sg_law_benefit_law_autocracy = {
 	value = 66.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -2646,7 +2649,7 @@ sg_law_score_law_autocracy = {
 
 sg_law_benefit_law_bakufu = {
 	value = 66.3
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -2712,7 +2715,7 @@ sg_law_score_law_bakufu = {
 
 sg_law_benefit_law_census_voting = {
 	value = 78.3
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -2778,7 +2781,7 @@ sg_law_score_law_census_voting = {
 
 sg_law_benefit_law_elder_council = {
 	value = 86.6
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -2844,7 +2847,7 @@ sg_law_score_law_elder_council = {
 
 sg_law_benefit_law_labour_suffrage = {
 	value = 77.3
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -2910,7 +2913,7 @@ sg_law_score_law_labour_suffrage = {
 
 sg_law_benefit_law_landed_voting = {
 	value = 72.3
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -2976,7 +2979,7 @@ sg_law_score_law_landed_voting = {
 
 sg_law_benefit_law_neo_absolutism = {
 	value = 68.5
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -3042,7 +3045,7 @@ sg_law_score_law_neo_absolutism = {
 
 sg_law_benefit_law_oligarchy = {
 	value = 75.6
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -3108,7 +3111,7 @@ sg_law_score_law_oligarchy = {
 
 sg_law_benefit_law_organic_regulation = {
 	value = 75.6
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -3174,7 +3177,7 @@ sg_law_score_law_organic_regulation = {
 
 sg_law_benefit_law_single_party_state = {
 	value = 86.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -3240,7 +3243,8 @@ sg_law_score_law_single_party_state = {
 
 sg_law_benefit_law_technocracy = {
 	value = 87.6
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { net_total_income < 0 } add = 6 }
+	if = { limit = { average_sol < average_expected_sol } add = 4 }
 	min = 0
 	max = 100
 }
@@ -3306,7 +3310,7 @@ sg_law_score_law_technocracy = {
 
 sg_law_benefit_law_universal_suffrage = {
 	value = 72.8
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -3372,7 +3376,7 @@ sg_law_score_law_universal_suffrage = {
 
 sg_law_benefit_law_wealth_voting = {
 	value = 77.3
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { legitimacy < 50 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -3438,8 +3442,7 @@ sg_law_score_law_wealth_voting = {
 
 sg_law_benefit_law_agrarianism = {
 	value = 79.0
-	if = { limit = { net_total_income < 0 } add = 6 }
-	if = { limit = { average_sol < average_expected_sol } add = 4 }
+	if = { limit = { net_total_income < 0 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -3505,8 +3508,7 @@ sg_law_score_law_agrarianism = {
 
 sg_law_benefit_law_command_economy = {
 	value = 73.8
-	if = { limit = { net_total_income < 0 } add = 6 }
-	if = { limit = { average_sol < average_expected_sol } add = 4 }
+	if = { limit = { net_total_income < 0 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -3573,8 +3575,7 @@ sg_law_score_law_command_economy = {
 
 sg_law_benefit_law_cooperative_ownership = {
 	value = 75.0
-	if = { limit = { net_total_income < 0 } add = 6 }
-	if = { limit = { average_sol < average_expected_sol } add = 4 }
+	if = { limit = { net_total_income < 0 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -3640,8 +3641,7 @@ sg_law_score_law_cooperative_ownership = {
 
 sg_law_benefit_law_extraction_economy = {
 	value = 54.5
-	if = { limit = { net_total_income < 0 } add = 6 }
-	if = { limit = { average_sol < average_expected_sol } add = 4 }
+	if = { limit = { average_sol < 12 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -3706,9 +3706,8 @@ sg_law_score_law_extraction_economy = {
 }
 
 sg_law_benefit_law_industry_banned = {
-	value = 71.2
-	if = { limit = { net_total_income < 0 } add = 6 }
-	if = { limit = { average_sol < average_expected_sol } add = 4 }
+	value = 70.0
+	if = { limit = { average_sol < 12 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -3774,8 +3773,7 @@ sg_law_score_law_industry_banned = {
 
 sg_law_benefit_law_interventionism = {
 	value = 71.0
-	if = { limit = { net_total_income < 0 } add = 6 }
-	if = { limit = { average_sol < average_expected_sol } add = 4 }
+	if = { limit = { net_total_income < 0 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -3841,8 +3839,7 @@ sg_law_score_law_interventionism = {
 
 sg_law_benefit_law_laissez_faire = {
 	value = 83.8
-	if = { limit = { net_total_income < 0 } add = 6 }
-	if = { limit = { average_sol < average_expected_sol } add = 4 }
+	if = { limit = { net_total_income < 0 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -3909,8 +3906,7 @@ sg_law_score_law_laissez_faire = {
 
 sg_law_benefit_law_traditionalism = {
 	value = 30.2
-	if = { limit = { net_total_income < 0 } add = 6 }
-	if = { limit = { average_sol < average_expected_sol } add = 4 }
+	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -4173,8 +4169,7 @@ sg_law_score_law_strict_edo_system = {
 }
 
 sg_law_benefit_law_no_schools = {
-	value = 45.0
-	if = { limit = { literacy_rate < 0.6 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -4240,7 +4235,7 @@ sg_law_score_law_no_schools = {
 
 sg_law_benefit_law_private_schools = {
 	value = 51.0
-	if = { limit = { literacy_rate < 0.6 } add = 6 }
+	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -4505,7 +4500,7 @@ sg_law_score_law_terakoya = {
 
 sg_law_benefit_law_censorship = {
 	value = 53.6
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { is_at_war = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -4572,7 +4567,7 @@ sg_law_score_law_censorship = {
 
 sg_law_benefit_law_outlawed_dissent = {
 	value = 61.5
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { is_at_war = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -4639,7 +4634,7 @@ sg_law_score_law_outlawed_dissent = {
 
 sg_law_benefit_law_protected_speech = {
 	value = 45.5
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { is_at_war = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -4705,7 +4700,7 @@ sg_law_score_law_protected_speech = {
 
 sg_law_benefit_law_right_of_assembly = {
 	value = 47.3
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { is_at_war = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -5365,14 +5360,14 @@ sg_law_score_law_theocracy = {
 }
 
 sg_law_benefit_law_charitable_health_system = {
-	value = 48.0
+	value = 49.8
 	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
 
 sg_law_risk_law_charitable_health_system = {
-	value = 3.4
+	value = 1.6
 	min = 0
 	max = 60
 }
@@ -5431,8 +5426,7 @@ sg_law_score_law_charitable_health_system = {
 }
 
 sg_law_benefit_law_no_health_system = {
-	value = 45.0
-	if = { limit = { average_sol < average_expected_sol } add = 5 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -5564,14 +5558,14 @@ sg_law_score_law_private_health_insurance = {
 }
 
 sg_law_benefit_law_public_health_insurance = {
-	value = 45.0
+	value = 60.5
 	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
 
 sg_law_risk_law_public_health_insurance = {
-	value = 5.0
+	value = 2.0
 	min = 0
 	max = 60
 }
@@ -5631,7 +5625,6 @@ sg_law_score_law_public_health_insurance = {
 
 sg_law_benefit_law_extraordinary_commission = {
 	value = 73.5
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -5697,7 +5690,6 @@ sg_law_score_law_extraordinary_commission = {
 
 sg_law_benefit_law_guaranteed_liberties = {
 	value = 50.0
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -5764,7 +5756,7 @@ sg_law_score_law_guaranteed_liberties = {
 
 sg_law_benefit_law_national_guard = {
 	value = 50.0
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
+	if = { limit = { is_at_war = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -5829,15 +5821,13 @@ sg_law_score_law_national_guard = {
 }
 
 sg_law_benefit_law_no_home_affairs = {
-	value = 45.0
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
 
 sg_law_risk_law_no_home_affairs = {
 	value = 5.0
-	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -5897,7 +5887,6 @@ sg_law_score_law_no_home_affairs = {
 
 sg_law_benefit_law_okhrana = {
 	value = 73.5
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -5963,7 +5952,6 @@ sg_law_score_law_okhrana = {
 
 sg_law_benefit_law_secret_police = {
 	value = 73.5
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -6029,7 +6017,6 @@ sg_law_score_law_secret_police = {
 
 sg_law_benefit_law_shinsengumi = {
 	value = 72.5
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
 	min = 0
 	max = 100
 }
@@ -6095,7 +6082,7 @@ sg_law_score_law_shinsengumi = {
 
 sg_law_benefit_law_third_section = {
 	value = 37.8
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
+	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -6160,8 +6147,7 @@ sg_law_score_law_third_section = {
 }
 
 sg_law_benefit_law_no_workers_rights = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6226,8 +6212,7 @@ sg_law_score_law_no_workers_rights = {
 }
 
 sg_law_benefit_law_regulatory_bodies = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6292,8 +6277,7 @@ sg_law_score_law_regulatory_bodies = {
 }
 
 sg_law_benefit_law_worker_protections = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6358,8 +6342,7 @@ sg_law_score_law_worker_protections = {
 }
 
 sg_law_benefit_law_anti_strike_laws = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6424,8 +6407,7 @@ sg_law_score_law_anti_strike_laws = {
 }
 
 sg_law_benefit_law_combination_acts = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6490,8 +6472,7 @@ sg_law_score_law_combination_acts = {
 }
 
 sg_law_benefit_law_corporatized_unions = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6557,8 +6538,7 @@ sg_law_score_law_corporatized_unions = {
 }
 
 sg_law_benefit_law_factory_councils = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6624,7 +6604,8 @@ sg_law_score_law_factory_councils = {
 
 sg_law_benefit_law_guild_system = {
 	value = 45.8
-	if = { limit = { average_sol < 12 } add = 6 }
+	if = { limit = { net_total_income < 0 } add = 6 }
+	if = { limit = { average_sol < average_expected_sol } add = 4 }
 	min = 0
 	max = 100
 }
@@ -6689,8 +6670,7 @@ sg_law_score_law_guild_system = {
 }
 
 sg_law_benefit_law_right_to_associate = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6755,8 +6735,7 @@ sg_law_score_law_right_to_associate = {
 }
 
 sg_law_benefit_law_collectivized_agriculture = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 4 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6821,8 +6800,7 @@ sg_law_score_law_collectivized_agriculture = {
 }
 
 sg_law_benefit_law_commercialized_agriculture = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 4 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -6888,7 +6866,7 @@ sg_law_score_law_commercialized_agriculture = {
 
 sg_law_benefit_law_expanded_latifundias = {
 	value = 46.2
-	if = { limit = { average_sol < 12 } add = 4 }
+	if = { limit = { net_total_income < 0 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -7019,8 +6997,7 @@ sg_law_score_law_homesteading = {
 }
 
 sg_law_benefit_law_latifundias = {
-	value = 43.8
-	if = { limit = { average_sol < 12 } add = 4 }
+	value = 28.8
 	min = 0
 	max = 100
 }
@@ -7349,8 +7326,7 @@ sg_law_score_law_tenant_farmers = {
 }
 
 sg_law_benefit_law_closed_borders = {
-	value = 25.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	value = 10.0
 	min = 0
 	max = 100
 }
@@ -7415,8 +7391,7 @@ sg_law_score_law_closed_borders = {
 }
 
 sg_law_benefit_law_migration_controls = {
-	value = 25.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	value = 10.0
 	min = 0
 	max = 100
 }
@@ -7481,8 +7456,7 @@ sg_law_score_law_migration_controls = {
 }
 
 sg_law_benefit_law_no_migration_controls = {
-	value = 45.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -7812,7 +7786,8 @@ sg_law_score_law_professional_navy = {
 
 sg_law_benefit_law_dedicated_police = {
 	value = 61.0
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
+	if = { limit = { net_total_income < 0 } add = 6 }
+	if = { limit = { average_sol < average_expected_sol } add = 4 }
 	min = 0
 	max = 100
 }
@@ -7878,8 +7853,7 @@ sg_law_score_law_dedicated_police = {
 }
 
 sg_law_benefit_law_local_police = {
-	value = 45.0
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -7945,7 +7919,8 @@ sg_law_score_law_local_police = {
 
 sg_law_benefit_law_militarized_police = {
 	value = 61.0
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
+	if = { limit = { net_total_income < 0 } add = 6 }
+	if = { limit = { average_sol < average_expected_sol } add = 4 }
 	min = 0
 	max = 100
 }
@@ -8011,15 +7986,13 @@ sg_law_score_law_militarized_police = {
 }
 
 sg_law_benefit_law_no_police = {
-	value = 45.0
-	if = { limit = { radical_fraction > 0.15 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
 
 sg_law_risk_law_no_police = {
 	value = 5.0
-	if = { limit = { radical_fraction > 0.2 } add = 8 }
 	min = 0
 	max = 60
 }
@@ -8079,7 +8052,7 @@ sg_law_score_law_no_police = {
 
 sg_law_benefit_law_no_womens_rights = {
 	value = 46.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -8145,7 +8118,7 @@ sg_law_score_law_no_womens_rights = {
 
 sg_law_benefit_law_women_in_the_fields = {
 	value = 0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -8211,7 +8184,7 @@ sg_law_score_law_women_in_the_fields = {
 
 sg_law_benefit_law_women_in_the_workplace = {
 	value = 46.5
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -8277,7 +8250,7 @@ sg_law_score_law_women_in_the_workplace = {
 
 sg_law_benefit_law_women_own_property = {
 	value = 46.2
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -8343,7 +8316,7 @@ sg_law_score_law_women_own_property = {
 
 sg_law_benefit_law_womens_suffrage = {
 	value = 49.4
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -8408,8 +8381,7 @@ sg_law_score_law_womens_suffrage = {
 }
 
 sg_law_benefit_law_colonial_slavery = {
-	value = 45.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -8474,8 +8446,7 @@ sg_law_score_law_colonial_slavery = {
 }
 
 sg_law_benefit_law_debt_slavery = {
-	value = 45.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -8540,8 +8511,7 @@ sg_law_score_law_debt_slavery = {
 }
 
 sg_law_benefit_law_legacy_slavery = {
-	value = 44.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	value = 29.0
 	min = 0
 	max = 100
 }
@@ -8606,8 +8576,7 @@ sg_law_score_law_legacy_slavery = {
 }
 
 sg_law_benefit_law_slave_trade = {
-	value = 42.5
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	value = 27.5
 	min = 0
 	max = 100
 }
@@ -8672,8 +8641,7 @@ sg_law_score_law_slave_trade = {
 }
 
 sg_law_benefit_law_slavery_banned = {
-	value = 45.0
-	if = { limit = { radical_fraction > 0.1 } add = 5 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -8739,8 +8707,7 @@ sg_law_score_law_slavery_banned = {
 
 sg_law_benefit_law_consumption_based_taxation = {
 	value = 67.5
-	if = { limit = { weeks_until_bankruptcy < 52 } add = 8 }
-	if = { limit = { net_total_income < 0 } add = 5 }
+	if = { limit = { approaching_bureaucracy_shortage = yes } add = 8 }
 	min = 0
 	max = 100
 }
@@ -8874,8 +8841,7 @@ sg_law_score_law_graduated_taxation = {
 
 sg_law_benefit_law_land_based_taxation = {
 	value = 72.5
-	if = { limit = { weeks_until_bankruptcy < 52 } add = 8 }
-	if = { limit = { net_total_income < 0 } add = 5 }
+	if = { limit = { average_sol < 12 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -8941,8 +8907,7 @@ sg_law_score_law_land_based_taxation = {
 
 sg_law_benefit_law_per_capita_based_taxation = {
 	value = 91.5
-	if = { limit = { weeks_until_bankruptcy < 52 } add = 8 }
-	if = { limit = { net_total_income < 0 } add = 5 }
+	if = { limit = { average_sol < 12 } add = 4 }
 	min = 0
 	max = 100
 }
@@ -9007,7 +8972,7 @@ sg_law_score_law_per_capita_based_taxation = {
 }
 
 sg_law_benefit_law_proportional_taxation = {
-	value = 67.5
+	value = 67.8
 	if = { limit = { weeks_until_bankruptcy < 52 } add = 8 }
 	if = { limit = { net_total_income < 0 } add = 5 }
 	min = 0
@@ -9209,8 +9174,8 @@ sg_law_score_law_free_trade = {
 
 sg_law_benefit_law_isolationism = {
 	value = 62.8
-	if = { limit = { is_at_war = yes } subtract = 4 }
-	else = { add = 3 }
+	if = { limit = { weeks_until_bankruptcy < 52 } add = 8 }
+	if = { limit = { net_total_income < 0 } add = 5 }
 	min = 0
 	max = 100
 }
@@ -9477,7 +9442,7 @@ sg_law_score_law_sakoku = {
 
 sg_law_benefit_law_chiefs_distribute_aid = {
 	value = 65.4
-	if = { limit = { average_sol < 12 } add = 6 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -9542,8 +9507,7 @@ sg_law_score_law_chiefs_distribute_aid = {
 }
 
 sg_law_benefit_law_no_social_security = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -9609,7 +9573,7 @@ sg_law_score_law_no_social_security = {
 
 sg_law_benefit_law_old_age_pension = {
 	value = 46.5
-	if = { limit = { average_sol < 12 } add = 6 }
+	if = { limit = { average_sol < average_expected_sol } add = 5 }
 	min = 0
 	max = 100
 }
@@ -9674,8 +9638,7 @@ sg_law_score_law_old_age_pension = {
 }
 
 sg_law_benefit_law_poor_laws = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }
@@ -9740,8 +9703,7 @@ sg_law_score_law_poor_laws = {
 }
 
 sg_law_benefit_law_wage_subsidies = {
-	value = 45.0
-	if = { limit = { average_sol < 12 } add = 6 }
+	value = 30.0
 	min = 0
 	max = 100
 }

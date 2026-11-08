@@ -6,15 +6,15 @@ sg_is_enabled = {
 }
 
 sg_has_top_1 = {
-	has_variable = sg_top_1_law
+	has_variable = sg_top_1_id
 }
 
 sg_has_top_2 = {
-	has_variable = sg_top_2_law
+	has_variable = sg_top_2_id
 }
 
 sg_has_top_3 = {
-	has_variable = sg_top_3_law
+	has_variable = sg_top_3_id
 }
 
 sg_has_ignored = {

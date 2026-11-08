@@ -1,0 +1,2394 @@
+{
+ "schema_version": 1,
+ "game": "/home/lincoln-ii/Games/Victoria 3/game",
+ "technologies": [
+  {
+   "name": "academia",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_education_access_wealth_add",
+     "0.005"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "admiralty",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "power_of_the_purse"
+   ]
+  },
+  {
+   "name": "analytical_philosophy",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "philosophical_pragmatism"
+   ]
+  },
+  {
+   "name": "aniline",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rubber_mastication"
+   ]
+  },
+  {
+   "name": "antibiotics",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_harvest_condition_disease_outbreak_impact_mult",
+     "-0.15"
+    ]
+   ],
+   "unlocking_technologies": [
+    "pharmaceuticals"
+   ]
+  },
+  {
+   "name": "arc_welding",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "compression_ignition"
+   ]
+  },
+  {
+   "name": "army_reserves",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_general_rank_impact_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "art_silk",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "aniline"
+   ]
+  },
+  {
+   "name": "artillery",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "gunsmithing"
+   ]
+  },
+  {
+   "name": "atmospheric_engine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "shaft_mining"
+   ]
+  },
+  {
+   "name": "automatic_bottle_blowers",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "vulcanization"
+   ]
+  },
+  {
+   "name": "automatic_machine_guns",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "handcranked_machine_gun",
+    "bolt_action_rifles"
+   ]
+  },
+  {
+   "name": "baking_powder",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "fractional_distillation"
+   ]
+  },
+  {
+   "name": "banking",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_loan_interest_rate_add",
+     "-0.02"
+    ],
+    [
+     "country_minting_mult",
+     "0.1"
+    ],
+    [
+     "state_max_trade_advantage_from_capacity_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "battleship_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "dreadnought_tech"
+   ]
+  },
+  {
+   "name": "behaviorism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.5"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.25"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "psychiatry"
+   ]
+  },
+  {
+   "name": "bessemer_process",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steelworking"
+   ]
+  },
+  {
+   "name": "bolt_action_rifles",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "repeaters"
+   ]
+  },
+  {
+   "name": "breech_loading_artillery",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rifling",
+    "shell_gun"
+   ]
+  },
+  {
+   "name": "canneries",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "lathe"
+   ]
+  },
+  {
+   "name": "carrier_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "dreadnought_tech"
+   ]
+  },
+  {
+   "name": "central_archives",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_home_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "state_incorporation_speed_mult",
+     "0.05"
+    ],
+    [
+     "state_tax_capacity_add",
+     "25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "centralization"
+   ]
+  },
+  {
+   "name": "central_banking",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_loan_interest_rate_add",
+     "-0.02"
+    ],
+    [
+     "country_minting_mult",
+     "0.1"
+    ],
+    [
+     "state_max_trade_advantage_from_capacity_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "banking"
+   ]
+  },
+  {
+   "name": "central_planning",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_literacy_growth_add",
+     "0.0002"
+    ],
+    [
+     "country_government_dividends_efficiency_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "market_economy"
+   ]
+  },
+  {
+   "name": "centralization",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_home_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "state_incorporation_speed_mult",
+     "0.05"
+    ],
+    [
+     "state_tax_capacity_add",
+     "25"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "chemical_bleaching",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "crystal_glass"
+   ]
+  },
+  {
+   "name": "chemical_warfare",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "automatic_machine_guns"
+   ]
+  },
+  {
+   "name": "civilizing_mission",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_infamy_generation_against_unrecognized_mult",
+     "-0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "colonization"
+   ]
+  },
+  {
+   "name": "colonialism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "colonization",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_colonial_affairs_max_investment_add",
+     "2"
+    ],
+    [
+     "country_infamy_generation_against_unrecognized_mult",
+     "-0.1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "combustion_engine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rotary_valve_engine"
+   ]
+  },
+  {
+   "name": "compression_ignition",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "combustion_engine"
+   ]
+  },
+  {
+   "name": "concrete_dockyards",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "ship_ship_type_supply_ship_supply_capacity_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "reinforced_concrete"
+   ]
+  },
+  {
+   "name": "concrete_fortifications",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "reinforced_concrete"
+   ]
+  },
+  {
+   "name": "conveyors",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "vulcanization",
+    "shift_work",
+    "electrical_generation"
+   ]
+  },
+  {
+   "name": "corporate_charters",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_free_charters_add",
+     "2"
+    ],
+    [
+     "country_max_companies_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "corporate_management",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "joint_stock_companies"
+   ]
+  },
+  {
+   "name": "corporatism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_radicals_from_political_movements_mult",
+     "-0.1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "cotton_gin",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "building_cotton_plantation_throughput_add",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "manufacturies"
+   ]
+  },
+  {
+   "name": "crystal_glass",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "lathe"
+   ]
+  },
+  {
+   "name": "currency_standards",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "international_trade",
+    "centralization"
+   ]
+  },
+  {
+   "name": "defense_in_depth",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "unit_army_defense_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "field_works"
+   ]
+  },
+  {
+   "name": "democracy",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_social_security_max_investment_add",
+     "2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "egalitarianism"
+   ]
+  },
+  {
+   "name": "destroyer",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "monitor_tech"
+   ]
+  },
+  {
+   "name": "distillation",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "manufacturies"
+   ]
+  },
+  {
+   "name": "dough_rollers",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "conveyors"
+   ]
+  },
+  {
+   "name": "dreadnought_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "pre_dreadnought_tech",
+    "sea_lane_strategies",
+    "concrete_dockyards"
+   ]
+  },
+  {
+   "name": "drydocks",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "navigation"
+   ]
+  },
+  {
+   "name": "dynamite",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_resource_discovery_chance_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "nitroglycerin"
+   ]
+  },
+  {
+   "name": "egalitarianism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_expected_sol_from_literacy",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "electric_arc_process",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "open_hearth_process"
+   ]
+  },
+  {
+   "name": "electric_railway",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "electrical_capacitors",
+    "steel_railway_cars"
+   ]
+  },
+  {
+   "name": "electric_telegraph",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "electrical_generation"
+   ]
+  },
+  {
+   "name": "electrical_capacitors",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "electrical_generation"
+   ]
+  },
+  {
+   "name": "electrical_generation",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rotary_valve_engine"
+   ]
+  },
+  {
+   "name": "elevator",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steel_frame_buildings"
+   ]
+  },
+  {
+   "name": "empiricism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.25"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.25"
+    ],
+    [
+     "country_institution_schools_max_investment_add",
+     "1"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "enclosure",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "3",
+   "modifier": [],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "field_works",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "unit_army_defense_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "film",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "photography"
+   ]
+  },
+  {
+   "name": "flash_freezing",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "pasteurization"
+   ]
+  },
+  {
+   "name": "floating_harbor",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "gantry_cranes"
+   ]
+  },
+  {
+   "name": "fractional_distillation",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "distillation"
+   ]
+  },
+  {
+   "name": "fuel_turbines",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "oil_turbine"
+   ]
+  },
+  {
+   "name": "gantry_cranes",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steel_railway_cars"
+   ]
+  },
+  {
+   "name": "general_staff",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "army_reserves"
+   ]
+  },
+  {
+   "name": "gunsmithing",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "standing_army"
+   ]
+  },
+  {
+   "name": "handcranked_machine_gun",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "unit_army_defense_add",
+     "5"
+    ],
+    [
+     "unit_kill_rate_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "human_rights",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_ban_slavery_no_infamy_bool",
+     "yes"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "hydraulic_cranes",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "drydocks"
+   ]
+  },
+  {
+   "name": "identification_documents",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "improved_fertilizer",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "2",
+   "modifier": [],
+   "unlocking_technologies": [
+    "intensive_agriculture"
+   ]
+  },
+  {
+   "name": "intensive_agriculture",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "2",
+   "modifier": [],
+   "unlocking_technologies": [
+    "enclosure"
+   ]
+  },
+  {
+   "name": "international_exchange_standards",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "currency_standards"
+   ]
+  },
+  {
+   "name": "international_trade",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "tech_bureaucracy"
+   ]
+  },
+  {
+   "name": "investment_banks",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_free_charters_add",
+     "1"
+    ],
+    [
+     "state_urbanization_per_level_mult",
+     "-0.15"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "ironclad_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "screw_frigate"
+   ]
+  },
+  {
+   "name": "jeune_ecole",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "dreadnought_tech"
+   ]
+  },
+  {
+   "name": "joint_stock_companies",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_free_charters_add",
+     "1"
+    ],
+    [
+     "country_max_companies_add",
+     "1"
+    ],
+    [
+     "state_urbanization_per_level_mult",
+     "-0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "corporate_charters"
+   ]
+  },
+  {
+   "name": "labor_movement",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_agitator_slots_add",
+     "1"
+    ],
+    [
+     "country_institution_workplace_safety_max_investment_add",
+     "3"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "landing_craft",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "jeune_ecole",
+    "monitor_tech"
+   ]
+  },
+  {
+   "name": "lathe",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "cotton_gin"
+   ]
+  },
+  {
+   "name": "law_enforcement",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_police_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "line_infantry",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "mandatory_service",
+    "military_drill"
+   ]
+  },
+  {
+   "name": "logistics",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "macroeconomics",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "modern_financial_instruments"
+   ]
+  },
+  {
+   "name": "malaria_prevention",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "pharmaceuticals"
+   ]
+  },
+  {
+   "name": "mandatory_service",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_conscription_rate_mult",
+     "0.2"
+    ],
+    [
+     "country_general_rank_impact_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "manufacturies",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "3",
+   "modifier": [],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "market_economy",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "mass_communication",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_authority_mult",
+     "0.1"
+    ],
+    [
+     "country_voting_power_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "telephone"
+   ]
+  },
+  {
+   "name": "mass_propaganda",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_war_support_battles_increase_mult",
+     "0.25"
+    ],
+    [
+     "country_war_support_battles_decrease_mult",
+     "-0.2"
+    ],
+    [
+     "country_support_separatism_strength_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "mass_surveillance",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_support_separatism_resistance_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "mechanical_tools",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "lathe",
+    "steelworking"
+   ]
+  },
+  {
+   "name": "mechanized_farming",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "threshing_machine"
+   ]
+  },
+  {
+   "name": "mechanized_workshops",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "building_economy_of_scale_level_cap_add",
+     "10"
+    ]
+   ],
+   "unlocking_technologies": [
+    "canneries",
+    "mechanical_tools"
+   ]
+  },
+  {
+   "name": "medical_degrees",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_health_system_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "military_aviation",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "handcranked_machine_gun"
+   ]
+  },
+  {
+   "name": "military_drill",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "unit_experience_gain_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "military_statistics",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "military_formation_organization_gain_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "mobile_armor",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "concrete_fortifications",
+    "nco_training"
+   ]
+  },
+  {
+   "name": "modern_financial_instruments",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_government_dividends_efficiency_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "modern_nursing",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "triage"
+   ]
+  },
+  {
+   "name": "modern_sewerage",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steel_frame_buildings"
+   ]
+  },
+  {
+   "name": "monitor_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "ironclad_tech",
+    "breech_loading_artillery"
+   ]
+  },
+  {
+   "name": "multilateral_alliances",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_allow_multiple_alliances_bool",
+     "yes"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "napoleonic_warfare",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "line_infantry",
+    "artillery"
+   ]
+  },
+  {
+   "name": "nationalism",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_authority_mult",
+     "0.1"
+    ],
+    [
+     "country_voting_power_mult",
+     "0.1"
+    ],
+    [
+     "country_homeland_infamy_reduction_bool",
+     "yes"
+    ],
+    [
+     "country_support_separatism_strength_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "navigation",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "nco_training",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "general_staff"
+   ]
+  },
+  {
+   "name": "nitrogen_fixation",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "improved_fertilizer"
+   ]
+  },
+  {
+   "name": "nitroglycerin",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_resource_discovery_chance_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "intensive_agriculture",
+    "prospecting"
+   ]
+  },
+  {
+   "name": "oil_turbine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steam_turbine"
+   ]
+  },
+  {
+   "name": "open_hearth_process",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "bessemer_process"
+   ]
+  },
+  {
+   "name": "organized_sports",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_prestige_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "mass_communication"
+   ]
+  },
+  {
+   "name": "paddle_steamer",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "ship_crew_damage_mult",
+     "0.05"
+    ],
+    [
+     "ship_hull_damage_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "navigation"
+   ]
+  },
+  {
+   "name": "pan_nationalism",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "nationalism"
+   ]
+  },
+  {
+   "name": "pasteurization",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "vacuum_canning",
+    "electrical_capacitors"
+   ]
+  },
+  {
+   "name": "paved_roads",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_infrastructure_from_automobiles_consumption_add",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "combustion_engine"
+   ]
+  },
+  {
+   "name": "percussion_cap",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "gunsmithing"
+   ]
+  },
+  {
+   "name": "pharmaceuticals",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_health_system_max_investment_add",
+     "1"
+    ],
+    [
+     "state_harvest_condition_disease_outbreak_impact_mult",
+     "-0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "medical_degrees"
+   ]
+  },
+  {
+   "name": "philosophical_pragmatism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_literacy_growth_add",
+     "0.0001"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "photography",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "nitroglycerin"
+   ]
+  },
+  {
+   "name": "plastics",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "reinforced_concrete"
+   ]
+  },
+  {
+   "name": "pneumatic_tools",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "building_construction_sector_throughput_add",
+     "0.1"
+    ],
+    [
+     "goods_output_hardwood_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "steam_donkey"
+   ]
+  },
+  {
+   "name": "political_agitation",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_agitator_slots_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "egalitarianism"
+   ]
+  },
+  {
+   "name": "postal_savings",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "building_cash_reserves_mult",
+     "0.2"
+    ],
+    [
+     "state_bureaucrats_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "state_engineers_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "state_farmers_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "state_machinists_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "state_shopkeepers_investment_pool_efficiency_mult",
+     "0.15"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "power_of_the_purse",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_admiral_rank_impact_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "pre_dreadnought_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "ironclad_tech"
+   ]
+  },
+  {
+   "name": "prospecting",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "shaft_mining"
+   ]
+  },
+  {
+   "name": "psychiatry",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.25"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.25"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "psychoanalysis",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.25"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.25"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "psychiatry"
+   ]
+  },
+  {
+   "name": "pumpjacks",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steam_donkey",
+    "dynamite"
+   ]
+  },
+  {
+   "name": "quinine",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_colonial_affairs_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "radio",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "telephone"
+   ]
+  },
+  {
+   "name": "railways",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "3",
+   "modifier": [],
+   "unlocking_technologies": [
+    "mechanical_tools",
+    "atmospheric_engine"
+   ]
+  },
+  {
+   "name": "rationalism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_schools_max_investment_add",
+     "1"
+    ],
+    [
+     "state_education_access_wealth_add",
+     "0.01"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "reinforced_concrete",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "building_construction_sector_throughput_add",
+     "0.15"
+    ]
+   ],
+   "unlocking_technologies": [
+    "bessemer_process"
+   ]
+  },
+  {
+   "name": "repeaters",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rifling"
+   ]
+  },
+  {
+   "name": "rifling",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "percussion_cap"
+   ]
+  },
+  {
+   "name": "romanticism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_prestige_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "rotary_valve_engine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "watertube_boiler"
+   ]
+  },
+  {
+   "name": "rubber_mastication",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "fractional_distillation",
+    "chemical_bleaching"
+   ]
+  },
+  {
+   "name": "screw_frigate",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "paddle_steamer"
+   ]
+  },
+  {
+   "name": "sea_lane_strategies",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "fuel_turbines"
+   ]
+  },
+  {
+   "name": "self_propelled_torpedoes",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "power_of_the_purse"
+   ]
+  },
+  {
+   "name": "sericulture",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": false,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "building_silk_plantation_throughput_add",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "shaft_mining",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "2",
+   "modifier": [],
+   "unlocking_technologies": [
+    "enclosure",
+    "manufacturies"
+   ]
+  },
+  {
+   "name": "shell_gun",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "artillery"
+   ]
+  },
+  {
+   "name": "shift_work",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "building_economy_of_scale_level_cap_add",
+     "20"
+    ]
+   ],
+   "unlocking_technologies": [
+    "mechanized_workshops"
+   ]
+  },
+  {
+   "name": "socialism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "egalitarianism"
+   ]
+  },
+  {
+   "name": "standing_army",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "steam_donkey",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "intensive_agriculture"
+   ]
+  },
+  {
+   "name": "steam_turbine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "electrical_generation"
+   ]
+  },
+  {
+   "name": "steel_frame_buildings",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "electric_arc_process"
+   ]
+  },
+  {
+   "name": "steel_railway_cars",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "railways"
+   ]
+  },
+  {
+   "name": "steelworking",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "shaft_mining"
+   ]
+  },
+  {
+   "name": "stock_exchange",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_market_access_price_impact",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "stormtroopers",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "unit_combat_unit_type_mechanized_infantry_offense_add",
+     "5"
+    ],
+    [
+     "unit_combat_unit_type_squad_infantry_offense_add",
+     "5"
+    ],
+    [
+     "unit_combat_unit_type_trench_infantry_offense_add",
+     "5"
+    ],
+    [
+     "unit_kill_rate_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "military_aviation"
+   ]
+  },
+  {
+   "name": "submarine",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "self_propelled_torpedoes"
+   ]
+  },
+  {
+   "name": "tech_bureaucracy",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_institution_police_max_investment_add",
+     "2"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "telephone",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "shift_work",
+    "electrical_generation"
+   ]
+  },
+  {
+   "name": "threshing_machine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steam_donkey"
+   ]
+  },
+  {
+   "name": "trench_works",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "general_staff",
+    "electric_telegraph"
+   ]
+  },
+  {
+   "name": "triage",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "logistics"
+   ]
+  },
+  {
+   "name": "urban_planning",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_max_weekly_construction_progress_add",
+     "5"
+    ],
+    [
+     "state_building_construction_sector_max_level_add",
+     "5"
+    ],
+    [
+     "state_infrastructure_from_population_add",
+     "1"
+    ],
+    [
+     "state_infrastructure_from_population_max_add",
+     "20"
+    ]
+   ],
+   "unlocking_technologies": [
+    "urbanization"
+   ]
+  },
+  {
+   "name": "urbanization",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_max_weekly_construction_progress_add",
+     "10"
+    ],
+    [
+     "state_building_construction_sector_max_level_add",
+     "10"
+    ],
+    [
+     "state_infrastructure_from_population_add",
+     "2"
+    ],
+    [
+     "state_infrastructure_from_population_max_add",
+     "40"
+    ]
+   ],
+   "unlocking_technologies": []
+  },
+  {
+   "name": "vacuum_canning",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "mechanized_workshops"
+   ]
+  },
+  {
+   "name": "vulcanization",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rubber_mastication"
+   ]
+  },
+  {
+   "name": "war_propaganda",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "country_war_support_battles_increase_mult",
+     "0.25"
+    ],
+    [
+     "country_war_support_battles_decrease_mult",
+     "-0.2"
+    ],
+    [
+     "unit_morale_loss_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "mass_propaganda"
+   ]
+  },
+  {
+   "name": "wargaming",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "unit_army_offense_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "military_statistics"
+   ]
+  },
+  {
+   "name": "watertube_boiler",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [],
+   "unlocking_technologies": [
+    "atmospheric_engine"
+   ]
+  },
+  {
+   "name": "zeppelins",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "1",
+   "modifier": [
+    [
+     "state_market_access_price_impact",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "electrical_capacitors"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,4783 @@
+{
+ "schema_version": 1,
+ "game": "/home/lincoln-ii/Victoria3_mod/game",
+ "technologies": [
+  {
+   "name": "sericulture",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": false,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "building_silk_plantation_throughput_add",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "building_silk_plantation_throughput_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "enclosure",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "manufacturies",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "shaft_mining",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "enclosure",
+    "manufacturies"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "cotton_gin",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "building_cotton_plantation_throughput_add",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "manufacturies"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "building_cotton_plantation_throughput_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "lathe",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "cotton_gin"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "distillation",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "manufacturies"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "steelworking",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "shaft_mining"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "prospecting",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "shaft_mining"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "crystal_glass",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "lathe"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "intensive_agriculture",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "enclosure"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "fractional_distillation",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "distillation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "canneries",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "lathe"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "watertube_boiler",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "atmospheric_engine"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "atmospheric_engine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "shaft_mining"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "railways",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "mechanical_tools",
+    "atmospheric_engine"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "chemical_bleaching",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "crystal_glass"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "nitroglycerin",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_resource_discovery_chance_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "intensive_agriculture",
+    "prospecting"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_resource_discovery_chance_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "bessemer_process",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steelworking"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "baking_powder",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "fractional_distillation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "mechanized_workshops",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "building_economy_of_scale_level_cap_add",
+     "10"
+    ]
+   ],
+   "unlocking_technologies": [
+    "canneries",
+    "mechanical_tools"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "building_economy_of_scale_level_cap_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "10"
+    }
+   ]
+  },
+  {
+   "name": "mechanical_tools",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "lathe",
+    "steelworking"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "improved_fertilizer",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "intensive_agriculture"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "steam_donkey",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "intensive_agriculture"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "dynamite",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_resource_discovery_chance_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "nitroglycerin"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_resource_discovery_chance_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "rubber_mastication",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "fractional_distillation",
+    "chemical_bleaching"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "rotary_valve_engine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "watertube_boiler"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "reinforced_concrete",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "building_construction_sector_throughput_add",
+     "0.15"
+    ]
+   ],
+   "unlocking_technologies": [
+    "bessemer_process"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "building_construction_sector_throughput_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.15"
+    }
+   ]
+  },
+  {
+   "name": "threshing_machine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steam_donkey"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "pumpjacks",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steam_donkey",
+    "dynamite"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "aniline",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rubber_mastication"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "open_hearth_process",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "bessemer_process"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "vulcanization",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rubber_mastication"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "vacuum_canning",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "mechanized_workshops"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "shift_work",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "building_economy_of_scale_level_cap_add",
+     "20"
+    ]
+   ],
+   "unlocking_technologies": [
+    "mechanized_workshops"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "building_economy_of_scale_level_cap_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "20"
+    }
+   ]
+  },
+  {
+   "name": "steel_railway_cars",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "railways"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "electrical_generation",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rotary_valve_engine"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "mechanized_farming",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "threshing_machine"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "art_silk",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "aniline"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "automatic_bottle_blowers",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "vulcanization"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "conveyors",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "vulcanization",
+    "shift_work",
+    "electrical_generation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "pasteurization",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "vacuum_canning",
+    "electrical_capacitors"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "electric_railway",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "electrical_capacitors",
+    "steel_railway_cars"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "combustion_engine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rotary_valve_engine"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "pneumatic_tools",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "building_construction_sector_throughput_add",
+     "0.1"
+    ],
+    [
+     "goods_output_hardwood_mult",
+     "0.25"
+    ],
+    [
+     "country_resource_discovery_chance_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "rotary_valve_engine",
+    "reinforced_concrete"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "building_construction_sector_throughput_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "goods_output_hardwood_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_resource_discovery_chance_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "nitrogen_fixation",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "improved_fertilizer"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "electric_arc_process",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "open_hearth_process"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "steam_turbine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "electrical_generation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "plastics",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "reinforced_concrete"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "electrical_capacitors",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "electrical_generation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "radio",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "telephone"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "telephone",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "shift_work",
+    "electrical_generation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "dough_rollers",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "conveyors"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "flash_freezing",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "pasteurization"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "oil_turbine",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "steam_turbine"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "arc_welding",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_ship_group_capital_ships_construction_progress_max_add",
+     "20"
+    ]
+   ],
+   "unlocking_technologies": [
+    "electric_arc_process",
+    "pneumatic_tools"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_ship_group_capital_ships_construction_progress_max_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "20"
+    }
+   ]
+  },
+  {
+   "name": "compression_ignition",
+   "file": "10_production.txt",
+   "category": "production",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "combustion_engine"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "standing_army",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "navigation",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "drydocks",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "navigation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "mandatory_service",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_conscription_rate_mult",
+     "0.2"
+    ],
+    [
+     "country_general_rank_impact_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "standing_army"
+   ],
+   "benefit": 1.6,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_conscription_rate_mult",
+     "benefit": 1.6,
+     "risk": 0.0,
+     "value": "0.2"
+    },
+    {
+     "key": "country_general_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.2"
+    }
+   ]
+  },
+  {
+   "name": "gunsmithing",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "standing_army"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "artillery",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "gunsmithing"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "military_drill",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_experience_gain_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "standing_army"
+   ],
+   "benefit": 0.3,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_experience_gain_mult",
+     "benefit": 0.3,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "napoleonic_warfare",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "line_infantry",
+    "artillery"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "admiralty",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "navigation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "army_reserves",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_conscription_rate_mult",
+     "0.2"
+    ],
+    [
+     "country_general_rank_impact_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "line_infantry"
+   ],
+   "benefit": 1.6,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_conscription_rate_mult",
+     "benefit": 1.6,
+     "risk": 0.0,
+     "value": "0.2"
+    },
+    {
+     "key": "country_general_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.2"
+    }
+   ]
+  },
+  {
+   "name": "line_infantry",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "mandatory_service",
+    "military_drill"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "paddle_steamer",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "ship_hull_damage_mult",
+     "0.05"
+    ],
+    [
+     "ship_crew_damage_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "admiralty"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "ship_hull_damage_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    },
+    {
+     "key": "ship_crew_damage_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "field_works",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_army_defense_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "napoleonic_warfare"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_army_defense_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    }
+   ]
+  },
+  {
+   "name": "logistics",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_conscription_rate_mult",
+     "0.2"
+    ],
+    [
+     "country_general_rank_impact_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "napoleonic_warfare",
+    "army_reserves"
+   ],
+   "benefit": 1.6,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_conscription_rate_mult",
+     "benefit": 1.6,
+     "risk": 0.0,
+     "value": "0.2"
+    },
+    {
+     "key": "country_general_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.2"
+    }
+   ]
+  },
+  {
+   "name": "triage",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "logistics"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "shell_gun",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "artillery"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "percussion_cap",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "gunsmithing"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "rifling",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "percussion_cap"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "general_staff",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "army_reserves"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "screw_frigate",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "paddle_steamer"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "power_of_the_purse",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_admiral_rank_impact_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "admiralty"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_admiral_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "hydraulic_cranes",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "drydocks"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "modern_nursing",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "triage"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "enlistment_offices",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_conscription_rate_mult",
+     "0.2"
+    ],
+    [
+     "country_general_rank_impact_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "logistics"
+   ],
+   "benefit": 1.6,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_conscription_rate_mult",
+     "benefit": 1.6,
+     "risk": 0.0,
+     "value": "0.2"
+    },
+    {
+     "key": "country_general_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.2"
+    }
+   ]
+  },
+  {
+   "name": "electric_telegraph",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_war_support_casualties_mult",
+     "-0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "logistics"
+   ],
+   "benefit": 1.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_war_support_casualties_mult",
+     "benefit": 1.0,
+     "risk": -0.0,
+     "value": "-0.25"
+    }
+   ]
+  },
+  {
+   "name": "military_statistics",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "military_formation_organization_gain_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "electric_telegraph",
+    "general_staff"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "military_formation_organization_gain_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.2"
+    }
+   ]
+  },
+  {
+   "name": "repeaters",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rifling"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "breech_loading_artillery",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "rifling",
+    "shell_gun"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "handcranked_machine_gun",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_army_defense_add",
+     "5"
+    ],
+    [
+     "unit_kill_rate_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "repeaters",
+    "breech_loading_artillery"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_army_defense_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "unit_kill_rate_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "self_propelled_torpedoes",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "power_of_the_purse"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "monitor_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "ironclad_tech",
+    "breech_loading_artillery"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "ironclad_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "screw_frigate"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "jeune_ecole",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_admiral_rank_impact_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "self_propelled_torpedoes"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_admiral_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "floating_harbor",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "gantry_cranes"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "gantry_cranes",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "ship_ship_type_supply_ship_supply_capacity_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "hydraulic_cranes",
+    "screw_frigate"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "ship_ship_type_supply_ship_supply_capacity_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    }
+   ]
+  },
+  {
+   "name": "trench_works",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "general_staff",
+    "electric_telegraph"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "war_propaganda",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_morale_loss_mult",
+     "-0.05"
+    ],
+    [
+     "state_conscription_rate_mult",
+     "0.2"
+    ],
+    [
+     "country_war_support_battles_increase_mult",
+     "0.25"
+    ],
+    [
+     "country_war_support_battles_decrease_mult",
+     "-0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "enlistment_offices"
+   ],
+   "benefit": 3.7,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_morale_loss_mult",
+     "benefit": 0.3,
+     "risk": -0.0,
+     "value": "-0.05"
+    },
+    {
+     "key": "state_conscription_rate_mult",
+     "benefit": 1.6,
+     "risk": 0.0,
+     "value": "0.2"
+    },
+    {
+     "key": "country_war_support_battles_increase_mult",
+     "benefit": 1.0,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_war_support_battles_decrease_mult",
+     "benefit": 0.8,
+     "risk": -0.0,
+     "value": "-0.2"
+    }
+   ]
+  },
+  {
+   "name": "wargaming",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_army_offense_mult",
+     "0.1"
+    ],
+    [
+     "country_general_rank_impact_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "military_statistics"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_army_offense_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_general_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.2"
+    }
+   ]
+  },
+  {
+   "name": "defense_in_depth",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_army_defense_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "trench_works",
+    "handcranked_machine_gun"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_army_defense_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    }
+   ]
+  },
+  {
+   "name": "bolt_action_rifles",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "repeaters"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "automatic_machine_guns",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "handcranked_machine_gun",
+    "bolt_action_rifles"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "submarine",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "self_propelled_torpedoes"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "destroyer",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "monitor_tech"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "pre_dreadnought_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "ironclad_tech"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "dreadnought_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "pre_dreadnought_tech",
+    "sea_lane_strategies",
+    "concrete_dockyards",
+    "military_aviation"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "sea_lane_strategies",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_admiral_rank_impact_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "jeune_ecole"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_admiral_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "landing_craft",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "jeune_ecole",
+    "monitor_tech"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "concrete_dockyards",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "ship_ship_type_supply_ship_supply_capacity_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "floating_harbor"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "ship_ship_type_supply_ship_supply_capacity_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    }
+   ]
+  },
+  {
+   "name": "nco_training",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_general_rank_impact_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "wargaming",
+    "trench_works"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_general_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.2"
+    }
+   ]
+  },
+  {
+   "name": "chemical_warfare",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "automatic_machine_guns"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "stormtroopers",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_kill_rate_add",
+     "0.05"
+    ],
+    [
+     "unit_combat_unit_type_trench_infantry_offense_add",
+     "5"
+    ],
+    [
+     "unit_combat_unit_type_squad_infantry_offense_add",
+     "5"
+    ],
+    [
+     "unit_combat_unit_type_mechanized_infantry_offense_add",
+     "5"
+    ]
+   ],
+   "unlocking_technologies": [
+    "wargaming",
+    "trench_works"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_kill_rate_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    },
+    {
+     "key": "unit_combat_unit_type_trench_infantry_offense_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "unit_combat_unit_type_squad_infantry_offense_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "unit_combat_unit_type_mechanized_infantry_offense_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    }
+   ]
+  },
+  {
+   "name": "concrete_fortifications",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_army_defense_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "defense_in_depth"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_army_defense_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    }
+   ]
+  },
+  {
+   "name": "mobile_armor",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "concrete_fortifications",
+    "nco_training"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "military_aviation",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "handcranked_machine_gun"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "flamethrowers",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "unit_kill_rate_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "trench_works",
+    "automatic_machine_guns"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "unit_kill_rate_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "carrier_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "dreadnought_tech"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "battleship_tech",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "dreadnought_tech"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "battlefleet_tactics",
+   "file": "20_military.txt",
+   "category": "military",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_admiral_rank_impact_mult",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "battleship_tech",
+    "sea_lane_strategies"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_admiral_rank_impact_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  },
+  {
+   "name": "urbanization",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_infrastructure_from_population_add",
+     "2"
+    ],
+    [
+     "state_infrastructure_from_population_max_add",
+     "40"
+    ],
+    [
+     "state_building_construction_sector_max_level_add",
+     "10"
+    ],
+    [
+     "country_max_weekly_construction_progress_add",
+     "10"
+    ]
+   ],
+   "unlocking_technologies": [],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_infrastructure_from_population_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "2"
+    },
+    {
+     "key": "state_infrastructure_from_population_max_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "40"
+    },
+    {
+     "key": "state_building_construction_sector_max_level_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "10"
+    },
+    {
+     "key": "country_max_weekly_construction_progress_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "10"
+    }
+   ]
+  },
+  {
+   "name": "urban_planning",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_infrastructure_from_population_add",
+     "1"
+    ],
+    [
+     "state_infrastructure_from_population_max_add",
+     "20"
+    ],
+    [
+     "state_building_construction_sector_max_level_add",
+     "5"
+    ],
+    [
+     "country_max_weekly_construction_progress_add",
+     "5"
+    ]
+   ],
+   "unlocking_technologies": [
+    "urbanization"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_infrastructure_from_population_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "state_infrastructure_from_population_max_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "20"
+    },
+    {
+     "key": "state_building_construction_sector_max_level_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "country_max_weekly_construction_progress_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    }
+   ]
+  },
+  {
+   "name": "rationalism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_schools_max_investment_add",
+     "1"
+    ],
+    [
+     "state_education_access_wealth_add",
+     "0.01"
+    ]
+   ],
+   "unlocking_technologies": [],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_schools_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_education_access_wealth_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.01"
+    }
+   ]
+  },
+  {
+   "name": "tech_bureaucracy",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_police_max_investment_add",
+     "2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "urbanization"
+   ],
+   "benefit": 16.0,
+   "risk": 8.0,
+   "annotated": [
+    {
+     "key": "country_institution_police_max_investment_add",
+     "benefit": 16.0,
+     "risk": 8.0,
+     "value": "2"
+    }
+   ]
+  },
+  {
+   "name": "currency_standards",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "international_trade",
+    "centralization"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "democracy",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_social_security_max_investment_add",
+     "2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "rationalism"
+   ],
+   "benefit": 16.0,
+   "risk": 8.0,
+   "annotated": [
+    {
+     "key": "country_institution_social_security_max_investment_add",
+     "benefit": 16.0,
+     "risk": 8.0,
+     "value": "2"
+    }
+   ]
+  },
+  {
+   "name": "romanticism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_prestige_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "academia"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_prestige_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "international_trade",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "tech_bureaucracy"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "centralization",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_tax_capacity_add",
+     "25"
+    ],
+    [
+     "country_institution_home_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "state_incorporation_speed_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "tech_bureaucracy"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "state_tax_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "25"
+    },
+    {
+     "key": "country_institution_home_affairs_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_incorporation_speed_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "corporate_charters",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_max_companies_add",
+     "1"
+    ],
+    [
+     "country_free_charters_add",
+     "2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "stock_exchange"
+   ],
+   "benefit": 18.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_max_companies_add",
+     "benefit": 6.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "country_free_charters_add",
+     "benefit": 12.0,
+     "risk": 0.0,
+     "value": "2"
+    }
+   ]
+  },
+  {
+   "name": "banking",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_minting_mult",
+     "0.1"
+    ],
+    [
+     "country_loan_interest_rate_add",
+     "-0.02"
+    ],
+    [
+     "state_max_trade_advantage_from_capacity_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "currency_standards"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_minting_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_loan_interest_rate_add",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.02"
+    },
+    {
+     "key": "state_max_trade_advantage_from_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "academia",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_education_access_wealth_add",
+     "0.005"
+    ]
+   ],
+   "unlocking_technologies": [
+    "rationalism"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_education_access_wealth_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.005"
+    }
+   ]
+  },
+  {
+   "name": "colonization",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_colonial_affairs_max_investment_add",
+     "2"
+    ],
+    [
+     "country_infamy_generation_against_unrecognized_mult",
+     "-0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "international_relations"
+   ],
+   "benefit": 16.0,
+   "risk": 8.0,
+   "annotated": [
+    {
+     "key": "country_institution_colonial_affairs_max_investment_add",
+     "benefit": 16.0,
+     "risk": 8.0,
+     "value": "2"
+    },
+    {
+     "key": "country_infamy_generation_against_unrecognized_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.1"
+    }
+   ]
+  },
+  {
+   "name": "international_relations",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "tech_bureaucracy"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "law_enforcement",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_police_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "tech_bureaucracy",
+    "urban_planning"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_police_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "stock_exchange",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_market_access_price_impact",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "international_trade"
+   ],
+   "benefit": -2.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_market_access_price_impact",
+     "benefit": -2.0,
+     "risk": 0.0,
+     "value": "0.1"
+    }
+   ]
+  },
+  {
+   "name": "medical_degrees",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_health_system_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "academia"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_health_system_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "mass_communication",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_authority_mult",
+     "0.1"
+    ],
+    [
+     "country_voting_power_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "democracy"
+   ],
+   "benefit": 1.5,
+   "risk": -0.5,
+   "annotated": [
+    {
+     "key": "country_authority_mult",
+     "benefit": 1.5,
+     "risk": -0.5,
+     "value": "0.1"
+    },
+    {
+     "key": "country_voting_power_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    }
+   ]
+  },
+  {
+   "name": "empiricism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.25"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.25"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "country_institution_schools_max_investment_add",
+     "1"
+    ],
+    [
+     "state_education_access_wealth_add",
+     "0.005"
+    ]
+   ],
+   "unlocking_technologies": [
+    "academia"
+   ],
+   "benefit": 10.5,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_influence_mult",
+     "benefit": 2.5,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_diplomatic_play_maneuvers_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_infamy_generation_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.05"
+    },
+    {
+     "key": "country_institution_schools_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_education_access_wealth_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.005"
+    }
+   ]
+  },
+  {
+   "name": "egalitarianism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_expected_sol_from_literacy",
+     "1"
+    ],
+    [
+     "country_institution_social_security_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "democracy"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "state_expected_sol_from_literacy",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "country_institution_social_security_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "pharmaceuticals",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_health_system_max_investment_add",
+     "1"
+    ],
+    [
+     "state_harvest_condition_disease_outbreak_impact_mult",
+     "-0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "medical_degrees"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_health_system_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_harvest_condition_disease_outbreak_impact_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.2"
+    }
+   ]
+  },
+  {
+   "name": "modern_sewerage",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_infrastructure_from_population_add",
+     "1"
+    ],
+    [
+     "state_infrastructure_from_population_max_add",
+     "20"
+    ],
+    [
+     "state_building_construction_sector_max_level_add",
+     "5"
+    ],
+    [
+     "country_max_weekly_construction_progress_add",
+     "5"
+    ],
+    [
+     "state_pollution_reduction_health_mult",
+     "-0.1"
+    ],
+    [
+     "state_harvest_condition_flood_impact_mult",
+     "-0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "urban_planning"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_infrastructure_from_population_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "state_infrastructure_from_population_max_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "20"
+    },
+    {
+     "key": "state_building_construction_sector_max_level_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "country_max_weekly_construction_progress_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "state_pollution_reduction_health_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.1"
+    },
+    {
+     "key": "state_harvest_condition_flood_impact_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.1"
+    }
+   ]
+  },
+  {
+   "name": "quinine",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_colonial_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "country_institution_health_system_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "colonization",
+    "pharmaceuticals"
+   ],
+   "benefit": 16.0,
+   "risk": 8.0,
+   "annotated": [
+    {
+     "key": "country_institution_colonial_affairs_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "country_institution_health_system_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "organized_sports",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_prestige_mult",
+     "0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "nationalism"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_prestige_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    }
+   ]
+  },
+  {
+   "name": "central_archives",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_tax_capacity_add",
+     "25"
+    ],
+    [
+     "country_institution_home_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "state_incorporation_speed_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "centralization"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "state_tax_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "25"
+    },
+    {
+     "key": "country_institution_home_affairs_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_incorporation_speed_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "central_banking",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_minting_mult",
+     "0.1"
+    ],
+    [
+     "country_loan_interest_rate_add",
+     "-0.02"
+    ],
+    [
+     "state_max_trade_advantage_from_capacity_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "banking"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_minting_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_loan_interest_rate_add",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.02"
+    },
+    {
+     "key": "state_max_trade_advantage_from_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "joint_stock_companies",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_max_companies_add",
+     "1"
+    ],
+    [
+     "state_urbanization_per_level_mult",
+     "-0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "banking",
+    "corporate_charters"
+   ],
+   "benefit": 6.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_max_companies_add",
+     "benefit": 6.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "state_urbanization_per_level_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.1"
+    }
+   ]
+  },
+  {
+   "name": "dialectics",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_schools_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "empiricism"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_schools_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "psychiatry",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.25"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.25"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "empiricism"
+   ],
+   "benefit": 4.0,
+   "risk": -0.75,
+   "annotated": [
+    {
+     "key": "country_influence_mult",
+     "benefit": 2.5,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_diplomatic_play_maneuvers_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_infamy_generation_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.05"
+    },
+    {
+     "key": "state_bureaucracy_population_base_cost_factor_mult",
+     "benefit": 1.5,
+     "risk": -0.75,
+     "value": "-0.05"
+    }
+   ]
+  },
+  {
+   "name": "realism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_prestige_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "romanticism"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_prestige_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "nationalism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_authority_mult",
+     "0.1"
+    ],
+    [
+     "country_voting_power_mult",
+     "0.1"
+    ],
+    [
+     "country_homeland_infamy_reduction_bool",
+     "yes"
+    ]
+   ],
+   "unlocking_technologies": [
+    "mass_communication",
+    "international_relations"
+   ],
+   "benefit": 1.5,
+   "risk": -0.5,
+   "annotated": [
+    {
+     "key": "country_authority_mult",
+     "benefit": 1.5,
+     "risk": -0.5,
+     "value": "0.1"
+    },
+    {
+     "key": "country_voting_power_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_homeland_infamy_reduction_bool",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "yes"
+    }
+   ]
+  },
+  {
+   "name": "labor_movement",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_expected_sol_from_literacy",
+     "1"
+    ],
+    [
+     "country_institution_workplace_safety_max_investment_add",
+     "3"
+    ],
+    [
+     "country_agitator_slots_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "mass_communication",
+    "egalitarianism"
+   ],
+   "benefit": 20.0,
+   "risk": 12.0,
+   "annotated": [
+    {
+     "key": "state_expected_sol_from_literacy",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "country_institution_workplace_safety_max_investment_add",
+     "benefit": 20.0,
+     "risk": 12.0,
+     "value": "3"
+    },
+    {
+     "key": "country_agitator_slots_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "postal_savings",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_farmers_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "state_shopkeepers_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "state_bureaucrats_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "state_engineers_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "state_machinists_investment_pool_efficiency_mult",
+     "0.15"
+    ],
+    [
+     "building_cash_reserves_mult",
+     "0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "stock_exchange"
+   ],
+   "benefit": 4.5,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_farmers_investment_pool_efficiency_mult",
+     "benefit": 0.9,
+     "risk": 0.0,
+     "value": "0.15"
+    },
+    {
+     "key": "state_shopkeepers_investment_pool_efficiency_mult",
+     "benefit": 0.9,
+     "risk": 0.0,
+     "value": "0.15"
+    },
+    {
+     "key": "state_bureaucrats_investment_pool_efficiency_mult",
+     "benefit": 0.9,
+     "risk": 0.0,
+     "value": "0.15"
+    },
+    {
+     "key": "state_engineers_investment_pool_efficiency_mult",
+     "benefit": 0.9,
+     "risk": 0.0,
+     "value": "0.15"
+    },
+    {
+     "key": "state_machinists_investment_pool_efficiency_mult",
+     "benefit": 0.9,
+     "risk": 0.0,
+     "value": "0.15"
+    },
+    {
+     "key": "building_cash_reserves_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.2"
+    }
+   ]
+  },
+  {
+   "name": "human_rights",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_social_security_max_investment_add",
+     "1"
+    ],
+    [
+     "country_ban_slavery_no_infamy_bool",
+     "yes"
+    ]
+   ],
+   "unlocking_technologies": [
+    "egalitarianism"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_social_security_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "country_ban_slavery_no_infamy_bool",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "yes"
+    }
+   ]
+  },
+  {
+   "name": "feminism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_social_security_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "human_rights"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_social_security_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "steel_frame_buildings",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_infrastructure_from_population_add",
+     "1"
+    ],
+    [
+     "state_infrastructure_from_population_max_add",
+     "20"
+    ],
+    [
+     "state_building_construction_sector_max_level_add",
+     "5"
+    ],
+    [
+     "country_max_weekly_construction_progress_add",
+     "5"
+    ],
+    [
+     "state_harvest_condition_flood_impact_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "modern_sewerage"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_infrastructure_from_population_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "state_infrastructure_from_population_max_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "20"
+    },
+    {
+     "key": "state_building_construction_sector_max_level_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "country_max_weekly_construction_progress_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "state_harvest_condition_flood_impact_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.05"
+    }
+   ]
+  },
+  {
+   "name": "civilizing_mission",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_colonial_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "country_infamy_generation_against_unrecognized_mult",
+     "-0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "quinine",
+    "nationalism"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_colonial_affairs_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "country_infamy_generation_against_unrecognized_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.25"
+    }
+   ]
+  },
+  {
+   "name": "anarchism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [],
+   "unlocking_technologies": [
+    "egalitarianism"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": []
+  },
+  {
+   "name": "socialism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_expected_sol_from_literacy",
+     "1"
+    ],
+    [
+     "country_institution_workplace_safety_max_investment_add",
+     "2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "labor_movement",
+    "dialectics"
+   ],
+   "benefit": 16.0,
+   "risk": 8.0,
+   "annotated": [
+    {
+     "key": "state_expected_sol_from_literacy",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "country_institution_workplace_safety_max_investment_add",
+     "benefit": 16.0,
+     "risk": 8.0,
+     "value": "2"
+    }
+   ]
+  },
+  {
+   "name": "corporatism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_radicals_from_political_movements_mult",
+     "-0.1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "labor_movement",
+    "pan",
+    "nationalism"
+   ],
+   "benefit": 0.0,
+   "risk": -4.0,
+   "annotated": [
+    {
+     "key": "state_radicals_from_political_movements_mult",
+     "benefit": -0.0,
+     "risk": -4.0,
+     "value": "-0.1"
+    }
+   ]
+  },
+  {
+   "name": "nationalism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_authority_mult",
+     "0.1"
+    ],
+    [
+     "country_support_separatism_strength_mult",
+     "0.25"
+    ],
+    [
+     "country_voting_power_mult",
+     "0.1"
+    ],
+    [
+     "country_shared_language_infamy_reduction_bool",
+     "yes"
+    ]
+   ],
+   "unlocking_technologies": [
+    "nationalism"
+   ],
+   "benefit": 4.0,
+   "risk": -0.5,
+   "annotated": [
+    {
+     "key": "country_authority_mult",
+     "benefit": 1.5,
+     "risk": -0.5,
+     "value": "0.1"
+    },
+    {
+     "key": "country_support_separatism_strength_mult",
+     "benefit": 2.5,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_voting_power_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_shared_language_infamy_reduction_bool",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "yes"
+    }
+   ]
+  },
+  {
+   "name": "mutual_funds",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_minting_mult",
+     "0.1"
+    ],
+    [
+     "country_loan_interest_rate_add",
+     "-0.02"
+    ],
+    [
+     "state_max_trade_advantage_from_capacity_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "central_banking",
+    "postal_savings"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_minting_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_loan_interest_rate_add",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.02"
+    },
+    {
+     "key": "state_max_trade_advantage_from_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "investment_banks",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_max_companies_add",
+     "1"
+    ],
+    [
+     "country_free_charters_add",
+     "1"
+    ],
+    [
+     "state_urbanization_per_level_mult",
+     "-0.15"
+    ]
+   ],
+   "unlocking_technologies": [
+    "joint_stock_companies",
+    "mutual_funds"
+   ],
+   "benefit": 12.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_max_companies_add",
+     "benefit": 6.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "country_free_charters_add",
+     "benefit": 6.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "state_urbanization_per_level_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.15"
+    }
+   ]
+  },
+  {
+   "name": "camera",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_prestige_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "realism"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_prestige_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "philosophical_pragmatism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.25"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.25"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ],
+    [
+     "state_literacy_growth_add",
+     "0.0001"
+    ]
+   ],
+   "unlocking_technologies": [
+    "psychiatry"
+   ],
+   "benefit": 4.0,
+   "risk": -0.75,
+   "annotated": [
+    {
+     "key": "country_influence_mult",
+     "benefit": 2.5,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_diplomatic_play_maneuvers_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_infamy_generation_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.05"
+    },
+    {
+     "key": "state_bureaucracy_population_base_cost_factor_mult",
+     "benefit": 1.5,
+     "risk": -0.75,
+     "value": "-0.05"
+    },
+    {
+     "key": "state_literacy_growth_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.0001"
+    }
+   ]
+  },
+  {
+   "name": "identification_documents",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_tax_capacity_add",
+     "25"
+    ],
+    [
+     "country_institution_home_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "state_incorporation_speed_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "central_archives"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "state_tax_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "25"
+    },
+    {
+     "key": "country_institution_home_affairs_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_incorporation_speed_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "elevator",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_infrastructure_from_population_add",
+     "1"
+    ],
+    [
+     "state_infrastructure_from_population_max_add",
+     "20"
+    ],
+    [
+     "state_building_construction_sector_max_level_add",
+     "5"
+    ],
+    [
+     "country_max_weekly_construction_progress_add",
+     "5"
+    ]
+   ],
+   "unlocking_technologies": [
+    "steel_frame_buildings"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_infrastructure_from_population_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "state_infrastructure_from_population_max_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "20"
+    },
+    {
+     "key": "state_building_construction_sector_max_level_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    },
+    {
+     "key": "country_max_weekly_construction_progress_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "5"
+    }
+   ]
+  },
+  {
+   "name": "zeppelins",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_market_access_price_impact",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "steel_frame_buildings"
+   ],
+   "benefit": -1.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_market_access_price_impact",
+     "benefit": -1.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "malaria_prevention",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_colonial_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "country_institution_health_system_max_investment_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "civilizing_mission"
+   ],
+   "benefit": 16.0,
+   "risk": 8.0,
+   "annotated": [
+    {
+     "key": "country_institution_colonial_affairs_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "country_institution_health_system_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "central_planning",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_tax_capacity_add",
+     "25"
+    ],
+    [
+     "country_government_dividends_efficiency_add",
+     "0.05"
+    ],
+    [
+     "country_institution_home_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "state_incorporation_speed_mult",
+     "0.05"
+    ],
+    [
+     "state_literacy_growth_add",
+     "0.0002"
+    ]
+   ],
+   "unlocking_technologies": [
+    "identification_documents"
+   ],
+   "benefit": 8.5,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "state_tax_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "25"
+    },
+    {
+     "key": "country_government_dividends_efficiency_add",
+     "benefit": 0.5,
+     "risk": 0.0,
+     "value": "0.05"
+    },
+    {
+     "key": "country_institution_home_affairs_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_incorporation_speed_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    },
+    {
+     "key": "state_literacy_growth_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.0002"
+    }
+   ]
+  },
+  {
+   "name": "political_agitation",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_expected_sol_from_literacy",
+     "1"
+    ],
+    [
+     "country_authority_mult",
+     "0.1"
+    ],
+    [
+     "country_voting_power_mult",
+     "0.1"
+    ],
+    [
+     "country_agitator_slots_add",
+     "1"
+    ]
+   ],
+   "unlocking_technologies": [
+    "anarchism",
+    "socialism",
+    "corporatism"
+   ],
+   "benefit": 1.5,
+   "risk": -0.5,
+   "annotated": [
+    {
+     "key": "state_expected_sol_from_literacy",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "country_authority_mult",
+     "benefit": 1.5,
+     "risk": -0.5,
+     "value": "0.1"
+    },
+    {
+     "key": "country_voting_power_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_agitator_slots_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    }
+   ]
+  },
+  {
+   "name": "international_exchange_standards",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_minting_mult",
+     "0.1"
+    ],
+    [
+     "country_loan_interest_rate_add",
+     "-0.02"
+    ],
+    [
+     "state_max_trade_advantage_from_capacity_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "mutual_funds"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_minting_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_loan_interest_rate_add",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.02"
+    },
+    {
+     "key": "state_max_trade_advantage_from_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "corporate_management",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_max_companies_add",
+     "1"
+    ],
+    [
+     "state_urbanization_per_level_mult",
+     "-0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "investment_banks"
+   ],
+   "benefit": 6.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_max_companies_add",
+     "benefit": 6.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "state_urbanization_per_level_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.25"
+    }
+   ]
+  },
+  {
+   "name": "psychoanalysis",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.25"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.25"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "philosophical_pragmatism"
+   ],
+   "benefit": 4.0,
+   "risk": -0.75,
+   "annotated": [
+    {
+     "key": "country_influence_mult",
+     "benefit": 2.5,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_diplomatic_play_maneuvers_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_infamy_generation_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.05"
+    },
+    {
+     "key": "state_bureaucracy_population_base_cost_factor_mult",
+     "benefit": 1.5,
+     "risk": -0.75,
+     "value": "-0.05"
+    }
+   ]
+  },
+  {
+   "name": "film",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_prestige_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "camera"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_prestige_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "multilateral_alliances",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_infamy_generation_mult",
+     "-0.25"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.5"
+    ],
+    [
+     "country_allow_multiple_alliances_bool",
+     "yes"
+    ]
+   ],
+   "unlocking_technologies": [
+    "pan",
+    "nationalism"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_infamy_generation_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.25"
+    },
+    {
+     "key": "country_diplomatic_play_maneuvers_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.5"
+    },
+    {
+     "key": "country_allow_multiple_alliances_bool",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "yes"
+    }
+   ]
+  },
+  {
+   "name": "mass_surveillance",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_tax_capacity_add",
+     "25"
+    ],
+    [
+     "country_support_separatism_resistance_mult",
+     "0.25"
+    ],
+    [
+     "country_institution_home_affairs_max_investment_add",
+     "1"
+    ],
+    [
+     "state_incorporation_speed_mult",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "central_planning"
+   ],
+   "benefit": 10.5,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "state_tax_capacity_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "25"
+    },
+    {
+     "key": "country_support_separatism_resistance_mult",
+     "benefit": 2.5,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_institution_home_affairs_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_incorporation_speed_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "antibiotics",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_institution_health_system_max_investment_add",
+     "1"
+    ],
+    [
+     "state_harvest_condition_disease_outbreak_impact_mult",
+     "-0.15"
+    ]
+   ],
+   "unlocking_technologies": [
+    "malaria_prevention"
+   ],
+   "benefit": 8.0,
+   "risk": 4.0,
+   "annotated": [
+    {
+     "key": "country_institution_health_system_max_investment_add",
+     "benefit": 8.0,
+     "risk": 4.0,
+     "value": "1"
+    },
+    {
+     "key": "state_harvest_condition_disease_outbreak_impact_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.15"
+    }
+   ]
+  },
+  {
+   "name": "mass_propaganda",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_authority_mult",
+     "0.1"
+    ],
+    [
+     "country_voting_power_mult",
+     "0.1"
+    ],
+    [
+     "state_expected_sol_from_literacy",
+     "1"
+    ],
+    [
+     "country_agitator_slots_add",
+     "1"
+    ],
+    [
+     "country_support_separatism_strength_mult",
+     "0.25"
+    ],
+    [
+     "country_war_support_battles_increase_mult",
+     "0.25"
+    ],
+    [
+     "country_war_support_battles_decrease_mult",
+     "-0.2"
+    ]
+   ],
+   "unlocking_technologies": [
+    "political_agitation",
+    "film"
+   ],
+   "benefit": 5.8,
+   "risk": -0.5,
+   "annotated": [
+    {
+     "key": "country_authority_mult",
+     "benefit": 1.5,
+     "risk": -0.5,
+     "value": "0.1"
+    },
+    {
+     "key": "country_voting_power_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "state_expected_sol_from_literacy",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "country_agitator_slots_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "country_support_separatism_strength_mult",
+     "benefit": 2.5,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_war_support_battles_increase_mult",
+     "benefit": 1.0,
+     "risk": 0.0,
+     "value": "0.25"
+    },
+    {
+     "key": "country_war_support_battles_decrease_mult",
+     "benefit": 0.8,
+     "risk": -0.0,
+     "value": "-0.2"
+    }
+   ]
+  },
+  {
+   "name": "modern_financial_instruments",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_minting_mult",
+     "0.1"
+    ],
+    [
+     "country_loan_interest_rate_add",
+     "-0.02"
+    ],
+    [
+     "country_government_dividends_efficiency_add",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "international_exchange_standards"
+   ],
+   "benefit": 0.5,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_minting_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.1"
+    },
+    {
+     "key": "country_loan_interest_rate_add",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.02"
+    },
+    {
+     "key": "country_government_dividends_efficiency_add",
+     "benefit": 0.5,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "macroeconomics",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_max_companies_add",
+     "1"
+    ],
+    [
+     "state_market_access_price_impact",
+     "0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "international_exchange_standards",
+    "corporate_management"
+   ],
+   "benefit": 5.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "country_max_companies_add",
+     "benefit": 6.0,
+     "risk": 0.0,
+     "value": "1"
+    },
+    {
+     "key": "state_market_access_price_impact",
+     "benefit": -1.0,
+     "risk": 0.0,
+     "value": "0.05"
+    }
+   ]
+  },
+  {
+   "name": "behaviorism",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "country_influence_mult",
+     "0.5"
+    ],
+    [
+     "country_diplomatic_play_maneuvers_mult",
+     "0.5"
+    ],
+    [
+     "country_infamy_generation_mult",
+     "-0.05"
+    ],
+    [
+     "state_bureaucracy_population_base_cost_factor_mult",
+     "-0.05"
+    ]
+   ],
+   "unlocking_technologies": [
+    "psychoanalysis"
+   ],
+   "benefit": 6.5,
+   "risk": -0.75,
+   "annotated": [
+    {
+     "key": "country_influence_mult",
+     "benefit": 5.0,
+     "risk": 0.0,
+     "value": "0.5"
+    },
+    {
+     "key": "country_diplomatic_play_maneuvers_mult",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.5"
+    },
+    {
+     "key": "country_infamy_generation_mult",
+     "benefit": -0.0,
+     "risk": -0.0,
+     "value": "-0.05"
+    },
+    {
+     "key": "state_bureaucracy_population_base_cost_factor_mult",
+     "benefit": 1.5,
+     "risk": -0.75,
+     "value": "-0.05"
+    }
+   ]
+  },
+  {
+   "name": "analytical_philosophy",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_literacy_growth_add",
+     "0.0002"
+    ]
+   ],
+   "unlocking_technologies": [
+    "psychoanalysis"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_literacy_growth_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.0002"
+    }
+   ]
+  },
+  {
+   "name": "paved_roads",
+   "file": "30_society.txt",
+   "category": "society",
+   "can_research": true,
+   "ai_weight": "{",
+   "modifier": [
+    [
+     "state_infrastructure_from_automobiles_consumption_add",
+     "0.25"
+    ]
+   ],
+   "unlocking_technologies": [
+    "elevator"
+   ],
+   "benefit": 0.0,
+   "risk": 0.0,
+   "annotated": [
+    {
+     "key": "state_infrastructure_from_automobiles_consumption_add",
+     "benefit": 0.0,
+     "risk": 0.0,
+     "value": "0.25"
+    }
+   ]
+  }
+ ]
+}

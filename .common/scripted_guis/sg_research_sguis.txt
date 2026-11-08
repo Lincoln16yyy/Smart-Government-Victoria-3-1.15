@@ -1,0 +1,3 @@
+# Placeholder for per-technology research SGUIs (still not wired to stable ids).
+# This file exists so the next step has an obvious target parallel to
+# common/scripted_guis/sg_law_sguis.txt. It is intentionally empty for now.

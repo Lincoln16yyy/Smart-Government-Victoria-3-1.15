@@ -333,6 +333,10 @@ Still to do:
    run. It checks brace balance, law/technology references, scripted-name
    resolution, GUI SGUI references, localization keys, duplicate blocks and
    stable ids.
+   The standard-library regression suite is `python3 -m unittest discover -s
+   tests -v`; it checks the 148-law inventory, stable ids, ranking sentinels,
+   score formula wiring, lifecycle cleanup, explanations and generated-file
+   consistency.
 2. **Runtime test.** Copy a save, back up `content_load.json`, install the mod,
    enable it, load the copy, open the journal, click Enact, ignore, refresh,
    disable and re-enable. Check `error.log` for script/GUI errors. The

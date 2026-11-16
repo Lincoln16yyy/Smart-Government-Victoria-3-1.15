@@ -8,6 +8,29 @@ registro de diário. O jogador decide: promulgar, ignorar, reavaliar ou desativa
 > do executável foram verificados; o teste interativo das ações do diário em um
 > save ainda depende de uma sessão gráfica do jogo.
 
+## Edição para Better Politics
+
+O pacote **Smart Government Advisor - Better Politics 1.0.1** usa as leis e
+os requisitos do Better Politics 2.5.47 com Victoria 3 1.15.x. O ranking
+prioriza reformas com melhor chance inicial e compara a posição dos grupos
+de interesse sobre a reforma e a lei em vigor. Os votos efetivos são
+calculados pelo Better Politics durante a tramitação.
+
+Baixe `smart-government-advisor-bpm.zip` nos
+[Releases](https://github.com/Lincoln16yyy/Smart-Government-Victoria-3-1.15/releases).
+Extraia a pasta e o descritor do ZIP para a pasta `mod` de Victoria 3.
+Ative esta edição depois do Better Politics e deixe a edição padrão do
+conselheiro desativada nesse perfil.
+
+Para gerar o pacote:
+
+```bash
+python3 -m tools.bpm_government --game "/caminho/para/Victoria 3/game" --bpm "/caminho/para/Better Politics Mod"
+```
+
+Validação estática aprovada para 231 leis em 40 grupos. Teste em campanha
+pendente.
+
 ## O que ele faz
 
 - Recomenda até três leis, com pontuação, benefício, risco, apoio do governo e

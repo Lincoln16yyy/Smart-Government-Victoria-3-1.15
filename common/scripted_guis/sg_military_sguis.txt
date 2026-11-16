@@ -1,0 +1,30 @@
+﻿sg_military_ready_sgui = {
+	scope = country
+	is_shown = { is_player = yes has_variable = sg_enabled has_variable = sg_military_card }
+}
+
+sg_military_refresh_sgui = {
+	scope = country
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = { sg_military_review = yes }
+}
+
+sg_military_idle_sgui = {
+	scope = country
+	is_shown = { var:sg_military_card ?= 0 }
+}
+
+sg_military_land_sgui = {
+	scope = country
+	is_shown = { var:sg_military_card ?= 1 }
+}
+
+sg_military_land_progress_sgui = {
+	scope = country
+	is_shown = { var:sg_military_land_history ?= 1 }
+}
+
+sg_military_land_expired_sgui = {
+	scope = country
+	is_shown = { var:sg_military_land_history ?= 2 }
+}

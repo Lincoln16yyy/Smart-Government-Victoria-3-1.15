@@ -1,0 +1,53 @@
+﻿# Country scope. Read the vanilla fiscal signals used by Smart Economy Director.
+sg_military_can_spend = {
+	net_total_income > 0
+	net_fixed_income >= 0
+	principal <= 0
+	gold_reserves > 0
+	gold_reserves >= {
+		value = fixed_income
+		subtract = net_fixed_income
+		min = 0
+		multiply = 12
+	}
+	net_total_income >= { value = military_expenses min = 0 multiply = 0.5 }
+}
+
+sg_military_at_risk = {
+	OR = {
+		is_at_war = yes
+		is_diplomatic_play_committed_participant = yes
+		is_diplomatic_play_initiator = yes
+		is_diplomatic_play_target = yes
+		is_diplomatic_play_undecided_participant = yes
+	}
+}
+
+# State scope. These are screening criteria; the recruitment dialog is authoritative.
+sg_military_recruiting_state = {
+	is_incorporated = yes
+	market_access >= 0.95
+	relative_infrastructure >= 1.1
+	b:building_barrack ?= { level > 0 }
+}
+
+# Formation scope.
+sg_military_recruiting_army = {
+	is_army = yes
+	is_mobilized = no
+	num_commanders > 0
+}
+
+sg_military_land_eligible = {
+	sg_military_can_spend = yes
+	sg_military_at_risk = no
+	has_technology_researched = standing_army
+	has_technology_researched = line_infantry
+	army_size < 10
+	market ?= {
+		mg:small_arms ?= {
+			market_goods_sell_orders > 0
+			market_goods_has_goods_shortage = no
+		}
+	}
+}

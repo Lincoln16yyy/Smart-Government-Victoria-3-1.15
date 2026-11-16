@@ -1,0 +1,8 @@
+﻿l_english:
+ sg_military_title:0 "Military Advisor"
+ sg_military_refresh_tt:0 "Reassess military recommendations"
+ sg_military_summary:0 "Regular battalions [JournalEntry.GetCountry.MakeScope.Var('sg_military_army_size').GetValue|v0] · Naval power (index) [JournalEntry.GetCountry.MakeScope.Var('sg_military_navy_size').GetValue|v0]\nObserved weekly balance @money![JournalEntry.GetCountry.MakeScope.Var('sg_military_balance').GetValue|D+=0]"
+ sg_military_idle:0 "No priority military action in this assessment."
+ sg_military_land:0 "#bold Medium · Recruit [JournalEntry.GetCountry.MakeScope.Var('sg_military_land_count').GetValue|v0] line infantry battalions#!\nPending · The army has fewer than 10 regular battalions. Reinforcement adds to the defensive reserve.\nMilitary → Armies → [JournalEntry.GetCountry.MakeScope.Var('sg_military_land_formation').GetMilitaryFormation.GetNameNoFormatting] → add line infantry. Prefer [JournalEntry.GetCountry.MakeScope.Var('sg_military_land_state').GetState.GetNameNoFormatting], which has barracks and market access. Check slots, manpower and cost before queuing."
+ sg_military_land_progress:0 "Army history · Possibly fulfilled. The national battalion count reached the target."
+ sg_military_land_expired:0 "Army history · Outdated. The review window ended or conditions changed."

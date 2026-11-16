@@ -51429,4 +51429,87 @@ flowcontainer = {
 			text = "sg_footer_note"
 		}
 	}
+
+	flowcontainer = {
+		visible = "[GetScriptedGui('sg_military_ready_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+		direction = vertical
+		spacing = 6
+		ignoreinvisible = yes
+
+		widget = {
+			size = { 500 36 }
+			background = { using = dark_area }
+			textbox = {
+				position = { 8 0 }
+				parentanchor = vcenter
+				autoresize = yes
+				using = fontsize_medium
+				text = "sg_military_title"
+			}
+			button_icon_round_action = {
+				position = { -6 0 }
+				parentanchor = right|vcenter
+				size = { 32 32 }
+				blockoverride "icon" {
+					texture = "gfx/interface/buttons/button_icons/reset.dds"
+				}
+				using = select_button_sound
+				using = tooltip_se
+				tooltip = "sg_military_refresh_tt"
+				enabled = "[GetScriptedGui('sg_military_refresh_sgui').IsValid(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+				onclick = "[GetScriptedGui('sg_military_refresh_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			}
+		}
+
+		textbox = {
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_summary"
+		}
+
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_idle_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_idle"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_land_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_land"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_land_progress_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_land_progress"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_land_expired_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_land_expired"
+		}
+	}
 }

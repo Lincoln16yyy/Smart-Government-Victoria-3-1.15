@@ -349,68 +349,67 @@ def ignored_slot_row(slot: int, laws: list[dict]) -> str:
 def military_section() -> str:
     root = "GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End"
     rows = (
-        ("idle", "idle"),
-        ("land", "land"),
-        ("land_progress", "land_progress"),
-        ("land_expired", "land_expired"),
+        "idle", "land", "naval", "supply", "fiscal", "front",
+        "readiness", "modernize", "commander", "rival", "land_progress",
+        "land_expired", "naval_progress", "naval_expired",
     )
     cards = "".join(
         f"""
-        textbox = {{
-            visible = "[GetScriptedGui('sg_military_{selector}_sgui').IsShown({root})]"
-            autoresize = yes
-            multiline = yes
-            align = left|nobaseline
-            using = fontsize_small
-            minimumsize = {{ 484 -1 }}
-            maximumsize = {{ 484 -1 }}
-            text = "sg_military_{label}"
-        }}"""
-        for selector, label in rows
+		textbox = {{
+			visible = "[GetScriptedGui('sg_military_{name}_sgui').IsShown({root})]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = {{ 484 -1 }}
+			maximumsize = {{ 484 -1 }}
+			text = "sg_military_{name}"
+		}}"""
+        for name in rows
     )
     return f"""
-    flowcontainer = {{
-        visible = "[GetScriptedGui('sg_military_ready_sgui').IsShown({root})]"
-        direction = vertical
-        spacing = 6
-        ignoreinvisible = yes
+	flowcontainer = {{
+		visible = "[GetScriptedGui('sg_military_ready_sgui').IsShown({root})]"
+		direction = vertical
+		spacing = 6
+		ignoreinvisible = yes
 
-        widget = {{
-            size = {{ 500 36 }}
-            background = {{ using = dark_area }}
-            textbox = {{
-                position = {{ 8 0 }}
-                parentanchor = vcenter
-                autoresize = yes
-                using = fontsize_medium
-                text = "sg_military_title"
-            }}
-            button_icon_round_action = {{
-                position = {{ -6 0 }}
-                parentanchor = right|vcenter
-                size = {{ 32 32 }}
-                blockoverride "icon" {{
-                    texture = "gfx/interface/buttons/button_icons/reset.dds"
-                }}
-                using = select_button_sound
-                using = tooltip_se
-                tooltip = "sg_military_refresh_tt"
-                enabled = "[GetScriptedGui('sg_military_refresh_sgui').IsValid({root})]"
-                onclick = "[GetScriptedGui('sg_military_refresh_sgui').Execute({root})]"
-            }}
-        }}
+		widget = {{
+			size = {{ 500 36 }}
+			background = {{ using = dark_area }}
+			textbox = {{
+				position = {{ 8 0 }}
+				parentanchor = vcenter
+				autoresize = yes
+				using = fontsize_medium
+				text = "sg_military_title"
+			}}
+			button_icon_round_action = {{
+				position = {{ -6 0 }}
+				parentanchor = right|vcenter
+				size = {{ 32 32 }}
+				blockoverride "icon" {{
+					texture = "gfx/interface/buttons/button_icons/reset.dds"
+				}}
+				using = select_button_sound
+				using = tooltip_se
+				tooltip = "sg_military_refresh_tt"
+				enabled = "[GetScriptedGui('sg_military_refresh_sgui').IsValid({root})]"
+				onclick = "[GetScriptedGui('sg_military_refresh_sgui').Execute({root})]"
+			}}
+		}}
 
-        textbox = {{
-            autoresize = yes
-            multiline = yes
-            align = left|nobaseline
-            using = fontsize_small
-            minimumsize = {{ 484 -1 }}
-            maximumsize = {{ 484 -1 }}
-            text = "sg_military_summary"
-        }}
+		textbox = {{
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = {{ 484 -1 }}
+			maximumsize = {{ 484 -1 }}
+			text = "sg_military_summary"
+		}}
 {cards}
-    }}""".replace("    ", "\t")
+	}}"""
 
 
 

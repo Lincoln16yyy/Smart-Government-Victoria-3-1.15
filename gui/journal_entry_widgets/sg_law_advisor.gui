@@ -51492,6 +51492,86 @@ flowcontainer = {
 			text = "sg_military_land"
 		}
 		textbox = {
+			visible = "[GetScriptedGui('sg_military_naval_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_naval"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_supply_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_supply"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_fiscal_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_fiscal"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_front_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_front"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_readiness_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_readiness"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_modernize_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_modernize"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_commander_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_commander"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_rival_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_rival"
+		}
+		textbox = {
 			visible = "[GetScriptedGui('sg_military_land_progress_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
 			autoresize = yes
 			multiline = yes
@@ -51510,6 +51590,26 @@ flowcontainer = {
 			minimumsize = { 484 -1 }
 			maximumsize = { 484 -1 }
 			text = "sg_military_land_expired"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_naval_progress_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_naval_progress"
+		}
+		textbox = {
+			visible = "[GetScriptedGui('sg_military_naval_expired_sgui').IsShown(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			autoresize = yes
+			multiline = yes
+			align = left|nobaseline
+			using = fontsize_small
+			minimumsize = { 484 -1 }
+			maximumsize = { 484 -1 }
+			text = "sg_military_naval_expired"
 		}
 	}
 }

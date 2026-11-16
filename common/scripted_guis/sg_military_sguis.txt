@@ -11,20 +11,70 @@ sg_military_refresh_sgui = {
 
 sg_military_idle_sgui = {
 	scope = country
-	is_shown = { var:sg_military_card ?= 0 }
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 0 }
 }
 
 sg_military_land_sgui = {
 	scope = country
-	is_shown = { var:sg_military_card ?= 1 }
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 1 }
 }
 
 sg_military_land_progress_sgui = {
 	scope = country
-	is_shown = { var:sg_military_land_history ?= 1 }
+	is_shown = { has_variable = sg_military_land_history var:sg_military_land_history = 1 }
 }
 
 sg_military_land_expired_sgui = {
 	scope = country
-	is_shown = { var:sg_military_land_history ?= 2 }
+	is_shown = { has_variable = sg_military_land_history var:sg_military_land_history = 2 }
+}
+
+sg_military_naval_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 2 }
+}
+
+sg_military_supply_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 3 }
+}
+
+sg_military_fiscal_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 4 }
+}
+
+sg_military_front_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 5 }
+}
+
+sg_military_readiness_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 6 }
+}
+
+sg_military_modernize_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 7 }
+}
+
+sg_military_commander_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 8 }
+}
+
+sg_military_rival_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 9 }
+}
+
+sg_military_naval_progress_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_naval_history var:sg_military_naval_history = 1 }
+}
+
+sg_military_naval_expired_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_naval_history var:sg_military_naval_history = 2 }
 }

@@ -2,14 +2,54 @@
 sg_military_review = {
 	if = {
 		limit = { is_player = yes has_variable = sg_enabled }
+		# The game-start on-action has no country ROOT.
+		save_scope_as = sg_military_country
 		set_variable = { name = sg_military_army_size value = army_size }
-		set_variable = { name = sg_military_navy_size value = navy_size }
+		set_variable = { name = sg_military_navy_size value = sg_military_ship_count }
 		set_variable = { name = sg_military_balance value = net_total_income }
 		sg_military_review_land_plan = yes
+		sg_military_review_naval_plan = yes
+		remove_variable = sg_military_rival_country
+		remove_variable = sg_military_target
+		remove_variable = sg_military_shortage
 		set_variable = { name = sg_military_card value = 0 }
 		if = {
+			limit = { sg_military_supply_shortage = yes }
+			sg_military_show_shortage = yes
+		}
+		else_if = {
+			limit = { sg_military_can_spend = no }
+			set_variable = { name = sg_military_card value = 4 }
+		}
+		else_if = {
+			limit = { sg_military_at_risk = yes }
+			sg_military_show_readiness = yes
+		}
+		else_if = {
+			limit = { any_military_formation = { sg_military_needs_modernization = yes } }
+			random_military_formation = {
+				limit = { sg_military_needs_modernization = yes }
+				save_scope_as = sg_military_candidate
+			}
+			set_variable = { name = sg_military_target value = scope:sg_military_candidate }
+			set_variable = { name = sg_military_card value = 7 }
+		}
+		else_if = {
+			limit = { any_military_formation = { sg_military_needs_commander = yes } }
+			random_military_formation = {
+				limit = { sg_military_needs_commander = yes }
+				save_scope_as = sg_military_candidate
+			}
+			set_variable = { name = sg_military_target value = scope:sg_military_candidate }
+			set_variable = { name = sg_military_card value = 8 }
+		}
+		else_if = {
 			limit = { has_variable = sg_military_land_window }
 			set_variable = { name = sg_military_card value = 1 }
+		}
+		else_if = {
+			limit = { has_variable = sg_military_naval_window }
+			set_variable = { name = sg_military_card value = 2 }
 		}
 		else_if = {
 			limit = {
@@ -20,28 +60,55 @@ sg_military_review = {
 			}
 			sg_military_open_land_plan = yes
 		}
+		else_if = {
+			limit = {
+				sg_military_naval_eligible = yes
+				NOT = { has_variable = sg_military_naval_cooldown }
+				any_scope_state = { sg_military_shipbuilding_state = yes }
+				any_military_formation = { sg_military_escort_fleet = yes }
+			}
+			sg_military_open_naval_plan = yes
+		}
+		else_if = {
+			limit = { any_country = { sg_military_stronger_border_rival = yes } }
+			random_country = {
+				limit = { sg_military_stronger_border_rival = yes }
+				save_scope_as = sg_military_rival
+			}
+			set_variable = { name = sg_military_rival_country value = scope:sg_military_rival }
+			set_variable = { name = sg_military_card value = 9 }
+		}
 	}
 }
 
 sg_military_open_land_plan = {
 	ordered_scope_state = {
 		limit = { sg_military_recruiting_state = yes }
-		order_by = population
-		max = 1
+		order_by = gdp
+		position = 0
 		check_range_bounds = no
 		save_scope_as = sg_military_site
 	}
-	every_military_formation = {
-		limit = {
-			sg_military_recruiting_army = yes
-			owner = { NOT = { has_variable = sg_military_land_formation } }
-		}
+	random_military_formation = {
+		limit = { sg_military_recruiting_army = yes }
 		save_scope_as = sg_military_formation
-		owner = { set_variable = { name = sg_military_land_formation value = scope:sg_military_formation } }
 	}
+	set_variable = { name = sg_military_land_formation value = scope:sg_military_formation }
 	set_variable = { name = sg_military_land_state value = scope:sg_military_site }
-	set_variable = { name = sg_military_land_count value = { value = 10 subtract = army_size min = 1 max = 4 } }
+	set_variable = {
+		name = sg_military_land_count
+		value = {
+			value = 10
+			subtract = army_size
+			max = 4
+			max = scope:sg_military_formation.sg_military_command_room
+		}
+	}
 	set_variable = { name = sg_military_land_goal value = { value = army_size add = var:sg_military_land_count } }
+	set_variable = {
+		name = sg_military_land_formation_goal
+		value = { value = var:sg_military_land_formation.sg_military_line_count add = var:sg_military_land_count }
+	}
 	set_variable = { name = sg_military_land_window days = 180 }
 	remove_variable = sg_military_land_history
 	set_variable = { name = sg_military_card value = 1 }
@@ -51,7 +118,13 @@ sg_military_review_land_plan = {
 	if = {
 		limit = { has_variable = sg_military_land_goal }
 		if = {
-			limit = { army_size >= var:sg_military_land_goal }
+			limit = {
+				army_size >= var:sg_military_land_goal
+				var:sg_military_land_formation ?= {
+					owner = scope:sg_military_country
+					sg_military_line_count >= scope:sg_military_country.var:sg_military_land_formation_goal
+				}
+			}
 			sg_military_close_land_plan = yes
 			set_variable = { name = sg_military_land_history value = 1 }
 		}
@@ -60,8 +133,9 @@ sg_military_review_land_plan = {
 				OR = {
 					NOT = { has_variable = sg_military_land_window }
 					sg_military_land_eligible = no
-					NOT = { var:sg_military_land_state ?= { owner = root sg_military_recruiting_state = yes } }
-					NOT = { var:sg_military_land_formation ?= { owner = root sg_military_recruiting_army = yes } }
+					sg_military_supply_shortage = yes
+					NOT = { var:sg_military_land_state ?= { owner = scope:sg_military_country sg_military_recruiting_state = yes } }
+					NOT = { var:sg_military_land_formation ?= { owner = scope:sg_military_country sg_military_recruiting_army = yes } }
 				}
 			}
 			sg_military_close_land_plan = yes
@@ -73,6 +147,7 @@ sg_military_review_land_plan = {
 sg_military_close_land_plan = {
 	remove_variable = sg_military_land_count
 	remove_variable = sg_military_land_goal
+	remove_variable = sg_military_land_formation_goal
 	remove_variable = sg_military_land_state
 	remove_variable = sg_military_land_formation
 	remove_variable = sg_military_land_window
@@ -80,6 +155,12 @@ sg_military_close_land_plan = {
 }
 
 sg_military_clear = {
+	sg_military_close_naval_plan = yes
+	remove_variable = sg_military_naval_cooldown
+	remove_variable = sg_military_naval_history
+	remove_variable = sg_military_rival_country
+	remove_variable = sg_military_target
+	remove_variable = sg_military_shortage
 	sg_military_close_land_plan = yes
 	remove_variable = sg_military_land_cooldown
 	remove_variable = sg_military_land_history
@@ -87,4 +168,94 @@ sg_military_clear = {
 	remove_variable = sg_military_navy_size
 	remove_variable = sg_military_balance
 	remove_variable = sg_military_card
+}
+
+sg_military_show_shortage = {
+	market = {
+		if = {
+			limit = { mg:small_arms ?= { market_goods_has_goods_shortage = yes } }
+			mg:small_arms = { save_scope_as = sg_military_market_good }
+		}
+		else_if = {
+			limit = { mg:ammunition ?= { market_goods_has_goods_shortage = yes } }
+			mg:ammunition = { save_scope_as = sg_military_market_good }
+		}
+		else = {
+			mg:artillery = { save_scope_as = sg_military_market_good }
+		}
+	}
+	set_variable = { name = sg_military_shortage value = scope:sg_military_market_good }
+	set_variable = { name = sg_military_card value = 3 }
+}
+
+sg_military_show_readiness = {
+	if = {
+		limit = { any_military_formation = { sg_military_front_organization_low = yes } }
+		random_military_formation = {
+			limit = { sg_military_front_organization_low = yes }
+			save_scope_as = sg_military_candidate
+		}
+		set_variable = { name = sg_military_target value = scope:sg_military_candidate }
+		set_variable = { name = sg_military_card value = 5 }
+	}
+	else = {
+		set_variable = { name = sg_military_card value = 6 }
+	}
+}
+
+sg_military_open_naval_plan = {
+	ordered_scope_state = {
+		limit = { sg_military_shipbuilding_state = yes }
+		order_by = gdp
+		position = 0
+		check_range_bounds = no
+		save_scope_as = sg_military_site
+	}
+	random_military_formation = {
+		limit = { sg_military_escort_fleet = yes }
+		save_scope_as = sg_military_formation
+	}
+	set_variable = { name = sg_military_naval_state value = scope:sg_military_site }
+	set_variable = { name = sg_military_naval_formation value = scope:sg_military_formation }
+	set_variable = { name = sg_military_naval_goal value = { value = scope:sg_military_formation.sg_military_frigate_count add = 1 } }
+	set_variable = { name = sg_military_naval_window days = 365 }
+	remove_variable = sg_military_naval_history
+	set_variable = { name = sg_military_card value = 2 }
+}
+
+sg_military_review_naval_plan = {
+	if = {
+		limit = { has_variable = sg_military_naval_goal }
+		if = {
+			limit = {
+				var:sg_military_naval_formation ?= {
+					owner = scope:sg_military_country
+					sg_military_frigate_count >= scope:sg_military_country.var:sg_military_naval_goal
+				}
+			}
+			sg_military_close_naval_plan = yes
+			set_variable = { name = sg_military_naval_history value = 1 }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					NOT = { has_variable = sg_military_naval_window }
+					sg_military_naval_eligible = no
+					sg_military_supply_shortage = yes
+					NOT = { var:sg_military_naval_state ?= { owner = scope:sg_military_country sg_military_shipbuilding_state = yes } }
+					NOT = { var:sg_military_naval_formation ?= { owner = scope:sg_military_country sg_military_escort_fleet = yes } }
+				}
+			}
+			sg_military_close_naval_plan = yes
+			set_variable = { name = sg_military_naval_history value = 2 }
+		}
+	}
+}
+
+sg_military_close_naval_plan = {
+	remove_variable = sg_military_naval_goal
+	remove_variable = sg_military_naval_state
+	remove_variable = sg_military_naval_formation
+	remove_variable = sg_military_naval_window
+	set_variable = { name = sg_military_naval_cooldown days = 90 }
 }

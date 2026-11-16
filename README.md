@@ -57,6 +57,20 @@ pendente.
 - Não edita nenhum arquivo original do jogo.
 - Inclui metadata local para evitar erro de leitura ao carregar o mod instalado.
 
+## Conselheiro Militar
+
+Abra **Smart Government** no diário e role até **Conselheiro Militar**. A
+seção mostra o efetivo regular, os navios e o saldo semanal observado. Exibe
+uma ação por vez e reavalia mensalmente ou pelo botão da própria seção.
+
+Os conselhos incluem recrutamento, escolta naval, modernização, comando,
+abastecimento e prontidão. A expansão é recomendada somente quando orçamento,
+reservas e fornecimento passam pela triagem. O jogador confirma e executa as
+ações no painel militar. O módulo usa as mesmas leituras de Victoria 3 que
+fundamentam as guardas do Smart Economy Director e funciona com ou sem ele.
+
+Veja os [critérios, limites e roteiro de teste](docs/SMART_MILITARY_ADVISOR.md).
+
 ## Requisitos
 
 - Victoria 3 **1.15.x**.

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "railways",
+    "category": "production",
+    "can_research": true,
+    "prerequisites": [
+      "mechanical_tools",
+      "atmospheric_engine"
+    ],
+    "id": 1570967808,
+    "context": "infrastructure",
+    "score": 90
+  }
+]

@@ -1,0 +1,7 @@
+﻿# Country scope. Evaluate each context once per research review.
+sg_research_infrastructure = {
+	any_scope_state = {
+		is_incorporated = yes
+		relative_infrastructure < 1
+	}
+}

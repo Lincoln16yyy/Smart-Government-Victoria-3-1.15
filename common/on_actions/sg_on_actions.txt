@@ -34,6 +34,10 @@ sg_monthly_country_dispatcher = {
 			limit = { has_variable = sg_enabled }
 			sg_initialize_refresh_date = yes
 			sg_ensure_journal_entry = yes
+		if = {
+			limit = { NOT = { has_variable = sg_military_card } }
+			sg_military_review = yes
+		}
 		}
 	}
 }

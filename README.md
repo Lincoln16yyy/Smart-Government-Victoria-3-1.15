@@ -57,6 +57,16 @@ pendente.
 - Não edita nenhum arquivo original do jogo.
 - Inclui metadata local para evitar erro de leitura ao carregar o mod instalado.
 
+## Conselheiro Tecnológico
+
+No diário **Smart Government**, procure **Conselheiro Tecnológico**. A seção
+mostra até três pesquisas disponíveis em ordem de prioridade e explica qual
+problema cada uma pode resolver. As sugestões usam dados de Produção, Militar
+e Sociedade. Consulte o progresso, a fila e os requisitos no próprio painel
+e escolha a pesquisa na árvore tecnológica.
+
+Veja [as regras de priorização e o teste em campanha](docs/SMART_TECHNOLOGY_ADVISOR.md).
+
 ## Conselheiro Militar
 
 Abra **Smart Government** no diário e role até **Conselheiro Militar**. A

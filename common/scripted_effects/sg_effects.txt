@@ -36,6 +36,7 @@ sg_migrate_schema = {
 sg_initialize_country = {
 	sg_migrate_schema = yes
 	set_variable = { name = sg_enabled value = yes }
+	sg_research_rank = yes
 	sg_initialize_refresh_date = yes
 	sg_ensure_journal_entry = yes
 	sg_rank_laws = yes
@@ -62,6 +63,7 @@ sg_initialize_refresh_date = {
 sg_disable_country = {
 	sg_military_clear = yes
 	remove_variable = sg_enabled
+	sg_research_clear = yes
 	remove_variable = sg_last_refresh_year
 	remove_variable = sg_last_refresh_month
 	remove_variable = sg_last_rank_evaluated

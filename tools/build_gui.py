@@ -11,6 +11,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from build_research_gui import section as research_section
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "law_data.json"
 OUT = ROOT / "gui" / "journal_entry_widgets" / "sg_law_advisor.gui"
@@ -582,6 +584,8 @@ flowcontainer = {{
 {ignored_slot_row(2, laws)}
 {ignored_slot_row(3, laws)}
 	}}
+
+{research_section()}
 
 	# ---- footer ---------------------------------------------------------------
 	flowcontainer = {{

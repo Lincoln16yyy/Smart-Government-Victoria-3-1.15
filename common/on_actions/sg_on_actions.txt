@@ -6,7 +6,7 @@ on_game_started_after_lobby = {
 }
 
 on_monthly_pulse_country = {
-	on_actions = { sg_monthly_country_dispatcher }
+	on_actions = { sg_monthly_country_dispatcher sg_research_update }
 }
 
 sg_game_start = {

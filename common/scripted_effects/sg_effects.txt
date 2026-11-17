@@ -40,6 +40,7 @@ sg_initialize_country = {
 	sg_initialize_refresh_date = yes
 	sg_ensure_journal_entry = yes
 	sg_rank_laws = yes
+	sg_military_review = yes
 	if = {
 		limit = { has_variable = sg_debug }
 		debug_log = "Smart Government Advisor: initialized for [THIS.GetNameNoFormatting]"
@@ -60,6 +61,7 @@ sg_initialize_refresh_date = {
 # Removes every runtime variable. The schema marker stays so a running save
 # that was deliberately disabled is never auto-enabled again.
 sg_disable_country = {
+	sg_military_clear = yes
 	remove_variable = sg_enabled
 	sg_research_clear = yes
 	remove_variable = sg_last_refresh_year
@@ -133,6 +135,7 @@ sg_monthly_update = {
 		limit = { has_variable = sg_enabled }
 		sg_ensure_journal_entry = yes
 		sg_rank_laws = yes
+		sg_military_review = yes
 	}
 }
 

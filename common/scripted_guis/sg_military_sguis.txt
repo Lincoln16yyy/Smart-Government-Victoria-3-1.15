@@ -1,0 +1,80 @@
+﻿sg_military_ready_sgui = {
+	scope = country
+	is_shown = { is_player = yes has_variable = sg_enabled has_variable = sg_military_card }
+}
+
+sg_military_refresh_sgui = {
+	scope = country
+	is_valid = { is_player = yes has_variable = sg_enabled }
+	effect = { sg_military_review = yes }
+}
+
+sg_military_idle_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 0 }
+}
+
+sg_military_land_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 1 }
+}
+
+sg_military_land_progress_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_land_history var:sg_military_land_history = 1 }
+}
+
+sg_military_land_expired_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_land_history var:sg_military_land_history = 2 }
+}
+
+sg_military_naval_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 2 }
+}
+
+sg_military_supply_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 3 }
+}
+
+sg_military_fiscal_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 4 }
+}
+
+sg_military_front_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 5 }
+}
+
+sg_military_readiness_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 6 }
+}
+
+sg_military_modernize_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 7 }
+}
+
+sg_military_commander_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 8 }
+}
+
+sg_military_rival_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_card var:sg_military_card = 9 }
+}
+
+sg_military_naval_progress_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_naval_history var:sg_military_naval_history = 1 }
+}
+
+sg_military_naval_expired_sgui = {
+	scope = country
+	is_shown = { has_variable = sg_military_naval_history var:sg_military_naval_history = 2 }
+}

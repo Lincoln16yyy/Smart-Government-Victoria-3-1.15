@@ -1,0 +1,133 @@
+﻿# Country scope. Read the vanilla fiscal signals used by Smart Economy Director.
+sg_military_can_spend = {
+	net_total_income > 0
+	net_fixed_income >= 0
+	in_default = no
+	principal <= 0
+	gold_reserves > 0
+	gold_reserves >= {
+		value = fixed_income
+		subtract = net_fixed_income
+		min = 0
+		multiply = 12
+	}
+	net_total_income >= { value = military_expenses min = 0 multiply = 0.5 }
+}
+
+sg_military_at_risk = {
+	OR = {
+		is_at_war = yes
+		is_diplomatic_play_committed_participant = yes
+		is_diplomatic_play_initiator = yes
+		is_diplomatic_play_target = yes
+		is_diplomatic_play_undecided_participant = yes
+	}
+}
+
+# State scope. These are screening criteria; the recruitment dialog is authoritative.
+sg_military_recruiting_state = {
+	is_incorporated = yes
+	market_access >= 0.95
+	relative_infrastructure >= 1.1
+	b:building_barrack ?= { level > 0 }
+}
+
+# Formation scope.
+sg_military_recruiting_army = {
+	is_army = yes
+	is_mobilized = no
+	sg_military_command_room >= 1
+}
+
+sg_military_land_eligible = {
+	sg_military_can_spend = yes
+	sg_military_at_risk = no
+	has_technology_researched = standing_army
+	has_technology_researched = line_infantry
+	army_size < 10
+	market ?= {
+		mg:small_arms ?= {
+			market_goods_sell_orders > 0
+			market_goods_has_goods_shortage = no
+		}
+	}
+}
+
+sg_military_supply_shortage = {
+	market ?= {
+		OR = {
+			mg:small_arms ?= { market_goods_has_goods_shortage = yes }
+			mg:ammunition ?= { market_goods_has_goods_shortage = yes }
+			mg:artillery ?= { market_goods_has_goods_shortage = yes }
+		}
+	}
+}
+
+sg_military_naval_eligible = {
+	sg_military_can_spend = yes
+	sg_military_at_risk = no
+	has_technology_researched = navigation
+	NOT = { has_technology_researched = ironclad_tech }
+	sg_military_ship_count < 3
+	any_country = {
+		NOT = { this = scope:sg_military_country }
+		has_diplomatic_pact = { who = scope:sg_military_country type = rivalry }
+		navy_size > scope:sg_military_country.navy_size
+	}
+	market ?= {
+		mg:hardwood ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+		mg:fabric ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+		mg:grain ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+	}
+}
+
+# State scope.
+sg_military_shipbuilding_state = {
+	is_coastal = yes
+	is_incorporated = yes
+	market_access >= 0.95
+	b:building_shipyard ?= { level > 0 occupancy >= 0.5 }
+	b:building_naval_administration ?= { level > 0 }
+}
+
+# Formation scope.
+sg_military_escort_fleet = {
+	is_fleet = yes
+	any_scope_character = { has_role_of_type = admiral }
+	any_scope_ship = { crew_percent >= 0.5 }
+	NOT = { any_scope_ship = { crew_percent < 0.5 } }
+	NOT = { has_naval_mission_with_invalid_area = yes }
+}
+
+sg_military_needs_modernization = {
+	is_army = yes
+	is_mobilized = no
+	any_combat_unit = { has_unit_type = unit_type:combat_unit_type_irregular_infantry }
+	owner = {
+		has_technology_researched = line_infantry
+		market ?= {
+			mg:small_arms ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+		}
+	}
+}
+
+sg_military_needs_commander = {
+	is_army = yes
+	is_mobilized = no
+	num_units >= 4
+	NOT = { any_scope_character = { has_role_of_type = general } }
+}
+
+sg_military_front_organization_low = {
+	is_army = yes
+	any_scope_character = { has_role_of_type = general is_on_front = yes }
+	organization_target < 80
+}
+
+# Candidate country scope. A rivalry plus state adjacency is not a prediction of war.
+sg_military_stronger_border_rival = {
+	NOT = { this = scope:sg_military_country }
+	has_diplomatic_pact = { who = scope:sg_military_country type = rivalry }
+	army_size > scope:sg_military_country.army_size
+	any_scope_state = { any_neighbouring_state = { owner = scope:sg_military_country } }
+}

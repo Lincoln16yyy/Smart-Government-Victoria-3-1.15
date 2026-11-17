@@ -1,0 +1,38 @@
+﻿# Country scope.
+sg_military_ship_count = {
+	value = 0
+	every_military_formation = {
+		limit = { is_fleet = yes }
+		add = num_ships
+	}
+}
+
+# Fleet scope.
+sg_military_frigate_count = {
+	value = 0
+	every_scope_ship = {
+		limit = { is_ship_type = ship_type:ship_type_frigate }
+		add = 1
+	}
+}
+
+# Army scope.
+sg_military_line_count = {
+	value = 0
+	every_combat_unit = {
+		limit = { has_unit_type = unit_type:combat_unit_type_line_infantry }
+		add = 1
+	}
+}
+
+# Army scope. Recruit only within existing generals' aggregate command capacity.
+sg_military_command_room = {
+	value = 0
+	every_scope_character = {
+		limit = { has_role_of_type = general }
+		add = command_limit_num_units
+	}
+	subtract = num_units
+	max = 4
+	min = 0
+}

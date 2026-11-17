@@ -16,6 +16,144 @@ sg_research_rank = {
 				set_variable = { name = sg_research_candidate_score value = 90 }
 				sg_research_insert = yes
 			}
+			if = {
+				limit = { sg_research_available_modern_sewerage = yes }
+				set_variable = { name = sg_research_candidate_id value = 712598675 }
+				set_variable = { name = sg_research_candidate_score value = 96 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_railway_path = yes }
+			if = {
+				limit = { sg_research_available_atmospheric_engine = yes }
+				set_variable = { name = sg_research_candidate_id value = 759905284 }
+				set_variable = { name = sg_research_candidate_score value = 69 }
+				sg_research_insert = yes
+			}
+			if = {
+				limit = { sg_research_available_mechanical_tools = yes }
+				set_variable = { name = sg_research_candidate_id value = 1901839964 }
+				set_variable = { name = sg_research_candidate_score value = 68 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_railway_upgrade = yes }
+			if = {
+				limit = { sg_research_available_electric_railway = yes }
+				set_variable = { name = sg_research_candidate_id value = 255537102 }
+				set_variable = { name = sg_research_candidate_score value = 98 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_farm_output = yes }
+			if = {
+				limit = { sg_research_available_improved_fertilizer = yes }
+				set_variable = { name = sg_research_candidate_id value = 1722758211 }
+				set_variable = { name = sg_research_candidate_score value = 75 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_mining = yes }
+			if = {
+				limit = { sg_research_available_watertube_boiler = yes }
+				set_variable = { name = sg_research_candidate_id value = 53178038 }
+				set_variable = { name = sg_research_candidate_score value = 86 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_defense = yes }
+			if = {
+				limit = { sg_research_available_field_works = yes }
+				set_variable = { name = sg_research_candidate_id value = 1564644536 }
+				set_variable = { name = sg_research_candidate_score value = 115 }
+				sg_research_insert = yes
+			}
+			if = {
+				limit = { sg_research_available_defense_in_depth = yes }
+				set_variable = { name = sg_research_candidate_id value = 2118372326 }
+				set_variable = { name = sg_research_candidate_score value = 117 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_infantry = yes }
+			if = {
+				limit = { sg_research_available_line_infantry = yes }
+				set_variable = { name = sg_research_candidate_id value = 1682056145 }
+				set_variable = { name = sg_research_candidate_score value = 109 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_arms_output = yes }
+			if = {
+				limit = { sg_research_available_rifling = yes }
+				set_variable = { name = sg_research_candidate_id value = 1095551173 }
+				set_variable = { name = sg_research_candidate_score value = 97 }
+				sg_research_insert = yes
+			}
+			if = {
+				limit = { sg_research_available_repeaters = yes }
+				set_variable = { name = sg_research_candidate_id value = 1309689071 }
+				set_variable = { name = sg_research_candidate_score value = 99 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_literacy = yes }
+			if = {
+				limit = { sg_research_available_rationalism = yes }
+				set_variable = { name = sg_research_candidate_id value = 2075303878 }
+				set_variable = { name = sg_research_candidate_score value = 78 }
+				sg_research_insert = yes
+			}
+			if = {
+				limit = { sg_research_available_empiricism = yes }
+				set_variable = { name = sg_research_candidate_id value = 1079672691 }
+				set_variable = { name = sg_research_candidate_score value = 80 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_university_access = yes }
+			if = {
+				limit = { sg_research_available_academia = yes }
+				set_variable = { name = sg_research_candidate_id value = 777714212 }
+				set_variable = { name = sg_research_candidate_score value = 84 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_university_methods = yes }
+			if = {
+				limit = { sg_research_available_dialectics = yes }
+				set_variable = { name = sg_research_candidate_id value = 960311749 }
+				set_variable = { name = sg_research_candidate_score value = 83 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_administration = yes }
+			if = {
+				limit = { sg_research_available_central_archives = yes }
+				set_variable = { name = sg_research_candidate_id value = 148589161 }
+				set_variable = { name = sg_research_candidate_score value = 94 }
+				sg_research_insert = yes
+			}
+		}
+		if = {
+			limit = { sg_research_debt_pressure = yes }
+			if = {
+				limit = { sg_research_available_central_banking = yes }
+				set_variable = { name = sg_research_candidate_id value = 193449114 }
+				set_variable = { name = sg_research_candidate_score value = 103 }
+				sg_research_insert = yes
+			}
 		}
 		remove_variable = sg_research_candidate_id
 		remove_variable = sg_research_candidate_score

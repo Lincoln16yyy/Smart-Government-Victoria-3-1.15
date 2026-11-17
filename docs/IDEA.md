@@ -1,5 +1,8 @@
 # Smart Research — recomendação de tecnologias
 
+Esta proposta registra o desenho inicial. A implementação e suas regras
+estão em [Smart Technology Advisor](SMART_TECHNOLOGY_ADVISOR.md).
+
 ## Escopo
 
 Relação direta ao solicitado: um módulo que, como o advisor de leis, analisa o estado do país e **recomenda as 3 melhores tecnologias** a serem pesquisadas, sem selecionar nem iniciar pesquisa nenhuma. O jogador lê e decide. A interação é toda manual, pelo diário, igual ao fluxo de leis.

@@ -5,3 +5,108 @@ sg_research_available_railways = {
 	has_technology_researched = mechanical_tools
 	has_technology_researched = atmospheric_engine
 }
+
+sg_research_available_atmospheric_engine = {
+	NOT = { has_technology_researched = atmospheric_engine }
+	NOT = { is_researching_technology = atmospheric_engine }
+	has_technology_researched = shaft_mining
+}
+
+sg_research_available_mechanical_tools = {
+	NOT = { has_technology_researched = mechanical_tools }
+	NOT = { is_researching_technology = mechanical_tools }
+	has_technology_researched = lathe
+	has_technology_researched = steelworking
+}
+
+sg_research_available_electric_railway = {
+	NOT = { has_technology_researched = electric_railway }
+	NOT = { is_researching_technology = electric_railway }
+	has_technology_researched = electrical_capacitors
+	has_technology_researched = steel_railway_cars
+}
+
+sg_research_available_improved_fertilizer = {
+	NOT = { has_technology_researched = improved_fertilizer }
+	NOT = { is_researching_technology = improved_fertilizer }
+	has_technology_researched = intensive_agriculture
+}
+
+sg_research_available_watertube_boiler = {
+	NOT = { has_technology_researched = watertube_boiler }
+	NOT = { is_researching_technology = watertube_boiler }
+	has_technology_researched = atmospheric_engine
+}
+
+sg_research_available_field_works = {
+	NOT = { has_technology_researched = field_works }
+	NOT = { is_researching_technology = field_works }
+	has_technology_researched = napoleonic_warfare
+}
+
+sg_research_available_defense_in_depth = {
+	NOT = { has_technology_researched = defense_in_depth }
+	NOT = { is_researching_technology = defense_in_depth }
+	has_technology_researched = trench_works
+	has_technology_researched = handcranked_machine_gun
+}
+
+sg_research_available_line_infantry = {
+	NOT = { has_technology_researched = line_infantry }
+	NOT = { is_researching_technology = line_infantry }
+	has_technology_researched = mandatory_service
+	has_technology_researched = military_drill
+}
+
+sg_research_available_rifling = {
+	NOT = { has_technology_researched = rifling }
+	NOT = { is_researching_technology = rifling }
+	has_technology_researched = percussion_cap
+}
+
+sg_research_available_repeaters = {
+	NOT = { has_technology_researched = repeaters }
+	NOT = { is_researching_technology = repeaters }
+	has_technology_researched = rifling
+}
+
+sg_research_available_rationalism = {
+	NOT = { has_technology_researched = rationalism }
+	NOT = { is_researching_technology = rationalism }
+}
+
+sg_research_available_empiricism = {
+	NOT = { has_technology_researched = empiricism }
+	NOT = { is_researching_technology = empiricism }
+	has_technology_researched = academia
+}
+
+sg_research_available_academia = {
+	NOT = { has_technology_researched = academia }
+	NOT = { is_researching_technology = academia }
+	has_technology_researched = rationalism
+}
+
+sg_research_available_dialectics = {
+	NOT = { has_technology_researched = dialectics }
+	NOT = { is_researching_technology = dialectics }
+	has_technology_researched = empiricism
+}
+
+sg_research_available_central_archives = {
+	NOT = { has_technology_researched = central_archives }
+	NOT = { is_researching_technology = central_archives }
+	has_technology_researched = centralization
+}
+
+sg_research_available_central_banking = {
+	NOT = { has_technology_researched = central_banking }
+	NOT = { is_researching_technology = central_banking }
+	has_technology_researched = banking
+}
+
+sg_research_available_modern_sewerage = {
+	NOT = { has_technology_researched = modern_sewerage }
+	NOT = { is_researching_technology = modern_sewerage }
+	has_technology_researched = urban_planning
+}

@@ -10,5 +10,194 @@
     "id": 1570967808,
     "context": "infrastructure",
     "score": 90
+  },
+  {
+    "name": "atmospheric_engine",
+    "category": "production",
+    "can_research": true,
+    "prerequisites": [
+      "shaft_mining"
+    ],
+    "id": 759905284,
+    "context": "railway_path",
+    "score": 69
+  },
+  {
+    "name": "mechanical_tools",
+    "category": "production",
+    "can_research": true,
+    "prerequisites": [
+      "lathe",
+      "steelworking"
+    ],
+    "id": 1901839964,
+    "context": "railway_path",
+    "score": 68
+  },
+  {
+    "name": "electric_railway",
+    "category": "production",
+    "can_research": true,
+    "prerequisites": [
+      "electrical_capacitors",
+      "steel_railway_cars"
+    ],
+    "id": 255537102,
+    "context": "railway_upgrade",
+    "score": 98
+  },
+  {
+    "name": "improved_fertilizer",
+    "category": "production",
+    "can_research": true,
+    "prerequisites": [
+      "intensive_agriculture"
+    ],
+    "id": 1722758211,
+    "context": "farm_output",
+    "score": 75
+  },
+  {
+    "name": "watertube_boiler",
+    "category": "production",
+    "can_research": true,
+    "prerequisites": [
+      "atmospheric_engine"
+    ],
+    "id": 53178038,
+    "context": "mining",
+    "score": 86
+  },
+  {
+    "name": "field_works",
+    "category": "military",
+    "can_research": true,
+    "prerequisites": [
+      "napoleonic_warfare"
+    ],
+    "id": 1564644536,
+    "context": "defense",
+    "score": 115
+  },
+  {
+    "name": "defense_in_depth",
+    "category": "military",
+    "can_research": true,
+    "prerequisites": [
+      "trench_works",
+      "handcranked_machine_gun"
+    ],
+    "id": 2118372326,
+    "context": "defense",
+    "score": 117
+  },
+  {
+    "name": "line_infantry",
+    "category": "military",
+    "can_research": true,
+    "prerequisites": [
+      "mandatory_service",
+      "military_drill"
+    ],
+    "id": 1682056145,
+    "context": "infantry",
+    "score": 109
+  },
+  {
+    "name": "rifling",
+    "category": "military",
+    "can_research": true,
+    "prerequisites": [
+      "percussion_cap"
+    ],
+    "id": 1095551173,
+    "context": "arms_output",
+    "score": 97
+  },
+  {
+    "name": "repeaters",
+    "category": "military",
+    "can_research": true,
+    "prerequisites": [
+      "rifling"
+    ],
+    "id": 1309689071,
+    "context": "arms_output",
+    "score": 99
+  },
+  {
+    "name": "rationalism",
+    "category": "society",
+    "can_research": true,
+    "prerequisites": [],
+    "id": 2075303878,
+    "context": "literacy",
+    "score": 78
+  },
+  {
+    "name": "empiricism",
+    "category": "society",
+    "can_research": true,
+    "prerequisites": [
+      "academia"
+    ],
+    "id": 1079672691,
+    "context": "literacy",
+    "score": 80
+  },
+  {
+    "name": "academia",
+    "category": "society",
+    "can_research": true,
+    "prerequisites": [
+      "rationalism"
+    ],
+    "id": 777714212,
+    "context": "university_access",
+    "score": 84
+  },
+  {
+    "name": "dialectics",
+    "category": "society",
+    "can_research": true,
+    "prerequisites": [
+      "empiricism"
+    ],
+    "id": 960311749,
+    "context": "university_methods",
+    "score": 83
+  },
+  {
+    "name": "central_archives",
+    "category": "society",
+    "can_research": true,
+    "prerequisites": [
+      "centralization"
+    ],
+    "id": 148589161,
+    "context": "administration",
+    "score": 94
+  },
+  {
+    "name": "central_banking",
+    "category": "society",
+    "can_research": true,
+    "prerequisites": [
+      "banking"
+    ],
+    "id": 193449114,
+    "context": "debt_pressure",
+    "score": 103
+  },
+  {
+    "name": "modern_sewerage",
+    "category": "society",
+    "can_research": true,
+    "prerequisites": [
+      "urban_planning"
+    ],
+    "id": 712598675,
+    "context": "infrastructure",
+    "score": 96
   }
 ]

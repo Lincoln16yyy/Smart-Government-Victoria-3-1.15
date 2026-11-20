@@ -290,3 +290,24 @@ desativar, reativar e pulso mensal, além da verificação dos logs.
   efeitos exatos aparecem no tooltip da lei, direto do jogo.
 - O mod não recomenda leis cuja disponibilidade não consiga modelar; ele nunca
   inventa um requisito.
+
+
+## Edição Better Politics 1.0.2
+
+A edição em `editions/better-politics` inclui leis, orientação militar e
+pesquisa. O ranking de pesquisa é atualizado mensalmente. Quando os
+contextos específicos ficam vazios, a edição sugere tecnologias gerais
+disponíveis pelos pré-requisitos, dando preferência a eras anteriores.
+
+O ZIP pronto está na prévia `v1.0.2-bpm` dos Releases deste repositório.
+Ative a edição depois do Better Politics no perfil do jogo.
+
+O reparo é reproduzível com
+`python3 tools/repair_government_research.py --source "<edição anterior>"
+--game "<pasta game>" --output "<pasta de saída>"`.
+Ele preserva os módulos da edição anterior e gera os novos scripts de
+fallback, despacho mensal, interface e localização. A edição já reparada
+é recusada para evitar aplicar a transformação duas vezes.
+
+Parser e validação do módulo de pesquisa passaram. A execução após a
+correção em campanha ainda precisa ser observada.

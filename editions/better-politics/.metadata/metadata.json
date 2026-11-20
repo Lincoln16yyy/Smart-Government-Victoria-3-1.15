@@ -1,0 +1,23 @@
+{
+  "name": "Smart Government Advisor - Better Politics",
+  "id": "sg.smart_government_advisor_bpm",
+  "version": "1.0.2",
+  "supported_game_version": "1.15.*",
+  "short_description": "Recommends laws without automating enactment.",
+  "tags": [
+    "Utilities",
+    "Politics"
+  ],
+  "relationships": [
+    {
+      "rel_type": "dependency",
+      "id": "2932134122",
+      "display_name": "Better Politics Mod",
+      "resource_type": "mod",
+      "version": "2.5"
+    }
+  ],
+  "game_custom_data": {
+    "multiplayer_synchronized": true
+  }
+}

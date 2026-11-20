@@ -1,0 +1,15 @@
+﻿# Additive: preserve the game's acquisition and research-start effects.
+on_acquired_technology = {
+	on_actions = { sg_research_update }
+}
+
+on_research_technology_started = {
+	on_actions = { sg_research_update }
+}
+
+sg_research_update = {
+	trigger = { is_player = yes has_variable = sg_enabled }
+	effect = { sg_research_rank = yes }
+}
+
+on_monthly_pulse_country = { on_actions = { sg_research_update } }

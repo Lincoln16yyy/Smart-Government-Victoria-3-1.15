@@ -1,0 +1,17 @@
+﻿sg_cwe_top_1_score_or_empty = {
+ value = 0
+ if = { limit = { has_variable = sg_top_1_score } add = var:sg_top_1_score }
+ if = { limit = { NOT = { has_variable = sg_top_1_score } } subtract = 1000 }
+}
+
+sg_cwe_top_2_score_or_empty = {
+ value = 0
+ if = { limit = { has_variable = sg_top_2_score } add = var:sg_top_2_score }
+ if = { limit = { NOT = { has_variable = sg_top_2_score } } subtract = 1000 }
+}
+
+sg_cwe_top_3_score_or_empty = {
+ value = 0
+ if = { limit = { has_variable = sg_top_3_score } add = var:sg_top_3_score }
+ if = { limit = { NOT = { has_variable = sg_top_3_score } } subtract = 1000 }
+}

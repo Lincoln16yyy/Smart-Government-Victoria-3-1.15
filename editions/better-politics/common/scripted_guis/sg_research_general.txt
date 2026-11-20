@@ -1,0 +1,2136 @@
+﻿sg_research_general_1_enclosure_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 873328080 sg_research_general_available_enclosure = yes }
+}
+sg_research_general_2_enclosure_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 873328080 sg_research_general_available_enclosure = yes }
+}
+sg_research_general_3_enclosure_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 873328080 sg_research_general_available_enclosure = yes }
+}
+sg_research_general_1_manufacturies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2108980749 sg_research_general_available_manufacturies = yes }
+}
+sg_research_general_2_manufacturies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2108980749 sg_research_general_available_manufacturies = yes }
+}
+sg_research_general_3_manufacturies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2108980749 sg_research_general_available_manufacturies = yes }
+}
+sg_research_general_1_shaft_mining_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 338974842 sg_research_general_available_shaft_mining = yes }
+}
+sg_research_general_2_shaft_mining_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 338974842 sg_research_general_available_shaft_mining = yes }
+}
+sg_research_general_3_shaft_mining_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 338974842 sg_research_general_available_shaft_mining = yes }
+}
+sg_research_general_1_cotton_gin_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 660783242 sg_research_general_available_cotton_gin = yes }
+}
+sg_research_general_2_cotton_gin_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 660783242 sg_research_general_available_cotton_gin = yes }
+}
+sg_research_general_3_cotton_gin_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 660783242 sg_research_general_available_cotton_gin = yes }
+}
+sg_research_general_1_lathe_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1322648676 sg_research_general_available_lathe = yes }
+}
+sg_research_general_2_lathe_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1322648676 sg_research_general_available_lathe = yes }
+}
+sg_research_general_3_lathe_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1322648676 sg_research_general_available_lathe = yes }
+}
+sg_research_general_1_distillation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1445823908 sg_research_general_available_distillation = yes }
+}
+sg_research_general_2_distillation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1445823908 sg_research_general_available_distillation = yes }
+}
+sg_research_general_3_distillation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1445823908 sg_research_general_available_distillation = yes }
+}
+sg_research_general_1_steelworking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1049901062 sg_research_general_available_steelworking = yes }
+}
+sg_research_general_2_steelworking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1049901062 sg_research_general_available_steelworking = yes }
+}
+sg_research_general_3_steelworking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1049901062 sg_research_general_available_steelworking = yes }
+}
+sg_research_general_1_prospecting_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 279371709 sg_research_general_available_prospecting = yes }
+}
+sg_research_general_2_prospecting_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 279371709 sg_research_general_available_prospecting = yes }
+}
+sg_research_general_3_prospecting_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 279371709 sg_research_general_available_prospecting = yes }
+}
+sg_research_general_1_crystal_glass_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1467941748 sg_research_general_available_crystal_glass = yes }
+}
+sg_research_general_2_crystal_glass_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1467941748 sg_research_general_available_crystal_glass = yes }
+}
+sg_research_general_3_crystal_glass_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1467941748 sg_research_general_available_crystal_glass = yes }
+}
+sg_research_general_1_intensive_agriculture_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 314068997 sg_research_general_available_intensive_agriculture = yes }
+}
+sg_research_general_2_intensive_agriculture_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 314068997 sg_research_general_available_intensive_agriculture = yes }
+}
+sg_research_general_3_intensive_agriculture_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 314068997 sg_research_general_available_intensive_agriculture = yes }
+}
+sg_research_general_1_fractional_distillation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1486545977 sg_research_general_available_fractional_distillation = yes }
+}
+sg_research_general_2_fractional_distillation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1486545977 sg_research_general_available_fractional_distillation = yes }
+}
+sg_research_general_3_fractional_distillation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1486545977 sg_research_general_available_fractional_distillation = yes }
+}
+sg_research_general_1_canneries_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 609178154 sg_research_general_available_canneries = yes }
+}
+sg_research_general_2_canneries_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 609178154 sg_research_general_available_canneries = yes }
+}
+sg_research_general_3_canneries_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 609178154 sg_research_general_available_canneries = yes }
+}
+sg_research_general_1_watertube_boiler_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 396644936 sg_research_general_available_watertube_boiler = yes }
+}
+sg_research_general_2_watertube_boiler_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 396644936 sg_research_general_available_watertube_boiler = yes }
+}
+sg_research_general_3_watertube_boiler_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 396644936 sg_research_general_available_watertube_boiler = yes }
+}
+sg_research_general_1_atmospheric_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 136026175 sg_research_general_available_atmospheric_engine = yes }
+}
+sg_research_general_2_atmospheric_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 136026175 sg_research_general_available_atmospheric_engine = yes }
+}
+sg_research_general_3_atmospheric_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 136026175 sg_research_general_available_atmospheric_engine = yes }
+}
+sg_research_general_1_railways_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 474890339 sg_research_general_available_railways = yes }
+}
+sg_research_general_2_railways_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 474890339 sg_research_general_available_railways = yes }
+}
+sg_research_general_3_railways_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 474890339 sg_research_general_available_railways = yes }
+}
+sg_research_general_1_chemical_bleaching_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 924192105 sg_research_general_available_chemical_bleaching = yes }
+}
+sg_research_general_2_chemical_bleaching_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 924192105 sg_research_general_available_chemical_bleaching = yes }
+}
+sg_research_general_3_chemical_bleaching_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 924192105 sg_research_general_available_chemical_bleaching = yes }
+}
+sg_research_general_1_nitroglycerin_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 893607328 sg_research_general_available_nitroglycerin = yes }
+}
+sg_research_general_2_nitroglycerin_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 893607328 sg_research_general_available_nitroglycerin = yes }
+}
+sg_research_general_3_nitroglycerin_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 893607328 sg_research_general_available_nitroglycerin = yes }
+}
+sg_research_general_1_bessemer_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1929470001 sg_research_general_available_bessemer_process = yes }
+}
+sg_research_general_2_bessemer_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1929470001 sg_research_general_available_bessemer_process = yes }
+}
+sg_research_general_3_bessemer_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1929470001 sg_research_general_available_bessemer_process = yes }
+}
+sg_research_general_1_baking_powder_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2109054055 sg_research_general_available_baking_powder = yes }
+}
+sg_research_general_2_baking_powder_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2109054055 sg_research_general_available_baking_powder = yes }
+}
+sg_research_general_3_baking_powder_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2109054055 sg_research_general_available_baking_powder = yes }
+}
+sg_research_general_1_mechanized_workshops_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1426448546 sg_research_general_available_mechanized_workshops = yes }
+}
+sg_research_general_2_mechanized_workshops_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1426448546 sg_research_general_available_mechanized_workshops = yes }
+}
+sg_research_general_3_mechanized_workshops_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1426448546 sg_research_general_available_mechanized_workshops = yes }
+}
+sg_research_general_1_mechanical_tools_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1708456610 sg_research_general_available_mechanical_tools = yes }
+}
+sg_research_general_2_mechanical_tools_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1708456610 sg_research_general_available_mechanical_tools = yes }
+}
+sg_research_general_3_mechanical_tools_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1708456610 sg_research_general_available_mechanical_tools = yes }
+}
+sg_research_general_1_improved_fertilizer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1459719619 sg_research_general_available_improved_fertilizer = yes }
+}
+sg_research_general_2_improved_fertilizer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1459719619 sg_research_general_available_improved_fertilizer = yes }
+}
+sg_research_general_3_improved_fertilizer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1459719619 sg_research_general_available_improved_fertilizer = yes }
+}
+sg_research_general_1_steam_donkey_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 211189099 sg_research_general_available_steam_donkey = yes }
+}
+sg_research_general_2_steam_donkey_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 211189099 sg_research_general_available_steam_donkey = yes }
+}
+sg_research_general_3_steam_donkey_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 211189099 sg_research_general_available_steam_donkey = yes }
+}
+sg_research_general_1_dynamite_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1744007984 sg_research_general_available_dynamite = yes }
+}
+sg_research_general_2_dynamite_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1744007984 sg_research_general_available_dynamite = yes }
+}
+sg_research_general_3_dynamite_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1744007984 sg_research_general_available_dynamite = yes }
+}
+sg_research_general_1_rubber_mastication_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1307837765 sg_research_general_available_rubber_mastication = yes }
+}
+sg_research_general_2_rubber_mastication_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1307837765 sg_research_general_available_rubber_mastication = yes }
+}
+sg_research_general_3_rubber_mastication_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1307837765 sg_research_general_available_rubber_mastication = yes }
+}
+sg_research_general_1_rotary_valve_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 878130212 sg_research_general_available_rotary_valve_engine = yes }
+}
+sg_research_general_2_rotary_valve_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 878130212 sg_research_general_available_rotary_valve_engine = yes }
+}
+sg_research_general_3_rotary_valve_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 878130212 sg_research_general_available_rotary_valve_engine = yes }
+}
+sg_research_general_1_reinforced_concrete_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 849849172 sg_research_general_available_reinforced_concrete = yes }
+}
+sg_research_general_2_reinforced_concrete_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 849849172 sg_research_general_available_reinforced_concrete = yes }
+}
+sg_research_general_3_reinforced_concrete_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 849849172 sg_research_general_available_reinforced_concrete = yes }
+}
+sg_research_general_1_threshing_machine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 420367272 sg_research_general_available_threshing_machine = yes }
+}
+sg_research_general_2_threshing_machine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 420367272 sg_research_general_available_threshing_machine = yes }
+}
+sg_research_general_3_threshing_machine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 420367272 sg_research_general_available_threshing_machine = yes }
+}
+sg_research_general_1_pumpjacks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 305114561 sg_research_general_available_pumpjacks = yes }
+}
+sg_research_general_2_pumpjacks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 305114561 sg_research_general_available_pumpjacks = yes }
+}
+sg_research_general_3_pumpjacks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 305114561 sg_research_general_available_pumpjacks = yes }
+}
+sg_research_general_1_aniline_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 252349304 sg_research_general_available_aniline = yes }
+}
+sg_research_general_2_aniline_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 252349304 sg_research_general_available_aniline = yes }
+}
+sg_research_general_3_aniline_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 252349304 sg_research_general_available_aniline = yes }
+}
+sg_research_general_1_open_hearth_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2026577039 sg_research_general_available_open_hearth_process = yes }
+}
+sg_research_general_2_open_hearth_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2026577039 sg_research_general_available_open_hearth_process = yes }
+}
+sg_research_general_3_open_hearth_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2026577039 sg_research_general_available_open_hearth_process = yes }
+}
+sg_research_general_1_vulcanization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1499550223 sg_research_general_available_vulcanization = yes }
+}
+sg_research_general_2_vulcanization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1499550223 sg_research_general_available_vulcanization = yes }
+}
+sg_research_general_3_vulcanization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1499550223 sg_research_general_available_vulcanization = yes }
+}
+sg_research_general_1_vacuum_canning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1149071256 sg_research_general_available_vacuum_canning = yes }
+}
+sg_research_general_2_vacuum_canning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1149071256 sg_research_general_available_vacuum_canning = yes }
+}
+sg_research_general_3_vacuum_canning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1149071256 sg_research_general_available_vacuum_canning = yes }
+}
+sg_research_general_1_shift_work_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 885723044 sg_research_general_available_shift_work = yes }
+}
+sg_research_general_2_shift_work_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 885723044 sg_research_general_available_shift_work = yes }
+}
+sg_research_general_3_shift_work_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 885723044 sg_research_general_available_shift_work = yes }
+}
+sg_research_general_1_steel_railway_cars_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 727551491 sg_research_general_available_steel_railway_cars = yes }
+}
+sg_research_general_2_steel_railway_cars_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 727551491 sg_research_general_available_steel_railway_cars = yes }
+}
+sg_research_general_3_steel_railway_cars_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 727551491 sg_research_general_available_steel_railway_cars = yes }
+}
+sg_research_general_1_electrical_generation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 739528525 sg_research_general_available_electrical_generation = yes }
+}
+sg_research_general_2_electrical_generation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 739528525 sg_research_general_available_electrical_generation = yes }
+}
+sg_research_general_3_electrical_generation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 739528525 sg_research_general_available_electrical_generation = yes }
+}
+sg_research_general_1_mechanized_farming_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 882247387 sg_research_general_available_mechanized_farming = yes }
+}
+sg_research_general_2_mechanized_farming_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 882247387 sg_research_general_available_mechanized_farming = yes }
+}
+sg_research_general_3_mechanized_farming_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 882247387 sg_research_general_available_mechanized_farming = yes }
+}
+sg_research_general_1_art_silk_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1143839558 sg_research_general_available_art_silk = yes }
+}
+sg_research_general_2_art_silk_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1143839558 sg_research_general_available_art_silk = yes }
+}
+sg_research_general_3_art_silk_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1143839558 sg_research_general_available_art_silk = yes }
+}
+sg_research_general_1_automatic_bottle_blowers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1469122220 sg_research_general_available_automatic_bottle_blowers = yes }
+}
+sg_research_general_2_automatic_bottle_blowers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1469122220 sg_research_general_available_automatic_bottle_blowers = yes }
+}
+sg_research_general_3_automatic_bottle_blowers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1469122220 sg_research_general_available_automatic_bottle_blowers = yes }
+}
+sg_research_general_1_conveyors_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 139444171 sg_research_general_available_conveyors = yes }
+}
+sg_research_general_2_conveyors_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 139444171 sg_research_general_available_conveyors = yes }
+}
+sg_research_general_3_conveyors_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 139444171 sg_research_general_available_conveyors = yes }
+}
+sg_research_general_1_pasteurization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 868091085 sg_research_general_available_pasteurization = yes }
+}
+sg_research_general_2_pasteurization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 868091085 sg_research_general_available_pasteurization = yes }
+}
+sg_research_general_3_pasteurization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 868091085 sg_research_general_available_pasteurization = yes }
+}
+sg_research_general_1_electric_railway_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 464786224 sg_research_general_available_electric_railway = yes }
+}
+sg_research_general_2_electric_railway_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 464786224 sg_research_general_available_electric_railway = yes }
+}
+sg_research_general_3_electric_railway_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 464786224 sg_research_general_available_electric_railway = yes }
+}
+sg_research_general_1_combustion_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 182679314 sg_research_general_available_combustion_engine = yes }
+}
+sg_research_general_2_combustion_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 182679314 sg_research_general_available_combustion_engine = yes }
+}
+sg_research_general_3_combustion_engine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 182679314 sg_research_general_available_combustion_engine = yes }
+}
+sg_research_general_1_pneumatic_tools_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 457995615 sg_research_general_available_pneumatic_tools = yes }
+}
+sg_research_general_2_pneumatic_tools_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 457995615 sg_research_general_available_pneumatic_tools = yes }
+}
+sg_research_general_3_pneumatic_tools_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 457995615 sg_research_general_available_pneumatic_tools = yes }
+}
+sg_research_general_1_nitrogen_fixation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1419166342 sg_research_general_available_nitrogen_fixation = yes }
+}
+sg_research_general_2_nitrogen_fixation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1419166342 sg_research_general_available_nitrogen_fixation = yes }
+}
+sg_research_general_3_nitrogen_fixation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1419166342 sg_research_general_available_nitrogen_fixation = yes }
+}
+sg_research_general_1_electric_arc_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 636922345 sg_research_general_available_electric_arc_process = yes }
+}
+sg_research_general_2_electric_arc_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 636922345 sg_research_general_available_electric_arc_process = yes }
+}
+sg_research_general_3_electric_arc_process_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 636922345 sg_research_general_available_electric_arc_process = yes }
+}
+sg_research_general_1_steam_turbine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 614768959 sg_research_general_available_steam_turbine = yes }
+}
+sg_research_general_2_steam_turbine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 614768959 sg_research_general_available_steam_turbine = yes }
+}
+sg_research_general_3_steam_turbine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 614768959 sg_research_general_available_steam_turbine = yes }
+}
+sg_research_general_1_plastics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 500473965 sg_research_general_available_plastics = yes }
+}
+sg_research_general_2_plastics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 500473965 sg_research_general_available_plastics = yes }
+}
+sg_research_general_3_plastics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 500473965 sg_research_general_available_plastics = yes }
+}
+sg_research_general_1_electrical_capacitors_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 91250617 sg_research_general_available_electrical_capacitors = yes }
+}
+sg_research_general_2_electrical_capacitors_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 91250617 sg_research_general_available_electrical_capacitors = yes }
+}
+sg_research_general_3_electrical_capacitors_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 91250617 sg_research_general_available_electrical_capacitors = yes }
+}
+sg_research_general_1_radio_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1961776808 sg_research_general_available_radio = yes }
+}
+sg_research_general_2_radio_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1961776808 sg_research_general_available_radio = yes }
+}
+sg_research_general_3_radio_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1961776808 sg_research_general_available_radio = yes }
+}
+sg_research_general_1_telephone_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 301280675 sg_research_general_available_telephone = yes }
+}
+sg_research_general_2_telephone_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 301280675 sg_research_general_available_telephone = yes }
+}
+sg_research_general_3_telephone_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 301280675 sg_research_general_available_telephone = yes }
+}
+sg_research_general_1_dough_rollers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 470737651 sg_research_general_available_dough_rollers = yes }
+}
+sg_research_general_2_dough_rollers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 470737651 sg_research_general_available_dough_rollers = yes }
+}
+sg_research_general_3_dough_rollers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 470737651 sg_research_general_available_dough_rollers = yes }
+}
+sg_research_general_1_flash_freezing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1542187449 sg_research_general_available_flash_freezing = yes }
+}
+sg_research_general_2_flash_freezing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1542187449 sg_research_general_available_flash_freezing = yes }
+}
+sg_research_general_3_flash_freezing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1542187449 sg_research_general_available_flash_freezing = yes }
+}
+sg_research_general_1_oil_turbine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1423388582 sg_research_general_available_oil_turbine = yes }
+}
+sg_research_general_2_oil_turbine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1423388582 sg_research_general_available_oil_turbine = yes }
+}
+sg_research_general_3_oil_turbine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1423388582 sg_research_general_available_oil_turbine = yes }
+}
+sg_research_general_1_arc_welding_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 551403131 sg_research_general_available_arc_welding = yes }
+}
+sg_research_general_2_arc_welding_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 551403131 sg_research_general_available_arc_welding = yes }
+}
+sg_research_general_3_arc_welding_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 551403131 sg_research_general_available_arc_welding = yes }
+}
+sg_research_general_1_compression_ignition_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1521935746 sg_research_general_available_compression_ignition = yes }
+}
+sg_research_general_2_compression_ignition_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1521935746 sg_research_general_available_compression_ignition = yes }
+}
+sg_research_general_3_compression_ignition_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1521935746 sg_research_general_available_compression_ignition = yes }
+}
+sg_research_general_1_standing_army_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 58458823 sg_research_general_available_standing_army = yes }
+}
+sg_research_general_2_standing_army_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 58458823 sg_research_general_available_standing_army = yes }
+}
+sg_research_general_3_standing_army_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 58458823 sg_research_general_available_standing_army = yes }
+}
+sg_research_general_1_navigation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 461823444 sg_research_general_available_navigation = yes }
+}
+sg_research_general_2_navigation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 461823444 sg_research_general_available_navigation = yes }
+}
+sg_research_general_3_navigation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 461823444 sg_research_general_available_navigation = yes }
+}
+sg_research_general_1_drydocks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 769092619 sg_research_general_available_drydocks = yes }
+}
+sg_research_general_2_drydocks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 769092619 sg_research_general_available_drydocks = yes }
+}
+sg_research_general_3_drydocks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 769092619 sg_research_general_available_drydocks = yes }
+}
+sg_research_general_1_mandatory_service_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 922635127 sg_research_general_available_mandatory_service = yes }
+}
+sg_research_general_2_mandatory_service_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 922635127 sg_research_general_available_mandatory_service = yes }
+}
+sg_research_general_3_mandatory_service_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 922635127 sg_research_general_available_mandatory_service = yes }
+}
+sg_research_general_1_gunsmithing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1527291663 sg_research_general_available_gunsmithing = yes }
+}
+sg_research_general_2_gunsmithing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1527291663 sg_research_general_available_gunsmithing = yes }
+}
+sg_research_general_3_gunsmithing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1527291663 sg_research_general_available_gunsmithing = yes }
+}
+sg_research_general_1_artillery_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2008836461 sg_research_general_available_artillery = yes }
+}
+sg_research_general_2_artillery_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2008836461 sg_research_general_available_artillery = yes }
+}
+sg_research_general_3_artillery_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2008836461 sg_research_general_available_artillery = yes }
+}
+sg_research_general_1_military_drill_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 38564725 sg_research_general_available_military_drill = yes }
+}
+sg_research_general_2_military_drill_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 38564725 sg_research_general_available_military_drill = yes }
+}
+sg_research_general_3_military_drill_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 38564725 sg_research_general_available_military_drill = yes }
+}
+sg_research_general_1_napoleonic_warfare_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 910709924 sg_research_general_available_napoleonic_warfare = yes }
+}
+sg_research_general_2_napoleonic_warfare_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 910709924 sg_research_general_available_napoleonic_warfare = yes }
+}
+sg_research_general_3_napoleonic_warfare_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 910709924 sg_research_general_available_napoleonic_warfare = yes }
+}
+sg_research_general_1_admiralty_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1260381675 sg_research_general_available_admiralty = yes }
+}
+sg_research_general_2_admiralty_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1260381675 sg_research_general_available_admiralty = yes }
+}
+sg_research_general_3_admiralty_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1260381675 sg_research_general_available_admiralty = yes }
+}
+sg_research_general_1_army_reserves_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1723811961 sg_research_general_available_army_reserves = yes }
+}
+sg_research_general_2_army_reserves_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1723811961 sg_research_general_available_army_reserves = yes }
+}
+sg_research_general_3_army_reserves_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1723811961 sg_research_general_available_army_reserves = yes }
+}
+sg_research_general_1_line_infantry_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 20544316 sg_research_general_available_line_infantry = yes }
+}
+sg_research_general_2_line_infantry_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 20544316 sg_research_general_available_line_infantry = yes }
+}
+sg_research_general_3_line_infantry_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 20544316 sg_research_general_available_line_infantry = yes }
+}
+sg_research_general_1_paddle_steamer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1433036237 sg_research_general_available_paddle_steamer = yes }
+}
+sg_research_general_2_paddle_steamer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1433036237 sg_research_general_available_paddle_steamer = yes }
+}
+sg_research_general_3_paddle_steamer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1433036237 sg_research_general_available_paddle_steamer = yes }
+}
+sg_research_general_1_field_works_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1791497040 sg_research_general_available_field_works = yes }
+}
+sg_research_general_2_field_works_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1791497040 sg_research_general_available_field_works = yes }
+}
+sg_research_general_3_field_works_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1791497040 sg_research_general_available_field_works = yes }
+}
+sg_research_general_1_logistics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2054185178 sg_research_general_available_logistics = yes }
+}
+sg_research_general_2_logistics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2054185178 sg_research_general_available_logistics = yes }
+}
+sg_research_general_3_logistics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2054185178 sg_research_general_available_logistics = yes }
+}
+sg_research_general_1_triage_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1922740980 sg_research_general_available_triage = yes }
+}
+sg_research_general_2_triage_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1922740980 sg_research_general_available_triage = yes }
+}
+sg_research_general_3_triage_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1922740980 sg_research_general_available_triage = yes }
+}
+sg_research_general_1_shell_gun_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 605927569 sg_research_general_available_shell_gun = yes }
+}
+sg_research_general_2_shell_gun_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 605927569 sg_research_general_available_shell_gun = yes }
+}
+sg_research_general_3_shell_gun_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 605927569 sg_research_general_available_shell_gun = yes }
+}
+sg_research_general_1_percussion_cap_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 940749437 sg_research_general_available_percussion_cap = yes }
+}
+sg_research_general_2_percussion_cap_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 940749437 sg_research_general_available_percussion_cap = yes }
+}
+sg_research_general_3_percussion_cap_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 940749437 sg_research_general_available_percussion_cap = yes }
+}
+sg_research_general_1_rifling_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 677890926 sg_research_general_available_rifling = yes }
+}
+sg_research_general_2_rifling_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 677890926 sg_research_general_available_rifling = yes }
+}
+sg_research_general_3_rifling_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 677890926 sg_research_general_available_rifling = yes }
+}
+sg_research_general_1_general_staff_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1803843633 sg_research_general_available_general_staff = yes }
+}
+sg_research_general_2_general_staff_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1803843633 sg_research_general_available_general_staff = yes }
+}
+sg_research_general_3_general_staff_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1803843633 sg_research_general_available_general_staff = yes }
+}
+sg_research_general_1_screw_frigate_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 410541068 sg_research_general_available_screw_frigate = yes }
+}
+sg_research_general_2_screw_frigate_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 410541068 sg_research_general_available_screw_frigate = yes }
+}
+sg_research_general_3_screw_frigate_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 410541068 sg_research_general_available_screw_frigate = yes }
+}
+sg_research_general_1_power_of_the_purse_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 599428992 sg_research_general_available_power_of_the_purse = yes }
+}
+sg_research_general_2_power_of_the_purse_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 599428992 sg_research_general_available_power_of_the_purse = yes }
+}
+sg_research_general_3_power_of_the_purse_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 599428992 sg_research_general_available_power_of_the_purse = yes }
+}
+sg_research_general_1_hydraulic_cranes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 483808767 sg_research_general_available_hydraulic_cranes = yes }
+}
+sg_research_general_2_hydraulic_cranes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 483808767 sg_research_general_available_hydraulic_cranes = yes }
+}
+sg_research_general_3_hydraulic_cranes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 483808767 sg_research_general_available_hydraulic_cranes = yes }
+}
+sg_research_general_1_modern_nursing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1759361757 sg_research_general_available_modern_nursing = yes }
+}
+sg_research_general_2_modern_nursing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1759361757 sg_research_general_available_modern_nursing = yes }
+}
+sg_research_general_3_modern_nursing_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1759361757 sg_research_general_available_modern_nursing = yes }
+}
+sg_research_general_1_enlistment_offices_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 618058184 sg_research_general_available_enlistment_offices = yes }
+}
+sg_research_general_2_enlistment_offices_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 618058184 sg_research_general_available_enlistment_offices = yes }
+}
+sg_research_general_3_enlistment_offices_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 618058184 sg_research_general_available_enlistment_offices = yes }
+}
+sg_research_general_1_electric_telegraph_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1147763422 sg_research_general_available_electric_telegraph = yes }
+}
+sg_research_general_2_electric_telegraph_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1147763422 sg_research_general_available_electric_telegraph = yes }
+}
+sg_research_general_3_electric_telegraph_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1147763422 sg_research_general_available_electric_telegraph = yes }
+}
+sg_research_general_1_military_statistics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1051230171 sg_research_general_available_military_statistics = yes }
+}
+sg_research_general_2_military_statistics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1051230171 sg_research_general_available_military_statistics = yes }
+}
+sg_research_general_3_military_statistics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1051230171 sg_research_general_available_military_statistics = yes }
+}
+sg_research_general_1_repeaters_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 451582300 sg_research_general_available_repeaters = yes }
+}
+sg_research_general_2_repeaters_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 451582300 sg_research_general_available_repeaters = yes }
+}
+sg_research_general_3_repeaters_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 451582300 sg_research_general_available_repeaters = yes }
+}
+sg_research_general_1_breech_loading_artillery_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1380244799 sg_research_general_available_breech_loading_artillery = yes }
+}
+sg_research_general_2_breech_loading_artillery_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1380244799 sg_research_general_available_breech_loading_artillery = yes }
+}
+sg_research_general_3_breech_loading_artillery_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1380244799 sg_research_general_available_breech_loading_artillery = yes }
+}
+sg_research_general_1_handcranked_machine_gun_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1060168795 sg_research_general_available_handcranked_machine_gun = yes }
+}
+sg_research_general_2_handcranked_machine_gun_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1060168795 sg_research_general_available_handcranked_machine_gun = yes }
+}
+sg_research_general_3_handcranked_machine_gun_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1060168795 sg_research_general_available_handcranked_machine_gun = yes }
+}
+sg_research_general_1_self_propelled_torpedoes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 35545457 sg_research_general_available_self_propelled_torpedoes = yes }
+}
+sg_research_general_2_self_propelled_torpedoes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 35545457 sg_research_general_available_self_propelled_torpedoes = yes }
+}
+sg_research_general_3_self_propelled_torpedoes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 35545457 sg_research_general_available_self_propelled_torpedoes = yes }
+}
+sg_research_general_1_monitor_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 297374270 sg_research_general_available_monitor_tech = yes }
+}
+sg_research_general_2_monitor_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 297374270 sg_research_general_available_monitor_tech = yes }
+}
+sg_research_general_3_monitor_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 297374270 sg_research_general_available_monitor_tech = yes }
+}
+sg_research_general_1_ironclad_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1722757651 sg_research_general_available_ironclad_tech = yes }
+}
+sg_research_general_2_ironclad_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1722757651 sg_research_general_available_ironclad_tech = yes }
+}
+sg_research_general_3_ironclad_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1722757651 sg_research_general_available_ironclad_tech = yes }
+}
+sg_research_general_1_jeune_ecole_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1306609486 sg_research_general_available_jeune_ecole = yes }
+}
+sg_research_general_2_jeune_ecole_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1306609486 sg_research_general_available_jeune_ecole = yes }
+}
+sg_research_general_3_jeune_ecole_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1306609486 sg_research_general_available_jeune_ecole = yes }
+}
+sg_research_general_1_floating_harbor_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1808708872 sg_research_general_available_floating_harbor = yes }
+}
+sg_research_general_2_floating_harbor_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1808708872 sg_research_general_available_floating_harbor = yes }
+}
+sg_research_general_3_floating_harbor_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1808708872 sg_research_general_available_floating_harbor = yes }
+}
+sg_research_general_1_gantry_cranes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1921549591 sg_research_general_available_gantry_cranes = yes }
+}
+sg_research_general_2_gantry_cranes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1921549591 sg_research_general_available_gantry_cranes = yes }
+}
+sg_research_general_3_gantry_cranes_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1921549591 sg_research_general_available_gantry_cranes = yes }
+}
+sg_research_general_1_trench_works_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1551632575 sg_research_general_available_trench_works = yes }
+}
+sg_research_general_2_trench_works_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1551632575 sg_research_general_available_trench_works = yes }
+}
+sg_research_general_3_trench_works_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1551632575 sg_research_general_available_trench_works = yes }
+}
+sg_research_general_1_war_propaganda_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 803685113 sg_research_general_available_war_propaganda = yes }
+}
+sg_research_general_2_war_propaganda_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 803685113 sg_research_general_available_war_propaganda = yes }
+}
+sg_research_general_3_war_propaganda_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 803685113 sg_research_general_available_war_propaganda = yes }
+}
+sg_research_general_1_wargaming_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1455819418 sg_research_general_available_wargaming = yes }
+}
+sg_research_general_2_wargaming_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1455819418 sg_research_general_available_wargaming = yes }
+}
+sg_research_general_3_wargaming_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1455819418 sg_research_general_available_wargaming = yes }
+}
+sg_research_general_1_defense_in_depth_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1791817496 sg_research_general_available_defense_in_depth = yes }
+}
+sg_research_general_2_defense_in_depth_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1791817496 sg_research_general_available_defense_in_depth = yes }
+}
+sg_research_general_3_defense_in_depth_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1791817496 sg_research_general_available_defense_in_depth = yes }
+}
+sg_research_general_1_bolt_action_rifles_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1453816022 sg_research_general_available_bolt_action_rifles = yes }
+}
+sg_research_general_2_bolt_action_rifles_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1453816022 sg_research_general_available_bolt_action_rifles = yes }
+}
+sg_research_general_3_bolt_action_rifles_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1453816022 sg_research_general_available_bolt_action_rifles = yes }
+}
+sg_research_general_1_automatic_machine_guns_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1593977486 sg_research_general_available_automatic_machine_guns = yes }
+}
+sg_research_general_2_automatic_machine_guns_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1593977486 sg_research_general_available_automatic_machine_guns = yes }
+}
+sg_research_general_3_automatic_machine_guns_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1593977486 sg_research_general_available_automatic_machine_guns = yes }
+}
+sg_research_general_1_submarine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1407909130 sg_research_general_available_submarine = yes }
+}
+sg_research_general_2_submarine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1407909130 sg_research_general_available_submarine = yes }
+}
+sg_research_general_3_submarine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1407909130 sg_research_general_available_submarine = yes }
+}
+sg_research_general_1_destroyer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2075310812 sg_research_general_available_destroyer = yes }
+}
+sg_research_general_2_destroyer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2075310812 sg_research_general_available_destroyer = yes }
+}
+sg_research_general_3_destroyer_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2075310812 sg_research_general_available_destroyer = yes }
+}
+sg_research_general_1_pre_dreadnought_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1780483183 sg_research_general_available_pre_dreadnought_tech = yes }
+}
+sg_research_general_2_pre_dreadnought_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1780483183 sg_research_general_available_pre_dreadnought_tech = yes }
+}
+sg_research_general_3_pre_dreadnought_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1780483183 sg_research_general_available_pre_dreadnought_tech = yes }
+}
+sg_research_general_1_dreadnought_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1020551108 sg_research_general_available_dreadnought_tech = yes }
+}
+sg_research_general_2_dreadnought_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1020551108 sg_research_general_available_dreadnought_tech = yes }
+}
+sg_research_general_3_dreadnought_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1020551108 sg_research_general_available_dreadnought_tech = yes }
+}
+sg_research_general_1_sea_lane_strategies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 986833405 sg_research_general_available_sea_lane_strategies = yes }
+}
+sg_research_general_2_sea_lane_strategies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 986833405 sg_research_general_available_sea_lane_strategies = yes }
+}
+sg_research_general_3_sea_lane_strategies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 986833405 sg_research_general_available_sea_lane_strategies = yes }
+}
+sg_research_general_1_landing_craft_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 587838527 sg_research_general_available_landing_craft = yes }
+}
+sg_research_general_2_landing_craft_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 587838527 sg_research_general_available_landing_craft = yes }
+}
+sg_research_general_3_landing_craft_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 587838527 sg_research_general_available_landing_craft = yes }
+}
+sg_research_general_1_concrete_dockyards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1584784933 sg_research_general_available_concrete_dockyards = yes }
+}
+sg_research_general_2_concrete_dockyards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1584784933 sg_research_general_available_concrete_dockyards = yes }
+}
+sg_research_general_3_concrete_dockyards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1584784933 sg_research_general_available_concrete_dockyards = yes }
+}
+sg_research_general_1_nco_training_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1615981873 sg_research_general_available_nco_training = yes }
+}
+sg_research_general_2_nco_training_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1615981873 sg_research_general_available_nco_training = yes }
+}
+sg_research_general_3_nco_training_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1615981873 sg_research_general_available_nco_training = yes }
+}
+sg_research_general_1_chemical_warfare_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1324269684 sg_research_general_available_chemical_warfare = yes }
+}
+sg_research_general_2_chemical_warfare_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1324269684 sg_research_general_available_chemical_warfare = yes }
+}
+sg_research_general_3_chemical_warfare_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1324269684 sg_research_general_available_chemical_warfare = yes }
+}
+sg_research_general_1_stormtroopers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 382366936 sg_research_general_available_stormtroopers = yes }
+}
+sg_research_general_2_stormtroopers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 382366936 sg_research_general_available_stormtroopers = yes }
+}
+sg_research_general_3_stormtroopers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 382366936 sg_research_general_available_stormtroopers = yes }
+}
+sg_research_general_1_concrete_fortifications_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1407880873 sg_research_general_available_concrete_fortifications = yes }
+}
+sg_research_general_2_concrete_fortifications_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1407880873 sg_research_general_available_concrete_fortifications = yes }
+}
+sg_research_general_3_concrete_fortifications_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1407880873 sg_research_general_available_concrete_fortifications = yes }
+}
+sg_research_general_1_mobile_armor_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1596436349 sg_research_general_available_mobile_armor = yes }
+}
+sg_research_general_2_mobile_armor_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1596436349 sg_research_general_available_mobile_armor = yes }
+}
+sg_research_general_3_mobile_armor_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1596436349 sg_research_general_available_mobile_armor = yes }
+}
+sg_research_general_1_military_aviation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 150474251 sg_research_general_available_military_aviation = yes }
+}
+sg_research_general_2_military_aviation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 150474251 sg_research_general_available_military_aviation = yes }
+}
+sg_research_general_3_military_aviation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 150474251 sg_research_general_available_military_aviation = yes }
+}
+sg_research_general_1_flamethrowers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1808548628 sg_research_general_available_flamethrowers = yes }
+}
+sg_research_general_2_flamethrowers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1808548628 sg_research_general_available_flamethrowers = yes }
+}
+sg_research_general_3_flamethrowers_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1808548628 sg_research_general_available_flamethrowers = yes }
+}
+sg_research_general_1_carrier_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2050468952 sg_research_general_available_carrier_tech = yes }
+}
+sg_research_general_2_carrier_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2050468952 sg_research_general_available_carrier_tech = yes }
+}
+sg_research_general_3_carrier_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2050468952 sg_research_general_available_carrier_tech = yes }
+}
+sg_research_general_1_battleship_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1347401849 sg_research_general_available_battleship_tech = yes }
+}
+sg_research_general_2_battleship_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1347401849 sg_research_general_available_battleship_tech = yes }
+}
+sg_research_general_3_battleship_tech_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1347401849 sg_research_general_available_battleship_tech = yes }
+}
+sg_research_general_1_battlefleet_tactics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2055852505 sg_research_general_available_battlefleet_tactics = yes }
+}
+sg_research_general_2_battlefleet_tactics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2055852505 sg_research_general_available_battlefleet_tactics = yes }
+}
+sg_research_general_3_battlefleet_tactics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2055852505 sg_research_general_available_battlefleet_tactics = yes }
+}
+sg_research_general_1_urbanization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1863208296 sg_research_general_available_urbanization = yes }
+}
+sg_research_general_2_urbanization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1863208296 sg_research_general_available_urbanization = yes }
+}
+sg_research_general_3_urbanization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1863208296 sg_research_general_available_urbanization = yes }
+}
+sg_research_general_1_urban_planning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1036839209 sg_research_general_available_urban_planning = yes }
+}
+sg_research_general_2_urban_planning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1036839209 sg_research_general_available_urban_planning = yes }
+}
+sg_research_general_3_urban_planning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1036839209 sg_research_general_available_urban_planning = yes }
+}
+sg_research_general_1_rationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1278744622 sg_research_general_available_rationalism = yes }
+}
+sg_research_general_2_rationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1278744622 sg_research_general_available_rationalism = yes }
+}
+sg_research_general_3_rationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1278744622 sg_research_general_available_rationalism = yes }
+}
+sg_research_general_1_tech_bureaucracy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1902763786 sg_research_general_available_tech_bureaucracy = yes }
+}
+sg_research_general_2_tech_bureaucracy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1902763786 sg_research_general_available_tech_bureaucracy = yes }
+}
+sg_research_general_3_tech_bureaucracy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1902763786 sg_research_general_available_tech_bureaucracy = yes }
+}
+sg_research_general_1_currency_standards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1226613740 sg_research_general_available_currency_standards = yes }
+}
+sg_research_general_2_currency_standards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1226613740 sg_research_general_available_currency_standards = yes }
+}
+sg_research_general_3_currency_standards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1226613740 sg_research_general_available_currency_standards = yes }
+}
+sg_research_general_1_democracy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 151786145 sg_research_general_available_democracy = yes }
+}
+sg_research_general_2_democracy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 151786145 sg_research_general_available_democracy = yes }
+}
+sg_research_general_3_democracy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 151786145 sg_research_general_available_democracy = yes }
+}
+sg_research_general_1_romanticism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1834923740 sg_research_general_available_romanticism = yes }
+}
+sg_research_general_2_romanticism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1834923740 sg_research_general_available_romanticism = yes }
+}
+sg_research_general_3_romanticism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1834923740 sg_research_general_available_romanticism = yes }
+}
+sg_research_general_1_international_trade_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1677539749 sg_research_general_available_international_trade = yes }
+}
+sg_research_general_2_international_trade_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1677539749 sg_research_general_available_international_trade = yes }
+}
+sg_research_general_3_international_trade_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1677539749 sg_research_general_available_international_trade = yes }
+}
+sg_research_general_1_centralization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 638333195 sg_research_general_available_centralization = yes }
+}
+sg_research_general_2_centralization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 638333195 sg_research_general_available_centralization = yes }
+}
+sg_research_general_3_centralization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 638333195 sg_research_general_available_centralization = yes }
+}
+sg_research_general_1_corporate_charters_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 468724644 sg_research_general_available_corporate_charters = yes }
+}
+sg_research_general_2_corporate_charters_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 468724644 sg_research_general_available_corporate_charters = yes }
+}
+sg_research_general_3_corporate_charters_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 468724644 sg_research_general_available_corporate_charters = yes }
+}
+sg_research_general_1_banking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 239969973 sg_research_general_available_banking = yes }
+}
+sg_research_general_2_banking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 239969973 sg_research_general_available_banking = yes }
+}
+sg_research_general_3_banking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 239969973 sg_research_general_available_banking = yes }
+}
+sg_research_general_1_academia_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1874307911 sg_research_general_available_academia = yes }
+}
+sg_research_general_2_academia_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1874307911 sg_research_general_available_academia = yes }
+}
+sg_research_general_3_academia_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1874307911 sg_research_general_available_academia = yes }
+}
+sg_research_general_1_colonization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1061316505 sg_research_general_available_colonization = yes }
+}
+sg_research_general_2_colonization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1061316505 sg_research_general_available_colonization = yes }
+}
+sg_research_general_3_colonization_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1061316505 sg_research_general_available_colonization = yes }
+}
+sg_research_general_1_international_relations_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 913545668 sg_research_general_available_international_relations = yes }
+}
+sg_research_general_2_international_relations_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 913545668 sg_research_general_available_international_relations = yes }
+}
+sg_research_general_3_international_relations_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 913545668 sg_research_general_available_international_relations = yes }
+}
+sg_research_general_1_law_enforcement_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 31349328 sg_research_general_available_law_enforcement = yes }
+}
+sg_research_general_2_law_enforcement_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 31349328 sg_research_general_available_law_enforcement = yes }
+}
+sg_research_general_3_law_enforcement_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 31349328 sg_research_general_available_law_enforcement = yes }
+}
+sg_research_general_1_stock_exchange_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1117979046 sg_research_general_available_stock_exchange = yes }
+}
+sg_research_general_2_stock_exchange_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1117979046 sg_research_general_available_stock_exchange = yes }
+}
+sg_research_general_3_stock_exchange_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1117979046 sg_research_general_available_stock_exchange = yes }
+}
+sg_research_general_1_medical_degrees_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 124783958 sg_research_general_available_medical_degrees = yes }
+}
+sg_research_general_2_medical_degrees_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 124783958 sg_research_general_available_medical_degrees = yes }
+}
+sg_research_general_3_medical_degrees_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 124783958 sg_research_general_available_medical_degrees = yes }
+}
+sg_research_general_1_mass_communication_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1151585212 sg_research_general_available_mass_communication = yes }
+}
+sg_research_general_2_mass_communication_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1151585212 sg_research_general_available_mass_communication = yes }
+}
+sg_research_general_3_mass_communication_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1151585212 sg_research_general_available_mass_communication = yes }
+}
+sg_research_general_1_empiricism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 317089688 sg_research_general_available_empiricism = yes }
+}
+sg_research_general_2_empiricism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 317089688 sg_research_general_available_empiricism = yes }
+}
+sg_research_general_3_empiricism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 317089688 sg_research_general_available_empiricism = yes }
+}
+sg_research_general_1_egalitarianism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1517166308 sg_research_general_available_egalitarianism = yes }
+}
+sg_research_general_2_egalitarianism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1517166308 sg_research_general_available_egalitarianism = yes }
+}
+sg_research_general_3_egalitarianism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1517166308 sg_research_general_available_egalitarianism = yes }
+}
+sg_research_general_1_pharmaceuticals_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2046564999 sg_research_general_available_pharmaceuticals = yes }
+}
+sg_research_general_2_pharmaceuticals_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2046564999 sg_research_general_available_pharmaceuticals = yes }
+}
+sg_research_general_3_pharmaceuticals_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2046564999 sg_research_general_available_pharmaceuticals = yes }
+}
+sg_research_general_1_modern_sewerage_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 605672847 sg_research_general_available_modern_sewerage = yes }
+}
+sg_research_general_2_modern_sewerage_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 605672847 sg_research_general_available_modern_sewerage = yes }
+}
+sg_research_general_3_modern_sewerage_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 605672847 sg_research_general_available_modern_sewerage = yes }
+}
+sg_research_general_1_quinine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 734801253 sg_research_general_available_quinine = yes }
+}
+sg_research_general_2_quinine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 734801253 sg_research_general_available_quinine = yes }
+}
+sg_research_general_3_quinine_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 734801253 sg_research_general_available_quinine = yes }
+}
+sg_research_general_1_organized_sports_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 90339752 sg_research_general_available_organized_sports = yes }
+}
+sg_research_general_2_organized_sports_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 90339752 sg_research_general_available_organized_sports = yes }
+}
+sg_research_general_3_organized_sports_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 90339752 sg_research_general_available_organized_sports = yes }
+}
+sg_research_general_1_central_archives_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 475297431 sg_research_general_available_central_archives = yes }
+}
+sg_research_general_2_central_archives_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 475297431 sg_research_general_available_central_archives = yes }
+}
+sg_research_general_3_central_archives_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 475297431 sg_research_general_available_central_archives = yes }
+}
+sg_research_general_1_central_banking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 99057030 sg_research_general_available_central_banking = yes }
+}
+sg_research_general_2_central_banking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 99057030 sg_research_general_available_central_banking = yes }
+}
+sg_research_general_3_central_banking_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 99057030 sg_research_general_available_central_banking = yes }
+}
+sg_research_general_1_joint_stock_companies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1855116215 sg_research_general_available_joint_stock_companies = yes }
+}
+sg_research_general_2_joint_stock_companies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1855116215 sg_research_general_available_joint_stock_companies = yes }
+}
+sg_research_general_3_joint_stock_companies_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1855116215 sg_research_general_available_joint_stock_companies = yes }
+}
+sg_research_general_1_dialectics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1803626798 sg_research_general_available_dialectics = yes }
+}
+sg_research_general_2_dialectics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1803626798 sg_research_general_available_dialectics = yes }
+}
+sg_research_general_3_dialectics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1803626798 sg_research_general_available_dialectics = yes }
+}
+sg_research_general_1_psychiatry_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 321375451 sg_research_general_available_psychiatry = yes }
+}
+sg_research_general_2_psychiatry_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 321375451 sg_research_general_available_psychiatry = yes }
+}
+sg_research_general_3_psychiatry_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 321375451 sg_research_general_available_psychiatry = yes }
+}
+sg_research_general_1_realism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1916555783 sg_research_general_available_realism = yes }
+}
+sg_research_general_2_realism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1916555783 sg_research_general_available_realism = yes }
+}
+sg_research_general_3_realism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1916555783 sg_research_general_available_realism = yes }
+}
+sg_research_general_1_nationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1758744098 sg_research_general_available_nationalism = yes }
+}
+sg_research_general_2_nationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1758744098 sg_research_general_available_nationalism = yes }
+}
+sg_research_general_3_nationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1758744098 sg_research_general_available_nationalism = yes }
+}
+sg_research_general_1_labor_movement_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 860192880 sg_research_general_available_labor_movement = yes }
+}
+sg_research_general_2_labor_movement_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 860192880 sg_research_general_available_labor_movement = yes }
+}
+sg_research_general_3_labor_movement_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 860192880 sg_research_general_available_labor_movement = yes }
+}
+sg_research_general_1_postal_savings_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1446981366 sg_research_general_available_postal_savings = yes }
+}
+sg_research_general_2_postal_savings_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1446981366 sg_research_general_available_postal_savings = yes }
+}
+sg_research_general_3_postal_savings_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1446981366 sg_research_general_available_postal_savings = yes }
+}
+sg_research_general_1_human_rights_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 994542517 sg_research_general_available_human_rights = yes }
+}
+sg_research_general_2_human_rights_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 994542517 sg_research_general_available_human_rights = yes }
+}
+sg_research_general_3_human_rights_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 994542517 sg_research_general_available_human_rights = yes }
+}
+sg_research_general_1_feminism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1617103491 sg_research_general_available_feminism = yes }
+}
+sg_research_general_2_feminism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1617103491 sg_research_general_available_feminism = yes }
+}
+sg_research_general_3_feminism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1617103491 sg_research_general_available_feminism = yes }
+}
+sg_research_general_1_steel_frame_buildings_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1998998595 sg_research_general_available_steel_frame_buildings = yes }
+}
+sg_research_general_2_steel_frame_buildings_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1998998595 sg_research_general_available_steel_frame_buildings = yes }
+}
+sg_research_general_3_steel_frame_buildings_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1998998595 sg_research_general_available_steel_frame_buildings = yes }
+}
+sg_research_general_1_civilizing_mission_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1499807482 sg_research_general_available_civilizing_mission = yes }
+}
+sg_research_general_2_civilizing_mission_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1499807482 sg_research_general_available_civilizing_mission = yes }
+}
+sg_research_general_3_civilizing_mission_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1499807482 sg_research_general_available_civilizing_mission = yes }
+}
+sg_research_general_1_anarchism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 129372390 sg_research_general_available_anarchism = yes }
+}
+sg_research_general_2_anarchism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 129372390 sg_research_general_available_anarchism = yes }
+}
+sg_research_general_3_anarchism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 129372390 sg_research_general_available_anarchism = yes }
+}
+sg_research_general_1_socialism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1107713481 sg_research_general_available_socialism = yes }
+}
+sg_research_general_2_socialism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1107713481 sg_research_general_available_socialism = yes }
+}
+sg_research_general_3_socialism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1107713481 sg_research_general_available_socialism = yes }
+}
+sg_research_general_1_corporatism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1289674124 sg_research_general_available_corporatism = yes }
+}
+sg_research_general_2_corporatism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1289674124 sg_research_general_available_corporatism = yes }
+}
+sg_research_general_3_corporatism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1289674124 sg_research_general_available_corporatism = yes }
+}
+sg_research_general_1_pan-nationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 141521622 sg_research_general_available_pan-nationalism = yes }
+}
+sg_research_general_2_pan-nationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 141521622 sg_research_general_available_pan-nationalism = yes }
+}
+sg_research_general_3_pan-nationalism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 141521622 sg_research_general_available_pan-nationalism = yes }
+}
+sg_research_general_1_mutual_funds_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1155895383 sg_research_general_available_mutual_funds = yes }
+}
+sg_research_general_2_mutual_funds_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1155895383 sg_research_general_available_mutual_funds = yes }
+}
+sg_research_general_3_mutual_funds_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1155895383 sg_research_general_available_mutual_funds = yes }
+}
+sg_research_general_1_investment_banks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1347042716 sg_research_general_available_investment_banks = yes }
+}
+sg_research_general_2_investment_banks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1347042716 sg_research_general_available_investment_banks = yes }
+}
+sg_research_general_3_investment_banks_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1347042716 sg_research_general_available_investment_banks = yes }
+}
+sg_research_general_1_camera_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1941598211 sg_research_general_available_camera = yes }
+}
+sg_research_general_2_camera_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1941598211 sg_research_general_available_camera = yes }
+}
+sg_research_general_3_camera_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1941598211 sg_research_general_available_camera = yes }
+}
+sg_research_general_1_philosophical_pragmatism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1559152075 sg_research_general_available_philosophical_pragmatism = yes }
+}
+sg_research_general_2_philosophical_pragmatism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1559152075 sg_research_general_available_philosophical_pragmatism = yes }
+}
+sg_research_general_3_philosophical_pragmatism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1559152075 sg_research_general_available_philosophical_pragmatism = yes }
+}
+sg_research_general_1_identification_documents_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1671819701 sg_research_general_available_identification_documents = yes }
+}
+sg_research_general_2_identification_documents_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1671819701 sg_research_general_available_identification_documents = yes }
+}
+sg_research_general_3_identification_documents_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1671819701 sg_research_general_available_identification_documents = yes }
+}
+sg_research_general_1_elevator_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1383447120 sg_research_general_available_elevator = yes }
+}
+sg_research_general_2_elevator_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1383447120 sg_research_general_available_elevator = yes }
+}
+sg_research_general_3_elevator_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1383447120 sg_research_general_available_elevator = yes }
+}
+sg_research_general_1_zeppelins_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2104088037 sg_research_general_available_zeppelins = yes }
+}
+sg_research_general_2_zeppelins_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2104088037 sg_research_general_available_zeppelins = yes }
+}
+sg_research_general_3_zeppelins_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2104088037 sg_research_general_available_zeppelins = yes }
+}
+sg_research_general_1_malaria_prevention_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 934809740 sg_research_general_available_malaria_prevention = yes }
+}
+sg_research_general_2_malaria_prevention_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 934809740 sg_research_general_available_malaria_prevention = yes }
+}
+sg_research_general_3_malaria_prevention_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 934809740 sg_research_general_available_malaria_prevention = yes }
+}
+sg_research_general_1_central_planning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 716121432 sg_research_general_available_central_planning = yes }
+}
+sg_research_general_2_central_planning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 716121432 sg_research_general_available_central_planning = yes }
+}
+sg_research_general_3_central_planning_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 716121432 sg_research_general_available_central_planning = yes }
+}
+sg_research_general_1_political_agitation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1818384774 sg_research_general_available_political_agitation = yes }
+}
+sg_research_general_2_political_agitation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1818384774 sg_research_general_available_political_agitation = yes }
+}
+sg_research_general_3_political_agitation_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1818384774 sg_research_general_available_political_agitation = yes }
+}
+sg_research_general_1_international_exchange_standards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1910617060 sg_research_general_available_international_exchange_standards = yes }
+}
+sg_research_general_2_international_exchange_standards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1910617060 sg_research_general_available_international_exchange_standards = yes }
+}
+sg_research_general_3_international_exchange_standards_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1910617060 sg_research_general_available_international_exchange_standards = yes }
+}
+sg_research_general_1_corporate_management_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 603390087 sg_research_general_available_corporate_management = yes }
+}
+sg_research_general_2_corporate_management_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 603390087 sg_research_general_available_corporate_management = yes }
+}
+sg_research_general_3_corporate_management_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 603390087 sg_research_general_available_corporate_management = yes }
+}
+sg_research_general_1_psychoanalysis_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 916088481 sg_research_general_available_psychoanalysis = yes }
+}
+sg_research_general_2_psychoanalysis_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 916088481 sg_research_general_available_psychoanalysis = yes }
+}
+sg_research_general_3_psychoanalysis_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 916088481 sg_research_general_available_psychoanalysis = yes }
+}
+sg_research_general_1_film_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 727012926 sg_research_general_available_film = yes }
+}
+sg_research_general_2_film_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 727012926 sg_research_general_available_film = yes }
+}
+sg_research_general_3_film_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 727012926 sg_research_general_available_film = yes }
+}
+sg_research_general_1_multilateral_alliances_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1876237540 sg_research_general_available_multilateral_alliances = yes }
+}
+sg_research_general_2_multilateral_alliances_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1876237540 sg_research_general_available_multilateral_alliances = yes }
+}
+sg_research_general_3_multilateral_alliances_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1876237540 sg_research_general_available_multilateral_alliances = yes }
+}
+sg_research_general_1_mass_surveillance_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1895294635 sg_research_general_available_mass_surveillance = yes }
+}
+sg_research_general_2_mass_surveillance_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1895294635 sg_research_general_available_mass_surveillance = yes }
+}
+sg_research_general_3_mass_surveillance_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1895294635 sg_research_general_available_mass_surveillance = yes }
+}
+sg_research_general_1_antibiotics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1822776882 sg_research_general_available_antibiotics = yes }
+}
+sg_research_general_2_antibiotics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1822776882 sg_research_general_available_antibiotics = yes }
+}
+sg_research_general_3_antibiotics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1822776882 sg_research_general_available_antibiotics = yes }
+}
+sg_research_general_1_mass_propaganda_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 370111379 sg_research_general_available_mass_propaganda = yes }
+}
+sg_research_general_2_mass_propaganda_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 370111379 sg_research_general_available_mass_propaganda = yes }
+}
+sg_research_general_3_mass_propaganda_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 370111379 sg_research_general_available_mass_propaganda = yes }
+}
+sg_research_general_1_modern_financial_instruments_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1231484756 sg_research_general_available_modern_financial_instruments = yes }
+}
+sg_research_general_2_modern_financial_instruments_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1231484756 sg_research_general_available_modern_financial_instruments = yes }
+}
+sg_research_general_3_modern_financial_instruments_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1231484756 sg_research_general_available_modern_financial_instruments = yes }
+}
+sg_research_general_1_macroeconomics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 732789854 sg_research_general_available_macroeconomics = yes }
+}
+sg_research_general_2_macroeconomics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 732789854 sg_research_general_available_macroeconomics = yes }
+}
+sg_research_general_3_macroeconomics_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 732789854 sg_research_general_available_macroeconomics = yes }
+}
+sg_research_general_1_behaviorism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 310485287 sg_research_general_available_behaviorism = yes }
+}
+sg_research_general_2_behaviorism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 310485287 sg_research_general_available_behaviorism = yes }
+}
+sg_research_general_3_behaviorism_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 310485287 sg_research_general_available_behaviorism = yes }
+}
+sg_research_general_1_analytical_philosophy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 2087641548 sg_research_general_available_analytical_philosophy = yes }
+}
+sg_research_general_2_analytical_philosophy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 2087641548 sg_research_general_available_analytical_philosophy = yes }
+}
+sg_research_general_3_analytical_philosophy_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 2087641548 sg_research_general_available_analytical_philosophy = yes }
+}
+sg_research_general_1_paved_roads_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_1_id var:sg_research_1_id = 1682355749 sg_research_general_available_paved_roads = yes }
+}
+sg_research_general_2_paved_roads_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_2_id var:sg_research_2_id = 1682355749 sg_research_general_available_paved_roads = yes }
+}
+sg_research_general_3_paved_roads_sgui = {
+ scope = country
+ is_shown = { has_variable = sg_research_3_id var:sg_research_3_id = 1682355749 sg_research_general_available_paved_roads = yes }
+}

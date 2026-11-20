@@ -1,0 +1,123 @@
+﻿# Country scope. Evaluate each context once per research review.
+sg_research_infrastructure = {
+	any_scope_state = {
+		is_incorporated = yes
+		relative_infrastructure < 1
+	}
+}
+
+sg_research_railway_path = {
+	NOT = { has_technology_researched = railways }
+	sg_research_infrastructure = yes
+}
+
+sg_research_railway_upgrade = {
+	any_scope_state = {
+		is_incorporated = yes
+		relative_infrastructure < 1
+		b:building_railway ?= { level > 0 }
+		sg:electricity ?= {
+			state_goods_production > 0
+			state_goods_has_local_goods_shortage = no
+		}
+	}
+}
+
+sg_research_farm_output = {
+	market ?= {
+		mg:grain ?= { market_goods_has_goods_shortage = yes }
+		mg:fertilizer ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+	}
+	any_scope_state = {
+		OR = {
+			b:building_wheat_farm ?= { level > 0 }
+			b:building_rye_farm ?= { level > 0 }
+			b:building_rice_farm ?= { level > 0 }
+			b:building_maize_farm ?= { level > 0 }
+			b:building_millet_farm ?= { level > 0 }
+		}
+	}
+}
+
+sg_research_mining = {
+	market ?= {
+		mg:tools ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+	}
+	OR = {
+		AND = {
+			market ?= {
+				mg:iron ?= { market_goods_has_goods_shortage = yes }
+				mg:coal ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+			}
+			any_scope_state = { b:building_iron_mine ?= { level > 0 } }
+		}
+		AND = {
+			market ?= { mg:coal ?= { market_goods_has_goods_shortage = yes } }
+			any_scope_state = { b:building_coal_mine ?= { level > 0 } }
+		}
+	}
+}
+
+sg_research_conflict = {
+	OR = {
+		is_at_war = yes
+		is_diplomatic_play_committed_participant = yes
+		is_diplomatic_play_initiator = yes
+		is_diplomatic_play_target = yes
+	}
+}
+
+sg_research_defense = {
+	sg_research_conflict = yes
+	army_size > 0
+}
+
+sg_research_infantry = {
+	sg_research_conflict = yes
+	any_military_formation = {
+		is_army = yes
+		any_combat_unit = { has_unit_type = unit_type:combat_unit_type_irregular_infantry }
+	}
+	market ?= {
+		mg:small_arms ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+	}
+}
+
+sg_research_arms_output = {
+	market ?= {
+		mg:small_arms ?= { market_goods_has_goods_shortage = yes }
+		mg:steel ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+		mg:hardwood ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+		mg:tools ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+	}
+	any_scope_state = { b:building_arms_industry ?= { level > 0 } }
+}
+
+sg_research_literacy = {
+	literacy_rate < 0.60
+}
+
+sg_research_university_access = {
+	country_innovation < max_innovation
+	NOT = { any_scope_state = { b:building_university ?= { level > 0 } } }
+}
+
+sg_research_university_methods = {
+	country_innovation < max_innovation
+	any_scope_state = { b:building_university ?= { level > 0 } }
+	market ?= {
+		mg:paper ?= { market_goods_sell_orders > 0 market_goods_has_goods_shortage = no }
+	}
+}
+
+sg_research_administration = {
+	any_scope_state = {
+		is_incorporated = yes
+		tax_capacity_usage > tax_capacity
+	}
+}
+
+sg_research_debt_pressure = {
+	principal > 0
+	net_total_income < 0
+}
